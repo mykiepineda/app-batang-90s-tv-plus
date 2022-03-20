@@ -1,24 +1,26 @@
-<div class="container mb-3">
-    <a href="/" role="button" class="btn btn-primary">Home</a>
-    {{#unless reachedStart}}
-        <a href="/episode/{{prevEpisode}}" role="button" class="btn btn-light active">Previous Episode</a>
-    {{/unless}}
-    {{#unless reachedEnd}}
-        <a href="/episode/{{nextEpisode}}" role="button" class="btn btn-light">Next Episode</a>
-    {{/unless}}
-</div>
-
-<div class="container">
-    <div class="row">
-        <div class="col-4">
-            <h4>Episode {{episode}} <a id="bookmark-button" href="/bookmark/{{episode}}"><i class="fa {{#if bookmarked}}fa-bookmark{{else}}fa-bookmark-o{{/if}}"></i></a></h4>
-            <h3>{{title}}</h3>
-            <p>{{synopsis}}</p>
-        </div>
-        <div class="col-6">
-            <video id="videoPlayer" width="650" controls muted="muted" autoplay>
-                <source src="/video/{{episode}}" type="video/mp4"/>
-            </video>
+<div class="container mt-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <h4>Episode {{episode}} <a id="bookmark-button" href="/bookmark/{{episode}}"><i
+                        class="fa {{#if bookmarked}}fa-bookmark{{else}}fa-bookmark-o{{/if}}"></i></a></h4>
+                <h3>{{title}}</h3>
+                <p>{{synopsis}}</p>
+                <div>
+                    {{#unless reachedStart}}
+                        <a href="/episode/{{prevEpisode}}" role="button" class="btn btn-light active"><i class="fa fa-step-backward"></i> Previous Episode</a>
+                    {{/unless}}
+                    {{#unless reachedEnd}}
+                        <a href="/episode/{{nextEpisode}}" role="button" class="btn btn-light">Next Episode <i class="fa fa-step-forward"></i></a>
+                    {{/unless}}
+                </div>
+            </div>
+            <div class="col-6">
+                <video id="videoPlayer" width="650" controls muted="muted" autoplay>
+                    <source src="/video/{{episode}}" type="video/mp4"/>
+                </video>
+            </div>
         </div>
     </div>
+
 </div>

@@ -1,23 +1,41 @@
-body {
-    background: url("/images/kamen_rider_black_rx_logo_by_mockingraffy_deibyqu.png"), linear-gradient(black, darkblue);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: left top;
-    background-size: cover;
-    color: white;
-}
+/*body {*/
+/*    background: url("/images/kamen_rider_black_rx_logo_by_mockingraffy_deibyqu.png"), linear-gradient(black, darkblue);*/
+/*    background-repeat: no-repeat;*/
+/*    background-attachment: fixed;*/
+/*    background-position: left top;*/
+/*    background-size: cover;}*/
 
-#card {
-    color: black;
-}
+/*#card {*/
+/*    color: black;*/
+/*}*/
 
-#bookmark-button {
-    color: white;
-}
+/*body, #bookmark-button {*/
+/*    color: white;*/
+/*}*/
 
 #card-bookmark {
     position: absolute;
     color: white;
     top: 5px;
     right: 5px;
-}w
+}
+
+/* missing styles from bootstrap */
+
+.mr-auto {
+    margin-right: auto !important;
+}
+
+.navbar {
+    padding: 0.5rem 1rem;
+}
+
+.mr-sm-2, .mx-sm-2 {
+    margin-right: 0.5rem!important;
+}
+
+.form-inline {
+    display: flex;
+    /*flex-flow: row wrap;*/
+    align-items: center;
+}

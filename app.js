@@ -16,9 +16,22 @@ const handlebars = require("express-handlebars");
 app.engine("handlebars", handlebars.engine({defaultLayout: "main"}));
 app.set("view engine", "handlebars");
 
+app.use("/css", express.static(path.join(__dirname, "node_modules/bootstrap/dist/css")));
+app.use("/js", express.static(path.join(__dirname, "node_modules/bootstrap/dist/js")));
+app.use("/jquery", express.static(path.join(__dirname, "node_modules/jquery/dist")));
+
 app.get("/", async function (req, res) {
 
     res.locals.videos = await videos.find().sort("episode").lean();
+
+    res.render("home");
+});
+
+app.get("/&sortBy=:sortBy", async function (req, res) {
+
+    const sortBy = req.params.sortBy;
+
+    res.locals.videos = await videos.find().sort(sortBy).lean();
 
     res.render("home");
 });
