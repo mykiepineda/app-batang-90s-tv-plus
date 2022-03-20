@@ -9,9 +9,9 @@
 /*    color: black;*/
 /*}*/
 
-/*body, #bookmark-button {*/
-/*    color: white;*/
-/*}*/
+body, #bookmark-button {
+    color: black;
+}
 
 #card-bookmark {
     position: absolute;

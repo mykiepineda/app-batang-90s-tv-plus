@@ -22,14 +22,11 @@ app.use("/jquery", express.static(path.join(__dirname, "node_modules/jquery/dist
 
 app.get("/", async function (req, res) {
 
-    res.locals.videos = await videos.find().sort("episode").lean();
+    let sortBy = req.query.sortBy;
 
-    res.render("home");
-});
-
-app.get("/&sortBy=:sortBy", async function (req, res) {
-
-    const sortBy = req.params.sortBy;
+    if (sortBy === undefined) {
+        sortBy = "episode";
+    }
 
     res.locals.videos = await videos.find().sort(sortBy).lean();
 
@@ -60,10 +57,10 @@ app.get("/episode/:id", async function (req, res) {
     let minEpisode = null;
     let maxEpisode = null;
 
-    await videos.findOne().sort({episode: 1}).then(function(doc){
+    await videos.findOne().sort({episode: 1}).then(function (doc) {
         minEpisode = doc.toJSON().episode;
     });
-    await videos.findOne().sort({episode: -1}).then(function(doc){
+    await videos.findOne().sort({episode: -1}).then(function (doc) {
         maxEpisode = doc.toJSON().episode;
     });
 
@@ -126,11 +123,11 @@ app.get("/bookmark/:episode", async function (req, res) {
     const episodeId = req.params.episode;
     let bookmarked = null;
 
-    await videos.findOne({episode: episodeId}).then(function(doc){
+    await videos.findOne({episode: episodeId}).then(function (doc) {
         bookmarked = doc.toJSON().bookmarked;
     });
 
-    await videos.updateOne({episode: episodeId}, { bookmarked: !bookmarked });
+    await videos.updateOne({episode: episodeId}, {bookmarked: !bookmarked});
 
     res.redirect(`/episode/${episodeId}`);
 });

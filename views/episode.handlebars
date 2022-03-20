@@ -8,10 +8,10 @@
                 <p>{{synopsis}}</p>
                 <div>
                     {{#unless reachedStart}}
-                        <a href="/episode/{{prevEpisode}}" role="button" class="btn btn-light active"><i class="fa fa-step-backward"></i> Previous Episode</a>
+                        <a href="/episode/{{prevEpisode}}" role="button" class="btn btn-primary"><i class="fa fa-step-backward"></i> Previous Episode</a>
                     {{/unless}}
                     {{#unless reachedEnd}}
-                        <a href="/episode/{{nextEpisode}}" role="button" class="btn btn-light">Next Episode <i class="fa fa-step-forward"></i></a>
+                        <a href="/episode/{{nextEpisode}}" role="button" class="btn btn-primary">Next Episode <i class="fa fa-step-forward"></i></a>
                     {{/unless}}
                 </div>
             </div>
