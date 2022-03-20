@@ -1,3 +1,9 @@
+# videos
+*.mp4
+
+# intellij
+.idea
+
 # Logs
 logs
 *.log

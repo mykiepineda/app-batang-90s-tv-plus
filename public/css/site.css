@@ -1,0 +1,10 @@
+body {
+    background: url("/images/kamen_rider_black_rx_logo_by_mockingraffy_deibyqu.png"), linear-gradient(black, darkblue) no-repeat fixed;
+    background-size: cover;
+    color: white;
+}
+
+#card {
+    color: black;
+}
+
