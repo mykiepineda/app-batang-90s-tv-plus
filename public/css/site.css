@@ -1,5 +1,8 @@
 body {
-    background: url("/images/kamen_rider_black_rx_logo_by_mockingraffy_deibyqu.png"), linear-gradient(black, darkblue) no-repeat fixed;
+    background: url("/images/kamen_rider_black_rx_logo_by_mockingraffy_deibyqu.png"), linear-gradient(black, darkblue);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left top;
     background-size: cover;
     color: white;
 }
@@ -8,3 +11,13 @@ body {
     color: black;
 }
 
+#bookmark-button {
+    color: white;
+}
+
+#card-bookmark {
+    position: absolute;
+    color: white;
+    top: 5px;
+    right: 5px;
+}w

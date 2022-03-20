@@ -41,17 +41,29 @@ function getOtherEpisode(episode, next) {
 }
 
 app.get("/episode/:id", async function (req, res) {
+
     const episodeId = req.params.id;
+
+    let minEpisode = null;
+    let maxEpisode = null;
+
+    await videos.findOne().sort({episode: 1}).then(function(doc){
+        minEpisode = doc.toJSON().episode;
+    });
+    await videos.findOne().sort({episode: -1}).then(function(doc){
+        maxEpisode = doc.toJSON().episode;
+    });
 
     await videos.find({"episode": episodeId}).then(function (collection) {
         const video = collection[0].toJSON();
         res.locals.episode = video.episode;
         res.locals.title = video.title;
         res.locals.synopsis = video.synopsis;
+        res.locals.bookmarked = video.bookmarked;
         res.locals.prevEpisode = getOtherEpisode(video.episode, false);
         res.locals.nextEpisode = getOtherEpisode(video.episode, true);
-        res.locals.reachedStart = (episodeId === "06");
-        res.locals.reachedEnd = (episodeId === "20");
+        res.locals.reachedStart = (episodeId === minEpisode);
+        res.locals.reachedEnd = (episodeId === maxEpisode);
     });
 
     res.render("episode");
@@ -60,7 +72,7 @@ app.get("/episode/:id", async function (req, res) {
 app.get("/video/:episode", function (req, res) {
 
     const videoId = req.params.episode;
-    console.log(videoId);
+
     // Ensure there is a range given for the video
     const range = req.headers.range;
     if (!range) {
@@ -94,6 +106,20 @@ app.get("/video/:episode", function (req, res) {
 
     // Stream the video chunk to the client
     videoStream.pipe(res);
+});
+
+app.get("/bookmark/:episode", async function (req, res) {
+
+    const episodeId = req.params.episode;
+    let bookmarked = null;
+
+    await videos.findOne({episode: episodeId}).then(function(doc){
+        bookmarked = doc.toJSON().bookmarked;
+    });
+
+    await videos.updateOne({episode: episodeId}, { bookmarked: !bookmarked });
+
+    res.redirect(`/episode/${episodeId}`);
 });
 
 app.listen(port, function () {

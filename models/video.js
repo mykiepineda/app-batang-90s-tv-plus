@@ -11,6 +11,11 @@ const videoSchema = new mongoose.Schema({
     synopsis: {
         type: String,
         required: true
+    },
+    bookmarked: {
+        type: Boolean,
+        default: false,
+        required: true
     }
 });
 
