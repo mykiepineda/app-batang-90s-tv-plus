@@ -13,14 +13,14 @@ const database = "my-streaming-site";
 mongoose.connect(`mongodb+srv://mykiepineda:P1n3d%40j0hN@cluster0.omg3p.mongodb.net/${database}?retryWrites=true&w=majority`);
 
 const handlebars = require("express-handlebars");
-app.engine("handlebars", handlebars.engine({defaultLayout: "main"}));
+app.engine("handlebars", handlebars.engine({defaultLayout: "main", helpers: require("./modules/handlebars-helpers")}));
 app.set("view engine", "handlebars");
 
 app.use("/css", express.static(path.join(__dirname, "node_modules/bootstrap/dist/css")));
 app.use("/js", express.static(path.join(__dirname, "node_modules/bootstrap/dist/js")));
 app.use("/jquery", express.static(path.join(__dirname, "node_modules/jquery/dist")));
 
-app.get("/", async function (req, res) {
+app.get("/", function (req, res) {
 
     let sortBy = req.query.sortBy;
 
@@ -28,12 +28,34 @@ app.get("/", async function (req, res) {
         sortBy = "episode";
     }
 
-    res.locals.videos = await videos.find().sort(sortBy).lean();
+    // TODO: put in a function
+    videos.find().sort(sortBy).lean().exec(function (err, collection) {
 
-    res.render("home");
+        let pagination = [];
+        let page = 1;
+        let videoArray = [];
+
+        for (let i = 0; i <= collection.length; i++) {
+            if (i > 0 && (i % 5 === 0 || i === collection.length)) {
+                pagination.push({
+                    page: page,
+                    videos: videoArray
+                });
+                page++;
+                videoArray = [];
+            }
+            if (i < collection.length) {
+                videoArray.push(collection[i]);
+            }
+        }
+
+        res.locals.pagination = pagination;
+        res.render("home");
+    });
+
 });
 
-app.get('/bookmarked', async function(req, res) {
+app.get('/bookmarked', async function (req, res) {
     res.locals.videos = await videos.find({bookmarked: true}).sort("episode").lean();
 
     res.render("home");
