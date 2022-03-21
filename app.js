@@ -33,6 +33,12 @@ app.get("/", async function (req, res) {
     res.render("home");
 });
 
+app.get('/bookmarked', async function(req, res) {
+    res.locals.videos = await videos.find({bookmarked: true}).sort("episode").lean();
+
+    res.render("home");
+});
+
 function getOtherEpisode(episode, next) {
 
     let intEpisode = parseInt(episode);
