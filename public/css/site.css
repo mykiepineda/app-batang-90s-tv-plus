@@ -37,9 +37,19 @@ body, #bookmark-button {
     color: white;
 }
 
+.navbar-tab-active, #navbar-tab .nav-item:hover {
+    border-bottom: 4px white solid;
+    box-sizing: border-box;
+}
+
+#navbar-tab a.nav-link {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
 #card-image:hover + h1 > #card-play-button {
     transform: scale(1.5);
-    transition: transform 0.50s ease-in-out;
+    transition: transform 0.15s ease;
 }
 
 /* missing styles from bootstrap */
