@@ -21,117 +21,120 @@ window.addEventListener("load", function () {
         dropdownMenu.classList.toggle("show");
     });
 
-    const s1NavItem = document.querySelector("#s1-nav-item");
-    const s2NavItem = document.querySelector("#s2-nav-item");
-    const s3NavItem = document.querySelector("#s3-nav-item");
-    const sfNavItem = document.querySelector("#sf-nav-item");
+    function activateSeasonNavItemInContext(options) {
+
+        const navItems = [];
+
+        navItems.push(document.querySelector("#s1-nav-item"));
+        navItems.push(document.querySelector("#s2-nav-item"));
+        navItems.push(document.querySelector("#s3-nav-item"));
+        navItems.push(document.querySelector("#sf-nav-item"));
+
+        for (let i = 0; i < options.length; i++) {
+            if (options[i] === true) {
+                navItems[i].classList.add("active");
+            } else {
+                navItems[i].classList.remove("active");
+            }
+        }
+    }
 
     // jQuery carousel methods
     $("#season01Link").click(function () {
         $("#episodesCarousel").carousel(0);
-        s1NavItem.classList.add("active");
-        s2NavItem.classList.remove("active");
-        s3NavItem.classList.remove("active");
-        sfNavItem.classList.remove("active");
+        activateSeasonNavItemInContext([true, false, false, false]);
     });
+
     $("#season02Link").click(function () {
         $("#episodesCarousel").carousel(3);
-        s1NavItem.classList.remove("active");
-        s2NavItem.classList.add("active");
-        s3NavItem.classList.remove("active");
-        sfNavItem.classList.remove("active");
+        activateSeasonNavItemInContext([false, true, false, false]);
     });
+
     $("#season03Link").click(function () {
         $("#episodesCarousel").carousel(6);
-        s1NavItem.classList.remove("active");
-        s2NavItem.classList.remove("active");
-        s3NavItem.classList.add("active");
-        sfNavItem.classList.remove("active");
+        activateSeasonNavItemInContext([false, false, true, false]);
     });
+
     $("#seasonFinaleLink").click(function () {
         $("#episodesCarousel").carousel(9);
-        s1NavItem.classList.remove("active");
-        s2NavItem.classList.remove("active");
-        s3NavItem.classList.remove("active");
-        sfNavItem.classList.add("active");
+        activateSeasonNavItemInContext([false, false, false, true]);
     });
 
     // Enable Carousel Controls
     $(".carousel-control-prev").click(function () {
         $("#episodesCarousel").carousel("prev");
     });
+
     $(".carousel-control-next").click(function () {
         $("#episodesCarousel").carousel("next");
     });
 
-    $("#episodesCarousel").on('slide.bs.carousel', function (item) {
-        switch (item.to) {
-            case 0:
-                s1NavItem.classList.add("active");
-                s2NavItem.classList.remove("active");
-                s3NavItem.classList.remove("active");
-                sfNavItem.classList.remove("active");
+    $("#episodesCarousel").on("slide.bs.carousel", function (item) {
+
+        const slideToIndex = item.to;
+
+        switch (true) {
+            case slideToIndex >= 9:
+                // Season Finale
+                activateSeasonNavItemInContext([false, false, false, true]);
                 break;
-            case 3:
-                s1NavItem.classList.remove("active");
-                s2NavItem.classList.add("active");
-                s3NavItem.classList.remove("active");
-                sfNavItem.classList.remove("active");
+            case slideToIndex >= 6:
+                // Season 03
+                activateSeasonNavItemInContext([false, false, true, false]);
                 break;
-            case 6:
-                s1NavItem.classList.remove("active");
-                s2NavItem.classList.remove("active");
-                s3NavItem.classList.add("active");
-                sfNavItem.classList.remove("active");
+            case slideToIndex >= 3:
+                // Season 02
+                activateSeasonNavItemInContext([false, true, false, false]);
                 break;
-            case 9:
-                s1NavItem.classList.remove("active");
-                s2NavItem.classList.remove("active");
-                s3NavItem.classList.remove("active");
-                sfNavItem.classList.add("active");
+            default:
+                // Season 01
+                activateSeasonNavItemInContext([true, false, false, false]);
         }
     });
 
     const detailsTabLink = document.querySelector("#details-tab-link");
-    const detailsTabNavItem = document.querySelector("#details-tab-nav-item");
     const episodesTabLink = document.querySelector("#episodes-tab-link");
-    const episodesTabNavItem = document.querySelector("#episodes-tab-nav-item");
     const suggestedTabLink = document.querySelector("#suggested-tab-link");
-    const suggestedTabNavItem = document.querySelector("#suggested-tab-nav-item");
+
+    // Containers
     const seasonsNavbar = document.querySelector("#seasons-navbar-container");
     const episodesCarousel = document.querySelector("#episodesCarousel");
 
-    detailsTabLink.addEventListener("click", function () {
-        episodesCarousel.style.visibility = "hidden";
-        seasonsNavbar.style.visibility = "hidden";
-        detailsTabNavItem.classList.add("active");
-        detailsTabNavItem.classList.add("navbar-tab-active");
-        episodesTabNavItem.classList.remove("active");
-        episodesTabNavItem.classList.remove("navbar-tab-active");
-        suggestedTabNavItem.classList.remove("active");
-        suggestedTabNavItem.classList.remove("navbar-tab-active");
-    });
+    function activateNavItemTabsInContext(options) {
+
+        const navItems = [];
+
+        navItems.push(document.querySelector("#episodes-tab-nav-item"));
+        navItems.push(document.querySelector("#suggested-tab-nav-item"));
+        navItems.push(document.querySelector("#details-tab-nav-item"));
+
+        for(let i = 0; i < options.length; i++) {
+            if (options[i] === true) {
+                navItems[i].classList.add("active");
+                navItems[i].classList.add("navbar-tab-active");
+            } else {
+                navItems[i].classList.remove("active");
+                navItems[i].classList.remove("navbar-tab-active");
+            }
+        }
+    }
 
     episodesTabLink.addEventListener("click", function () {
         episodesCarousel.style.visibility = "visible";
         seasonsNavbar.style.visibility = "visible";
-        detailsTabNavItem.classList.remove("active");
-        detailsTabNavItem.classList.remove("navbar-tab-active");
-        episodesTabNavItem.classList.add("active");
-        episodesTabNavItem.classList.add("navbar-tab-active");
-        suggestedTabNavItem.classList.remove("active");
-        suggestedTabNavItem.classList.remove("navbar-tab-active");
+        activateNavItemTabsInContext([true, false, false]);
     });
 
     suggestedTabLink.addEventListener("click", function () {
         episodesCarousel.style.visibility = "hidden";
         seasonsNavbar.style.visibility = "hidden";
-        detailsTabNavItem.classList.remove("active");
-        detailsTabNavItem.classList.remove("navbar-tab-active");
-        episodesTabNavItem.classList.remove("active");
-        episodesTabNavItem.classList.remove("navbar-tab-active");
-        suggestedTabNavItem.classList.add("active");
-        suggestedTabNavItem.classList.add("navbar-tab-active");
+        activateNavItemTabsInContext([false, true, false]);
+    });
+
+    detailsTabLink.addEventListener("click", function () {
+        episodesCarousel.style.visibility = "hidden";
+        seasonsNavbar.style.visibility = "hidden";
+        activateNavItemTabsInContext([false, false, true]);
     });
 
 });
