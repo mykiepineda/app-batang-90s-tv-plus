@@ -1,4 +1,4 @@
-<div class="container mt-3">
+<div class="container-fluid mt-3">
     <div class="row">
         <div class="col-4">
             <h4>Episode {{episode}} <a id="bookmark-button" href="/bookmark/{{episode}}"><i
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="col-6">
-            <video id="videoPlayer" width="650" controls muted="muted" autoplay>
+            <video id="videoPlayer" style="width:100%" controls muted="muted" autoplay>
                 <source src="/video/{{episode}}" type="video/mp4"/>
             </video>
         </div>

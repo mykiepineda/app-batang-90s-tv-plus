@@ -87,5 +87,9 @@ body, #bookmark-button {
 }
 
 .carousel-control-prev, .carousel-control-next {
-    width: 5% !important;
+    width: 10% !important;
+}
+
+.nav-item.active > .nav-link {
+    color: white !important;
 }

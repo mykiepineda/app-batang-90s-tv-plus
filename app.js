@@ -34,14 +34,19 @@ app.get("/", function (req, res) {
         let pagination = [];
         let page = 1;
         let videoList = [];
+        let j = 1;
         const cardsPerPage = 5; // varies depending on screen width
 
         for (let i = 0; i <= collection.length; i++) {
             if (i > 0 && (i % cardsPerPage === 0 || i === collection.length)) {
                 pagination.push({
                     page: page,
+                    season: j,
                     videos: videoList
                 });
+                if (page % 3 === 0) {
+                    j++;
+                }
                 page++;
                 videoList = [];
             }

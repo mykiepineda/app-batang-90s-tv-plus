@@ -1,7 +1,7 @@
-<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+<div id="episodesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
     <div class="carousel-inner">
         {{#each pagination}}
-            <div class="carousel-item {{#ifEquals page 1}}active{{/ifEquals}}">
+            <div id="s{{season}}" class="carousel-item {{#ifEquals page 1}}active{{/ifEquals}}">
                 <div id="card" class="d-flex flex-row justify-content-center">
                     {{#each videos}}
                         <div class="pt-2 ps-3 pb-2 pe-3">
