@@ -1,23 +1,124 @@
-<div class="container">
-    <div id="card" class="d-flex flex-wrap align-items-stretch">
-        {{#each videos}}
-            <div class="p-2">
-                <div class="card" style="width: 18rem; height: 500px;">
-                    <img class="card-img-top" src="/images/thumbnails/{{this.thumbnail}}" alt="Card image cap">
-                    <h4><i id="card-bookmark"
-                           class="fa {{#if this.bookmarked}}fa-bookmark{{else}}fa-bookmark-o{{/if}}"></i></h4>
-                    <div class="card-body d-flex flex-column justify-content-between">
-                        <div class="d-flex flex-column">
-                            <h5 class="card-title">{{this.episode}}. {{this.title}}</h5>
-                            <p class="card-text">{{this.synopsis}}</p>
+<section class="py-5">
+    <div id="foreground" class="py-5">
+        <div class="row py-lg-5 justify-content-end">
+            <!--            <div class="col-2"><img src="/images/cover.jpg" alt="covoer photo"></div>-->
+            <div class="col">
+                <h1>Kamen Rider Black RX</h1>
+                <p><em><strong>Kamen Rider Black RX</strong></em> (仮面ライダーBLACK RX, Kamen Raidā Burakku Āru Ekkusu,
+                    Masked Rider Black RX) is a
+                    Japanese
+                    tokusatsu drama and the ninth installment of the Kamen Rider Series. Debuting as the 9th and final
+                    entry
+                    of
+                    the Showa Era, it serves as a direct sequel to Kamen Rider Black and aired from October 23, 1988 to
+                    September 24, 1989 on the Mainichi Broadcasting System and the Tokyo Broadcasting System. The
+                    47-episode
+                    series was a joint collaboration between Ishimori Productions and Toei Company. The show aired in
+                    Indonesia
+                    under the title Ksatria Baja Hitam RX. The show aired in Hong Kong under the title 幪面超人RX.<br>
+
+                    The series was adapted by Saban in North America as Saban's Masked Rider in an attempt to integrate
+                    its
+                    universe with the Power RangersIcon-crosswiki.png series.</p>
+                <a href="#" class="btn btn-light p-3"><i class="fa fa-play" aria-hidden="true"></i><strong> Play</strong></a>
+                <a href="#" class="btn btn-light p-3"><strong>Add to Watchlist</strong></a>
+            </div>
+        </div>
+    </div>
+    <div id="background">
+        <!-- Placeholder only -->
+    </div>
+</section>
+
+<div>
+    <nav id="navbar-tab" class="navbar navbar-expand-lg navbar-dark bg-dark"
+         style="--bs-bg-opacity: 0;">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown" style="border-bottom: 1px white solid;">
+            <ul class="navbar-nav">
+                <div class="pe-5">
+                    <li class="nav-item active navbar-tab-active">
+                        <a class="nav-link" href="#"><h3>EPISODES</h3></a>
+                    </li>
+                </div>
+                <div class="pe-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><h3>SUGGESTED</h3></a>
+                    </li>
+                </div>
+                <div class="pe-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><h3>DETAILS</h3></a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="--bs-bg-opacity: 0;">
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <div class="pe-5">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><h5>Season 01</h5></a>
+                    </li>
+                </div>
+                <div class="pe-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><h5>Season 02</h5></a>
+                    </li>
+                </div>
+                <div class="pe-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><h5>Season 03</h5></a>
+                    </li>
+                </div>
+                <div class="pe-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><h5>Season 04</h5></a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+    </nav>
+</div>
+
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        {{#each pagination}}
+            <div class="carousel-item {{#ifEquals page 1}}active{{/ifEquals}}">
+                <div id="card" class="d-flex flex-row justify-content-center">
+                    {{#each videos}}
+                        <div class="p-2">
+                            <div class="card border-0" style="width: 18rem; height: 500px">
+                                <a href="/episode/{{episode}}"><img id="card-image" class="card-img-top rounded-0"
+                                                                    src="/images/thumbnails/{{thumbnail}}"
+                                                                    alt="Card image cap">
+                                    <h1><i id="card-play-button" class="fa fa-play-circle-o opacity-50"
+                                           aria-hidden="true"></i></h1>
+                                    <h4><i id="card-bookmark"
+                                           class="fa {{#if bookmarked}}fa-bookmark{{else}}fa-bookmark-o{{/if}}"></i>
+                                    </h4></a>
+                                <div class="card-body d-flex flex-column justify-content-between">
+                                    <div class="d-flex flex-column">
+                                        <h5 class="card-title">Episode {{episode}}</h5>
+                                        <h4>{{title}}</h4>
+                                        <p class="card-text">{{synopsis}}</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="d-flex flex-column">
-                            <a href="/episode/{{this.episode}}" class="btn btn-primary">Watch Episode <i
-                                    class="fa fa-chevron-right"></i></a>
-                        </div>
-                    </div>
+                    {{/each}}
                 </div>
             </div>
         {{/each}}
     </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
 </div>
