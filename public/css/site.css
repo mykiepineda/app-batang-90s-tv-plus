@@ -15,6 +15,10 @@
     top: 70px;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 body {
     background-color: black;
 }
@@ -26,15 +30,16 @@ body, #bookmark-button {
 #card-bookmark {
     position: absolute;
     color: white;
-    top: 5px;
-    right: 5px;
+    top: 10px;
+    right: 10px;
 }
 
 #card-play-button {
+    visibility: hidden;
     position: absolute;
     color: white;
-    top: 5.5rem;
-    right: 9rem;
+    top: 210px;
+    left: 20px;
 }
 
 .card, .card-body {
@@ -51,8 +56,14 @@ body, #bookmark-button {
     padding-right: 0 !important;
 }
 
-#card-image:hover + h1 > #card-play-button {
-    transform: scale(1.5);
+#card-body:hover #card-image-container {
+    border: 5px white solid;
+    transition: border 0.15s ease;
+}
+
+#card-body:hover #card-play-button {
+    visibility: visible;
+    transform: scale(1.2);
     transition: transform 0.15s ease;
 }
 
@@ -76,5 +87,5 @@ body, #bookmark-button {
 }
 
 .carousel-control-prev, .carousel-control-next {
-    width: 3% !important;
+    width: 5% !important;
 }

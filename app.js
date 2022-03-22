@@ -34,7 +34,7 @@ app.get("/", function (req, res) {
         let pagination = [];
         let page = 1;
         let videoList = [];
-        const cardsPerPage = 8; // varies depending on screen width
+        const cardsPerPage = 5; // varies depending on screen width
 
         for (let i = 0; i <= collection.length; i++) {
             if (i > 0 && (i % cardsPerPage === 0 || i === collection.length)) {
