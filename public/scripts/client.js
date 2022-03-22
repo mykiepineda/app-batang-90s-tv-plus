@@ -92,4 +92,46 @@ window.addEventListener("load", function () {
         }
     });
 
+    const detailsTabLink = document.querySelector("#details-tab-link");
+    const detailsTabNavItem = document.querySelector("#details-tab-nav-item");
+    const episodesTabLink = document.querySelector("#episodes-tab-link");
+    const episodesTabNavItem = document.querySelector("#episodes-tab-nav-item");
+    const suggestedTabLink = document.querySelector("#suggested-tab-link");
+    const suggestedTabNavItem = document.querySelector("#suggested-tab-nav-item");
+    const seasonsNavbar = document.querySelector("#seasons-navbar-container");
+    const episodesCarousel = document.querySelector("#episodesCarousel");
+
+    detailsTabLink.addEventListener("click", function () {
+        episodesCarousel.style.visibility = "hidden";
+        seasonsNavbar.style.visibility = "hidden";
+        detailsTabNavItem.classList.add("active");
+        detailsTabNavItem.classList.add("navbar-tab-active");
+        episodesTabNavItem.classList.remove("active");
+        episodesTabNavItem.classList.remove("navbar-tab-active");
+        suggestedTabNavItem.classList.remove("active");
+        suggestedTabNavItem.classList.remove("navbar-tab-active");
+    });
+
+    episodesTabLink.addEventListener("click", function () {
+        episodesCarousel.style.visibility = "visible";
+        seasonsNavbar.style.visibility = "visible";
+        detailsTabNavItem.classList.remove("active");
+        detailsTabNavItem.classList.remove("navbar-tab-active");
+        episodesTabNavItem.classList.add("active");
+        episodesTabNavItem.classList.add("navbar-tab-active");
+        suggestedTabNavItem.classList.remove("active");
+        suggestedTabNavItem.classList.remove("navbar-tab-active");
+    });
+
+    suggestedTabLink.addEventListener("click", function () {
+        episodesCarousel.style.visibility = "hidden";
+        seasonsNavbar.style.visibility = "hidden";
+        detailsTabNavItem.classList.remove("active");
+        detailsTabNavItem.classList.remove("navbar-tab-active");
+        episodesTabNavItem.classList.remove("active");
+        episodesTabNavItem.classList.remove("navbar-tab-active");
+        suggestedTabNavItem.classList.add("active");
+        suggestedTabNavItem.classList.add("navbar-tab-active");
+    });
+
 });
