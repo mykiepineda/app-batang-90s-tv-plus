@@ -33,19 +33,20 @@ app.get("/", function (req, res) {
 
         let pagination = [];
         let page = 1;
-        let videoArray = [];
+        let videoList = [];
+        const cardsPerPage = 8; // varies depending on screen width
 
         for (let i = 0; i <= collection.length; i++) {
-            if (i > 0 && (i % 5 === 0 || i === collection.length)) {
+            if (i > 0 && (i % cardsPerPage === 0 || i === collection.length)) {
                 pagination.push({
                     page: page,
-                    videos: videoArray
+                    videos: videoList
                 });
                 page++;
-                videoArray = [];
+                videoList = [];
             }
             if (i < collection.length) {
-                videoArray.push(collection[i]);
+                videoList.push(collection[i]);
             }
         }
 
