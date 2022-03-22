@@ -1,2 +1,5 @@
 # my-streaming-site
-My Streaming Site
+
+Disney+ clone
+
+![](./specs/ui_screenshot.jpg)
