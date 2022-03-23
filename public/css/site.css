@@ -38,11 +38,11 @@ body, #bookmark-button {
     visibility: hidden;
     position: absolute;
     color: white;
-    top: 210px;
+    top: 160px;
     left: 20px;
 }
 
-.card, .card-body {
+#card-body {
     background-color: black;
     color: white;
 }
@@ -65,6 +65,16 @@ body, #bookmark-button {
     visibility: visible;
     transform: scale(1.2);
     transition: transform 0.15s ease;
+}
+
+#card-image {
+    height: 200px;
+    object-fit: cover;
+}
+
+#card-body {
+    width: calc((100vw - 200px) / 5);
+    height: 500px;
 }
 
 /* Override Bootstrap styles */

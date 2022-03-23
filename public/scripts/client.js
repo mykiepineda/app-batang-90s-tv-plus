@@ -41,35 +41,35 @@ window.addEventListener("load", function () {
 
     // jQuery carousel methods
     $("#season01Link").click(function () {
-        $("#episodesCarousel").carousel(0);
+        $("#episodes-carousel").carousel(0);
         activateSeasonNavItemInContext([true, false, false, false]);
     });
 
     $("#season02Link").click(function () {
-        $("#episodesCarousel").carousel(3);
+        $("#episodes-carousel").carousel(3);
         activateSeasonNavItemInContext([false, true, false, false]);
     });
 
     $("#season03Link").click(function () {
-        $("#episodesCarousel").carousel(6);
+        $("#episodes-carousel").carousel(6);
         activateSeasonNavItemInContext([false, false, true, false]);
     });
 
     $("#seasonFinaleLink").click(function () {
-        $("#episodesCarousel").carousel(9);
+        $("#episodes-carousel").carousel(9);
         activateSeasonNavItemInContext([false, false, false, true]);
     });
 
     // Enable Carousel Controls
     $(".carousel-control-prev").click(function () {
-        $("#episodesCarousel").carousel("prev");
+        $("#episodes-carousel").carousel("prev");
     });
 
     $(".carousel-control-next").click(function () {
-        $("#episodesCarousel").carousel("next");
+        $("#episodes-carousel").carousel("next");
     });
 
-    $("#episodesCarousel").on("slide.bs.carousel", function (item) {
+    $("#episodes-carousel").on("slide.bs.carousel", function (item) {
 
         const slideToIndex = item.to;
 
@@ -98,7 +98,7 @@ window.addEventListener("load", function () {
 
     // Containers
     const seasonsNavbar = document.querySelector("#seasons-navbar-container");
-    const episodesCarousel = document.querySelector("#episodesCarousel");
+    const episodesCarousel = document.querySelector("#episodes-carousel");
 
     function activateNavItemTabsInContext(options) {
 
