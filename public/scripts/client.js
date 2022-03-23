@@ -90,6 +90,7 @@ window.addEventListener("load", function () {
     // Containers
     const seasonsNavbar = document.querySelector("#seasons-navbar-container");
     const episodesCarousel = document.querySelector("#episodes-carousel");
+    const detailsSection = document.querySelector("#details-section");
 
     function activateNavItemTabsInContext(options) {
 
@@ -111,20 +112,23 @@ window.addEventListener("load", function () {
     }
 
     episodesTabLink.addEventListener("click", function () {
-        episodesCarousel.style.visibility = "visible";
-        seasonsNavbar.style.visibility = "visible";
+        episodesCarousel.style.display = "block";
+        seasonsNavbar.style.display = "block";
+        detailsSection.style.display = "none";
         activateNavItemTabsInContext([true, false, false]);
     });
 
     suggestedTabLink.addEventListener("click", function () {
-        episodesCarousel.style.visibility = "hidden";
-        seasonsNavbar.style.visibility = "hidden";
+        episodesCarousel.style.display = "none";
+        seasonsNavbar.style.display = "none";
+        detailsSection.style.display = "none";
         activateNavItemTabsInContext([false, true, false]);
     });
 
     detailsTabLink.addEventListener("click", function () {
-        episodesCarousel.style.visibility = "hidden";
-        seasonsNavbar.style.visibility = "hidden";
+        episodesCarousel.style.display = "none";
+        seasonsNavbar.style.display = "none";
+        detailsSection.style.display = "block";
         activateNavItemTabsInContext([false, false, true]);
     });
 
