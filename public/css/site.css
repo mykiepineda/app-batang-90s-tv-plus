@@ -98,6 +98,45 @@ body, #bookmark-button {
     border: 5px white solid;
 }
 
+#suggested-section img {
+    width: 18rem;
+    height: 13rem;
+    object-fit: cover;
+    transition: opacity 0.30s ease;
+}
+
+#suggested-section .card:hover img {
+    opacity: 0.3;
+}
+
+#suggested-section .card {
+    background-color: transparent;
+    border: 1px white solid;
+}
+
+.my-card-title {
+    width: 18rem;
+    height: 13rem;
+    position: absolute;
+    text-align: center;
+    opacity: 0;
+    color: white;
+    transition: opacity 0.30s ease;
+}
+
+#suggested-section .card:hover .my-card-title {
+    opacity: 1;
+}
+
+
+#suggested-section .card {
+    transition: transform 0.30s ease;
+}
+
+#suggested-section .card:hover {
+    transform: scale(1.1);
+}
+
 #card-body:hover {
     transform: scale(1.1);
 }
