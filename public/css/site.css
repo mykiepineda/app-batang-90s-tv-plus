@@ -1,6 +1,6 @@
 #foreground {
     padding-left: 50%;
-    padding-right: 20%;
+    padding-right: 10%;
 }
 
 #background {
@@ -15,6 +15,23 @@
 
 a {
     text-decoration: none !important;
+    color: white;
+}
+
+a:hover {
+    color: white;
+    opacity: 0.80;
+}
+
+.the-dot::before {
+    display: inline-block;
+    margin: 0 0.5rem 0.2rem;
+    content: "";
+    font-size: 0.7em; /* h6 */
+    padding: 1px;
+    border-radius: 50%;
+    vertical-align: middle;
+    background-color: white;
 }
 
 body {
@@ -110,6 +127,10 @@ body, #bookmark-button {
 }
 
 /* Override Bootstrap styles */
+
+.fa-star {
+    color: #f3ce13; /* IMDb yellow */
+}
 
 .mr-auto {
     margin-right: auto !important;
