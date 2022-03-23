@@ -60,15 +60,6 @@ window.addEventListener("load", function () {
         activateSeasonNavItemInContext([false, false, false, true]);
     });
 
-    // Enable Carousel Controls
-    $(".carousel-control-prev").click(function () {
-        $("#episodes-carousel").carousel("prev");
-    });
-
-    $(".carousel-control-next").click(function () {
-        $("#episodes-carousel").carousel("next");
-    });
-
     $("#episodes-carousel").on("slide.bs.carousel", function (item) {
 
         const slideToIndex = item.to;
