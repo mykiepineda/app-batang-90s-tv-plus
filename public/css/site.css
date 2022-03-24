@@ -1,23 +1,14 @@
 #foreground {
     padding-left: 50%;
     padding-right: 10%;
-    z-index: 5;
 }
 
-#background-layer-0 {
-    background: linear-gradient(black, darkgreen, black, black);
-}
-
-#background-layer-1 {
-    background: url("/images/background_cutout.png");
+body {
+    background: url("/images/background_cutout.png"), linear-gradient(black, darkgreen, black, black);
     background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.2;
+    background-size: contain;
+    background-position: right;
+    background-attachment: fixed;
 }
 
 #background {
@@ -26,7 +17,8 @@
     width: 100%;
     height: 70%;
     position: absolute;
-    top: 70px;
+    top: 100px;
+    z-index: -5;
 }
 
 a {
@@ -49,10 +41,6 @@ a:hover {
     vertical-align: middle;
     background-color: white;
 }
-
-/*body {*/
-/*    background-color: black;*/
-/*}*/
 
 body, #bookmark-button {
     color: white;
