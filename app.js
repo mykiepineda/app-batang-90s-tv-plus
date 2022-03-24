@@ -20,6 +20,45 @@ app.use("/css", express.static(path.join(__dirname, "node_modules/bootstrap/dist
 app.use("/js", express.static(path.join(__dirname, "node_modules/bootstrap/dist/js")));
 app.use("/jquery", express.static(path.join(__dirname, "node_modules/jquery/dist")));
 
+const AWS = require("aws-sdk");
+
+app.get("/download", function (req, res) {
+
+    const fileKey = "kamen-rider-black-rx/01.mp4";
+
+    const params = {
+        accessKeyId: "AKIAYDAXBKHVEAZTEFM6",
+        secretAccessKey: "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",
+        region: "ap-southeast-2"
+    }
+
+    AWS.config.update(params);
+
+    const s3 = new AWS.S3();
+    const options = {
+        Bucket: "batang-90s-tv-plus-videos",
+        Key: fileKey
+    };
+
+    res.attachment(fileKey);
+
+    s3.headObject(options, function(err, data) {
+
+        // const data = {
+        //     AcceptRanges: 'bytes',
+        //         LastModified: 2022-03-23T23:32:27.000Z,
+        //     ContentLength: 268749861,
+        //     ETag: '"90b7264547841edf069ef640134ee186-16"',
+        //     ContentType: 'video/mp4',
+        //     Metadata: {}
+        // }
+
+        const fileStream = s3.getObject(options).createReadStream();
+        fileStream.pipe(res);
+    });
+
+})
+
 app.get("/", function (req, res) {
 
     let sortBy = req.query.sortBy;
@@ -122,6 +161,8 @@ app.get("/video/:episode", function (req, res) {
     if (!range) {
         res.status(400).send("Requires Range header");
     }
+
+    console.log(range);
 
     // get video stats (about 61MB)
     const videoPath = __dirname + `/videos/${videoId}.mp4`;
