@@ -1,5 +1,4 @@
 const express = require("express");
-const fs = require("fs");
 const app = express();
 const port = 3000;
 
@@ -15,12 +14,6 @@ mongoose.connect(`mongodb+srv://mykiepineda:P1n3d%40j0hN@cluster0.omg3p.mongodb.
 const handlebars = require("express-handlebars");
 app.engine("handlebars", handlebars.engine({defaultLayout: "main", helpers: require("./modules/handlebars-helpers")}));
 app.set("view engine", "handlebars");
-
-app.use("/css", express.static(path.join(__dirname, "node_modules/bootstrap/dist/css")));
-app.use("/js", express.static(path.join(__dirname, "node_modules/bootstrap/dist/js")));
-app.use("/jquery", express.static(path.join(__dirname, "node_modules/jquery/dist")));
-
-const mime = require("mime-types");
 
 const AWS = require("aws-sdk");
 
@@ -149,12 +142,14 @@ async function getContentLength(s3, params) {
 app.get("/video/:episode", async function (req, res, next) {
 
     // Ensure there is a range given for the video
+    // video HTML DOM is responsible for this?
     const range = req.headers.range;
     if (!range) {
         res.status(400).send("Requires Range header");
     }
 
-    const key = `kamen-rider-black-rx/${req.params.episode}.mp4`;
+    const show = "kamen-rider-black-rx";
+    const key = `${show}/${req.params.episode}.mp4`;
 
     const s3 = new AWS.S3();
 
@@ -167,9 +162,9 @@ app.get("/video/:episode", async function (req, res, next) {
     const videoSize = await getContentLength(s3, params);
 
     // Calculate for Byte-Range
-    const CHUNK_SIZE = 10 ** 6; // 1MB; Exponentiation operator
-    const start = Number(range.replace(/\D/g, "")); // Example: "bytes=32324-"
-    const end = Math.min(start + CHUNK_SIZE, videoSize - 1); // is - 1 really necessary ?
+    const CHUNK_SIZE = 10 ** 6; // 1 MB
+    const start = Number(range.replace(/\D/g, "")); // Strip value from ie. "bytes=1000001-"
+    const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
 
     // Once we know the content-length, start requesting for the actual s3 object in chunks
     params.Range = `bytes=${start}-${end}`;
@@ -178,16 +173,16 @@ app.get("/video/:episode", async function (req, res, next) {
 
     // forward errors
     stream.on("error", function error(err) {
-        //continue to the next middlewares
         return next();
     });
 
     // Create headers
+    const contentLength = end - start + 1;
     const headers = {
         "Content-Range": `bytes ${start}-${end}/${videoSize}`,
         "Accept-Ranges": "bytes",
-        "Content-Length": videoSize,
-        "Content-Type": mime.lookup(key)
+        "Content-Length": contentLength,
+        "Content-Type": "video/mp4"
     };
 
     // HTTP Status 206 for Partial Content
