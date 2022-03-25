@@ -7,4 +7,4 @@ Streaming platform of my childhood favourite TV shows in the 90s:
 4. Voltes V
 5. Masked Rider Black RX
 
-![](./specs/ui_screenshot_2.jpg)
+![](./specs/ui_screenshot_3.jpg)

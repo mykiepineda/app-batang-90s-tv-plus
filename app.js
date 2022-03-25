@@ -22,6 +22,8 @@ app.use("/jquery", express.static(path.join(__dirname, "node_modules/jquery/dist
 
 app.get("/", function (req, res) {
 
+    res.locals.suggestions = require("./mock_data/suggestions.json");
+
     let sortBy = req.query.sortBy;
 
     if (sortBy === undefined) {

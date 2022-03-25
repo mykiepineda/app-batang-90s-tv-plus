@@ -1,58 +1,19 @@
 <div class="my-container">
     <div class="d-flex flex-row flex-wrap">
+        {{#each suggestions}}
         <div class="pt-lg-5 pe-lg-5">
             <div class="card">
                 <div class="d-flex flex-column">
                     <div>
-                        <img class="card-img-top" src="/images/Kamen_rider_black_rx_title_banner.jpg"
+                        <img class="card-img-top" src="/images/suggestions/covers/{{cover}}"
                              alt="Card image cap">
                     </div>
                     <div class="my-card-title d-flex justify-content-center align-items-center">
-                        <h3>Masked Rider Black RX</h3>
+                        <h3>{{name}}</h3>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="pt-lg-5 pe-lg-5">
-            <div class="card">
-                <div>
-                    <img class="card-img-top" src="/images/Shaider_title_banner.webp" alt="Card image cap">
-                </div>
-                <div class="my-card-title d-flex justify-content-center align-items-center">
-                    <h3>Shaider</h3>
-                </div>
-            </div>
-        </div>
-        <div class="pt-lg-5 pe-lg-5">
-            <div class="card">
-                <div>
-                    <img class="card-img-top" src="/images/Kamen_rider_black_title_banner.jpg" alt="Card image cap">
-                </div>
-                <div class="my-card-title d-flex justify-content-center align-items-center">
-                    <h3>Masked Rider Black</h3>
-                </div>
-            </div>
-        </div>
-        <div class="pt-lg-5 pe-lg-5">
-            <div class="card">
-                <div>
-                    <img class="card-img-top" src="/images/Hikari_sentai_maskman_title_banner.webp"
-                         alt="Card image cap">
-                </div>
-                <div class="my-card-title d-flex justify-content-center align-items-center">
-                    <h3>Hikari Sentai Maskman</h3>
-                </div>
-            </div>
-        </div>
-        <div class="pt-lg-5 pe-lg-5">
-            <div class="card">
-                <div>
-                    <img class="card-img-top" src="/images/Voltes_v_title_banner.jpg" alt="Card image cap">
-                </div>
-                <div class="my-card-title d-flex justify-content-center align-items-center">
-                    <h3>Voltes V</h3>
-                </div>
-            </div>
-        </div>
+        {{/each}}
     </div>
 </div>
