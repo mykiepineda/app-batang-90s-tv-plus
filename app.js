@@ -105,9 +105,11 @@ app.get("/episode/:id", async function (req, res) {
 
     await videos.find({"episode": episodeId}).then(function (collection) {
         const video = collection[0].toJSON();
+        res.locals.show = "kamen-rider-black-rx";
         res.locals.episode = video.episode;
         res.locals.title = video.title;
         res.locals.synopsis = video.synopsis;
+        res.locals.thumbnail = video.thumbnail;
         res.locals.bookmarked = video.bookmarked;
         res.locals.prevEpisode = getOtherEpisode(video.episode, false);
         res.locals.nextEpisode = getOtherEpisode(video.episode, true);
@@ -141,16 +143,16 @@ async function getContentLength(s3, params) {
 
 }
 
-app.get("/video/:episode", async function (req, res, next) {
+app.get("/show/:show/video/:episode", async function (req, res, next) {
 
     // Ensure there is a range given for the video
     // video HTML DOM is responsible for this?
     const range = req.headers.range;
     if (!range) {
-        res.status(400).send("Requires Range header");
+        return res.status(400).send("Requires Range Header");
     }
 
-    const show = "kamen-rider-black-rx";
+    const show = req.params.show;
     const key = `${show}/${req.params.episode}.mp4`;
 
     const s3 = new AWS.S3();
@@ -165,7 +167,7 @@ app.get("/video/:episode", async function (req, res, next) {
 
     // Calculate for Byte-Range
     const CHUNK_SIZE = 10 ** 6; // 1 MB
-    const start = Number(range.replace(/\D/g, "")); // Strip value from ie. "bytes=1000001-"
+    const start = Number(range.replace(/\D/g, "")); // Strips numeric value from ie. "bytes=1000001-"
     const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
 
     // Once we know the content-length, start requesting for the actual s3 object in chunks

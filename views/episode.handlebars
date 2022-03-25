@@ -5,21 +5,24 @@
                     class="fa {{#if bookmarked}}fa-bookmark{{else}}fa-bookmark-o{{/if}}"></i></a></h4>
             <h3>{{title}}</h3>
             <p>{{synopsis}}</p>
-            <div>
+        </div>
+        <div class="col-6">
+            <video id="videoPlayer" style="width:100%" controls controlsList="nodownload"
+                   poster="/images/thumbnails/{{thumbnail}}" autoplay>
+                <source src="/show/{{show}}/video/{{episode}}" type="video/mp4"/>
+            </video>
+            <div id="video-controls">
                 {{#unless reachedStart}}
                     <a href="/episode/{{prevEpisode}}" role="button" class="btn btn-light"><i
-                            class="fa fa-step-backward"></i> Previous Episode</a>
+                            class="fa fa-step-backward"></i></a>
                 {{/unless}}
+                <button type="button" class="btn btn-light"><i class="fa fa-play"></i></button>
                 {{#unless reachedEnd}}
-                    <a href="/episode/{{nextEpisode}}" role="button" class="btn btn-light">Next Episode <i
+                    <a href="/episode/{{nextEpisode}}" role="button" class="btn btn-light"><i
                             class="fa fa-step-forward"></i></a>
                 {{/unless}}
             </div>
         </div>
-        <div class="col-6">
-            <video id="videoPlayer" style="width:100%" controls muted="muted" autoplay>
-                <source src="/video/{{episode}}" type="video/mp4"/>
-            </video>
-        </div>
     </div>
+</div>
 </div>
