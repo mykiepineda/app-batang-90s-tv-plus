@@ -1,7 +1,3 @@
-html {
-    overflow-y:scroll; /* fixed scrollbar */
-}
-
 #foreground {
     padding-left: 50%;
     padding-right: 10%;
