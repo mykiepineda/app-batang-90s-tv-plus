@@ -1,3 +1,7 @@
+html {
+    overflow-y:scroll; /* fixed scrollbar */
+}
+
 #foreground {
     padding-left: 50%;
     padding-right: 10%;
@@ -14,10 +18,12 @@ body {
 #background {
     background: url("/images/kamen_rider_black_rx_logo_by_mockingraffy_deibyqu_deviantart_resized.png");
     background-repeat: no-repeat;
+    background-position: 10% 100px;
+    /* Div container */
     width: 100%;
-    height: 70%;
+    height: 100%;
     position: absolute;
-    top: 100px;
+    top: 0;
     z-index: -5;
 }
 
