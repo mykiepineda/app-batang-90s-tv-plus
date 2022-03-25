@@ -20,44 +20,15 @@ app.use("/css", express.static(path.join(__dirname, "node_modules/bootstrap/dist
 app.use("/js", express.static(path.join(__dirname, "node_modules/bootstrap/dist/js")));
 app.use("/jquery", express.static(path.join(__dirname, "node_modules/jquery/dist")));
 
+const mime = require("mime-types");
+
 const AWS = require("aws-sdk");
 
-app.get("/download", function (req, res) {
-
-    const fileKey = "kamen-rider-black-rx/01.mp4";
-
-    const params = {
-        accessKeyId: "AKIAYDAXBKHVEAZTEFM6",
-        secretAccessKey: "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",
-        region: "ap-southeast-2"
-    }
-
-    AWS.config.update(params);
-
-    const s3 = new AWS.S3();
-    const options = {
-        Bucket: "batang-90s-tv-plus-videos",
-        Key: fileKey
-    };
-
-    res.attachment(fileKey);
-
-    s3.headObject(options, function(err, data) {
-
-        // const data = {
-        //     AcceptRanges: 'bytes',
-        //         LastModified: 2022-03-23T23:32:27.000Z,
-        //     ContentLength: 268749861,
-        //     ETag: '"90b7264547841edf069ef640134ee186-16"',
-        //     ContentType: 'video/mp4',
-        //     Metadata: {}
-        // }
-
-        const fileStream = s3.getObject(options).createReadStream();
-        fileStream.pipe(res);
-    });
-
-})
+AWS.config.update({
+    accessKeyId: "AKIAYDAXBKHVEAZTEFM6",
+    secretAccessKey: "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",
+    region: "ap-southeast-2"
+});
 
 app.get("/", function (req, res) {
 
@@ -100,7 +71,7 @@ app.get("/", function (req, res) {
 
 });
 
-app.get('/bookmarked', async function (req, res) {
+app.get("/bookmarked", async function (req, res) {
     res.locals.videos = await videos.find({bookmarked: true}).sort("episode").lean();
 
     res.render("home");
@@ -152,9 +123,30 @@ app.get("/episode/:id", async function (req, res) {
     res.render("episode");
 });
 
-app.get("/video/:episode", function (req, res) {
+async function getContentLength(s3, params) {
 
-    const videoId = req.params.episode;
+    let videoSize = 0;
+
+    const promise = new Promise(function (resolve, reject) {
+        s3.headObject(params, function (err, data) {
+            if (err) {
+                reject(0);
+            }
+            resolve(data.ContentLength);
+        });
+    });
+
+    const thenPromise = promise.then(function (value) {
+        videoSize = value;
+    });
+
+    await thenPromise;
+
+    return videoSize;
+
+}
+
+app.get("/video/:episode", async function (req, res, next) {
 
     // Ensure there is a range given for the video
     const range = req.headers.range;
@@ -162,35 +154,48 @@ app.get("/video/:episode", function (req, res) {
         res.status(400).send("Requires Range header");
     }
 
-    console.log(range);
+    const key = `kamen-rider-black-rx/${req.params.episode}.mp4`;
 
-    // get video stats (about 61MB)
-    const videoPath = __dirname + `/videos/${videoId}.mp4`;
-    const videoSize = fs.statSync(videoPath).size;
+    const s3 = new AWS.S3();
 
-    // Parse Range
-    // Example: "bytes=32324-"
-    const CHUNK_SIZE = 10 ** 6; // 1MB
-    const start = Number(range.replace(/\D/g, ""));
-    const end = Math.min(start + CHUNK_SIZE, videoSize - 1);
+    const params = {
+        Bucket: "batang-90s-tv-plus-videos",
+        Key: key
+    };
+
+    // Check first the content-length of the file in s3 bucket so that we can calculate for the Byte-Range
+    const videoSize = await getContentLength(s3, params);
+
+    // Calculate for Byte-Range
+    const CHUNK_SIZE = 10 ** 6; // 1MB; Exponentiation operator
+    const start = Number(range.replace(/\D/g, "")); // Example: "bytes=32324-"
+    const end = Math.min(start + CHUNK_SIZE, videoSize - 1); // is - 1 really necessary ?
+
+    // Once we know the content-length, start requesting for the actual s3 object in chunks
+    params.Range = `bytes=${start}-${end}`;
+
+    const stream = s3.getObject(params).createReadStream();
+
+    // forward errors
+    stream.on("error", function error(err) {
+        //continue to the next middlewares
+        return next();
+    });
 
     // Create headers
-    const contentLength = end - start + 1;
     const headers = {
         "Content-Range": `bytes ${start}-${end}/${videoSize}`,
         "Accept-Ranges": "bytes",
-        "Content-Length": contentLength,
-        "Content-Type": "video/mp4",
+        "Content-Length": videoSize,
+        "Content-Type": mime.lookup(key)
     };
 
     // HTTP Status 206 for Partial Content
     res.writeHead(206, headers);
 
-    // create video read stream for this particular chunk
-    const videoStream = fs.createReadStream(videoPath, {start, end});
+    // Pipe the s3 object to the response
+    stream.pipe(res);
 
-    // Stream the video chunk to the client
-    videoStream.pipe(res);
 });
 
 app.get("/bookmark/:episode", async function (req, res) {
