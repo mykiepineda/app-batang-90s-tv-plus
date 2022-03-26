@@ -15,7 +15,7 @@ window.addEventListener("load", function () {
     const fullscreenIcon = fullscreen.querySelector("i");
 
     playPauseButton.addEventListener("click", function (event) {
-        if (videoPlayer.paused) {
+        if (!(videoPlayer.currentTime > 0 && !videoPlayer.paused && !videoPlayer.ended && videoPlayer.readyState > 2)) {
             videoPlayer.play();
             playPauseIcon.classList.remove("fa-play");
             playPauseIcon.classList.add("fa-pause");
@@ -26,28 +26,51 @@ window.addEventListener("load", function () {
         }
     })
 
+    function setVolumeMuteState() {
+        volumeIcon.classList.add("fa-volume-xmark");
+        volumeIcon.classList.remove("fa-volume-high");
+        volumeIcon.classList.remove("fa-volume-low");
+    }
+
+    function setVolumeUnmuteState() {
+        volumeIcon.classList.remove("fa-volume-xmark");
+        if (videoPlayer.volume > 0.5) {
+            volumeIcon.classList.add("fa-volume-high");
+            volumeIcon.classList.remove("fa-volume-low");
+        } else if (videoPlayer.volume > 0) {
+            volumeIcon.classList.remove("fa-volume-high");
+            volumeIcon.classList.add("fa-volume-low");
+        }
+    }
+
+    // On load state
+    if (videoPlayer.muted) {
+        setVolumeMuteState();
+        volumeSlider.value = "0";
+    } else {
+        setVolumeUnmuteState();
+        volumeSlider.value = videoPlayer.volume;
+    }
+
     volumeButton.addEventListener("click", function (event) {
         videoPlayer.muted = !videoPlayer.muted;
-        volumeIcon.classList.toggle("fa-volume-high");
-        volumeIcon.classList.toggle("fa-volume-xmark");
+        if (videoPlayer.muted) {
+            setVolumeMuteState();
+            volumeSlider.value = "0";
+        } else {
+            setVolumeUnmuteState();
+            volumeSlider.value = videoPlayer.volume;
+        }
     });
 
     volumeSlider.addEventListener("mousemove", function (event) {
         videoPlayer.volume = event.target.value;
-
-        if (videoPlayer.muted || videoPlayer.volume === 0) {
-            volumeIcon.classList.add("fa-volume-xmark");
-            volumeIcon.classList.remove("fa-volume-high");
-            volumeIcon.classList.remove("fa-volume-low");
+        if (videoPlayer.muted) {
+            setVolumeMuteState();
+            volumeSlider.value = "0";
         } else {
-            volumeIcon.classList.remove("fa-volume-xmark");
-            if (videoPlayer.volume <= 0.5) {
-                volumeIcon.classList.remove("fa-volume-high");
-                volumeIcon.classList.add("fa-volume-low");
-            } else if (videoPlayer.volume > 0.5) {
-                volumeIcon.classList.add("fa-volume-high");
-                volumeIcon.classList.remove("fa-volume-low");
-            }
+            setVolumeUnmuteState();
+            volumeSlider.value = videoPlayer.volume;
         }
     });
 
