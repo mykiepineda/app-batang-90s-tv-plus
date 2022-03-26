@@ -33,27 +33,18 @@ window.addEventListener("load", function () {
     }
 
     function setVolumeUnmuteState() {
-        volumeIcon.classList.remove("fa-volume-xmark");
         if (videoPlayer.volume > 0.5) {
+            volumeIcon.classList.remove("fa-volume-xmark");
             volumeIcon.classList.add("fa-volume-high");
             volumeIcon.classList.remove("fa-volume-low");
         } else if (videoPlayer.volume > 0) {
+            volumeIcon.classList.remove("fa-volume-xmark");
             volumeIcon.classList.remove("fa-volume-high");
             volumeIcon.classList.add("fa-volume-low");
         }
     }
 
-    // On load state
-    if (videoPlayer.muted) {
-        setVolumeMuteState();
-        volumeSlider.value = "0";
-    } else {
-        setVolumeUnmuteState();
-        volumeSlider.value = videoPlayer.volume;
-    }
-
-    volumeButton.addEventListener("click", function (event) {
-        videoPlayer.muted = !videoPlayer.muted;
+    function toggleVolumeState() {
         if (videoPlayer.muted) {
             setVolumeMuteState();
             volumeSlider.value = "0";
@@ -61,16 +52,26 @@ window.addEventListener("load", function () {
             setVolumeUnmuteState();
             volumeSlider.value = videoPlayer.volume;
         }
+    }
+
+    // On load state
+    toggleVolumeState();
+
+    volumeButton.addEventListener("click", function (event) {
+        videoPlayer.muted = !videoPlayer.muted;
+        if (!videoPlayer.muted && videoPlayer.volume === 0) {
+            videoPlayer.volume = 0.1; // Set default
+        }
+        toggleVolumeState();
     });
 
     volumeSlider.addEventListener("mousemove", function (event) {
         videoPlayer.volume = event.target.value;
+        videoPlayer.muted = !(videoPlayer.volume > 0);
         if (videoPlayer.muted) {
             setVolumeMuteState();
-            volumeSlider.value = "0";
         } else {
             setVolumeUnmuteState();
-            volumeSlider.value = videoPlayer.volume;
         }
     });
 
