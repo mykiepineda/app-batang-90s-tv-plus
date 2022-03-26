@@ -12,6 +12,7 @@ window.addEventListener("load", function () {
     const progress = document.querySelector("#video-progress-background");
     const progressBar = document.querySelector("#video-progress-filled");
     const fullscreen = document.querySelector("#fullscreen");
+    const fullscreenIcon = fullscreen.querySelector("i");
 
     playPauseButton.addEventListener("click", function (event) {
         if (videoPlayer.paused) {
@@ -82,7 +83,13 @@ window.addEventListener("load", function () {
     });
 
     fullscreen.addEventListener("click", function () {
-        videoContainer.requestFullscreen();
+        if (document.fullscreenElement && document.fullscreenElement.id === "video-container") {
+            document.exitFullscreen();
+        } else {
+            videoContainer.requestFullscreen();
+        }
+        fullscreenIcon.classList.toggle("fa-expand");
+        fullscreenIcon.classList.toggle("fa-compress");
     });
 
 });
