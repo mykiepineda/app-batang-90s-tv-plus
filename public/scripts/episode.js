@@ -113,6 +113,13 @@ window.addEventListener("load", function () {
         progressVideo(event);
     });
 
+    // TODO: WIP
+    progressCircle.addEventListener("mousemove", function(event) {
+        const progressTime = (event.offsetX / progress.offsetWidth) * videoPlayer.duration;
+        progressBar.style.width = ((event.offsetX / progress.offsetWidth) * 100) + "%";
+        videoPlayer.currentTime = progressTime;
+    });
+
     fullscreen.addEventListener("click", function () {
         if (document.fullscreenElement && document.fullscreenElement.id === "video-container") {
             document.exitFullscreen();
