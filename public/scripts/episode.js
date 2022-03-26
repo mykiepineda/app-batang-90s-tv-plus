@@ -11,6 +11,7 @@ window.addEventListener("load", function () {
     const duration = document.querySelector("#duration");
     const progress = document.querySelector("#video-progress-background");
     const progressBar = document.querySelector("#video-progress-filled");
+    const progressCircle = document.querySelector("#video-progress-circle");
     const fullscreen = document.querySelector("#fullscreen");
     const fullscreenIcon = fullscreen.querySelector("i");
 
@@ -88,8 +89,14 @@ window.addEventListener("load", function () {
     videoPlayer.addEventListener("timeupdate", currentTime);
 
     videoPlayer.addEventListener("timeupdate", function (event) {
-        const percentage = (videoPlayer.currentTime / videoPlayer.duration) * 100;
-        progressBar.style.width = `${percentage}%`;
+        const percentage = (videoPlayer.currentTime / videoPlayer.duration);
+        progressBar.style.width = `calc(${percentage} * (100% - 2rem))`;
+        progressCircle.style.left = `calc((${percentage} * (100% - 2rem)) + 7.5px)`;
+        if (videoPlayer.ended) {
+            // Play video again
+            playPauseIcon.classList.add("fa-play");
+            playPauseIcon.classList.remove("fa-pause");
+        }
     });
 
 

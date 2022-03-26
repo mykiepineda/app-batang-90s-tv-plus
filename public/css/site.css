@@ -181,7 +181,7 @@ body, #bookmark-button {
     bottom: 0;
     opacity: 0;
     transition: opacity 0.5s ease;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), black 75%);
+    background-image: linear-gradient(rgba(255, 255, 255, 0), black 95%);
 }
 
 #video-controls:hover {
@@ -204,7 +204,6 @@ body, #bookmark-button {
 
 #video-progress-background {
     display: flex;
-    width: 100%;
     height: 10px;
     background: white;
     opacity: 0.20;
@@ -217,6 +216,24 @@ body, #bookmark-button {
     background: red;
     cursor: pointer;
     z-index: 10;
+}
+
+#video-progress-circle {
+    position: absolute;
+    border-radius: 50%;
+    top: 13px;
+    width: 15px;
+    height: 15px;
+    background: white;
+    cursor: pointer;
+    z-index: 15;
+    transition: transform 0.2s ease;
+}
+
+#video-progress-circle:hover,
+#video-progress-filled:hover + #video-progress-background + #video-progress-circle,
+#video-progress-background:hover + #video-progress-circle {
+    transform: scale(1.5);
 }
 
 #video-player {
@@ -237,6 +254,10 @@ body, #bookmark-button {
 
 #volume-container:hover #volume-slider {
     display: block;
+}
+
+#time h4 {
+    margin: 0;
 }
 
 /* Override Bootstrap/Fontawesome styles */

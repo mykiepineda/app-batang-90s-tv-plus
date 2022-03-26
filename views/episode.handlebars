@@ -8,22 +8,23 @@
         </div>
         <div class="col-6">
             <div id="video-container">
-                <video id="video-player" poster="/images/thumbnails/{{thumbnail}}" autoplay>
+                <video id="video-player" poster="/images/thumbnails/{{thumbnail}}" muted="muted" autoplay>
                     <source src="/show/{{show}}/video/{{episode}}" type="video/mp4"/>
                 </video>
                 <div id="video-controls">
-                    <div id="video-progress-container" class="pt-5 ps-2 pe-2">
+                    <div id="video-progress-container" class="pb-0 p-3">
                         <div id="video-progress-filled"></div>
                         <div id="video-progress-background"></div>
+                        <div id="video-progress-circle"></div>
                     </div>
-                    <div id="video-controls-inner" class="d-flex align-items-center p-3">
+                    <div id="video-controls-inner" class="d-flex align-items-center pt-0 p-3">
                         {{#unless reachedStart}}
                             <div class="p-1" style="width:auto;">
                                 <a href="/episode/{{prevEpisode}}" role="button" class="btn btn-light"><i
                                         class="fa fa-step-backward"></i></a>
                             </div>
                         {{/unless}}
-                        <div class="p-1" style="width:auto;">
+                        <div class="p-1 text-center" style="width:70px;">
                             <button id="play-pause-button" class="btn btn-light"><i class="fa fa-pause"></i></button>
                         </div>
                         {{#unless reachedEnd}}
@@ -32,7 +33,7 @@
                                         class="fa fa-step-forward"></i></a>
                             </div>
                         {{/unless}}
-                        <div id="volume-container" class="d-flex p-1 align-items-center" style="width:auto;">
+                        <div id="volume-container" class="d-flex p-1 align-items-center">
                             <div style="width:70px;">
                                 <button id="volume-button" class="btn btn-light text-start"><i class="fa fa-volume-high"
                                                                                                aria-hidden="true"></i>
