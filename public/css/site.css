@@ -260,6 +260,33 @@ body, #bookmark-button {
     margin: 0;
 }
 
+#video-slide-container {
+    position: relative;
+}
+
+#video-track {
+    width: 100%;
+    height: 10px;
+    background: rgba(255,255,255,0.2);
+}
+
+#video-progress {
+    width: 100%;
+    height: 100%;
+    background: red;
+    transform-origin: 0;
+}
+
+#video-thumb {
+    width: 20px;
+    height: 20px;
+    background: white;
+    position: absolute;
+    top: -5px;
+    border-radius: 50px;
+    transform: translate(-50%);
+}
+
 /* Override Bootstrap/Fontawesome styles */
 
 .fa-star {

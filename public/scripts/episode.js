@@ -9,9 +9,9 @@ window.addEventListener("load", function () {
     const volumeSlider = document.querySelector("#volume-slider");
     const current = document.querySelector("#current");
     const duration = document.querySelector("#duration");
-    const progress = document.querySelector("#video-progress-background");
-    const progressBar = document.querySelector("#video-progress-filled");
-    const progressCircle = document.querySelector("#video-progress-circle");
+    // const progress = document.querySelector("#video-progress-background");
+    // const progressBar = document.querySelector("#video-progress-filled");
+    // const progressCircle = document.querySelector("#video-progress-circle");
     const fullscreen = document.querySelector("#fullscreen");
     const fullscreenIcon = fullscreen.querySelector("i");
 
@@ -88,37 +88,18 @@ window.addEventListener("load", function () {
 
     videoPlayer.addEventListener("timeupdate", currentTime);
 
-    videoPlayer.addEventListener("timeupdate", function (event) {
-        const percentage = (videoPlayer.currentTime / videoPlayer.duration);
-        progressBar.style.width = `calc(${percentage} * (100% - 2rem))`;
-        progressCircle.style.left = `calc((${percentage} * (100% - 2rem)) + 7.5px)`;
-        if (videoPlayer.ended) {
-            // Play video again
-            playPauseIcon.classList.add("fa-play");
-            playPauseIcon.classList.remove("fa-pause");
-        }
-    });
-
-
-    function progressVideo(event) {
-        const progressTime = (event.offsetX / progress.offsetWidth) * videoPlayer.duration;
-        videoPlayer.currentTime = progressTime;
-    }
-
-    progress.addEventListener("click", function (event) {
-        progressVideo(event);
-    });
-
-    progressBar.addEventListener("click", function (event) {
-        progressVideo(event);
-    });
-
-    // TODO: WIP
-    progressCircle.addEventListener("mousemove", function(event) {
-        const progressTime = (event.offsetX / progress.offsetWidth) * videoPlayer.duration;
-        progressBar.style.width = ((event.offsetX / progress.offsetWidth) * 100) + "%";
-        videoPlayer.currentTime = progressTime;
-    });
+    // function progressVideo(event) {
+    //     const progressTime = (event.offsetX / progress.offsetWidth) * videoPlayer.duration;
+    //     videoPlayer.currentTime = progressTime;
+    // }
+    //
+    // progress.addEventListener("click", function (event) {
+    //     progressVideo(event);
+    // });
+    //
+    // progressBar.addEventListener("click", function (event) {
+    //     progressVideo(event);
+    // });
 
     fullscreen.addEventListener("click", function () {
         if (document.fullscreenElement && document.fullscreenElement.id === "video-container") {
@@ -128,6 +109,59 @@ window.addEventListener("load", function () {
         }
         fullscreenIcon.classList.toggle("fa-expand");
         fullscreenIcon.classList.toggle("fa-compress");
+    });
+
+    const sliderContainer = document.querySelector("#video-slide-container");
+    const progressBar = document.querySelector("#video-progress");
+    const thumb = document.querySelector("#video-thumb");
+
+    const sliderContainerWidth = sliderContainer.offsetWidth;
+    const totalOffsetLeft = videoContainer.offsetLeft + sliderContainer.offsetLeft;
+
+    let percentage = 0;
+    let dragging = false;
+    let translate;
+
+    function setPercentage() {
+        percentage = percentage / 100;
+        progressBar.style.transform = `scaleX(${percentage})`;
+        thumb.style.transform = `translate(-50%) translate(${percentage * sliderContainerWidth}px)`;
+    }
+
+    setPercentage();
+
+    videoPlayer.addEventListener("timeupdate", function (event) {
+        percentage = (videoPlayer.currentTime / videoPlayer.duration) * 100;
+        setPercentage(percentage);
+        // progressBar.style.width = `calc(${percentage} * (100% - 2rem))`;
+        // progressCircle.style.left = `calc((${percentage} * (100% - 2rem)) + 7.5px)`;
+        if (videoPlayer.ended) {
+            // Play video again
+            playPauseIcon.classList.add("fa-play");
+            playPauseIcon.classList.remove("fa-pause");
+        }
+    });
+
+    thumb.addEventListener("mousedown", function (event) {
+        dragging = true;
+    });
+    window.addEventListener("mousemove", function (event) {
+        if (dragging) {
+            if (event.clientX < totalOffsetLeft) {
+                percentage = 0;
+            } else if (event.clientX > sliderContainerWidth + totalOffsetLeft) {
+                percentage = 100;
+            } else {
+                translate = event.clientX - totalOffsetLeft;
+                percentage = (translate / sliderContainerWidth) * 100;
+            }
+            // setPercentage(percentage);
+            videoPlayer.currentTime = (percentage / 100) * videoPlayer.duration;
+        }
+    });
+
+    window.addEventListener("mouseup", function (event) {
+        dragging = false;
     });
 
 });
