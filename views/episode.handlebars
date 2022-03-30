@@ -1,6 +1,6 @@
 <div class="container-fluid mt-3">
-    <div class="row">
-        <div class="col-4">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-2">
             <h4>Episode {{episode}} <a id="bookmark-button" href="/bookmark/{{episode}}"><i
                     class="fa {{#if bookmarked}}fa-bookmark{{else}}fa-bookmark-o{{/if}}"></i></a></h4>
             <h3>{{title}}</h3>
@@ -8,7 +8,22 @@
         </div>
         <div class="col-6">
             <div id="video-outer-container">
-                <div id="loader-container"><div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+                <div id="loader-container">
+                    <div class="lds-spinner">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
                 <div id="video-container">
                     <video id="video-player" poster="/images/thumbnails/{{thumbnail}}" muted="muted" autoplay>
                         <source src="/show/{{show}}/video/{{episode}}" type="video/mp4"/>

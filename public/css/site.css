@@ -262,6 +262,9 @@ body, #bookmark-button {
 
 #video-outer-container {
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #video-slide-container {
@@ -271,8 +274,8 @@ body, #bookmark-button {
 
 #loader-container {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    /*top: 50%;*/
+    /*left: 50%;*/
     z-index: 10;
 }
 
@@ -287,6 +290,7 @@ body, #bookmark-button {
     position: relative;
     width: 80px;
     height: 80px;
+    transform: scale(1.5);
 }
 .lds-spinner div {
     transform-origin: 40px 40px;
