@@ -87,10 +87,10 @@ window.addEventListener("load", function () {
     videoPlayer.addEventListener("timeupdate", currentTime);
 
     fullscreen.addEventListener("click", function () {
-        if (document.fullscreenElement && document.fullscreenElement.id === "video-container") {
+        if (document.fullscreenElement && document.fullscreenElement.id === "video-outer-container") {
             document.exitFullscreen();
         } else {
-            videoContainer.requestFullscreen();
+            videoOuterContainer.requestFullscreen();
         }
         fullscreenIcon.classList.toggle("fa-expand");
         fullscreenIcon.classList.toggle("fa-compress");
@@ -111,12 +111,13 @@ window.addEventListener("load", function () {
     }
 
     function seekVideo(event) {
-        if (event.clientX < (videoOuterContainer.offsetLeft + sliderContainer.offsetLeft)) {
+        const totalOffsetLeft = videoOuterContainer.offsetLeft + videoContainer.offsetLeft + sliderContainer.offsetLeft;
+        if (event.clientX < totalOffsetLeft) {
             percentage = 0;
-        } else if (event.clientX > (sliderContainer.offsetWidth + videoOuterContainer.offsetLeft + sliderContainer.offsetLeft)) {
+        } else if (event.clientX > (sliderContainer.offsetWidth + totalOffsetLeft)) {
             percentage = 100;
         } else {
-            translate = event.clientX - (videoOuterContainer.offsetLeft + sliderContainer.offsetLeft);
+            translate = event.clientX - totalOffsetLeft;
             percentage = (translate / sliderContainer.offsetWidth) * 100;
         }
         videoPlayer.currentTime = (percentage / 100) * videoPlayer.duration;

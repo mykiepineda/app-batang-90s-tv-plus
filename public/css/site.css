@@ -181,7 +181,7 @@ body, #bookmark-button {
     bottom: 0;
     opacity: 0;
     transition: opacity 0.5s ease;
-    background-image: linear-gradient(rgba(255, 255, 255, 0), black 95%);
+    background-image: linear-gradient(rgba(255, 255, 255, 0), black);
 }
 
 #video-controls:hover {
@@ -236,10 +236,10 @@ body, #bookmark-button {
     transform: scale(1.5);
 }
 
-#video-player {
-    width: 100%;
-    height: 100%;
-}
+/*#video-player {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*}*/
 
 #video-container .btn {
     background-color: transparent;
@@ -274,8 +274,6 @@ body, #bookmark-button {
 
 #loader-container {
     position: absolute;
-    /*top: 50%;*/
-    /*left: 50%;*/
     z-index: 10;
 }
 
@@ -290,7 +288,7 @@ body, #bookmark-button {
     position: relative;
     width: 80px;
     height: 80px;
-    transform: scale(1.5);
+    transform: scale(2);
 }
 .lds-spinner div {
     transform-origin: 40px 40px;
@@ -367,7 +365,7 @@ body, #bookmark-button {
 
 #video-track {
     width: 100%;
-    height: 10px;
+    height: 5px;
     background: rgba(255,255,255,0.2);
 }
 
@@ -379,13 +377,25 @@ body, #bookmark-button {
 }
 
 #video-thumb {
-    width: 20px;
-    height: 20px;
-    background: white;
+    width: 10px;
+    height: 10px;
+    background: red;
     position: absolute;
-    top: -5px;
+    top: -2.5px;
     border-radius: 50px;
     transform: translate(-50%);
+}
+
+#video-thumb-indicator {
+    width: 100%;
+    height: 100%;
+    background: red;
+    border-radius: 50px;
+    transition: transform 0.2s ease;
+}
+
+#video-thumb-indicator:hover {
+    transform: scale(1.75);
 }
 
 /* Override Bootstrap/Fontawesome styles */

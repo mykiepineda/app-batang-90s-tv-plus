@@ -24,17 +24,21 @@
                         <div></div>
                     </div>
                 </div>
-                <div id="video-container">
-                    <video id="video-player" poster="/images/thumbnails/{{thumbnail}}" muted="muted" autoplay>
+                <div id="video-container" style="height:100%;">
+                    <video id="video-player" style="height:100%;" poster="/images/thumbnails/{{thumbnail}}"
+                           muted="muted" autoplay>
+                        <!--                        <source src="/videos/sample-video.mp4" type="video/mp4"/>-->
                         <source src="/show/{{show}}/video/{{episode}}" type="video/mp4"/>
                     </video>
                     <div id="video-controls">
-                        <div class="pb-0 p-3">
+                        <div class="ps-3 pb-2 pe-3 pt-5">
                             <div id="video-slide-container">
                                 <div id="video-track">
                                     <div id="video-progress"></div>
                                 </div>
-                                <div id="video-thumb"></div>
+                                <div id="video-thumb">
+                                    <div id="video-thumb-indicator"></div>
+                                </div>
                             </div>
                         </div>
                         <div id="video-controls-inner" class="d-flex align-items-center pt-0 p-3">
