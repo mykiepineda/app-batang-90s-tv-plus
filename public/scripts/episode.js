@@ -141,8 +141,12 @@ window.addEventListener("load", function () {
         }
     });
 
-    videoPlayer.addEventListener("canplaythrough", function (event) {
-        spinner.classList.toggle("hide");
+    videoPlayer.addEventListener("playing", function (event) {
+        spinner.classList.add("hide");
+    });
+
+    videoPlayer.addEventListener("waiting", function (event) {
+        spinner.classList.remove("hide");
     });
 
     thumb.addEventListener("mousedown", function (event) {
