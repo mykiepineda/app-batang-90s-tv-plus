@@ -9,9 +9,6 @@ window.addEventListener("load", function () {
     const volumeSlider = document.querySelector("#volume-slider");
     const current = document.querySelector("#current");
     const duration = document.querySelector("#duration");
-    // const progress = document.querySelector("#video-progress-background");
-    // const progressBar = document.querySelector("#video-progress-filled");
-    // const progressCircle = document.querySelector("#video-progress-circle");
     const fullscreen = document.querySelector("#fullscreen");
     const fullscreenIcon = fullscreen.querySelector("i");
 
@@ -88,19 +85,6 @@ window.addEventListener("load", function () {
 
     videoPlayer.addEventListener("timeupdate", currentTime);
 
-    // function progressVideo(event) {
-    //     const progressTime = (event.offsetX / progress.offsetWidth) * videoPlayer.duration;
-    //     videoPlayer.currentTime = progressTime;
-    // }
-    //
-    // progress.addEventListener("click", function (event) {
-    //     progressVideo(event);
-    // });
-    //
-    // progressBar.addEventListener("click", function (event) {
-    //     progressVideo(event);
-    // });
-
     fullscreen.addEventListener("click", function () {
         if (document.fullscreenElement && document.fullscreenElement.id === "video-container") {
             document.exitFullscreen();
@@ -128,13 +112,29 @@ window.addEventListener("load", function () {
         thumb.style.transform = `translate(-50%) translate(${percentage * sliderContainerWidth}px)`;
     }
 
+    function seekVideo(event) {
+        if (event.clientX < totalOffsetLeft) {
+            percentage = 0;
+        } else if (event.clientX > sliderContainerWidth + totalOffsetLeft) {
+            percentage = 100;
+        } else {
+            translate = event.clientX - totalOffsetLeft;
+            percentage = (translate / sliderContainerWidth) * 100;
+        }
+        videoPlayer.currentTime = (percentage / 100) * videoPlayer.duration;
+        setPercentage(percentage);
+    }
+
+    // Call on initial load
     setPercentage();
+
+    sliderContainer.addEventListener("click", function (event) {
+        seekVideo(event);
+    });
 
     videoPlayer.addEventListener("timeupdate", function (event) {
         percentage = (videoPlayer.currentTime / videoPlayer.duration) * 100;
         setPercentage(percentage);
-        // progressBar.style.width = `calc(${percentage} * (100% - 2rem))`;
-        // progressCircle.style.left = `calc((${percentage} * (100% - 2rem)) + 7.5px)`;
         if (videoPlayer.ended) {
             // Play video again
             playPauseIcon.classList.add("fa-play");
@@ -145,18 +145,10 @@ window.addEventListener("load", function () {
     thumb.addEventListener("mousedown", function (event) {
         dragging = true;
     });
+
     window.addEventListener("mousemove", function (event) {
         if (dragging) {
-            if (event.clientX < totalOffsetLeft) {
-                percentage = 0;
-            } else if (event.clientX > sliderContainerWidth + totalOffsetLeft) {
-                percentage = 100;
-            } else {
-                translate = event.clientX - totalOffsetLeft;
-                percentage = (translate / sliderContainerWidth) * 100;
-            }
-            // setPercentage(percentage);
-            videoPlayer.currentTime = (percentage / 100) * videoPlayer.duration;
+            seekVideo(event);
         }
     });
 
