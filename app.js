@@ -198,6 +198,15 @@ app.get("/show/:show/video/:episode", async function (req, res, next) {
     // Pipe the s3 object to the response
     stream.pipe(res);
 
+    stream.on("error", function(error) {
+        console.log(error);
+        res.end();
+    });
+
+    stream.on("end", function() {
+       res.end();
+    });
+
 });
 
 app.get("/bookmark/:episode", async function (req, res) {
