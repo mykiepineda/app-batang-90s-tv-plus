@@ -1,5 +1,6 @@
 window.addEventListener("load", function () {
 
+    const videoOuterContainer = document.querySelector("#video-outer-container");
     const videoContainer = document.querySelector("#video-container");
     const videoPlayer = document.querySelector("#video-player");
     const playPauseButton = document.querySelector("#play-pause-button");
@@ -95,12 +96,13 @@ window.addEventListener("load", function () {
         fullscreenIcon.classList.toggle("fa-compress");
     });
 
+    const spinner = document.querySelector(".lds-spinner");
     const sliderContainer = document.querySelector("#video-slide-container");
     const progressBar = document.querySelector("#video-progress");
     const thumb = document.querySelector("#video-thumb");
 
     const sliderContainerWidth = sliderContainer.offsetWidth;
-    const totalOffsetLeft = videoContainer.offsetLeft + sliderContainer.offsetLeft;
+    const totalOffsetLeft = videoOuterContainer.offsetLeft + sliderContainer.offsetLeft;
 
     let percentage = 0;
     let dragging = false;
@@ -140,6 +142,10 @@ window.addEventListener("load", function () {
             playPauseIcon.classList.add("fa-play");
             playPauseIcon.classList.remove("fa-pause");
         }
+    });
+
+    videoPlayer.addEventListener("canplaythrough", function(event) {
+            spinner.classList.toggle("hide");
     });
 
     thumb.addEventListener("mousedown", function (event) {
