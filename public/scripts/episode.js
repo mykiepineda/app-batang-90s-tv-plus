@@ -101,30 +101,26 @@ window.addEventListener("load", function () {
     const progressBar = document.querySelector("#video-progress");
     const thumb = document.querySelector("#video-thumb");
 
-    const sliderContainerWidth = sliderContainer.offsetWidth;
-    const totalOffsetLeft = videoOuterContainer.offsetLeft + sliderContainer.offsetLeft;
-
     let percentage = 0;
     let dragging = false;
     let translate;
 
     function setPercentage() {
-        percentage = percentage / 100;
-        progressBar.style.transform = `scaleX(${percentage})`;
-        thumb.style.transform = `translate(-50%) translate(${percentage * sliderContainerWidth}px)`;
+        progressBar.style.transform = `scaleX(${percentage / 100})`;
+        thumb.style.transform = `translate(-50%) translate(${(percentage / 100) * sliderContainer.offsetWidth}px)`;
     }
 
     function seekVideo(event) {
-        if (event.clientX < totalOffsetLeft) {
+        if (event.clientX < (videoOuterContainer.offsetLeft + sliderContainer.offsetLeft)) {
             percentage = 0;
-        } else if (event.clientX > sliderContainerWidth + totalOffsetLeft) {
+        } else if (event.clientX > (sliderContainer.offsetWidth + videoOuterContainer.offsetLeft + sliderContainer.offsetLeft)) {
             percentage = 100;
         } else {
-            translate = event.clientX - totalOffsetLeft;
-            percentage = (translate / sliderContainerWidth) * 100;
+            translate = event.clientX - (videoOuterContainer.offsetLeft + sliderContainer.offsetLeft);
+            percentage = (translate / sliderContainer.offsetWidth) * 100;
         }
         videoPlayer.currentTime = (percentage / 100) * videoPlayer.duration;
-        setPercentage(percentage);
+        setPercentage();
     }
 
     // Call on initial load
@@ -136,7 +132,7 @@ window.addEventListener("load", function () {
 
     videoPlayer.addEventListener("timeupdate", function (event) {
         percentage = (videoPlayer.currentTime / videoPlayer.duration) * 100;
-        setPercentage(percentage);
+        setPercentage();
         if (videoPlayer.ended) {
             // Play video again
             playPauseIcon.classList.add("fa-play");
@@ -144,8 +140,8 @@ window.addEventListener("load", function () {
         }
     });
 
-    videoPlayer.addEventListener("canplaythrough", function(event) {
-            spinner.classList.toggle("hide");
+    videoPlayer.addEventListener("canplaythrough", function (event) {
+        spinner.classList.toggle("hide");
     });
 
     thumb.addEventListener("mousedown", function (event) {
