@@ -17,9 +17,12 @@ app.set("view engine", "handlebars");
 
 const AWS = require("aws-sdk");
 
+const wasabiEndpoint = new AWS.Endpoint("s3.ap-northeast-2.wasabisys.com");
+
 AWS.config.update({
-    accessKeyId: "AKIAYDAXBKHVEAZTEFM6",
-    secretAccessKey: "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",
+    accessKeyId: "Z5QQ38VNUCU81ANC8NZE",
+    secretAccessKey: "DmJTppTMTEbXJi8KIlEk1i2mteWtKBAp3hYHrdWV",
+    endpoint: wasabiEndpoint,
     region: "ap-southeast-2"
 });
 
@@ -145,6 +148,9 @@ async function getContentLength(s3, params) {
 
 app.get("/show/:show/video/:episode", async function (req, res, next) {
 
+    // TODO: https://github.com/aws/aws-sdk-js/issues/2087
+    // Getting timeout error when seeking video (multiple canceled requests in browser developer/network mode)
+
     // Ensure there is a range given for the video
     // video HTML DOM is responsible for this?
     const range = req.headers.range;
@@ -158,7 +164,7 @@ app.get("/show/:show/video/:episode", async function (req, res, next) {
     const s3 = new AWS.S3();
 
     const params = {
-        Bucket: "batang-90s-tv-plus-videos",
+        Bucket: "batang-90s-tv-plus",
         Key: key
     };
 
@@ -175,9 +181,9 @@ app.get("/show/:show/video/:episode", async function (req, res, next) {
 
     const stream = s3.getObject(params).createReadStream();
 
-    // forward errors
-    stream.on("error", function error(err) {
-        return next();
+    stream.on("error", function (error) {
+        console.log(error);
+        res.end();
     });
 
     // Create headers
@@ -194,6 +200,10 @@ app.get("/show/:show/video/:episode", async function (req, res, next) {
 
     // Pipe the s3 object to the response
     stream.pipe(res);
+
+    stream.on("end", function () {
+        res.end();
+    });
 
 });
 
