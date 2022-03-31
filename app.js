@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000; // heroku to dynamically assign the port number during deployment or use 3000 when running locally
 
 // Make the "public" folder available statically
 const path = require("path");
@@ -222,5 +222,6 @@ app.get("/bookmark/:episode", async function (req, res) {
 });
 
 app.listen(port, function () {
+    console.log(`Environment URL = ${process.env.URL}`);
     console.log(`App listening on port ${port}`);
 });
