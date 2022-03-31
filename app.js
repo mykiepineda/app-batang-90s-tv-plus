@@ -181,11 +181,6 @@ app.get("/show/:show/video/:episode", async function (req, res, next) {
 
     const stream = s3.getObject(params).createReadStream();
 
-    stream.on("error", function (error) {
-        console.log(error);
-        res.end();
-    });
-
     // Create headers
     const contentLength = end - start + 1;
     const headers = {
@@ -201,7 +196,8 @@ app.get("/show/:show/video/:episode", async function (req, res, next) {
     // Pipe the s3 object to the response
     stream.pipe(res);
 
-    stream.on("end", function () {
+    stream.on("error", function (error) {
+        console.log(error);
         res.end();
     });
 

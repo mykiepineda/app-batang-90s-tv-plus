@@ -1,5 +1,16 @@
 window.addEventListener("load", function () {
 
+    const carouselInners = document.querySelectorAll(".carousel-inner");
+    const cards = document.querySelectorAll(".card");
+
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].addEventListener("mouseover", function () {
+            for (let j = 0; j < carouselInners.length; j++) {
+                carouselInners[j].style.overflow = "visible";
+            }
+        });
+    }
+
     const navbarHome = document.querySelector("#navbar-home");
     const navbarBookmarked = document.querySelector("#navbar-bookmarked");
 
@@ -39,28 +50,38 @@ window.addEventListener("load", function () {
         }
     }
 
+    const episodesCarousel = document.querySelector("#episodes-carousel");
+    const season1Link = document.querySelector("#season01Link");
+    const season2Link = document.querySelector("#season02Link");
+    const season3Link = document.querySelector("#season03Link");
+    const seasonFLink = document.querySelector("#seasonFinaleLink");
+
     // jQuery carousel methods
-    $("#season01Link").click(function () {
+    season1Link.addEventListener("click", function () {
         $("#episodes-carousel").carousel(0);
         activateSeasonNavItemInContext([true, false, false, false]);
     });
 
-    $("#season02Link").click(function () {
+    season2Link.addEventListener("click", function () {
         $("#episodes-carousel").carousel(3);
         activateSeasonNavItemInContext([false, true, false, false]);
     });
 
-    $("#season03Link").click(function () {
+    season3Link.addEventListener("click", function () {
         $("#episodes-carousel").carousel(6);
         activateSeasonNavItemInContext([false, false, true, false]);
     });
 
-    $("#seasonFinaleLink").click(function () {
+    seasonFLink.addEventListener("click", function () {
         $("#episodes-carousel").carousel(9);
         activateSeasonNavItemInContext([false, false, false, true]);
     });
 
-    $("#episodes-carousel").on("slide.bs.carousel", function (item) {
+    episodesCarousel.addEventListener("slide.bs.carousel", function (item) {
+
+        for (let i = 0; i < carouselInners.length; i++) {
+            carouselInners[i].style.overflow = "hidden";
+        }
 
         const slideToIndex = item.to;
 
