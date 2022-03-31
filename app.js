@@ -148,6 +148,9 @@ async function getContentLength(s3, params) {
 
 app.get("/show/:show/video/:episode", async function (req, res, next) {
 
+    // TODO: https://github.com/aws/aws-sdk-js/issues/2087
+    // Getting timeout error when seeking video (multiple canceled requests in browser developer/network mode)
+
     // Ensure there is a range given for the video
     // video HTML DOM is responsible for this?
     const range = req.headers.range;
@@ -178,9 +181,9 @@ app.get("/show/:show/video/:episode", async function (req, res, next) {
 
     const stream = s3.getObject(params).createReadStream();
 
-    // forward errors
-    stream.on("error", function error(err) {
-        return next();
+    stream.on("error", function (error) {
+        console.log(error);
+        res.end();
     });
 
     // Create headers
@@ -198,13 +201,8 @@ app.get("/show/:show/video/:episode", async function (req, res, next) {
     // Pipe the s3 object to the response
     stream.pipe(res);
 
-    stream.on("error", function(error) {
-        console.log(error);
+    stream.on("end", function () {
         res.end();
-    });
-
-    stream.on("end", function() {
-       res.end();
     });
 
 });
