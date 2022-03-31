@@ -1,12 +1,6 @@
-<div class="container-fluid mt-3">
-    <div class="row align-items-center justify-content-center">
-        <div class="col-2">
-            <h4>Episode {{episode}} <a id="bookmark-button" href="/bookmark/{{episode}}"><i
-                    class="fa {{#if bookmarked}}fa-bookmark{{else}}fa-bookmark-o{{/if}}"></i></a></h4>
-            <h3>{{title}}</h3>
-            <p>{{synopsis}}</p>
-        </div>
-        <div class="col-6">
+<div class="container d-flex mt-3">
+    <div class="d-flex flex-column" style="width:50%">
+        <div>
             <div id="video-outer-container">
                 <div id="loader-container">
                     <div class="lds-spinner">
@@ -24,10 +18,8 @@
                         <div></div>
                     </div>
                 </div>
-                <div id="video-container" style="height:100%;">
-                    <video id="video-player" style="height:100%;" poster="/images/thumbnails/{{thumbnail}}"
-                           muted="muted" autoplay>
-                        <!--                        <source src="/videos/sample-video.mp4" type="video/mp4"/>-->
+                <div id="video-container">
+                    <video id="video-player" poster="/images/thumbnails/{{thumbnail}}" muted="muted" autoplay>
                         <source src="/show/{{show}}/video/{{episode}}" type="video/mp4"/>
                     </video>
                     <div id="video-controls">
@@ -82,6 +74,11 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <div>
+            <h6>Episode {{episode}}<span class="the-dot">Season 01</span></h6>
+            <h3>{{title}}</h3>
+            <p>{{synopsis}}</p>
         </div>
     </div>
     <script src="/scripts/episode.js"></script>

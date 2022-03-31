@@ -241,6 +241,11 @@ body, #bookmark-button {
 /*    height: 100%;*/
 /*}*/
 
+#video-container, #video-player {
+    height: 100%;
+    width: 100%;
+}
+
 #video-container .btn {
     background-color: transparent;
     color: white;
