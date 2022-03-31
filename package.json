@@ -1,6 +1,10 @@
 {
   "name": "my-streaming-site",
   "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app.js"
+  },
   "dependencies": {
     "aws-sdk": "^2.1099.0",
     "express": "^4.17.3",
