@@ -5,7 +5,7 @@
 
 body {
     /*background: url("/images/kamen_rider_black_rx.png"), linear-gradient(black, darkgreen, black, black);*/
-    background: linear-gradient(black, darkgreen, black);
+    background: linear-gradient(black, darkgreen, black, black);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right;
@@ -71,9 +71,11 @@ body, #bookmark-button {
 }
 
 #card-body {
-    background-color: transparent;
+    background-color: black;
     color: white;
     transition: transform 0.25s ease;
+    height: 500px;
+    overflow: hidden;
 }
 
 #episodes-tab-nav-item::after,
@@ -457,7 +459,7 @@ body, #bookmark-button {
 }
 
 .card-body {
-    padding: 0 !important;
+    /*padding: 0 !important;*/
 }
 
 .btn:focus {

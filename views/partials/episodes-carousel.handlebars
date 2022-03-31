@@ -1,15 +1,15 @@
-<div id="episodes-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
+<div id="episodes-carousel" class="carousel slide pt-2 pb-2" data-bs-ride="carousel" data-bs-interval="false">
     <div class="my-container">
         <div class="carousel-inner">
             {{#each pagination}}
                 <div id="s{{season}}" class="carousel-item {{#ifEquals page 1}}active{{/ifEquals}}">
-                    <div id="card" class="d-flex flex-row pt-3 justify-content-start">
+                    <div id="card" class="d-flex flex-row justify-content-start">
                         {{#each videos}}
                             <div>
                                 <a href="/episode/{{episode}}">
-                                    <div id="card-body" class="card border-0">
+                                    <div id="card-body" class="card border-0 shadow">
                                         <div id="card-image-container">
-                                            <img id="card-image" class="card-img-top rounded-0"
+                                            <img id="card-image" class="card-img-top"
                                                  src="/images/thumbnails/{{thumbnail}}"
                                                  alt="Card image cap">
                                             <i id="card-play-button" class="fa fa-play-circle-o"
