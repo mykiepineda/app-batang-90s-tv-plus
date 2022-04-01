@@ -63,7 +63,6 @@ window.addEventListener("load", function () {
         const s4Active = options[3];
 
         for (let i = 0; i < cardDecks.length; i++) {
-            console.log(cardDecks[i]);
             switch (true) {
                 case s1Active:
                     if (cardDecks[i].id === "s1") {

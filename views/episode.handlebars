@@ -1,5 +1,5 @@
 <div class="container d-flex mt-3">
-    <div class="d-flex flex-column" style="width:50%">
+    <div id="episode-container" class="d-flex flex-column">
         <div>
             <div id="video-outer-container">
                 <div id="loader-container">
@@ -35,23 +35,23 @@
                         </div>
                         <div id="video-controls-inner" class="d-flex align-items-center pt-0 p-3">
                             {{#unless reachedStart}}
-                                <div class="p-1" style="width:auto;">
+                                <div>
                                     <a href="/episode/{{prevEpisode}}" role="button" class="btn btn-light"><i
                                             class="fa fa-step-backward"></i></a>
                                 </div>
                             {{/unless}}
-                            <div class="p-1 text-center" style="width:70px;">
+                            <div class="text-center" style="width:50px;">
                                 <button id="play-pause-button" class="btn btn-light"><i class="fa fa-pause"></i>
                                 </button>
                             </div>
                             {{#unless reachedEnd}}
-                                <div class="p-1" style="width:auto;">
+                                <div>
                                     <a href="/episode/{{nextEpisode}}" role="button" class="btn btn-light"><i
                                             class="fa fa-step-forward"></i></a>
                                 </div>
                             {{/unless}}
                             <div id="volume-container" class="d-flex p-1 align-items-center">
-                                <div style="width:70px;">
+                                <div>
                                     <button id="volume-button" class="btn btn-light text-start"><i
                                             class="fa fa-volume-high"
                                             aria-hidden="true"></i>
@@ -62,8 +62,8 @@
                                            value="1">
                                 </div>
                             </div>
-                            <div class="p-1 me-auto">
-                                <div id="time"><h4><span id="current">0:00</span> / <span id="duration">0:00</span></h4>
+                            <div class="me-auto">
+                                <div id="time"><span id="current">0:00</span> / <span id="duration">0:00</span>
                                 </div>
                             </div>
                             <div>
