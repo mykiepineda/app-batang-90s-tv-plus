@@ -209,6 +209,39 @@ body, #bookmark-button {
 
 /* End, From bootstrap _containers.scss */
 
+@media screen and (max-width: 992px) {
+    #hero-banner .d-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+    #image-cover {
+        width: 50%;
+        margin-right: 0 !important;
+        margin-bottom: 3rem;
+    }
+    section.py-5 {
+        padding-top: 1.5rem !important;
+    }
+    /*#rating {*/
+    /*    text-align: center;*/
+    /*}*/
+    #hero-buttons {
+        justify-content: center;
+    }
+    /*#navbar-tab .navbar-nav,*/
+    /*#seasons-navbar .navbar-nav{*/
+    /*    flex-direction: row;*/
+    /*}*/
+    /*#navbar-tab > div {*/
+    /*    display: flex;*/
+    /*    flex-direction: row;*/
+    /*    align-items: center;*/
+    /*}*/
+    /*#episodes-tab-link, #suggested-tab-link, #details-tab-link {*/
+    /*    margin: auto;*/
+    /*}*/
+}
+
 .carousel-control-prev {
     justify-content: end !important;
 }
