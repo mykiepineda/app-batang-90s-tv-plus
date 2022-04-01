@@ -1,0 +1,27 @@
+<div id="card-deck-container" class="container">
+    {{#each pagination}}
+        <div id="s{{season}}" class="card-deck">
+            {{#each videos}}
+                <div style="margin-top:25px;margin-bottom:25px">
+                    <a href="/episode/{{episode}}">
+                        <div id="card-body" class="card border-0 shadow">
+                            <div id="card-image-container">
+                                <img id="card-image" class="card-img-top" src="/images/thumbnails/{{thumbnail}}"
+                                     alt="Card image cap">
+                                <i id="card-play-button" class="fa fa-play-circle-o" aria-hidden="true"></i>
+                            </div>
+                            <div id="card-title-container" class="card-body d-flex flex-column justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <h5 class="card-title">{{episode}}. {{title}}</h5>
+                                    <div>
+                                        <p class="card-text">{{#truncate synopsis}}{{/truncate}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {{/each}}
+        </div>
+    {{/each}}
+</div>

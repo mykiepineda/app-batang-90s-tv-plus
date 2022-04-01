@@ -16,12 +16,107 @@ window.addEventListener("load", function () {
             navbarBookmarked.classList.remove("active");
     }
 
-    const dropdown = document.querySelector(".nav-item.dropdown");
-    const dropdownMenu = document.querySelector(".dropdown-menu");
+    // const dropdown = document.querySelector(".nav-item.dropdown");
+    // const dropdownMenu = document.querySelector(".dropdown-menu");
+    //
+    // dropdown.addEventListener("click", function () {
+    //     dropdown.classList.toggle("show");
+    //     dropdownMenu.classList.toggle("show");
+    // });
+
+    const dropdown = document.querySelector("#seasons-sff-dropdown");
+    const dropdownButton = dropdown.querySelector("button");
+    const dropdownMenu = dropdown.querySelector(".dropdown-menu");
 
     dropdown.addEventListener("click", function () {
         dropdown.classList.toggle("show");
         dropdownMenu.classList.toggle("show");
+    });
+
+    const s1DropdownItem = document.querySelector("#s1-dropdown-item");
+    const s2DropdownItem = document.querySelector("#s2-dropdown-item");
+    const s3DropdownItem = document.querySelector("#s3-dropdown-item");
+    const sfDropdownItem = document.querySelector("#sf-dropdown-item");
+
+    const cardDecks = document.querySelectorAll("#card-deck-container .card-deck");
+
+    function activateSeasonDropdownInContext(options) {
+
+        const dropdownItems = [];
+
+        dropdownItems.push(s1DropdownItem);
+        dropdownItems.push(s2DropdownItem);
+        dropdownItems.push(s3DropdownItem);
+        dropdownItems.push(sfDropdownItem);
+
+        for (let i = 0; i < options.length; i++) {
+            if (options[i] === true) {
+                dropdownItems[i].classList.add("active");
+            } else {
+                dropdownItems[i].classList.remove("active");
+            }
+        }
+
+        const s1Active = options[0];
+        const s2Active = options[1];
+        const s3Active = options[2];
+        const s4Active = options[3];
+
+        for (let i = 0; i < cardDecks.length; i++) {
+            //TODO: cardDecks[i].display = undefined
+            switch (true) {
+                case s1Active:
+                    if (cardDecks[i].id === "s1") {
+                        cardDecks[i].display = "block";
+                    } else {
+                        cardDecks[i].display = "none";
+                    }
+                    break;
+                case s2Active:
+                    if (cardDecks[i].id === "s2") {
+                        cardDecks[i].display = "block";
+                    } else {
+                        cardDecks[i].display = "none";
+                    }
+                    break;
+                case s3Active:
+                    if (cardDecks[i].id === "s3") {
+                        cardDecks[i].display = "block";
+                    } else {
+                        cardDecks[i].display = "none";
+                    }
+                    break;
+                case s4Active:
+                    if (cardDecks[i].id === "s4") {
+                        cardDecks[i].display = "block";
+                    } else {
+                        cardDecks[i].display = "none";
+                    }
+                    break;
+            }
+        }
+    }
+
+    activateSeasonDropdownInContext([true, false, false, false]);
+
+    s1DropdownItem.addEventListener("click",function() {
+        dropdownButton.innerHTML = "Season 01";
+        activateSeasonDropdownInContext([true, false, false, false]);
+    });
+
+    s2DropdownItem.addEventListener("click",function() {
+        dropdownButton.innerHTML = "Season 02";
+        activateSeasonDropdownInContext([false, true, false, false]);
+    });
+
+    s3DropdownItem.addEventListener("click",function() {
+        dropdownButton.innerHTML = "Season 03";
+        activateSeasonDropdownInContext([false, false, true, false]);
+    });
+
+    sfDropdownItem.addEventListener("click",function() {
+        dropdownButton.innerHTML = "Season Finale";
+        activateSeasonDropdownInContext([false, false, false, true]);
     });
 
     function activateSeasonNavItemInContext(options) {

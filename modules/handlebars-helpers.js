@@ -5,6 +5,14 @@ function ifEquals(value1, value2, options) {
     return options.inverse(this);
 }
 
+function truncate(value) {
+    if (String(value).length > 50) {
+        return `${value.substr(0, 50)}...`;
+    }
+    return value;
+}
+
 module.exports = {
-    ifEquals
+    ifEquals,
+    truncate
 };

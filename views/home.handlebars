@@ -5,8 +5,14 @@
     {{>mid-navbar}}
 </section>
 <section id="episodes-section">
-    {{>seasons-navbar}}
-    {{>episodes-carousel}}
+    <div id="non-small-form-factor">
+        {{>seasons-navbar}}
+        {{>episodes-carousel}}
+    </div>
+    <div id="small-form-factor">
+        {{>seasons-dropdown}}
+        {{>episodes-small-form-factor}}
+    </div>
 </section>
 <section id="suggested-section" style="display:none;">
     {{>suggestions}}

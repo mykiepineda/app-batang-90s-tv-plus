@@ -64,6 +64,10 @@ body, #bookmark-button {
 #card-body {
     color: white;
     transition: transform 0.25s ease;
+    z-index: 30;
+}
+
+#non-small-form-factor #card-body {
     height: 500px;
     overflow: hidden;
 }
@@ -98,10 +102,13 @@ body, #bookmark-button {
     background-color: white;
     position: relative;
     transition: border 0.25s ease;
+    overflow: hidden;
 }
 
 #card-body:hover #card-image-container {
     border: 5px white solid;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
 }
 
 #suggested-section img {
@@ -158,7 +165,7 @@ body, #bookmark-button {
 
 /* Begin, From bootstrap _containers.scss */
 @media screen and (min-width: 576px) {
-    #card-body {
+    #non-small-form-factor #card-body {
         width: calc((540px - (0.75rem * 2) - (var(--cards-spacing) * 4)) / 5);
     }
 
@@ -168,7 +175,7 @@ body, #bookmark-button {
 }
 
 @media screen and (min-width: 768px) {
-    #card-body {
+    #non-small-form-factor #card-body {
         width: calc((720px - (0.75rem * 2) - (var(--cards-spacing) * 4)) / 5);
     }
 
@@ -178,7 +185,7 @@ body, #bookmark-button {
 }
 
 @media screen and (min-width: 992px) {
-    #card-body {
+    #non-small-form-factor #card-body {
         width: calc((960px - (0.75rem * 2) - (var(--cards-spacing) * 4)) / 5);
     }
 
@@ -188,7 +195,7 @@ body, #bookmark-button {
 }
 
 @media screen and (min-width: 1200px) {
-    #card-body {
+    #non-small-form-factor #card-body {
         width: calc((1140px - (0.75rem * 2) - (var(--cards-spacing) * 4)) / 5);
     }
 
@@ -198,7 +205,7 @@ body, #bookmark-button {
 }
 
 @media screen and (min-width: 1400px) {
-    #card-body {
+    #non-small-form-factor #card-body {
         width: calc((1320px - (0.75rem * 2) - (var(--cards-spacing) * 4)) / 5);
     }
 
@@ -209,25 +216,75 @@ body, #bookmark-button {
 
 /* End, From bootstrap _containers.scss */
 
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 1100px) {
+    #non-small-form-factor {
+        display: block;
+    }
+
+    #small-form-factor {
+        display: none;
+    }
+
+    #small-form-factor #card-body {
+        flex-direction: row;
+    }
+}
+
+#card-title-container {
+    width: 100%;
+}
+
+@media screen and (max-width: 1099px) {
+    #non-small-form-factor {
+        display: none;
+    }
+
+    #small-form-factor {
+        display: block;
+    }
+
+    #small-form-factor #card-body {
+        flex-direction: row;
+    }
+
+    #small-form-factor #card-image-container {
+        width: 300px !important;
+    }
+
+    #small-form-factor #card-image-container > #card-image {
+        width: 100%;
+        height: 100%;
+    }
+
+    #small-form-factor #card-image-container,
+    #small-form-factor #card-image-container > #card-image,
+    #small-form-factor #card-body:hover #card-image-container {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.25rem;
+    }
+
     #hero-banner .d-flex {
         flex-direction: column;
         align-items: center;
     }
+
     #image-cover {
-        width: 50%;
+        width: 40%;
         margin-right: 0 !important;
         margin-bottom: 3rem;
     }
+
     section.py-5 {
         padding-top: 1.5rem !important;
     }
+
     /*#rating {*/
     /*    text-align: center;*/
     /*}*/
     #hero-buttons {
         justify-content: center;
     }
+
     /*#navbar-tab .navbar-nav,*/
     /*#seasons-navbar .navbar-nav{*/
     /*    flex-direction: row;*/
@@ -385,7 +442,6 @@ body, #bookmark-button {
     position: relative;
     width: 80px;
     height: 80px;
-    transform: scale(2);
 }
 
 .lds-spinner div {
