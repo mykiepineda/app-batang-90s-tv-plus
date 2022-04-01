@@ -163,6 +163,10 @@ body, #bookmark-button {
     object-position: center;
 }
 
+#mid-navbar .navbar-nav {
+    flex-direction: row !important;
+}
+
 /* Begin, From bootstrap _containers.scss */
 @media screen and (min-width: 576px) {
     #non-small-form-factor #card-body {
@@ -228,10 +232,22 @@ body, #bookmark-button {
     #small-form-factor #card-body {
         flex-direction: row;
     }
+
+    #add-to-watchlist {
+        display: block;
+    }
+
+    #plus-watchlist {
+        display: none;
+    }
 }
 
 #card-title-container {
     width: 100%;
+}
+
+#plus-watchlist a {
+    color: white !important;
 }
 
 @media screen and (max-width: 1099px) {
@@ -241,6 +257,23 @@ body, #bookmark-button {
 
     #small-form-factor {
         display: block;
+    }
+
+    #mid-navbar .navbar-nav {
+        justify-content: center;
+    }
+
+    #add-to-watchlist {
+        display: none;
+    }
+
+    #plus-watchlist {
+        display: block;
+    }
+
+    #mid-navbar .navbar-nav div {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
     }
 
     #small-form-factor #card-body {
@@ -269,9 +302,9 @@ body, #bookmark-button {
     }
 
     #image-cover {
-        width: 40%;
+        width: 70%;
         margin-right: 0 !important;
-        margin-bottom: 3rem;
+        /*margin-bottom: 3rem;*/
     }
 
     section.py-5 {
@@ -282,7 +315,17 @@ body, #bookmark-button {
     /*    text-align: center;*/
     /*}*/
     #hero-buttons {
+        flex-direction: column !important;
         justify-content: center;
+    }
+
+    #hero-buttons #play,
+    #hero-buttons #play a {
+        width: 100%;
+    }
+
+    #hero-buttons #play {
+        padding-right: 0 !important;
     }
 
     /*#navbar-tab .navbar-nav,*/

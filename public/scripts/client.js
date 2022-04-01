@@ -63,34 +63,34 @@ window.addEventListener("load", function () {
         const s4Active = options[3];
 
         for (let i = 0; i < cardDecks.length; i++) {
-            //TODO: cardDecks[i].display = undefined
+            console.log(cardDecks[i]);
             switch (true) {
                 case s1Active:
                     if (cardDecks[i].id === "s1") {
-                        cardDecks[i].display = "block";
+                        cardDecks[i].style.display = "block";
                     } else {
-                        cardDecks[i].display = "none";
+                        cardDecks[i].style.display = "none";
                     }
                     break;
                 case s2Active:
                     if (cardDecks[i].id === "s2") {
-                        cardDecks[i].display = "block";
+                        cardDecks[i].style.display = "block";
                     } else {
-                        cardDecks[i].display = "none";
+                        cardDecks[i].style.display = "none";
                     }
                     break;
                 case s3Active:
                     if (cardDecks[i].id === "s3") {
-                        cardDecks[i].display = "block";
+                        cardDecks[i].style.display = "block";
                     } else {
-                        cardDecks[i].display = "none";
+                        cardDecks[i].style.display = "none";
                     }
                     break;
                 case s4Active:
                     if (cardDecks[i].id === "s4") {
-                        cardDecks[i].display = "block";
+                        cardDecks[i].style.display = "block";
                     } else {
-                        cardDecks[i].display = "none";
+                        cardDecks[i].style.display = "none";
                     }
                     break;
             }
