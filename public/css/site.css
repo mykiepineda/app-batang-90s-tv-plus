@@ -62,7 +62,6 @@ body, #bookmark-button {
 }
 
 #card-body {
-    background-color: black;
     color: white;
     transition: transform 0.25s ease;
     height: 500px;
@@ -96,6 +95,7 @@ body, #bookmark-button {
 }
 
 #card-image-container {
+    background-color: white;
     position: relative;
     transition: border 0.25s ease;
 }
@@ -157,50 +157,56 @@ body, #bookmark-button {
 }
 
 /* Begin, From bootstrap _containers.scss */
-@media (min-width: 576px) {
+@media screen and (min-width: 576px) {
     #card-body {
         width: calc((540px - (0.75rem * 2) - (var(--cards-spacing) * 4)) / 5);
     }
+
     .carousel-control-prev, .carousel-control-next {
         width: calc((100vw - 540px - (0.75rem * 2)) / 2);
     }
 }
 
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
     #card-body {
         width: calc((720px - (0.75rem * 2) - (var(--cards-spacing) * 4)) / 5);
     }
+
     .carousel-control-prev, .carousel-control-next {
         width: calc((100vw - 720px - (0.75rem * 2)) / 2);
     }
 }
 
-@media (min-width: 992px) {
+@media screen and (min-width: 992px) {
     #card-body {
         width: calc((960px - (0.75rem * 2) - (var(--cards-spacing) * 4)) / 5);
     }
+
     .carousel-control-prev, .carousel-control-next {
         width: calc((100vw - 960px - (0.75rem * 2)) / 2);
     }
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
     #card-body {
         width: calc((1140px - (0.75rem * 2) - (var(--cards-spacing) * 4)) / 5);
     }
+
     .carousel-control-prev, .carousel-control-next {
         width: calc((100vw - 1140px - (0.75rem * 2)) / 2);
     }
 }
 
-@media (min-width: 1400px) {
+@media screen and (min-width: 1400px) {
     #card-body {
         width: calc((1320px - (0.75rem * 2) - (var(--cards-spacing) * 4)) / 5);
     }
+
     .carousel-control-prev, .carousel-control-next {
         width: calc((100vw - 1320px - (0.75rem * 2)) / 2);
     }
 }
+
 /* End, From bootstrap _containers.scss */
 
 .carousel-control-prev {
@@ -496,7 +502,7 @@ body, #bookmark-button {
 }
 
 .card-body {
-    /*padding: 0 !important;*/
+    background-color: black;
 }
 
 .btn:focus {

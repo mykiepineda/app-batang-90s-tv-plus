@@ -3,14 +3,6 @@ window.addEventListener("load", function () {
     const carouselInners = document.querySelectorAll(".carousel-inner");
     const cards = document.querySelectorAll(".card");
 
-    for (let i = 0; i < cards.length; i++) {
-        cards[i].addEventListener("mouseover", function () {
-            for (let j = 0; j < carouselInners.length; j++) {
-                carouselInners[j].style.overflow = "visible";
-            }
-        });
-    }
-
     const navbarHome = document.querySelector("#navbar-home");
     const navbarBookmarked = document.querySelector("#navbar-bookmarked");
 
@@ -77,7 +69,11 @@ window.addEventListener("load", function () {
         activateSeasonNavItemInContext([false, false, false, true]);
     });
 
+    let sliding = false;
+
     episodesCarousel.addEventListener("slide.bs.carousel", function (item) {
+
+        sliding = true;
 
         for (let i = 0; i < carouselInners.length; i++) {
             carouselInners[i].style.overflow = "hidden";
@@ -102,7 +98,22 @@ window.addEventListener("load", function () {
                 // Season 01
                 activateSeasonNavItemInContext([true, false, false, false]);
         }
+
     });
+
+    episodesCarousel.addEventListener("slid.bs.carousel", function() {
+        sliding = false;
+    });
+
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].addEventListener("mouseover", function () {
+            for (let j = 0; j < carouselInners.length; j++) {
+                if (!sliding) {
+                    carouselInners[j].style.overflow = "visible";
+                }
+            }
+        });
+    }
 
     const episodesTabLink = document.querySelector("#episodes-tab-link");
     const suggestedTabLink = document.querySelector("#suggested-tab-link");
