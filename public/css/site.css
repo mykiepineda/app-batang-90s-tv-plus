@@ -295,8 +295,7 @@ body, #bookmark-button {
 
     #image-cover {
         width: 70%;
-        margin-right: 0 !important;
-        /*margin-bottom: 3rem;*/
+        margin: 1rem 0 !important;
     }
 
     section.py-5 {
