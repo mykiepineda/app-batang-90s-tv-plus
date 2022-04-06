@@ -8,6 +8,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 const mongoose = require("mongoose");
 const videos = require("./models/video");
+const shows = require("./models/show");
 const database = "my-streaming-site";
 mongoose.connect(`mongodb+srv://mykiepineda:P1n3d%40j0hN@cluster0.omg3p.mongodb.net/${database}?retryWrites=true&w=majority`);
 
@@ -16,6 +17,7 @@ app.engine("handlebars", handlebars.engine({defaultLayout: "main", helpers: requ
 app.set("view engine", "handlebars");
 
 const AWS = require("aws-sdk");
+const suggestions = require("./mock_data/suggestions.json");
 
 const wasabiEndpoint = new AWS.Endpoint("s3.ap-northeast-2.wasabisys.com");
 
@@ -26,9 +28,27 @@ AWS.config.update({
     region: "ap-southeast-2"
 });
 
-app.get("/", function (req, res) {
+app.get("/", function(req, res) {
+    // TODO: Redirect to Kamen Rider Black RX for now
+   res.redirect("/show/01");
+});
 
-    res.locals.suggestions = require("./mock_data/suggestions.json");
+app.get("/show/:id", async function (req, res) {
+
+    const showId = req.params.id;
+
+    res.locals.show = await shows.findOne({id: showId}).lean();
+
+    const suggestions = require("./mock_data/suggestions.json");
+    let filteredSuggestions = [];
+
+    for(let i = 0; i < suggestions.length; i++) {
+        if (suggestions[i].id !== showId) {
+            filteredSuggestions.push(suggestions[i]);
+        }
+    }
+
+    res.locals.suggestions = filteredSuggestions;
 
     let sortBy = req.query.sortBy;
 

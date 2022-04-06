@@ -1,22 +1,27 @@
 [
   {
+    "id": "01",
     "name": "Masked Rider Black RX",
     "cover": "Kamen_rider_black_rx_title_banner.jpg"
   },
   {
-    "name": "Masked Rider Black",
-    "cover": "Kamen_rider_black_title_banner.jpg"
-  },
-  {
+    "id": "02",
     "name": "Shaider",
     "cover": "Shaider_title_banner.webp"
   },
   {
+    "id": "03",
+    "name": "Kousoku Sentai Turboranger",
+    "cover": "Turboranger_Title_Card.jpg"
+  },
+  {
+    "id": "04",
     "name": "Hikari Sentai Maskman",
     "cover": "Hikari_sentai_maskman_title_banner.webp"
   },
   {
-    "name": "Kousoku Sentai Turboranger",
-    "cover": "Turboranger_Title_Card.jpg"
+    "id": "05",
+    "name": "Masked Rider Black",
+    "cover": "Kamen_rider_black_title_banner.jpg"
   }
 ]

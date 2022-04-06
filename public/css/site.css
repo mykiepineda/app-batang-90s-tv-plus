@@ -9,9 +9,11 @@ html, body {
     -ms-text-size-adjust: none;
 }
 
-body {
-    background: linear-gradient(black, darkgreen, black, black) fixed;
-}
+.background-show-01 {background: linear-gradient(black, darkgreen, black, black) fixed;}
+.background-show-02 {background: linear-gradient(black, darkblue, black, black) fixed;}
+.background-show-03 {background: linear-gradient(black, darkred, black, black) fixed;}
+.background-show-04 {background: linear-gradient(black, darkred, black, black) fixed;}
+.background-show-05 {background: linear-gradient(black, yellow, black, black) fixed;}
 
 #image-cover,
 #image-cover img {
