@@ -1,5 +1,13 @@
 window.addEventListener("load", function () {
 
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    const navbarCollapse = document.querySelector(".navbar-collapse");
+
+    navbarToggler.addEventListener("click", function () {
+        navbarToggler.classList.toggle("collapsed");
+        navbarCollapse.classList.toggle("show");
+    });
+
     const carouselInners = document.querySelectorAll(".carousel-inner");
     const cards = document.querySelectorAll(".card");
 
@@ -98,22 +106,22 @@ window.addEventListener("load", function () {
 
     activateSeasonDropdownInContext([true, false, false, false]);
 
-    s1DropdownItem.addEventListener("click",function() {
+    s1DropdownItem.addEventListener("click", function () {
         dropdownButton.innerHTML = "Season 01";
         activateSeasonDropdownInContext([true, false, false, false]);
     });
 
-    s2DropdownItem.addEventListener("click",function() {
+    s2DropdownItem.addEventListener("click", function () {
         dropdownButton.innerHTML = "Season 02";
         activateSeasonDropdownInContext([false, true, false, false]);
     });
 
-    s3DropdownItem.addEventListener("click",function() {
+    s3DropdownItem.addEventListener("click", function () {
         dropdownButton.innerHTML = "Season 03";
         activateSeasonDropdownInContext([false, false, true, false]);
     });
 
-    sfDropdownItem.addEventListener("click",function() {
+    sfDropdownItem.addEventListener("click", function () {
         dropdownButton.innerHTML = "Season Finale";
         activateSeasonDropdownInContext([false, false, false, true]);
     });
@@ -195,7 +203,7 @@ window.addEventListener("load", function () {
 
     });
 
-    episodesCarousel.addEventListener("slid.bs.carousel", function() {
+    episodesCarousel.addEventListener("slid.bs.carousel", function () {
         sliding = false;
     });
 
