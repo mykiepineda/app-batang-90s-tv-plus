@@ -159,7 +159,7 @@ async function getContentLength(s3, params) {
 
 }
 
-app.get("/show/:showId/video/:episode", async function (req, res, next) {
+app.get("/video/:objectId", async function (req, res, next) {
 
     // TODO: https://github.com/aws/aws-sdk-js/issues/2087
     // Getting timeout error when seeking video (multiple canceled requests in browser developer/network mode)
@@ -170,8 +170,9 @@ app.get("/show/:showId/video/:episode", async function (req, res, next) {
         return res.status(400).send("Requires Range Header");
     }
 
-    const show = await shows.findOne({_id: req.params.showId}).lean();
-    const key = `${show.bucketFolder}/${req.params.episode}.mp4`;
+    const episode = await videos.findOne({_id: req.params.objectId}).lean();
+    const show = await shows.findOne({_id: episode.showId}).lean();
+    const key = `${show.bucketFolder}/${episode.episode}.mp4`;
 
     const s3 = new AWS.S3();
 
