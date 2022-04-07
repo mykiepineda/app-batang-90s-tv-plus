@@ -28,9 +28,9 @@ AWS.config.update({
     region: "ap-southeast-2"
 });
 
-app.get("/", function(req, res) {
+app.get("/", function (req, res) {
     // TODO: Homepage. Redirect to Kamen Rider Black RX for now
-   res.redirect("/show/01");
+    res.redirect("/show/01");
 });
 
 app.get("/show/:id", async function (req, res) {
@@ -43,7 +43,7 @@ app.get("/show/:id", async function (req, res) {
     const suggestions = require("./mock_data/suggestions.json");
     let filteredSuggestions = [];
 
-    for(let i = 0; i < suggestions.length; i++) {
+    for (let i = 0; i < suggestions.length; i++) {
         if (suggestions[i].id !== showId) {
             filteredSuggestions.push(suggestions[i]);
         }
@@ -51,43 +51,35 @@ app.get("/show/:id", async function (req, res) {
 
     res.locals.suggestions = filteredSuggestions;
 
-    // TODO: put in a function
-    videos.find({showId: showId}).sort({episode: 1}).lean().exec(function (err, collection) {
+    const videoCollection = await videos.find({showId: showId}).sort({episode: 1}).lean();
 
-        let pagination = [];
-        let page = 1;
-        let videoList = [];
-        let j = 1;
-        const cardsPerPage = 5;
+    let pagination = [];
+    let page = 1;
+    let videoList = [];
+    let j = 1;
+    const cardsPerPage = 5;
 
-        for (let i = 0; i <= collection.length; i++) {
-            if (i > 0 && (i % cardsPerPage === 0 || i === collection.length)) {
-                pagination.push({
-                    page: page,
-                    season: j,
-                    videos: videoList
-                });
-                if (page % 3 === 0) {
-                    j++;
-                }
-                page++;
-                videoList = [];
+    for (let i = 0; i <= videoCollection.length; i++) {
+        if (i > 0 && (i % cardsPerPage === 0 || i === videoCollection.length)) {
+            pagination.push({
+                page: page,
+                season: j,
+                videos: videoList
+            });
+            if (page % 3 === 0) {
+                j++;
             }
-            if (i < collection.length) {
-                videoList.push(collection[i]);
-            }
+            page++;
+            videoList = [];
         }
+        if (i < videoCollection.length) {
+            videoList.push(videoCollection[i]);
+        }
+    }
 
-        res.locals.pagination = pagination;
-        res.render("home");
-    });
-
-});
-
-app.get("/bookmarked", async function (req, res) {
-    res.locals.videos = await videos.find({bookmarked: true}).sort("episode").lean();
-
+    res.locals.pagination = pagination;
     res.render("home");
+
 });
 
 function getOtherEpisode(episode, next) {
@@ -216,21 +208,9 @@ app.get("/video/:objectId", async function (req, res, next) {
 
 });
 
-app.get("/bookmark/:episode", async function (req, res) {
-
-    const episodeId = req.params.episode;
-    let bookmarked = null;
-
-    await videos.findOne({episode: episodeId}).then(function (doc) {
-        bookmarked = doc.toJSON().bookmarked;
-    });
-
-    await videos.updateOne({episode: episodeId}, {bookmarked: !bookmarked});
-
-    res.redirect(`/episode/${episodeId}`);
-});
-
 app.listen(port, function () {
-    console.log(`Environment URL = ${process.env.URL}`);
+    if (process.env.URL !== undefined) {
+        console.log(`Environment URL = ${process.env.URL}`);
+    }
     console.log(`App listening on port ${port}`);
 });
