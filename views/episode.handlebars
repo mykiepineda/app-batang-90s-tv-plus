@@ -1,4 +1,4 @@
-<div class="container d-flex mt-3">
+<div class="container d-flex justify-content-center mt-3">
     <div id="episode-container" class="d-flex flex-column">
         <div>
             <div id="video-outer-container">
@@ -19,8 +19,8 @@
                     </div>
                 </div>
                 <div id="video-container">
-                    <video id="video-player" poster="/images/thumbnails/{{thumbnail}}" muted="muted" autoplay>
-                        <source src="/show/{{show}}/video/{{episode}}" type="video/mp4"/>
+                    <video id="video-player" poster="/images/shows/{{video.showId}}/thumbnails/{{video.thumbnail}}" muted="muted" autoplay>
+                        <source src="/show/{{video.showId}}/video/{{video.episode}}" type="video/mp4"/>
                     </video>
                     <div id="video-controls">
                         <div class="ps-3 pb-2 pe-3 pt-5">
@@ -36,7 +36,7 @@
                         <div id="video-controls-inner" class="d-flex align-items-center pt-0 p-3">
                             {{#unless reachedStart}}
                                 <div>
-                                    <a href="/episode/{{prevEpisode}}" role="button" class="btn btn-light"><i
+                                    <a href="/show/{{video.showId}}/episode/{{prevEpisode}}" role="button" class="btn btn-light"><i
                                             class="fa fa-step-backward"></i></a>
                                 </div>
                             {{/unless}}
@@ -46,7 +46,7 @@
                             </div>
                             {{#unless reachedEnd}}
                                 <div>
-                                    <a href="/episode/{{nextEpisode}}" role="button" class="btn btn-light"><i
+                                    <a href="/show/{{video.showId}}/episode/{{nextEpisode}}" role="button" class="btn btn-light"><i
                                             class="fa fa-step-forward"></i></a>
                                 </div>
                             {{/unless}}
@@ -76,9 +76,9 @@
             </div>
         </div>
         <div>
-            <h6>Episode {{episode}}<span class="the-dot">Season 01</span></h6>
-            <h3>{{title}}</h3>
-            <p>{{synopsis}}</p>
+            <h6>Episode {{video.episode}}<span class="the-dot">Season {{video.season}}</span></h6>
+            <h3>{{video.title}}</h3>
+            <p>{{video.synopsis}}</p>
         </div>
     </div>
     <script src="/scripts/episode.js"></script>

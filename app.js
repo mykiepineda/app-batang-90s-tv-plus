@@ -29,7 +29,7 @@ AWS.config.update({
 });
 
 app.get("/", function(req, res) {
-    // TODO: Redirect to Kamen Rider Black RX for now
+    // TODO: Homepage. Redirect to Kamen Rider Black RX for now
    res.redirect("/show/01");
 });
 
@@ -37,7 +37,8 @@ app.get("/show/:id", async function (req, res) {
 
     const showId = req.params.id;
 
-    res.locals.show = await shows.findOne({id: showId}).lean();
+    res.locals.showId = showId;
+    res.locals.show = await shows.findOne({_id: showId}).lean();
 
     const suggestions = require("./mock_data/suggestions.json");
     let filteredSuggestions = [];
@@ -50,20 +51,14 @@ app.get("/show/:id", async function (req, res) {
 
     res.locals.suggestions = filteredSuggestions;
 
-    let sortBy = req.query.sortBy;
-
-    if (sortBy === undefined) {
-        sortBy = "episode";
-    }
-
     // TODO: put in a function
-    videos.find().sort(sortBy).lean().exec(function (err, collection) {
+    videos.find({showId: showId}).sort({episode: 1}).lean().exec(function (err, collection) {
 
         let pagination = [];
         let page = 1;
         let videoList = [];
         let j = 1;
-        const cardsPerPage = 5; // varies depending on screen width
+        const cardsPerPage = 5;
 
         for (let i = 0; i <= collection.length; i++) {
             if (i > 0 && (i % cardsPerPage === 0 || i === collection.length)) {
@@ -79,7 +74,6 @@ app.get("/show/:id", async function (req, res) {
                 videoList = [];
             }
             if (i < collection.length) {
-                collection[i].showId = showId;
                 videoList.push(collection[i]);
             }
         }
@@ -113,33 +107,31 @@ function getOtherEpisode(episode, next) {
     return intEpisode.toString();
 }
 
-app.get("/episode/:id", async function (req, res) {
+app.get("/show/:showId/episode/:id", async function (req, res) {
 
+    const showId = req.params.showId;
     const episodeId = req.params.id;
 
     let minEpisode = null;
     let maxEpisode = null;
 
-    await videos.findOne().sort({episode: 1}).then(function (doc) {
+    await videos.findOne({showId: showId}).sort({episode: 1}).then(function (doc) {
         minEpisode = doc.toJSON().episode;
     });
-    await videos.findOne().sort({episode: -1}).then(function (doc) {
+    await videos.findOne({showId: showId}).sort({episode: -1}).then(function (doc) {
         maxEpisode = doc.toJSON().episode;
     });
 
-    await videos.find({"episode": episodeId}).then(function (collection) {
+    await videos.find({showId: showId, episode: episodeId}).then(function (collection) {
         const video = collection[0].toJSON();
-        res.locals.show = "kamen-rider-black-rx";
-        res.locals.episode = video.episode;
-        res.locals.title = video.title;
-        res.locals.synopsis = video.synopsis;
-        res.locals.thumbnail = video.thumbnail;
-        res.locals.bookmarked = video.bookmarked;
+        res.locals.video = video;
         res.locals.prevEpisode = getOtherEpisode(video.episode, false);
         res.locals.nextEpisode = getOtherEpisode(video.episode, true);
         res.locals.reachedStart = (episodeId === minEpisode);
         res.locals.reachedEnd = (episodeId === maxEpisode);
     });
+
+    res.locals.showId = showId;
 
     res.render("episode");
 });
@@ -167,20 +159,19 @@ async function getContentLength(s3, params) {
 
 }
 
-app.get("/show/:show/video/:episode", async function (req, res, next) {
+app.get("/show/:showId/video/:episode", async function (req, res, next) {
 
     // TODO: https://github.com/aws/aws-sdk-js/issues/2087
     // Getting timeout error when seeking video (multiple canceled requests in browser developer/network mode)
 
     // Ensure there is a range given for the video
-    // video HTML DOM is responsible for this?
     const range = req.headers.range;
     if (!range) {
         return res.status(400).send("Requires Range Header");
     }
 
-    const show = req.params.show;
-    const key = `${show}/${req.params.episode}.mp4`;
+    const show = await shows.findOne({_id: req.params.showId}).lean();
+    const key = `${show.bucketFolder}/${req.params.episode}.mp4`;
 
     const s3 = new AWS.S3();
 

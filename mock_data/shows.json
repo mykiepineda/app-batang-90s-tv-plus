@@ -1,6 +1,6 @@
 [
   {
-    "id": "01",
+    "_id": "01",
     "title": "Kamen Rider Black RX",
     "summary": "Half a year after the downfall of Gorgom, Kotaro Minami has gotten a job of a helicopter pilot in a business owned by the Sahara family. Kotaro is later captured by the Crisis Empire and offered a place in their group. When Kotaro refused, his King Stone was shattered and he was thrown into space where the sun's radiation mutated his King Stone and he mutated into Kamen Rider Black RX. With his new powers, he battles the Crisis Empire and thwarts their plans to take over Earth.",
     "cover": "9110712rx.jpg",
@@ -8,10 +8,11 @@
     "imdbUrl": "https://www.imdb.com/title/tt0151178/",
     "imdbRating": "8.2",
     "releaseInfo": "1987-1988",
-    "averageRunningTime": "25m"
+    "averageRunningTime": "25m",
+    "bucketFolder": "kamen-rider-black-rx"
   },
   {
-    "id": "02",
+    "_id": "02",
     "title": "Uchuu Keiji Shaider",
     "summary": "In college studying archaeology, Dai Sawamura deciphers the symbols of the Nazca Lines in Peru. Impressed by this feat, the Galactic Union Police (銀河連邦警察, Ginga Renpō Keisatsu) recruit and train him to be Earth's third Space Sheriff. He's given the code name Shaider in memory of an ancient warrior who defeated Emperor Kubilai and brought down his Fuuma Empire 12,000 years ago. When Fuuma returns, Dai is deputized as he returns to Earth to battle Fuuma.",
     "cover": "9vJzrEPmjxcaxQJ3o3nxaeYVkT3.jpg",
@@ -19,10 +20,11 @@
     "imdbUrl": "https://www.imdb.com/title/tt0185829",
     "imdbRating": "7.8",
     "releaseInfo": "1984-1985",
-    "averageRunningTime": "30m"
+    "averageRunningTime": "30m",
+    "bucketFolder": "uchuu-keiji-shaider"
   },
   {
-    "id": "03",
+    "_id": "03",
     "title": "Kousoku Sentai Turboranger",
     "summary": "Twenty thousand years ago, the Fairy race assisted humans in a battle against the Bōma Tribes and sealed them away. Due to modern day pollution and man's destruction of nature, the power of Fairy magic has weakened, allowing the seal to be broken and the Tribes escape. With the help of Doctor Dazai, Seelon, the last of the fairies, summoned five high school seniors. As children, they were showered with the \"flames of spirit\" of the fallen fairies in a forest, and can now hear Seelon's voice. Donning powered suits, the product of a collaboration between Seelon's magic and Doctor Dazai's science, the five become the Turborangers, juggling days of fighting with their regular school lives, in order to defeat the Bōma Tribes.",
     "cover": "7331242.jpg",
@@ -30,10 +32,11 @@
     "imdbUrl": "https://www.imdb.com/title/tt0096629",
     "imdbRating": "7.4",
     "releaseInfo": "1989-1990",
-    "averageRunningTime": "30m"
+    "averageRunningTime": "30m",
+    "bucketFolder": "kosouku-sentai-turboranger"
   },
   {
-    "id": "04",
+    "_id": "04",
     "title": "Hikari Sentai Maskman",
     "summary": "Commander Sugata is a scientist and sage who excels in mental reinforcements and is a master of every martial art. He disthumbnailed the existence of the Underground Empire Tube, a once peaceful kingdom that has turned into a malignant force under the mysterious Zeba, who desires to conquer the surface. In order to stand against them and thwart their plans, Sugata recruits five young people to become the Maskmen. Each becomes specialized in a style of martial arts, and Sugata teaches them the ways of the mystical \"Aura Power\" energy. A year after Sugata recruits and trains the Maskmen, the Underground Empire Tube is ready to strike. Princess Ial of the deposed Igam Royal Family, sent to spy above ground as Mio, falls in love with Takeru, and wishes for those underground and above ground to coexist. She is kidnapped and imprisoned in ice for her betrayal. As Takeru and the Maskmen battle Tube, they learn about Ial and Igam's relationship, and a terrible dark secret about Zeba, the Tube leader.",
     "cover": "6731772.jpg",
@@ -41,10 +44,11 @@
     "imdbUrl": "https://www.imdb.com/title/tt0092371",
     "imdbRating": "7.1",
     "releaseInfo": "1987-1988",
-    "averageRunningTime": "30m"
+    "averageRunningTime": "30m",
+    "bucketFolder": "hikari-sentai-maskman"
   },
   {
-    "id": "05",
+    "_id": "05",
     "title": "Kamen Rider Black",
     "summary": "After being kidnapped by the cult Gorgom on the night of their 19th birthday, stepbrothers Kotaro Minami and Nobuhiko Akizuki were submitted to a cyborg surgery with the purpose of becoming the candidates for the next Gorgom Creation King. Both of them are called Century Kings and are destined to best each other in a final battle - whoever wins will become the next Creation King. Kotaro escaped before getting brainwashed (which is the final step in the surgery), with help from his foster father, and turned against Gorgom. He soon finds out the horrific truth from his stepfather: Gorgom originally killed his true parents and, since both Kotaro and Nobuhiko were born on the day of a solar eclipse, referred as \"Black Sun\" and \"Shadow Moon\". Kotaro, taking on the name of Kamen Rider Black, was determined to rescue his stepbrother from Gorgom while protecting Japan.",
     "cover": "8105822black.jpg",
@@ -52,6 +56,7 @@
     "imdbUrl": "https://www.imdb.com/title/tt0156213",
     "imdbRating": "8.3",
     "releaseInfo": "1987-1988",
-    "averageRunningTime": "25m"
+    "averageRunningTime": "25m",
+    "bucketFolder": "kamen-rider-black"
   }
 ]

@@ -1,0 +1,410 @@
+[
+  {
+    "episode": "01",
+    "title": "The Fushigi World",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "01 THE STRANGE WORLD.JPG",
+    "season": "01",
+    "showId": "02"
+  },
+  {
+    "episode": "02",
+    "title": "Dance, Petpet",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "02 DANCE PETOPETO.JPG",
+    "season": "01",
+    "showId": "02"
+  },
+  {
+    "episode": "03",
+    "title": "Annie Doesn't Listen",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "03 ANNIE DOESN'T LISTEN.JPG",
+    "season": "01",
+    "showId": "02"
+  },
+  {
+    "episode": "04",
+    "title": "The Children Who Became Dogs",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "04 THE CHILDREN WHO BECAME ANIMALS.JPG",
+    "season": "01",
+    "showId": "02"
+  },
+  {
+    "episode": "05",
+    "title": "Suddenly! Lazy People",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "05 THE SUDDEN CASE OF LAZINESS.JPG",
+    "season": "01",
+    "showId": "02"
+  },
+  {
+    "episode": "06",
+    "title": "Strange Cooking Counterattack",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "06 THE ATTACK OF THE STRANGE WORLD'S COOKING.JPG",
+    "season": "01",
+    "showId": "02"
+  },
+  {
+    "episode": "07",
+    "title": "Have You Seen the Girls' Hallucination?",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "07 HAVE YOU SEEN THE GIRL'S HALLUCINATION.JPG",
+    "season": "01",
+    "showId": "02"
+  },
+  {
+    "episode": "08",
+    "title": "Rebellious Girl From the Stars",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "08 THE REBELLIOUS GIRL FROM THE STARS.JPG",
+    "season": "01",
+    "showId": "02"
+  },
+  {
+    "episode": "09",
+    "title": "I Hate the Blue Boys Band!",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "09 I HATE THE BLUE BOYS BAND.JPG",
+    "season": "01",
+    "showId": "02"
+  },
+  {
+    "episode": "10",
+    "title": "House of Twilight",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "10 HOUSE OF DARKNESS.JPG",
+    "season": "01",
+    "showId": "02"
+  },
+  {
+    "episode": "11",
+    "title": "Leave It to Annie",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "11 LEAVE IT TO ANNIE.JPG",
+    "season": "01",
+    "showId": "02"
+  },
+  {
+    "episode": "12",
+    "title": "Perfect-Score Genta's True Identity?",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "12 THE TRUE IDENTITY OF PERFECT-SCORING GENTA.JPG",
+    "season": "01",
+    "showId": "02"
+  },
+  {
+    "episode": "13",
+    "title": "The Gold Medal Tricked People",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "13 THE GOLD MEDAL MAN.JPG",
+    "season": "01",
+    "showId": "02"
+  },
+  {
+    "episode": "14",
+    "title": "The Love Mutant",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "14 MUTANT OF LOVE.JPG",
+    "season": "01",
+    "showId": "02"
+  },
+  {
+    "episode": "15",
+    "title": "Marine Blue of the Seashore",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "15 THE MARINE BLUE OF THE SEASHORE.JPG",
+    "season": "01",
+    "showId": "02"
+  },
+  {
+    "episode": "16",
+    "title": "The Surprised Alien Life Form",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "16 THE SURPRISED ALIEN LIFE FORM.JPG",
+    "season": "02",
+    "showId": "02"
+  },
+  {
+    "episode": "17",
+    "title": "The Mysterious Writings of the Space Sheriffs",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "17 GREAT CRASH INTO THE DEMON ZONE.JPG",
+    "season": "02",
+    "showId": "02"
+  },
+  {
+    "episode": "18",
+    "title": "The Fallen Empire Swallowed by the Pacific Ocean",
+    "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "18 DEATH MATCH AT DEMON ISLAND.JPG",
+    "season": "02",
+    "showId": "02"
+  },
+  {
+    "episode": "19",
+    "title": "Annie In Danger",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "19 ANNIE IN DANGER.JPG",
+    "season": "02",
+    "showId": "02"
+  },
+  {
+    "episode": "20",
+    "title": "The Fushigi Song",
+    "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "20 THE FEMALE COP WITH A HUNDRED FACES.JPG",
+    "season": "02",
+    "showId": "02"
+  },
+  {
+    "episode": "21",
+    "title": "Oh No! The Beast Family",
+    "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "21 THE MESSAGE OF LIFE SLICING THE SKY.JPG",
+    "season": "02",
+    "showId": "02"
+  },
+  {
+    "episode": "22",
+    "title": "The Merman Calls the Ocean of Mysteries",
+    "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "22 THE BIG SALE ON WILD CANNED MONSTERS.JPG",
+    "season": "02",
+    "showId": "02"
+  },
+  {
+    "episode": "23",
+    "title": "The Great Escape With Wounds All Over",
+    "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "23 THE MELODY OF YOURS AND MINE.JPG",
+    "season": "02",
+    "showId": "02"
+  },
+  {
+    "episode": "24",
+    "title": "The Beautiful Poe's Mask",
+    "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "24 THE WALKING PUPPET MASTER.JPG",
+    "season": "02",
+    "showId": "02"
+  },
+  {
+    "episode": "25",
+    "title": "Esper Queen",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "25 ESPER QUEEN.JPG",
+    "season": "02",
+    "showId": "02"
+  },
+  {
+    "episode": "26",
+    "title": "Great Crash Into the Demon Zone",
+    "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "26 THE MYSTERIOUS WRITINGS OF THE SPACE POLICE.JPG",
+    "season": "02",
+    "showId": "02"
+  },
+  {
+    "episode": "27",
+    "title": "The Demon Island Deathmatch",
+    "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "27 THE FALLEN EMPIRE SWALLOWED BY THE PACIFIC OCEAN.JPG",
+    "season": "02",
+    "showId": "02"
+  },
+  {
+    "episode": "28",
+    "title": "The Demon Palace's Backstabbing Brothers",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "28 BACKSTABBING BROTHERS OF THE DEMON PALACE.jpg",
+    "season": "02",
+    "showId": "02"
+  },
+  {
+    "episode": "29",
+    "title": "Police Woman with a Hundred Faces",
+    "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "29 THE STRANGE SONG.jpg",
+    "season": "02",
+    "showId": "02"
+  },
+  {
+    "episode": "30",
+    "title": "The Message of Life Slicing the Sky",
+    "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "30 I HATE THEM! THE LITTLE BEASTS' FAMILY.jpg",
+    "season": "02",
+    "showId": "02"
+  },
+  {
+    "episode": "31",
+    "title": "Canned Beast Bargain",
+    "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "31 THE ODDITY OF THE SEA ACCORDING TO A MERMAN.jpg",
+    "season": "03",
+    "showId": "02"
+  },
+  {
+    "episode": "32",
+    "title": "Our Melody",
+    "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "32 THE GREAT ESCAPE WITH WOUNDS ALL OVER.jpg",
+    "season": "03",
+    "showId": "02"
+  },
+  {
+    "episode": "33",
+    "title": "The Walking Puppet Master",
+    "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "33 THE BEAUTIFUL MASK OF PO.jpg",
+    "season": "03",
+    "showId": "02"
+  },
+  {
+    "episode": "34",
+    "title": "Kubilai's Secret",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "34 KUBILAI'S SECRET.jpg",
+    "season": "03",
+    "showId": "02"
+  },
+  {
+    "episode": "35",
+    "title": "The Mysterious Golden Arrow",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "35 THE MYSTERIOUS GOLDEN ARROW.jpg",
+    "season": "03",
+    "showId": "02"
+  },
+  {
+    "episode": "36",
+    "title": "It's the Maddening Age of Yumecom",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "36 IT'S THE AGE OF DREAM COMPUTER MADNESS.jpg",
+    "season": "03",
+    "showId": "02"
+  },
+  {
+    "episode": "37",
+    "title": "Roaring Beam Gun",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "37 ROARING BEAM GUN.jpg",
+    "season": "03",
+    "showId": "02"
+  },
+  {
+    "episode": "38",
+    "title": "Demon Girl Cinderella",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "38 THE DEMONIC CINDERELLA.jpg",
+    "season": "03",
+    "showId": "02"
+  },
+  {
+    "episode": "39",
+    "title": "The Masked Dancing Choir",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "39 THE CHOIR OF THE DANCING MASKS.jpg",
+    "season": "03",
+    "showId": "02"
+  },
+  {
+    "episode": "40",
+    "title": "Vavilos S.O.S.",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "40 VAVILOS S.O.S..jpg",
+    "season": "03",
+    "showId": "02"
+  },
+  {
+    "episode": "41",
+    "title": "Direct Attack on the Female Journalist",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "41 DIRECT ATTACK ON THE FEMALE JOURNALIST.jpg",
+    "season": "03",
+    "showId": "02"
+  },
+  {
+    "episode": "42",
+    "title": "The 6th Grade Class 0 Strangeness",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "42 THE MIRACLE OF GRADE 6, CLASS 0.jpg",
+    "season": "03",
+    "showId": "02"
+  },
+  {
+    "episode": "43",
+    "title": "Our Fuuma",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "43 OUR FUUMA.jpg",
+    "season": "03",
+    "showId": "02"
+  },
+  {
+    "episode": "44",
+    "title": "The Great Invasion",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "44 THE GREAT INVASION.jpg",
+    "season": "03",
+    "showId": "02"
+  },
+  {
+    "episode": "45",
+    "title": "The Fire Breathing Golden Idol",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "45 THE FIRE BREATHING GOLDEN IDOL.jpg",
+    "season": "03",
+    "showId": "02"
+  },
+  {
+    "episode": "46",
+    "title": "Phantom Showtime",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "46 PHANTOM SHOWTIME.jpg",
+    "season": "Finale",
+    "showId": "02"
+  },
+  {
+    "episode": "47",
+    "title": "Twelve Thousand Years of Darkness",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "47 12,000 YEARS OF DARKNESS.jpg",
+    "season": "Finale",
+    "showId": "02"
+  },
+  {
+    "episode": "48",
+    "title": "Justice – Friendship – Love",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "48 JUSTICE, FRIENDSHIP, AND LOVE.jpg",
+    "season": "Finale",
+    "showId": "02"
+  },
+  {
+    "episode": "49",
+    "title": "The Three Space Sheriffs – Gavan, Sharivan, Shaider Great Gathering!",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "49 3 SPACE SHERIFFS! GAVAN, SHARIVAN, SHAIDER! THE GATHERING.jpg",
+    "season": "Finale",
+    "showId": "02"
+  },
+  {
+    "episode": "50",
+    "title": "Movie 01",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "MOVIE 02.jpg",
+    "season": "Extra",
+    "showId": "02"
+  },
+  {
+    "episode": "51",
+    "title": "Movie 02",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "MOVIE 02.jpg",
+    "season": "Extra",
+    "showId": "02"
+  }
+]

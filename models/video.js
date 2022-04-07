@@ -16,12 +16,11 @@ const videoSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    bookmarked: {
-        type: Boolean,
-        default: false,
+    season: {
+        type: String,
         required: true
     },
-    season: {
+    showId: {
         type: String,
         required: true
     }

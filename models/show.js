@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 const showSchema = new mongoose.Schema({
-    id: {
+    _id: {
         type: String,
         required: true
     },
@@ -33,6 +33,10 @@ const showSchema = new mongoose.Schema({
         required: true
     },
     averageRunningTime: {
+        type: String,
+        required: true
+    },
+    bucketFolder: {
         type: String,
         required: true
     }
