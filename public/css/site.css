@@ -9,11 +9,25 @@ html, body {
     -ms-text-size-adjust: none;
 }
 
-.background-show-01 {background: linear-gradient(black, darkgreen, black, black) fixed;}
-.background-show-02 {background: linear-gradient(black, darkblue, black, black) fixed;}
-.background-show-03 {background: linear-gradient(black, darkred, black, black) fixed;}
-.background-show-04 {background: linear-gradient(black, darkred, black, black) fixed;}
-.background-show-05 {background: linear-gradient(black, yellow, black, black) fixed;}
+.background-show-01 {
+    background: linear-gradient(black, darkgreen, black, black) fixed;
+}
+
+.background-show-02 {
+    background: linear-gradient(black, darkblue, black, black) fixed;
+}
+
+.background-show-03 {
+    background: linear-gradient(black, darkred, black, black) fixed;
+}
+
+.background-show-04 {
+    background: linear-gradient(black, darkred, black, black) fixed;
+}
+
+.background-show-05 {
+    background: linear-gradient(black, yellow, black, black) fixed;
+}
 
 #image-cover,
 #image-cover img {
@@ -333,7 +347,6 @@ body, #bookmark-button {
     /*#episodes-tab-link, #suggested-tab-link, #details-tab-link {*/
     /*    margin: auto;*/
     /*}*/
-
     #suggested-section .d-flex {
         justify-content: center !important;
     }
@@ -649,4 +662,8 @@ body, #bookmark-button {
 
 .carousel-inner {
     overflow: visible;
+}
+
+.nav-link {
+    cursor: pointer;
 }

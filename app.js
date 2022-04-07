@@ -21,6 +21,8 @@ const suggestions = require("./mock_data/suggestions.json");
 
 const wasabiEndpoint = new AWS.Endpoint("s3.ap-northeast-2.wasabisys.com");
 
+const showsDropdown = require("./modules/middleware");
+
 AWS.config.update({
     accessKeyId: "Z5QQ38VNUCU81ANC8NZE",
     secretAccessKey: "DmJTppTMTEbXJi8KIlEk1i2mteWtKBAp3hYHrdWV",
@@ -33,14 +35,13 @@ app.get("/", function (req, res) {
     res.redirect("/show/01");
 });
 
-app.get("/show/:id", async function (req, res) {
+app.get("/show/:id", showsDropdown(), async function (req, res) {
 
     const showId = req.params.id;
 
     res.locals.showId = showId;
     res.locals.show = await shows.findOne({_id: showId}).lean();
 
-    const suggestions = require("./mock_data/suggestions.json");
     let filteredSuggestions = [];
 
     for (let i = 0; i < suggestions.length; i++) {

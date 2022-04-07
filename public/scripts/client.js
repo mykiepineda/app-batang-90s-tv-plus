@@ -1,5 +1,13 @@
 window.addEventListener("load", function () {
 
+    const showsDropdown = document.querySelector("#shows-dropdown");
+    const showsDropdownMenu = showsDropdown.querySelector(".dropdown-menu");
+
+    showsDropdown.addEventListener("click", function() {
+        showsDropdown.classList.toggle("show");
+        showsDropdownMenu.classList.toggle("show");
+    });
+
     const navbarToggler = document.querySelector(".navbar-toggler");
     const navbarCollapse = document.querySelector(".navbar-collapse");
 
