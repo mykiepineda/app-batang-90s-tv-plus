@@ -79,6 +79,7 @@ app.get("/show/:id", async function (req, res) {
                 videoList = [];
             }
             if (i < collection.length) {
+                collection[i].showId = showId;
                 videoList.push(collection[i]);
             }
         }
