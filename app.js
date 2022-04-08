@@ -52,36 +52,71 @@ app.get("/show/:id", showsDropdown(), async function (req, res) {
 
     res.locals.suggestions = filteredSuggestions;
 
-    const videoCollection = await videos.find({showId: showId}).sort({episode: 1}).lean();
+    const videoCollection = await videos.find({showId: showId}).sort({episode: 1, season: 1}).lean();
 
     let pagination = [];
-    let page = 1;
+    let pageNbr = 1;
     let videoList = [];
-    let j = 1;
     const cardsPerPage = 5;
+    let prevSeason = videoCollection[0].season;
 
-    for (let i = 0; i <= videoCollection.length; i++) {
-        if (i > 0 && (i % cardsPerPage === 0 || i === videoCollection.length)) {
-            pagination.push({
-                page: page,
-                season: j,
-                videos: videoList
-            });
-            if (page % 3 === 0) {
-                j++;
-            }
-            page++;
-            videoList = [];
+    let seasonsList = [];
+    let episodesList = [];
+
+    for (let i = 0; i < videoCollection.length; i++) {
+
+        const videoDocument = videoCollection[i];
+
+        if (prevSeason === videoDocument.season) {
+            episodesList.push(videoDocument.episode);
         }
-        if (i < videoCollection.length) {
-            videoList.push(videoCollection[i]);
-        }
+        prevSeason = videoDocument.season;
     }
+
+    console.log(pagination);
+
+    // for (let i = 0; i < videoCollection.length; i++) {
+    //
+    //     const videoDocument = videoCollection[i];
+    //
+    //     const changedSeason = (prevSeason !== videoDocument.season);
+    //
+    //     if (videoList.length < cardsPerPage && !changedSeason) {
+    //         videoList.push(videoDocument.episode);
+    //     }
+    //
+    //     const maxedCards = (videoList.length === cardsPerPage);
+    //     const reachedEnd = (i === videoCollection.length - 1);
+    //
+    //     if (maxedCards || reachedEnd || changedSeason) {
+    //         pagination.push({
+    //             i: i,
+    //             page: pageNbr,
+    //             prevSeason: prevSeason,
+    //             currSeason: videoDocument.season,
+    //             maxedCards: maxedCards,
+    //             reachedEnd: reachedEnd,
+    //             changedSeason: changedSeason,
+    //             videos: videoList
+    //         });
+    //         pageNbr++;
+    //         videoList = [];
+    //         if (changedSeason) {
+    //             videoList.push(videoDocument.episode);
+    //         }
+    //     }
+    //
+    //     prevSeason = videoDocument.season;
+    //
+    // }
+
+    // console.log(pagination);
 
     res.locals.pagination = pagination;
     res.render("home");
 
-});
+})
+;
 
 function getOtherEpisode(episode, next) {
 
