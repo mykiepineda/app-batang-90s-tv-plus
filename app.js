@@ -100,7 +100,7 @@ function getOtherEpisode(episode, next) {
     return intEpisode.toString();
 }
 
-app.get("/show/:showId/episode/:id", async function (req, res) {
+app.get("/show/:showId/episode/:id", showsDropdown(), async function (req, res) {
 
     const showId = req.params.showId;
     const episodeId = req.params.id;
