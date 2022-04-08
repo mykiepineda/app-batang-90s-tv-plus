@@ -2,7 +2,7 @@
     <div class="container">
         <div class="carousel-inner">
             {{#each pagination}}
-                <div id="s{{season}}" class="carousel-item {{#ifEquals page 1}}active{{/ifEquals}}">
+                <div class="my-carousel-group-{{season}} carousel-item {{#ifEquals page 1}}active{{/ifEquals}}">
                     <div class="card-deck">
                         <div id="card" class="d-flex flex-row justify-content-start">
                             {{#each videos}}

@@ -2,26 +2,13 @@
     <nav id="seasons-navbar" class="navbar navbar-expand-lg navbar-dark bg-dark" style="--bs-bg-opacity: 0;">
         <div class="flex-grow-1" id="navbarNavDropdown">
             <ul class="navbar-nav">
+                {{#each show.seasons}}
                 <div class="pe-5">
-                    <li id="s1-nav-item" class="nav-item active">
-                        <button id="season01Link" class="nav-link btn btn-link"><h4>Season 01</h4></button>
+                    <li id="{{this}}" class="my-seasons-nav-item nav-item{{#ifEquals this "01"}} active{{/ifEquals}}">
+                        <button class="my-seasons-link nav-link btn btn-link"><h4>Season {{this}}</h4></button>
                     </li>
                 </div>
-                <div class="pe-5">
-                    <li id="s2-nav-item" class="nav-item">
-                        <button id="season02Link" class="nav-link btn btn-link"><h4>Season 02</h4></button>
-                    </li>
-                </div>
-                <div class="pe-5">
-                    <li id="s3-nav-item" class="nav-item">
-                        <button id="season03Link" class="nav-link btn btn-link"><h4>Season 03</h4></button>
-                    </li>
-                </div>
-                <div class="pe-5">
-                    <li id="sf-nav-item" class="nav-item">
-                        <button id="seasonFinaleLink" class="nav-link btn btn-link"><h4>Season Finale</h4></button>
-                    </li>
-                </div>
+                {{/each}}
             </ul>
         </div>
     </nav>

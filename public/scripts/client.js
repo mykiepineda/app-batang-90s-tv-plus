@@ -136,12 +136,7 @@ window.addEventListener("load", function () {
 
     function activateSeasonNavItemInContext(options) {
 
-        const navItems = [];
-
-        navItems.push(document.querySelector("#s1-nav-item"));
-        navItems.push(document.querySelector("#s2-nav-item"));
-        navItems.push(document.querySelector("#s3-nav-item"));
-        navItems.push(document.querySelector("#sf-nav-item"));
+        const navItems = document.querySelectorAll(".my-seasons-nav-item");
 
         for (let i = 0; i < options.length; i++) {
             if (options[i] === true) {
@@ -152,32 +147,33 @@ window.addEventListener("load", function () {
         }
     }
 
+    const seasonsLinks = document.querySelectorAll(".my-seasons-link");
+    const carouselItems = document.querySelectorAll(".carousel-item");
+
+    for (let i = 0; i < seasonsLinks.length; i++) {
+
+        seasonsLinks[i].addEventListener("click", function (event) {
+
+            let options = [];
+            for (let j = 0; j < seasonsLinks.length; j++) {
+                if (i === j) {
+                    options.push(true);
+                } else {
+                    options.push(false);
+                }
+            }
+            activateSeasonNavItemInContext(options);
+
+            for(let k = 0; k < carouselItems.length; k++) {
+                if (carouselItems[k].classList.contains(`my-carousel-group-${i+1}`)) {
+                    $("#episodes-carousel").carousel(k);
+                    break;
+                }
+            }
+        });
+    }
+
     const episodesCarousel = document.querySelector("#episodes-carousel");
-    const season1Link = document.querySelector("#season01Link");
-    const season2Link = document.querySelector("#season02Link");
-    const season3Link = document.querySelector("#season03Link");
-    const seasonFLink = document.querySelector("#seasonFinaleLink");
-
-    // jQuery carousel methods
-    season1Link.addEventListener("click", function () {
-        $("#episodes-carousel").carousel(0);
-        activateSeasonNavItemInContext([true, false, false, false]);
-    });
-
-    season2Link.addEventListener("click", function () {
-        $("#episodes-carousel").carousel(3);
-        activateSeasonNavItemInContext([false, true, false, false]);
-    });
-
-    season3Link.addEventListener("click", function () {
-        $("#episodes-carousel").carousel(6);
-        activateSeasonNavItemInContext([false, false, true, false]);
-    });
-
-    seasonFLink.addEventListener("click", function () {
-        $("#episodes-carousel").carousel(9);
-        activateSeasonNavItemInContext([false, false, false, true]);
-    });
 
     let sliding = false;
 

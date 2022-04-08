@@ -396,7 +396,7 @@
     "title": "Movie 01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "MOVIE 01.jpg",
-    "season": "Extra",
+    "season": "Specials",
     "showId": "02"
   },
   {
@@ -404,7 +404,7 @@
     "title": "Movie 02",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "MOVIE 02.jpg",
-    "season": "Extra",
+    "season": "Specials",
     "showId": "02"
   }
 ]
