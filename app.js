@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, "public")));
 const mongoose = require("mongoose");
 const videos = require("./models/video");
 const shows = require("./models/show");
-const database = "my-streaming-site";
+const database = "batang-90s-tv-plus";
 mongoose.connect(`mongodb+srv://mykiepineda:P1n3d%40j0hN@cluster0.omg3p.mongodb.net/${database}?retryWrites=true&w=majority`);
 
 const handlebars = require("express-handlebars");
@@ -17,7 +17,6 @@ app.engine("handlebars", handlebars.engine({defaultLayout: "main", helpers: requ
 app.set("view engine", "handlebars");
 
 const AWS = require("aws-sdk");
-const suggestions = require("./mock_data/suggestions.json");
 
 const wasabiEndpoint = new AWS.Endpoint("s3.ap-northeast-2.wasabisys.com");
 
@@ -43,13 +42,12 @@ app.get("/show/:id", showsDropdown(), async function (req, res) {
     res.locals.show = await shows.findOne({_id: showId}).lean();
 
     let filteredSuggestions = [];
-
+    const suggestions = await shows.find().sort({_id: 1}).lean();
     for (let i = 0; i < suggestions.length; i++) {
-        if (suggestions[i].id !== showId) {
+        if (suggestions[i]._id !== showId) {
             filteredSuggestions.push(suggestions[i]);
         }
     }
-
     res.locals.suggestions = filteredSuggestions;
 
     const videoCollection = await videos.find({showId: showId}).sort({episode: 1}).lean();
