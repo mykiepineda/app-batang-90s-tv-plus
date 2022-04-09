@@ -131,7 +131,7 @@
     "episode": "17",
     "title": "The Mysterious Writings of the Space Sheriffs",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "thumbnail": "17 GREAT CRASH INTO THE DEMON ZONE.JPG",
+    "thumbnail": "17 THE MYSTERIOUS WRITINGS OF THE SPACE POLICE.jpg",
     "season": 1,
     "showId": "02"
   },
@@ -139,7 +139,7 @@
     "episode": "18",
     "title": "The Fallen Empire Swallowed by the Pacific Ocean",
     "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "thumbnail": "18 DEATH MATCH AT DEMON ISLAND.JPG",
+    "thumbnail": "18 THE FALLEN EMPIRE SWALLOWED BY THE PACIFIC OCEAN.JPG",
     "season": 1,
     "showId": "02"
   },
@@ -155,7 +155,7 @@
     "episode": "20",
     "title": "The Fushigi Song",
     "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "thumbnail": "20 THE FEMALE COP WITH A HUNDRED FACES.JPG",
+    "thumbnail": "20 THE STRANGE SONG.jpg",
     "season": 2,
     "showId": "02"
   },
@@ -163,7 +163,7 @@
     "episode": "21",
     "title": "Oh No! The Beast Family",
     "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "thumbnail": "21 THE MESSAGE OF LIFE SLICING THE SKY.JPG",
+    "thumbnail": "21 I HATE THEM! THE LITTLE BEASTS' FAMILY.jpg",
     "season": 2,
     "showId": "02"
   },
@@ -171,7 +171,7 @@
     "episode": "22",
     "title": "The Merman Calls the Ocean of Mysteries",
     "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "thumbnail": "22 THE BIG SALE ON WILD CANNED MONSTERS.JPG",
+    "thumbnail": "22 THE ODDITY OF THE SEA ACCORDING TO A MERMAN.jpg",
     "season": 2,
     "showId": "02"
   },
@@ -179,7 +179,7 @@
     "episode": "23",
     "title": "The Great Escape With Wounds All Over",
     "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "thumbnail": "23 THE MELODY OF YOURS AND MINE.JPG",
+    "thumbnail": "23 THE GREAT ESCAPE WITH WOUNDS ALL OVER.jpg",
     "season": 2,
     "showId": "02"
   },
@@ -187,7 +187,7 @@
     "episode": "24",
     "title": "The Beautiful Poe's Mask",
     "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "thumbnail": "24 THE WALKING PUPPET MASTER.JPG",
+    "thumbnail": "24 THE BEAUTIFUL MASK OF PO.jpg",
     "season": 2,
     "showId": "02"
   },
@@ -203,7 +203,7 @@
     "episode": "26",
     "title": "Great Crash Into the Demon Zone",
     "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "thumbnail": "26 THE MYSTERIOUS WRITINGS OF THE SPACE POLICE.jpg",
+    "thumbnail": "26 GREAT CRASH INTO THE DEMON ZONE.JPG",
     "season": 2,
     "showId": "02"
   },
@@ -211,7 +211,7 @@
     "episode": "27",
     "title": "The Demon Island Deathmatch",
     "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "thumbnail": "27 THE FALLEN EMPIRE SWALLOWED BY THE PACIFIC OCEAN.JPG",
+    "thumbnail": "27 DEATH MATCH AT DEMON ISLAND.JPG",
     "season": 2,
     "showId": "02"
   },
@@ -227,7 +227,7 @@
     "episode": "29",
     "title": "Police Woman with a Hundred Faces",
     "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "thumbnail": "29 THE STRANGE SONG.jpg",
+    "thumbnail": "29 THE FEMALE COP WITH A HUNDRED FACES.JPG",
     "season": 2,
     "showId": "02"
   },
@@ -235,7 +235,7 @@
     "episode": "30",
     "title": "The Message of Life Slicing the Sky",
     "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "thumbnail": "30 I HATE THEM! THE LITTLE BEASTS' FAMILY.jpg",
+    "thumbnail": "30 THE MESSAGE OF LIFE SLICING THE SKY.JPG",
     "season": 2,
     "showId": "02"
   },
@@ -243,7 +243,7 @@
     "episode": "31",
     "title": "Canned Beast Bargain",
     "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "thumbnail": "31 THE ODDITY OF THE SEA ACCORDING TO A MERMAN.jpg",
+    "thumbnail": "31 THE BIG SALE ON WILD CANNED MONSTERS.JPG",
     "season": 3,
     "showId": "02"
   },
@@ -251,7 +251,7 @@
     "episode": "32",
     "title": "Our Melody",
     "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "thumbnail": "32 THE GREAT ESCAPE WITH WOUNDS ALL OVER.jpg",
+    "thumbnail": "32 THE MELODY OF YOURS AND MINE.JPG",
     "season": 3,
     "showId": "02"
   },
@@ -259,7 +259,7 @@
     "episode": "33",
     "title": "The Walking Puppet Master",
     "synopsis": "TODO: Wrong thumbnail. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "thumbnail": "33 THE BEAUTIFUL MASK OF PO.jpg",
+    "thumbnail": "33 THE WALKING PUPPET MASTER.JPG",
     "season": 3,
     "showId": "02"
   },
@@ -395,7 +395,7 @@
     "episode": "50",
     "title": "The Movie",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "thumbnail": "MOVIE 01.jpg",
+    "thumbnail": "50 THE MOVIE.jpg",
     "season": 5,
     "showId": "02"
   },
@@ -403,7 +403,7 @@
     "episode": "51",
     "title": "Pursuit! The Strange Kidnappers!",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "thumbnail": "MOVIE 02.jpg",
+    "thumbnail": "51 PURSUIT! THE STRANGE KIDNAPPERS!.jpg",
     "season": 5,
     "showId": "02"
   }

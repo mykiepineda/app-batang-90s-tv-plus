@@ -43,7 +43,11 @@ const showSchema = new mongoose.Schema({
     seasons: {
         type: Array,
         required: true
-    }
+    },
+    details: {
+        type: String,
+        required: true
+    },
 });
 
 module.exports = mongoose.model("shows", showSchema);

@@ -53,52 +53,58 @@ app.get("/show/:id", showsDropdown(), async function (req, res) {
     res.locals.suggestions = filteredSuggestions;
 
     const videoCollection = await videos.find({showId: showId}).sort({episode: 1}).lean();
-    const cardsPerPage = 5;
-    let pagination = [];
-    let pageNbr = 1;
-    let videoList = [];
-    let tempVideoList = [];
-    let prevSeason = videoCollection[0].season;
 
-    for (let i = 0; i < videoCollection.length; i++) {
+    if (videoCollection.length > 0) {
 
-        const videoDocument = videoCollection[i];
+        const cardsPerPage = 5;
+        let pagination = [];
+        let pageNbr = 1;
+        let videoList = [];
+        let tempVideoList = [];
+        let prevSeason = videoCollection[0].season;
 
-        if (prevSeason !== videoDocument.season) {
-            tempVideoList = videoList;
-            videoList = [];
-        }
+        for (let i = 0; i < videoCollection.length; i++) {
 
-        if (videoList.length < cardsPerPage) {
-            videoList.push(videoDocument);
-        }
+            const videoDocument = videoCollection[i];
 
-        switch (true) {
-            case ((videoList.length === cardsPerPage) || (i === videoCollection.length - 1)):
-                pagination.push({
-                    page: pageNbr,
-                    season: videoDocument.season,
-                    videos: videoList
-                });
+            if (prevSeason !== videoDocument.season) {
+                tempVideoList = videoList;
                 videoList = [];
-                pageNbr++;
-                break;
-            case (tempVideoList.length > 0):
-                pagination.push({
-                    page: pageNbr,
-                    season: prevSeason,
-                    videos: tempVideoList
-                });
-                tempVideoList = [];
-                pageNbr++;
-                break;
+            }
+
+            if (videoList.length < cardsPerPage) {
+                videoList.push(videoDocument);
+            }
+
+            switch (true) {
+                case ((videoList.length === cardsPerPage) || (i === videoCollection.length - 1)):
+                    pagination.push({
+                        page: pageNbr,
+                        season: videoDocument.season,
+                        videos: videoList
+                    });
+                    videoList = [];
+                    pageNbr++;
+                    break;
+                case (tempVideoList.length > 0):
+                    pagination.push({
+                        page: pageNbr,
+                        season: prevSeason,
+                        videos: tempVideoList
+                    });
+                    tempVideoList = [];
+                    pageNbr++;
+                    break;
+            }
+
+            prevSeason = videoDocument.season;
+
         }
 
-        prevSeason = videoDocument.season;
+        res.locals.pagination = pagination;
 
     }
 
-    res.locals.pagination = pagination;
     res.render("home");
 
 })
