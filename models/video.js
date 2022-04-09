@@ -17,7 +17,7 @@ const videoSchema = new mongoose.Schema({
         required: true
     },
     season: {
-        type: String,
+        type: Number,
         required: true
     },
     showId: {

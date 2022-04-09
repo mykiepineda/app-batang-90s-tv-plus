@@ -19,27 +19,6 @@ window.addEventListener("load", function () {
     const carouselInners = document.querySelectorAll(".carousel-inner");
     const cards = document.querySelectorAll(".card");
 
-    const navbarHome = document.querySelector("#navbar-home");
-    const navbarBookmarked = document.querySelector("#navbar-bookmarked");
-
-    switch (window.location.href) {
-        case "http://localhost:3000/bookmarked":
-            navbarHome.classList.remove("active");
-            navbarBookmarked.classList.add("active");
-            break;
-        case "http://localhost:3000/":
-            navbarHome.classList.add("active");
-            navbarBookmarked.classList.remove("active");
-    }
-
-    // const dropdown = document.querySelector(".nav-item.dropdown");
-    // const dropdownMenu = document.querySelector(".dropdown-menu");
-    //
-    // dropdown.addEventListener("click", function () {
-    //     dropdown.classList.toggle("show");
-    //     dropdownMenu.classList.toggle("show");
-    // });
-
     const dropdown = document.querySelector("#seasons-sff-dropdown");
     const dropdownButton = dropdown.querySelector("button");
     const dropdownMenu = dropdown.querySelector(".dropdown-menu");
@@ -136,7 +115,7 @@ window.addEventListener("load", function () {
 
     function activateSeasonNavItemInContext(options) {
 
-        const navItems = document.querySelectorAll(".my-seasons-nav-item");
+        const navItems = document.querySelectorAll("#seasons-navbar .nav-item");
 
         for (let i = 0; i < options.length; i++) {
             if (options[i] === true) {
@@ -185,25 +164,19 @@ window.addEventListener("load", function () {
             carouselInners[i].style.overflow = "hidden";
         }
 
-        const slideToIndex = item.to;
+        // my-carousel-group-x
+        const myCarouselGroupClass = carouselItems[item.to].classList[0];
+        const index = parseInt(myCarouselGroupClass.substr(18, (myCarouselGroupClass.length - 18))) - 1;
 
-        switch (true) {
-            case slideToIndex >= 9:
-                // Season Finale
-                activateSeasonNavItemInContext([false, false, false, true]);
-                break;
-            case slideToIndex >= 6:
-                // Season 03
-                activateSeasonNavItemInContext([false, false, true, false]);
-                break;
-            case slideToIndex >= 3:
-                // Season 02
-                activateSeasonNavItemInContext([false, true, false, false]);
-                break;
-            default:
-                // Season 01
-                activateSeasonNavItemInContext([true, false, false, false]);
+        let options = [];
+        for (let i = 0; i < seasonsLinks.length; i++) {
+            if (index === i) {
+                options.push(true);
+            } else {
+                options.push(false);
+            }
         }
+        activateSeasonNavItemInContext(options);
 
     });
 

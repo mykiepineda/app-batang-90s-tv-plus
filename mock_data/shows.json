@@ -11,7 +11,12 @@
     "releaseInfo": "1987-1988",
     "averageRunningTime": "25m",
     "bucketFolder": "kamen-rider-black-rx",
-    "seasons": ["01","02","03","Finale"]
+    "seasons": [
+      "Season 1",
+      "Season 2",
+      "Season 3",
+      "Season Finale"
+    ]
   },
   {
     "_id": "02",
@@ -25,7 +30,13 @@
     "releaseInfo": "1984-1985",
     "averageRunningTime": "30m",
     "bucketFolder": "uchuu-keiji-shaider",
-    "seasons": ["01","02","03","Finale","Specials"]
+    "seasons": [
+      "Season 1",
+      "Season 2",
+      "Season 3",
+      "Season Finale",
+      "Movies"
+    ]
   },
   {
     "_id": "03",
@@ -39,7 +50,9 @@
     "releaseInfo": "1989-1990",
     "averageRunningTime": "30m",
     "bucketFolder": "kosouku-sentai-turboranger",
-    "seasons": ["01"]
+    "seasons": [
+      "Season 1"
+    ]
   },
   {
     "_id": "04",
@@ -53,7 +66,9 @@
     "releaseInfo": "1987-1988",
     "averageRunningTime": "30m",
     "bucketFolder": "hikari-sentai-maskman",
-    "seasons": ["01"]
+    "seasons": [
+      "Season 1"
+    ]
   },
   {
     "_id": "05",
@@ -67,6 +82,8 @@
     "releaseInfo": "1987-1988",
     "averageRunningTime": "25m",
     "bucketFolder": "kamen-rider-black",
-    "seasons": ["01"]
+    "seasons": [
+      "Season 1"
+    ]
   }
 ]
