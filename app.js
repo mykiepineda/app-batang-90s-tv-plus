@@ -76,25 +76,24 @@ app.get("/show/:id", showsDropdown(), async function (req, res) {
                 videoList.push(videoDocument);
             }
 
-            switch (true) {
-                case ((videoList.length === cardsPerPage) || (i === videoCollection.length - 1)):
-                    pagination.push({
-                        page: pageNbr,
-                        season: videoDocument.season,
-                        videos: videoList
-                    });
-                    videoList = [];
-                    pageNbr++;
-                    break;
-                case (tempVideoList.length > 0):
-                    pagination.push({
-                        page: pageNbr,
-                        season: prevSeason,
-                        videos: tempVideoList
-                    });
-                    tempVideoList = [];
-                    pageNbr++;
-                    break;
+            if (tempVideoList.length > 0) {
+                pagination.push({
+                    page: pageNbr,
+                    season: prevSeason,
+                    videos: tempVideoList
+                });
+                tempVideoList = [];
+                pageNbr++;
+            }
+
+            if ((videoList.length === cardsPerPage) || (i === videoCollection.length - 1)) {
+                pagination.push({
+                    page: pageNbr,
+                    season: videoDocument.season,
+                    videos: videoList
+                });
+                videoList = [];
+                pageNbr++;
             }
 
             prevSeason = videoDocument.season;
