@@ -3,7 +3,7 @@ window.addEventListener("load", function () {
     const showsDropdown = document.querySelector("#shows-dropdown");
     const showsDropdownMenu = showsDropdown.querySelector(".dropdown-menu");
 
-    showsDropdown.addEventListener("click", function() {
+    showsDropdown.addEventListener("click", function () {
         showsDropdown.classList.toggle("show");
         showsDropdownMenu.classList.toggle("show");
     });
@@ -19,99 +19,50 @@ window.addEventListener("load", function () {
     const carouselInners = document.querySelectorAll(".carousel-inner");
     const cards = document.querySelectorAll(".card");
 
+    // Seasons Dropdown
+
     const dropdown = document.querySelector("#seasons-sff-dropdown");
-    const dropdownButton = dropdown.querySelector("button");
+    const dropdownButton = dropdown.querySelector("#dropdownMenuButton");
     const dropdownMenu = dropdown.querySelector(".dropdown-menu");
+    const dropdownItems = dropdown.querySelectorAll(".dropdown-item");
+
+    const cardDecks = document.querySelectorAll("#card-deck-container .card-deck");
 
     dropdown.addEventListener("click", function () {
         dropdown.classList.toggle("show");
         dropdownMenu.classList.toggle("show");
     });
 
-    const s1DropdownItem = document.querySelector("#s1-dropdown-item");
-    const s2DropdownItem = document.querySelector("#s2-dropdown-item");
-    const s3DropdownItem = document.querySelector("#s3-dropdown-item");
-    const sfDropdownItem = document.querySelector("#sf-dropdown-item");
+    function activateSeasonDropdownInContext(i) {
 
-    const cardDecks = document.querySelectorAll("#card-deck-container .card-deck");
+        dropdownButton.innerText = dropdownItems[i].innerText;
 
-    function activateSeasonDropdownInContext(options) {
-
-        const dropdownItems = [];
-
-        dropdownItems.push(s1DropdownItem);
-        dropdownItems.push(s2DropdownItem);
-        dropdownItems.push(s3DropdownItem);
-        dropdownItems.push(sfDropdownItem);
-
-        for (let i = 0; i < options.length; i++) {
-            if (options[i] === true) {
-                dropdownItems[i].classList.add("active");
+        for (let j = 0; j < dropdownItems.length; j++) {
+            if (i === j) {
+                dropdownItems[j].classList.add("active");
             } else {
-                dropdownItems[i].classList.remove("active");
+                dropdownItems[j].classList.remove("active");
             }
         }
 
-        const s1Active = options[0];
-        const s2Active = options[1];
-        const s3Active = options[2];
-        const s4Active = options[3];
-
-        for (let i = 0; i < cardDecks.length; i++) {
-            switch (true) {
-                case s1Active:
-                    if (cardDecks[i].id === "s1") {
-                        cardDecks[i].style.display = "block";
-                    } else {
-                        cardDecks[i].style.display = "none";
-                    }
-                    break;
-                case s2Active:
-                    if (cardDecks[i].id === "s2") {
-                        cardDecks[i].style.display = "block";
-                    } else {
-                        cardDecks[i].style.display = "none";
-                    }
-                    break;
-                case s3Active:
-                    if (cardDecks[i].id === "s3") {
-                        cardDecks[i].style.display = "block";
-                    } else {
-                        cardDecks[i].style.display = "none";
-                    }
-                    break;
-                case s4Active:
-                    if (cardDecks[i].id === "s4") {
-                        cardDecks[i].style.display = "block";
-                    } else {
-                        cardDecks[i].style.display = "none";
-                    }
-                    break;
+        for (let k = 0; k < cardDecks.length; k++) {
+            if (cardDecks[k].classList.contains(`my-card-deck-${i + 1}`)) {
+                cardDecks[k].style.display = "block";
+            } else {
+                cardDecks[k].style.display = "none";
             }
         }
     }
 
-    activateSeasonDropdownInContext([true, false, false, false]);
+    for (let i = 0; i < dropdownItems.length; i++) {
+        dropdownItems[i].addEventListener("click", function () {
+            activateSeasonDropdownInContext(i);
+        });
+    }
 
-    s1DropdownItem.addEventListener("click", function () {
-        dropdownButton.innerHTML = "Season 01";
-        activateSeasonDropdownInContext([true, false, false, false]);
-    });
+    activateSeasonDropdownInContext(0);
 
-    s2DropdownItem.addEventListener("click", function () {
-        dropdownButton.innerHTML = "Season 02";
-        activateSeasonDropdownInContext([false, true, false, false]);
-    });
-
-    s3DropdownItem.addEventListener("click", function () {
-        dropdownButton.innerHTML = "Season 03";
-        activateSeasonDropdownInContext([false, false, true, false]);
-    });
-
-    sfDropdownItem.addEventListener("click", function () {
-        dropdownButton.innerHTML = "Season Finale";
-        activateSeasonDropdownInContext([false, false, false, true]);
-    });
+    // Seasons Tabs
 
     function activateSeasonNavItemInContext(options) {
 
@@ -143,8 +94,8 @@ window.addEventListener("load", function () {
             }
             activateSeasonNavItemInContext(options);
 
-            for(let k = 0; k < carouselItems.length; k++) {
-                if (carouselItems[k].classList.contains(`my-carousel-group-${i+1}`)) {
+            for (let k = 0; k < carouselItems.length; k++) {
+                if (carouselItems[k].classList.contains(`my-carousel-group-${i + 1}`)) {
                     $("#episodes-carousel").carousel(k);
                     break;
                 }

@@ -1,14 +1,15 @@
 <div class="container" style="margin-top:calc(25px - 0.5rem)">
     <div id="seasons-sff-dropdown" class="dropdown">
-        <button class="btn btn-light btn-lg dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false" style="font-size: calc(1.275rem + .3vw);font-weight: 500;line-height: 1.2">
-            Season 01
+        <button id="dropdownMenuButton" class="btn btn-light btn-lg dropdown-toggle" type="button"
+                data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"
+                style="font-size: calc(1.275rem + .3vw);font-weight: 500;line-height: 1.2">
+            Season 1
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-            <button id="s1-dropdown-item" class="dropdown-item active"><h4>Season 01</h4></button>
-            <button id="s2-dropdown-item" class="dropdown-item"><h4>Season 02</h4></button>
-            <button id="s3-dropdown-item" class="dropdown-item"><h4>Season 03</h4></button>
-            <button id="sf-dropdown-item" class="dropdown-item"><h4>Season Finale</h4></button>
+            {{#each show.seasons}}
+            <button class="dropdown-item{{#ifEquals this "Season 1"}} active{{/ifEquals}}"><h4>{{this}}</h4></button>
+            {{/each}}
         </div>
     </div>
 </div>
