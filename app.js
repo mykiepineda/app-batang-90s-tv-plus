@@ -53,35 +53,56 @@ app.get("/show/:id", showsDropdown(), async function (req, res) {
     res.locals.suggestions = filteredSuggestions;
 
     const videoCollection = await videos.find({showId: showId}).sort({episode: 1}).lean();
-
-    let pagination = [];
-    let page = 1;
-    let videoList = [];
-    let j = 1;
     const cardsPerPage = 5;
+    let pagination = [];
+    let pageNbr = 1;
+    let videoList = [];
+    let tempVideoList = [];
+    let prevSeason = videoCollection[0].season;
 
-    for (let i = 0; i <= videoCollection.length; i++) {
-        if (i > 0 && (i % cardsPerPage === 0 || i === videoCollection.length)) {
-            pagination.push({
-                page: page,
-                season: j,
-                videos: videoList
-            });
-            if (page % 3 === 0) {
-                j++;
-            }
-            page++;
+    for (let i = 0; i < videoCollection.length; i++) {
+
+        const videoDocument = videoCollection[i];
+
+        if (prevSeason !== videoDocument.season) {
+            tempVideoList = videoList;
             videoList = [];
         }
-        if (i < videoCollection.length) {
-            videoList.push(videoCollection[i]);
+
+        if (videoList.length < cardsPerPage) {
+            videoList.push(videoDocument);
         }
+
+        switch (true) {
+            case ((videoList.length === cardsPerPage) || (i === videoCollection.length - 1)):
+                pagination.push({
+                    page: pageNbr,
+                    season: videoDocument.season,
+                    videos: videoList
+                });
+                videoList = [];
+                pageNbr++;
+                break;
+            case (tempVideoList.length > 0):
+                pagination.push({
+                    page: pageNbr,
+                    season: prevSeason,
+                    videos: tempVideoList
+                });
+                tempVideoList = [];
+                pageNbr++;
+                break;
+        }
+
+        prevSeason = videoDocument.season;
+
     }
 
     res.locals.pagination = pagination;
     res.render("home");
 
-});
+})
+;
 
 function getOtherEpisode(episode, next) {
 

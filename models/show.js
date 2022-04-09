@@ -39,6 +39,10 @@ const showSchema = new mongoose.Schema({
     bucketFolder: {
         type: String,
         required: true
+    },
+    seasons: {
+        type: Array,
+        required: true
     }
 });
 

@@ -4,7 +4,7 @@
     "title": "Child of the Sun! RX",
     "synopsis": "Some time after the defeat of Gorgom, Kohtaro Minami attempts to create a new life for himself in peace. But when the Crisis Empire arrives to conquer Earth, they come prepared to deal with the hero; forcing him to awaken a new power to face this new threat.",
     "thumbnail": "01.webp",
-    "season": "01",
+    "season": 1,
     "showId": "01"
   },
   {
@@ -12,7 +12,7 @@
     "title": "Covered in Light! RX",
     "synopsis": "Kohtaro begins to realize the new power he has gained by becoming Kamen Rider Black RX, even as a robotic member of the Crisis Empire has him targeted for battle.",
     "thumbnail": "02.webp",
-    "season": "01",
+    "season": 1,
     "showId": "01"
   },
   {
@@ -20,7 +20,7 @@
     "title": "RX vs. the Knight of the Wind",
     "synopsis": "In order to save the son of the Sahara Family from a wind-controlling knight, Kohtaro must travel to the Demon World where he discovers the truth about the realm of the Crisis Emperor.",
     "thumbnail": "03.webp",
-    "season": "01",
+    "season": 1,
     "showId": "01"
   },
   {
@@ -28,7 +28,7 @@
     "title": "The Car of Light, Ridoron",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "04.webp",
-    "season": "01",
+    "season": 1,
     "showId": "01"
   },
   {
@@ -36,7 +36,7 @@
     "title": "The Pitfall of Cave Exploration",
     "synopsis": "Shigeru and Reiko become caught by Bosgun's moth monster, where Kohtaro has an hour to save them before they mutate into his minions.",
     "thumbnail": "05.webp",
-    "season": "01",
+    "season": 1,
     "showId": "01"
   },
   {
@@ -44,7 +44,7 @@
     "title": "The Strange Demon Extraterrestrials' Great Riot!",
     "synopsis": "Shigeru befriends a strange extraterrestrial sent by Gedorian to impregnate and ultimately overrun Earth in their numbers.",
     "thumbnail": "06.webp",
-    "season": "01",
+    "season": 1,
     "showId": "01"
   },
   {
@@ -52,7 +52,7 @@
     "title": "SOS! The Story of Friendship",
     "synopsis": "When a friend discovers plans for a massive Crisis poison gas weapon, Kohtaro must come to his aid and protect him while preventing the plans from falling into the wrong hands.",
     "thumbnail": "07.jpg",
-    "season": "01",
+    "season": 1,
     "showId": "01"
   },
   {
@@ -60,7 +60,7 @@
     "title": "Papa and Mama's Secret",
     "synopsis": "A girl who suddenly becomes a genius becomes the target for the Crisis Empire due to a secret kept from her by her parents regarding who she really is.",
     "thumbnail": "08.jpg",
-    "season": "01",
+    "season": 1,
     "showId": "01"
   },
   {
@@ -68,7 +68,7 @@
     "synopsis": "Maribaron decides to use one of Gedorian's weaker monsters to assist in a plot to brainwash humanity by manipulating the purity of a cactus-loving girl.",
     "title": "Maribaron's Witchcraft",
     "thumbnail": "09.webp",
-    "season": "01",
+    "season": 1,
     "showId": "01"
   },
   {
@@ -76,7 +76,7 @@
     "title": "Surprised with Replicas",
     "synopsis": "A monster replaces Shigeru with a perfect clone in a plot by Maribaron to replace all of Kohtaro's friends and allies in order to estrange him.",
     "thumbnail": "10.jpg",
-    "season": "01",
+    "season": 1,
     "showId": "01"
   },
   {
@@ -84,7 +84,7 @@
     "title": "The Scraps' Revolt",
     "synopsis": "Gatezone employs an extremely powerful yet extremely rebellious member of his machine army to use his machine-controlling powers to defeat Kohtaro for the Crisis Empire.",
     "thumbnail": "11.webp",
-    "season": "01",
+    "season": 1,
     "showId": "01"
   },
   {
@@ -92,7 +92,7 @@
     "title": "The Assassin in the Dreams",
     "synopsis": "A Crisis monster is brought in to manipulate Reiko's dreams to use her to draw suspicion against Kohtaro and thus use her against RX.",
     "thumbnail": "12.webp",
-    "season": "01",
+    "season": 1,
     "showId": "01"
   },
   {
@@ -100,7 +100,7 @@
     "title": "The Targeted Strange Demon Girl",
     "synopsis": "Shigeru finds a strange green stone needed by the Crisis Empire to activate their new dimension-switching device as the daughter of the scientist behind it pursues him to get it back.",
     "thumbnail": "13.webp",
-    "season": "01",
+    "season": 1,
     "showId": "01"
   },
   {
@@ -108,7 +108,7 @@
     "title": "Hitomi's Kidnapping",
     "synopsis": "When Maribaron accidentally kills the Crisis Emperor's cloned daughter, she decides to fix her mistake by abducting the Sahara daughter Hitomi as her replacement.",
     "thumbnail": "14.webp",
-    "season": "01",
+    "season": 1,
     "showId": "01"
   },
   {
@@ -116,7 +116,7 @@
     "title": "Roborider's Birth",
     "synopsis": "Pursuing Maribaron and Hitomi in the Demon World, Kohtaro is forced to fight against the assumed traitor Deathgaron, leading to a sorrowful encounter that awakens a new power in RX.",
     "thumbnail": "15.webp",
-    "season": "01",
+    "season": 2,
     "showId": "01"
   },
   {
@@ -124,7 +124,7 @@
     "title": "The Miraculous Valley's Princess",
     "synopsis": "While still pursuing Hitomi, Kohtaro encounters a strange cyborg who wishes to work on his side, but is under the control of a harsh, mind-controlling warrior of the Crisis Empire.",
     "thumbnail": "16.webp",
-    "season": "02",
+    "season": 2,
     "showId": "01"
   },
   {
@@ -132,7 +132,7 @@
     "title": "Biorider!",
     "synopsis": "With Hitomi fully transformed into Princess Garonia, Kohtaro has to figure out a way to finally resurrect her memories and save her before he, Shigeru and Joe the Haze are executed by Maribaron's pawn.",
     "thumbnail": "17.webp",
-    "season": "02",
+    "season": 2,
     "showId": "01"
   },
   {
@@ -140,7 +140,7 @@
     "title": "Mystery! A Dream of Swimming in the Air",
     "synopsis": "Kohtaro takes on Gedorian's Crisis monster mutating kids while giving them the delusion that they're flying squirrels.",
     "thumbnail": "18.webp",
-    "season": "02",
+    "season": 2,
     "showId": "01"
   },
   {
@@ -148,7 +148,7 @@
     "title": "The Artificial Sun of Terror!",
     "synopsis": "Crisis creates a second sun over Tokyo, forcing the city to burn unless a scientist can develop a special magnetic gun that can eliminate the threat while under Kohtaro's protection.",
     "thumbnail": "19.jpg",
-    "season": "02",
+    "season": 2,
     "showId": "01"
   },
   {
@@ -156,7 +156,7 @@
     "title": "The Banana-eating Ogre",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "20.webp",
-    "season": "02",
+    "season": 2,
     "showId": "01"
   },
   {
@@ -164,7 +164,7 @@
     "title": "The Front of Love and Friendship",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "21.webp",
-    "season": "02",
+    "season": 2,
     "showId": "01"
   },
   {
@@ -172,7 +172,7 @@
     "title": "Shadow Moon!",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "22.webp",
-    "season": "02",
+    "season": 2,
     "showId": "01"
   },
   {
@@ -180,7 +180,7 @@
     "title": "RX Became a Pig",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "23.webp",
-    "season": "02",
+    "season": 2,
     "showId": "01"
   },
   {
@@ -188,7 +188,7 @@
     "title": "Papa is Dracula",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "24.webp",
-    "season": "02",
+    "season": 2,
     "showId": "01"
   },
   {
@@ -196,7 +196,7 @@
     "title": "The Bride of the Scorpion Seat",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "25.webp",
-    "season": "02",
+    "season": 2,
     "showId": "01"
   },
   {
@@ -204,7 +204,7 @@
     "title": "Bosgun's Counterattack",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "26.webp",
-    "season": "02",
+    "season": 2,
     "showId": "01"
   },
   {
@@ -212,7 +212,7 @@
     "title": "Great Counterattack! The Prince of Shadows",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "27.webp",
-    "season": "02",
+    "season": 2,
     "showId": "01"
   },
   {
@@ -220,7 +220,7 @@
     "title": "Agent of the Majestic Emperor",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "28.webp",
-    "season": "02",
+    "season": 2,
     "showId": "01"
   },
   {
@@ -228,7 +228,7 @@
     "title": "A World Without Water",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "29.webp",
-    "season": "02",
+    "season": 2,
     "showId": "01"
   },
   {
@@ -236,7 +236,7 @@
     "title": "Tomorrow in Tears, Tokyo's a Desert",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "30.webp",
-    "season": "02",
+    "season": 2,
     "showId": "01"
   },
   {
@@ -244,7 +244,7 @@
     "title": "The Woman who Saw the Evil Devil World",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "31.webp",
-    "season": "03",
+    "season": 3,
     "showId": "01"
   },
   {
@@ -252,7 +252,7 @@
     "title": "The Sky of Love and Hope",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "32.webp",
-    "season": "03",
+    "season": 3,
     "showId": "01"
   },
   {
@@ -260,7 +260,7 @@
     "title": "The Great Battle of Seto Bridge",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "33.webp",
-    "season": "03",
+    "season": 3,
     "showId": "01"
   },
   {
@@ -268,7 +268,7 @@
     "title": "The Shikoku Aircraft Plans!!",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "34.webp",
-    "season": "03",
+    "season": 3,
     "showId": "01"
   },
   {
@@ -276,7 +276,7 @@
     "title": "Kohtaro Wanted!!",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "35.webp",
-    "season": "03",
+    "season": 3,
     "showId": "01"
   },
   {
@@ -284,7 +284,7 @@
     "title": "Who's the Hero!?",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "36.webp",
-    "season": "03",
+    "season": 3,
     "showId": "01"
   },
   {
@@ -292,7 +292,7 @@
     "title": "Peeling with Tusks, the Beastman Ninja Troop",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "37.webp",
-    "season": "03",
+    "season": 3,
     "showId": "01"
   },
   {
@@ -300,7 +300,7 @@
     "title": "The Wicked Dance Troop of the White Bone Field",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "38.webp",
-    "season": "03",
+    "season": 3,
     "showId": "01"
   },
   {
@@ -308,7 +308,7 @@
     "title": "Running Explosion! Mini 4WD",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "39.webp",
-    "season": "03",
+    "season": 3,
     "showId": "01"
   },
   {
@@ -316,7 +316,7 @@
     "title": "The Trap of the Ghostly Housing Development",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "40.webp",
-    "season": "03",
+    "season": 3,
     "showId": "01"
   },
   {
@@ -324,7 +324,7 @@
     "title": "Terror of the 100 Eyed Hag",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "41.webp",
-    "season": "03",
+    "season": 3,
     "showId": "01"
   },
   {
@@ -332,7 +332,7 @@
     "title": "The Four Commanders Are Banished",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "42.jpg",
-    "season": "03",
+    "season": 3,
     "showId": "01"
   },
   {
@@ -340,7 +340,7 @@
     "title": "Defeated!! RX",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "43.webp",
-    "season": "03",
+    "season": 3,
     "showId": "01"
   },
   {
@@ -348,7 +348,7 @@
     "title": "Fight! All Riders",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "44.webp",
-    "season": "03",
+    "season": 4,
     "showId": "01"
   },
   {
@@ -356,7 +356,7 @@
     "title": "False Rider's Last Days",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "45.webp",
-    "season": "03",
+    "season": 4,
     "showId": "01"
   },
   {
@@ -364,7 +364,7 @@
     "title": "The Riders' All Out Charge",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "46.webp",
-    "season": "Finale",
+    "season": 4,
     "showId": "01"
   },
   {
@@ -372,7 +372,7 @@
     "title": "A Shining Tomorrow!",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "47.webp",
-    "season": "Finale",
+    "season": 4,
     "showId": "01"
   }
 ]
