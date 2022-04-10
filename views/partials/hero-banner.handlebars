@@ -32,13 +32,13 @@
                                     Play</h5></a>
                             </div>
                             <div id="add-to-watchlist" class="pt-1">
-                                <a href="/watchlist/{{showId}}" class="btn btn-outline-light pt-3 ps-5 pb-3 pe-5"><h5><i
-                                        class="fa fa-plus-circle"
+                                <a href="/watchlist/{{#if inWatchlist}}remove{{else}}add{{/if}}/{{showId}}" class="btn btn-outline-light pt-3 ps-5 pb-3 pe-5"><h5><i
+                                        class="fa fa-{{#if inWatchlist}}minus{{else}}plus{{/if}}-circle"
                                         aria-hidden="true"></i> Watchlist</h5></a>
                             </div>
                             <div id="plus-watchlist" class="pt-1">
-                                <a href="/watchlist/{{showId}}" class="nav-link pt-3 ps-5 pb-3 pe-5"><h5><i
-                                        class="fa fa-plus" aria-hidden="true"></i></i> Watchlist</h5></a>
+                                <a href="/watchlist/{{#if inWatchlist}}remove{{else}}add{{/if}}/{{showId}}" class="nav-link pt-3 ps-5 pb-3 pe-5"><h5><i
+                                        class="fa fa-{{#if inWatchlist}}minus{{else}}plus{{/if}}" aria-hidden="true"></i></i> Watchlist</h5></a>
                             </div>
                         </div>
                     </div>

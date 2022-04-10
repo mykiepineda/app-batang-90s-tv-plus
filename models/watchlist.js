@@ -10,4 +10,4 @@ const watchlistSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model("watchlist", watchlistSchema);
+module.exports = mongoose.model("watchlists", watchlistSchema);

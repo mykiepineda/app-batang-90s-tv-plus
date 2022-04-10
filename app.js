@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, "public")));
 const mongoose = require("mongoose");
 const videos = require("./models/video");
 const shows = require("./models/show");
-const watchlist = require("./models/watchlist");
+const watchlists = require("./models/watchlist");
 const database = "batang-90s-tv-plus";
 mongoose.connect(`mongodb+srv://mykiepineda:P1n3d%40j0hN@cluster0.omg3p.mongodb.net/${database}?retryWrites=true&w=majority`);
 
@@ -41,6 +41,20 @@ app.get("/show/:id", showsDropdown(), async function (req, res) {
 
     res.locals.showId = showId;
     res.locals.show = await shows.findOne({_id: showId}).lean();
+    res.locals.myWatchlist = [];
+    res.locals.inWatchlist = false;
+
+    const myWatchlist = await watchlists.findOne({user: "mykie"}).populate({path: "shows", model: "shows"}).lean();
+
+    if (myWatchlist !== null) {
+        for (let i = 0; i < myWatchlist.shows.length; i++) {
+            const myWatchlistShow = myWatchlist.shows[i];
+            if (myWatchlistShow._id === showId) {
+                res.locals.inWatchlist = true;
+            }
+            res.locals.myWatchlist.push({id: myWatchlistShow._id, title: myWatchlistShow.title});
+        }
+    }
 
     let filteredSuggestions = [];
     const suggestions = await shows.find().sort({_id: 1}).lean();
@@ -234,12 +248,43 @@ app.get("/video/:objectId", async function (req, res, next) {
 
 });
 
-app.get("/watchlist/:showId", async function(req, res) {
+async function addRemoveToWatchlist(add, user, showId) {
+
+    let watchlistUpdate = await watchlists.findOne({user: user}).lean();
+
+    if (watchlistUpdate !== null) {
+        const index = watchlistUpdate.shows.indexOf(showId);
+        if (add) {
+            if (index < 0) {
+                watchlistUpdate.shows.push(showId);
+            }
+        } else {
+            if (index > -1) {
+                watchlistUpdate.shows.splice(index, 1);
+            }
+        }
+        await watchlists.findOneAndUpdate({user: user}, watchlistUpdate);
+    }
+
+}
+
+app.get("/watchlist/add/:showId", async function (req, res) {
 
     const showId = req.params.showId;
 
-    // TODO: WIP
-    await watchlist.findOneAndUpdate({user: "01"}, {shows: [showId]});
+    // TODO: Pass in logged-in user
+    await addRemoveToWatchlist(true, "mykie", showId);
+
+    res.redirect(`/show/${showId}`);
+
+});
+
+app.get("/watchlist/remove/:showId", async function (req, res) {
+
+    const showId = req.params.showId;
+
+    // TODO: Pass in logged-in user
+    await addRemoveToWatchlist(false, "mykie", showId);
 
     res.redirect(`/show/${showId}`);
 

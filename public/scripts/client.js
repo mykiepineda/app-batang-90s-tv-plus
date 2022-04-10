@@ -8,6 +8,14 @@ window.addEventListener("load", function () {
         showsDropdownMenu.classList.toggle("show");
     });
 
+    const myWatchlistDropdown = document.querySelector("#my-watchlist-dropdown");
+    const myWatchlistDropdownMenu = myWatchlistDropdown.querySelector(".dropdown-menu");
+
+    myWatchlistDropdown.addEventListener("click", function () {
+        myWatchlistDropdown.classList.toggle("show");
+        myWatchlistDropdownMenu.classList.toggle("show");
+    });
+
     const navbarToggler = document.querySelector(".navbar-toggler");
     const navbarCollapse = document.querySelector(".navbar-collapse");
 

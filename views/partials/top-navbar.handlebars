@@ -27,8 +27,14 @@
                         {{/each}}
                     </div>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">My Watchlist</a>
+                <li id="my-watchlist-dropdown" class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">My Watchlist</a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                        {{#each myWatchlist}}
+                            <a class="dropdown-item{{#ifEquals @root.showId this.id}} active{{/ifEquals}}" href="/show/{{this.id}}">{{this.title}}</a>
+                        {{/each}}
+                    </div>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" action="/search" method="POST">

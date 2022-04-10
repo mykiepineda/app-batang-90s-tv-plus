@@ -17,15 +17,14 @@ html, body {
     background: linear-gradient(black, darkblue, black, black) fixed;
 }
 
-.background-show-03 {
+.background-show-03,
+.background-show-04,
+.background-show-05,
+.background-show-06 {
     background: linear-gradient(black, darkred, black, black) fixed;
 }
 
-.background-show-04 {
-    background: linear-gradient(black, darkred, black, black) fixed;
-}
-
-.background-show-05 {
+.background-show-07 {
     background: linear-gradient(black, yellow, black, black) fixed;
 }
 
