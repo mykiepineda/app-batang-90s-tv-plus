@@ -1,8 +1,10 @@
 <div>
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark ps-3 pe-3" style="--bs-bg-opacity: 0;">
-        <a class="navbar-brand" href="/"><img
-                src="/images/Icon-rx.webp" style="height:35px;"><i class="fa fa-plus" aria-hidden="true"></i></a>
-        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        <a class="navbar-brand" href="/">
+                <img src="/images/broadcasting.png" style="height:40px">
+        </a>
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -16,10 +18,12 @@
                     <a class="nav-link" href="{{show.fandomWiki}}" target="_blank">Fandom Wiki</a>
                 </li>
                 <li id="shows-dropdown" class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shows</a>
+                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+                       aria-expanded="false">Shows</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
                         {{#each allShows}}
-                            <a class="dropdown-item{{#ifEquals @root.showId this._id}} active{{/ifEquals}}" href="/show/{{this._id}}">{{this.title}}</a>
+                            <a class="dropdown-item{{#ifEquals @root.showId this._id}} active{{/ifEquals}}"
+                               href="/show/{{this._id}}">{{this.title}}</a>
                         {{/each}}
                     </div>
                 </li>

@@ -9,6 +9,7 @@ app.use(express.static(path.join(__dirname, "public")));
 const mongoose = require("mongoose");
 const videos = require("./models/video");
 const shows = require("./models/show");
+const watchlist = require("./models/watchlist");
 const database = "batang-90s-tv-plus";
 mongoose.connect(`mongodb+srv://mykiepineda:P1n3d%40j0hN@cluster0.omg3p.mongodb.net/${database}?retryWrites=true&w=majority`);
 
@@ -230,6 +231,17 @@ app.get("/video/:objectId", async function (req, res, next) {
         console.log(error);
         res.end();
     });
+
+});
+
+app.get("/watchlist/:showId", async function(req, res) {
+
+    const showId = req.params.showId;
+
+    // TODO: WIP
+    await watchlist.findOneAndUpdate({user: "01"}, {shows: [showId]});
+
+    res.redirect(`/show/${showId}`);
 
 });
 
