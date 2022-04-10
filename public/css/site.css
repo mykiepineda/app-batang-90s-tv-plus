@@ -1,12 +1,21 @@
 :root {
     --cards-spacing: 25px;
-}
+    --my-primary-color: rgb(26,29,41);
+    --my-secondary-color: rgb(9,11,19);}
+
+.my-primary-text {font-size: 20px !important;}
+.my-secondary-text {font-size: 15px !important;}
+.my-tertiary-text {font-size: 12px !important;}
 
 html, body {
     text-size-adjust: none;
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
     -ms-text-size-adjust: none;
+}
+
+body {
+    background: linear-gradient(45deg, var(--my-secondary-color), var(--my-primary-color), var(--my-secondary-color));
 }
 
 .background-show-01 {
@@ -281,13 +290,18 @@ body, #bookmark-button {
         display: block;
     }
 
-    #mid-navbar .navbar-nav div:nth-child(1),
-    #mid-navbar .navbar-nav div:nth-child(2) {
-        padding-right: 10px !important;
+    #logo-image {
+        width: 100%;
     }
 
+    #mid-navbar .navbar-nav div:nth-child(1),
+    #mid-navbar .navbar-nav div:nth-child(2),
     #mid-navbar .navbar-nav div:nth-child(3) {
         padding: 0 !important;
+    }
+
+    ul.navbar-nav {
+        justify-content: space-between;
     }
 
     #small-form-factor #card-body {
