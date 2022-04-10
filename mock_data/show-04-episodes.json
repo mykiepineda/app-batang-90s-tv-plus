@@ -1,0 +1,461 @@
+[
+  {
+    "episode": "01",
+    "title": "The Mysterious, Beautiful Runaway",
+    "airDate": "1987-02-28",
+    "synopsis": "Five youths begin their battle against the underground forces of Tube as Maskman after they begin a war with the surface with the abduction of the mysterious Mio.",
+    "thumbnail": "01.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "02",
+    "title": "Strange! The Dark Underground Castle",
+    "airDate": "1987-03-07",
+    "synopsis": "Takeru abandons Commander Sugata's Aura Power training when he receives a message from Mio about her survival and current whereabouts as Tube prepares to punish her.",
+    "thumbnail": "02.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "03",
+    "title": "The First Step into the Unknown",
+    "airDate": "1987-03-14",
+    "synopsis": "As Emperor Zeba plunges the world into eternal darkness, the Maskman must complete their Aura Power training, even as Prince Igam decides to face Takeru for the shame Mio has brought him.",
+    "thumbnail": "03.jpg",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "04",
+    "title": "Burn! F1 Spirits!",
+    "airDate": "1987-03-21",
+    "synopsis": "The Maskman must save a boy and his father trapped within a tunnel transformed by Oyobu into an endless Medius tunnel.",
+    "thumbnail": "04.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "05",
+    "title": "The Small Swordsman, Blue",
+    "airDate": "1987-03-28",
+    "synopsis": "Akira's teammates become frustrated with his childish behavior, and he tries to prove himself as Skull Doggler and Fumin start swapping people's faces.",
+    "thumbnail": "05.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "06",
+    "title": "The God Hand of Dreams",
+    "airDate": "1987-04-04",
+    "synopsis": "While investigating a series of unusual earthquakes in Otaki, Takeru meets a boy who believes he possesses a legendary martial arts move.",
+    "thumbnail": "06.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "07",
+    "title": "Explode! Kenta's Love",
+    "airDate": "1987-04-11",
+    "synopsis": "Kenta encounters a girl who likes him, inspiring Baraba to use a Doggler to sabotage his new love.",
+    "thumbnail": "07.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "08",
+    "title": "Burn! The Flower's Sword",
+    "airDate": "1987-04-18",
+    "synopsis": "Igam uses a special flower to lure out Akira and Momoko to save their teammates after the other Maskman become frozen by a Doggler.",
+    "thumbnail": "08.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "09",
+    "title": "Combine! Aura of Life",
+    "airDate": "1987-04-25",
+    "synopsis": "Takeru unexpectedly summons an alien child to Earth with his Aura, which interferes with Baraba's scheme to cut off the planet's electricity.",
+    "thumbnail": "09.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "10",
+    "title": "Igam vs. Takeru",
+    "airDate": "1987-05-02",
+    "synopsis": "Igam challenges Takeru to his family's ceremonial Death Ring match, a cage showdown where only one of them will leave the battle alive!",
+    "thumbnail": "10.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "11",
+    "title": "The Refugee From Underground",
+    "airDate": "1987-05-09",
+    "synopsis": "Kenta pursues a former ninja from underground who has abducted a crown associated with the truth behind Emperor Zeba.",
+    "thumbnail": "11.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "12",
+    "title": "A Challenge! The Pride of a Shinobi",
+    "airDate": "1987-05-16",
+    "synopsis": "Haruka is forced to join in a showdown between Fumin and Oyobu to defeat a ninja Doggler that can grant the ultimate shinobi power.",
+    "thumbnail": "12.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "13",
+    "title": "Chase the Idol!",
+    "airDate": "1987-05-23",
+    "synopsis": "Kenta investigates an idol with a reporter when he discovers she may be part of a plot to create a stronger army of Ungler Soldiers for Tube.",
+    "thumbnail": "13.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "14",
+    "title": "The Great Escape to the Blue Sky!",
+    "airDate": "1987-05-30",
+    "synopsis": "Akira is dragged underground into a city where he meets children of Tube's empire who only dream of the surface and the sky.",
+    "thumbnail": "14.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "15",
+    "title": "Farewell, Dear Flower!",
+    "airDate": "1987-06-06",
+    "synopsis": "A flower cared for by Momoko becomes the key to stopping a Doggler's deadly flower that kills as it sprouts.",
+    "thumbnail": "15.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "16",
+    "title": "Deadly! Blazing Baraba",
+    "airDate": "1987-06-13",
+    "synopsis": "Kenta must fight alone against Baraba after the Tube general steals the Aura from his teammates to strengthen his powers.",
+    "thumbnail": "16.jpg",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "17",
+    "title": "Smash it! The Maze of Hell",
+    "airDate": "1987-06-20",
+    "synopsis": "Takeru is lured by Igam into a building transformed into a maze by a Doggler to confuse and wear him down.",
+    "thumbnail": "17.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "18",
+    "title": "The Dear Bloodsucking Doll!",
+    "airDate": "1987-06-27",
+    "synopsis": "Haruka gives a doll she formerly owned to a girl who desires it, unknowing of the Doggler hiding within threatening to kill her.",
+    "thumbnail": "18.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "19",
+    "title": "Phantom Magic! Anagumas",
+    "airDate": "1987-07-04",
+    "synopsis": "Anagmas uses his magic to enhance the Tube forces while making Akira lose his memories during a sneak attack.",
+    "thumbnail": "19.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "20",
+    "title": "A Trap! The Sinking Giant Robot",
+    "airDate": "1987-07-11",
+    "synopsis": "Momoko's pride as a kenpo teacher is tested by a powerful opponent set up by Anagmas as part of a scheme to defeat Maskman and Great Five.",
+    "thumbnail": "20.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "21",
+    "title": "The Black Shadow of the Misty Valley",
+    "airDate": "1987-07-18",
+    "synopsis": "With Great Five buried underground, Sugata decides to investigate a rival mecha that has gained infamy for killing its creator.",
+    "thumbnail": "21.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "22",
+    "title": "The Winds and Clouds of an Aura Storm!",
+    "airDate": "1987-07-25",
+    "synopsis": "With Galaxy Robo in their hands, the Maskman head forth to save Great Five, unknowing of the difficulties of doing so and an unknown key to fully activate their new mecha.",
+    "thumbnail": "22.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "23",
+    "title": "Mio Who Has Become a Demon",
+    "airDate": "1987-08-01",
+    "synopsis": "A Doggler transforms a woman into a fake, evil Mio to lure Takeru into a Tube trap.",
+    "thumbnail": "23.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "24",
+    "title": "The Grotto of the Young Monster",
+    "airDate": "1987-08-08",
+    "synopsis": "The Maskman are summoned to Inasa where a boy is mutated into a monster by a Doggler as a city friend comes to visit.",
+    "thumbnail": "24.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "25",
+    "title": "Akira's Lover!?",
+    "airDate": "1987-08-15",
+    "synopsis": "Akira enters a martial arts tournament unknowingly controlled by Tube due to a letter he has received from an unexpected writer.",
+    "thumbnail": "25.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "26",
+    "title": "A Life That Disappeared on the Hot Sand!",
+    "airDate": "1987-08-22",
+    "synopsis": "Kenta encounters a sorrowful girl who is actually a creature working to empower a Doggler while trying to preserve her own short life.",
+    "thumbnail": "26.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "27",
+    "title": "Thief Knight Kiros!",
+    "airDate": "1987-08-29",
+    "synopsis": "Thief Knight Kiros, a lone wolf of the underground, takes on the Maskman in hopes of defeating them and winning Princess Ial for himself.",
+    "thumbnail": "27.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "28",
+    "title": "Mio is Princess Ial!?",
+    "airDate": "1987-09-05",
+    "synopsis": "An assault by Kiros draws Takeru away from research for Shot Bomber's replacement, where he finds out the truth about Mio and her current fate.",
+    "thumbnail": "28.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "29",
+    "title": "The New Lethal Weapon of Friendship",
+    "airDate": "1987-09-12",
+    "synopsis": "The Maskman rush to face a Doggler while their new cannon remains incomplete against the warnings of their head engineer, who has personal ties with their enemy.",
+    "thumbnail": "29.jpg",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "30",
+    "title": "Mama!! Baraba's Scream!",
+    "airDate": "1987-09-19",
+    "synopsis": "Akira decides to help Baraba's mother reach her son when he decides to partake in a trial to gain the legendary sword of the underground.",
+    "thumbnail": "30.jpg",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "31",
+    "title": "It Appears! The Guardian Deity Igam Dragon",
+    "airDate": "1987-09-26",
+    "synopsis": "Igam attempts to gain the assistance of his family's guardian to increase his power, while Haruka has a crisis in the sudden loss of her own abilities.",
+    "thumbnail": "31.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "32",
+    "title": "Oyobu's Lethal Dash",
+    "airDate": "1987-10-03",
+    "synopsis": "Kenta discovers a derelict car of a racing friend he decides to use to cheer him up, even while being chased by Oyobu for accidentally obtaining a part of Baraba's latest plot.",
+    "thumbnail": "32.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "33",
+    "title": "Takeru!! Cut Through Love!",
+    "airDate": "1987-10-10",
+    "synopsis": "Takeru encounters an underground girl who wants to help him even though she has sworn her love to Kiros.",
+    "thumbnail": "33.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "34",
+    "title": "Blues of Love and Murderous Intent",
+    "airDate": "1987-10-17",
+    "synopsis": "A Doggler takes a human form in order to pursue love with Momoko, under the condition he destroys the Maskman in three days!",
+    "thumbnail": "34.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "35",
+    "title": "The Mystery of Zeba! The Forbidden Tomb",
+    "airDate": "1987-10-24",
+    "synopsis": "Kiros opens a sealed tomb revealing a powerful Doggler that may be associated with Zeba's greatest secret.\n\n",
+    "thumbnail": "35.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "36",
+    "title": "Elimination! The Destructive Twin Girls",
+    "airDate": "1987-10-31",
+    "synopsis": "Igam uses a Doggler to turn twin sisters into a combined menace as they destroy while trying to reunite with one another.\n\n",
+    "thumbnail": "36.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "37",
+    "title": "Soldiers Who Bet on Their Dreams",
+    "airDate": "1987-11-07",
+    "synopsis": "Kiros uses a Doggler to remove Kenta's courage, forcing a boy he protected to help him rediscover his dreams to regain it.\n\n",
+    "thumbnail": "37.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "38",
+    "title": "The Time to Erase Takeru",
+    "airDate": "1987-11-14",
+    "synopsis": "Igam devises a plan to go back in time and kill Takeru when he's little, thereby creating a time paradox. The Maskman must stop this plan, while getting to see how Takeru is like when he is a kid.",
+    "thumbnail": "38.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "39",
+    "title": "Revival! The Mysterious X1 Mask",
+    "airDate": "1987-11-21",
+    "synopsis": "When a sixth Maskman saves the team from an attack, Takeru investigates to find out why he vanished from their battle with Tube.",
+    "thumbnail": "39.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "40",
+    "title": "Resurrect! The Melody of Love",
+    "airDate": "1987-11-28",
+    "synopsis": "A famous pianist returning to Japan is suddenly targeted by Tube due to a unknown connection with them and her mysterious benefactor.",
+    "thumbnail": "40.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "41",
+    "title": "Female Thieves Haruka & Momoko",
+    "airDate": "1987-12-05",
+    "synopsis": "Kiros uses a Doggler to transform Haruka and Momoko into evil female thieves stealing wealth to give to Ial.",
+    "thumbnail": "41.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "42",
+    "title": "Fly! The Poem of a Timid Boy",
+    "airDate": "1987-12-12",
+    "synopsis": "A cowardly boy gains super-strength to defend himself after eating a cave mushroom Baraba wished to harvest for himself.",
+    "thumbnail": "42.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "43",
+    "title": "Akira Loses His Eyesight! The Mysterious Spell",
+    "airDate": "1987-12-19",
+    "synopsis": "During a revenge attack by Kiros for stopping his previous research, Akira begins to hear a strange chant from underground that makes his eyes go blind.",
+    "thumbnail": "43.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "44",
+    "title": "Transform! Underground Empire Swordsman Akira",
+    "airDate": "1987-12-26",
+    "synopsis": "The underground refugees complete a ritual in an attempt to awaken a great hero, but instead awaken a Doggler of the Igam clan who rewards its power to a surprising warrior...",
+    "thumbnail": "44.png",
+    "season": 1,
+    "showId": "04"
+  },
+  {
+    "episode": "45",
+    "title": "Prince Igam! You're a Woman!",
+    "airDate": "1988-01-09",
+    "synopsis": "The Maskman discover the truth behind why Akira was transformed into the Underground Knight Unas as they fight to get him back from Igam's control.",
+    "thumbnail": "45.png",
+    "season": 2,
+    "showId": "04"
+  },
+  {
+    "episode": "46",
+    "title": "Counterattack! The Secret of the Demon Pond",
+    "airDate": "1988-01-16",
+    "synopsis": "Igam's teacher guides her to a pond where Lethal Doggler was born to gain its power, only to learn a surprising revelation regarding what lies within.\n\n",
+    "thumbnail": "46.png",
+    "season": 2,
+    "showId": "04"
+  },
+  {
+    "episode": "47",
+    "title": "The Night Prior to the Attack! The Dance of Death",
+    "airDate": "1988-01-23",
+    "synopsis": "A dance student of Haruka is abducted to take part in Tube's ceremony to summon victory in their final war on the surface.",
+    "thumbnail": "47.png",
+    "season": 2,
+    "showId": "04"
+  },
+  {
+    "episode": "48",
+    "title": "Baraba! Death for Treason",
+    "airDate": "1988-01-30",
+    "synopsis": "With no more chances left in Tube, Baraba joins with Kiros to abduct the frozen Ial in a final chance to defeat Takeru.\n\n",
+    "thumbnail": "48.png",
+    "season": 2,
+    "showId": "04"
+  },
+  {
+    "episode": "49",
+    "title": "The Revived Princess Ial",
+    "airDate": "1988-02-06",
+    "synopsis": "With Kiros possessing Ial's frozen body, Takeru and Igam both try to get her back in order to control her ultimate fate before the thief knight can thaw her out.\n\n",
+    "thumbnail": "49.png",
+    "season": 2,
+    "showId": "04"
+  },
+  {
+    "episode": "50",
+    "title": "Zeba! His Hair-Raising Secret Identity",
+    "airDate": "1988-02-13",
+    "synopsis": "Ial and the Maskman obtain a ball that reveals the truth behind Emperor Zeba, even as he begins his final plan to raise the Underground Castle and cover the world in darkness.",
+    "thumbnail": "50.png",
+    "season": 2,
+    "showId": "04"
+  },
+  {
+    "episode": "51",
+    "title": "Great Destruction of Underground Empire Castle!",
+    "airDate": "1988-02-20",
+    "synopsis": "As Zeba finally unleashes eternal darkness upon the world, the Maskman must work with the twins of the Igam royal family and complete the restoration of light upon two realms.",
+    "thumbnail": "51.png",
+    "season": 2,
+    "showId": "04"
+  }
+]

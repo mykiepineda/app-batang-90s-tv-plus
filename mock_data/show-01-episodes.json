@@ -2,6 +2,7 @@
   {
     "episode": "01",
     "title": "Child of the Sun! RX",
+    "airDate": "1900-01-01",
     "synopsis": "Some time after the defeat of Gorgom, Kohtaro Minami attempts to create a new life for himself in peace. But when the Crisis Empire arrives to conquer Earth, they come prepared to deal with the hero; forcing him to awaken a new power to face this new threat.",
     "thumbnail": "01.webp",
     "season": 1,
@@ -10,6 +11,7 @@
   {
     "episode": "02",
     "title": "Covered in Light! RX",
+    "airDate": "1900-01-01",
     "synopsis": "Kohtaro begins to realize the new power he has gained by becoming Kamen Rider Black RX, even as a robotic member of the Crisis Empire has him targeted for battle.",
     "thumbnail": "02.webp",
     "season": 1,
@@ -18,6 +20,7 @@
   {
     "episode": "03",
     "title": "RX vs. the Knight of the Wind",
+    "airDate": "1900-01-01",
     "synopsis": "In order to save the son of the Sahara Family from a wind-controlling knight, Kohtaro must travel to the Demon World where he discovers the truth about the realm of the Crisis Emperor.",
     "thumbnail": "03.webp",
     "season": 1,
@@ -26,6 +29,7 @@
   {
     "episode": "04",
     "title": "The Car of Light, Ridoron",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "04.webp",
     "season": 1,
@@ -34,6 +38,7 @@
   {
     "episode": "05",
     "title": "The Pitfall of Cave Exploration",
+    "airDate": "1900-01-01",
     "synopsis": "Shigeru and Reiko become caught by Bosgun's moth monster, where Kohtaro has an hour to save them before they mutate into his minions.",
     "thumbnail": "05.webp",
     "season": 1,
@@ -42,6 +47,7 @@
   {
     "episode": "06",
     "title": "The Strange Demon Extraterrestrials' Great Riot!",
+    "airDate": "1900-01-01",
     "synopsis": "Shigeru befriends a strange extraterrestrial sent by Gedorian to impregnate and ultimately overrun Earth in their numbers.",
     "thumbnail": "06.webp",
     "season": 1,
@@ -50,6 +56,7 @@
   {
     "episode": "07",
     "title": "SOS! The Story of Friendship",
+    "airDate": "1900-01-01",
     "synopsis": "When a friend discovers plans for a massive Crisis poison gas weapon, Kohtaro must come to his aid and protect him while preventing the plans from falling into the wrong hands.",
     "thumbnail": "07.jpg",
     "season": 1,
@@ -58,6 +65,7 @@
   {
     "episode": "08",
     "title": "Papa and Mama's Secret",
+    "airDate": "1900-01-01",
     "synopsis": "A girl who suddenly becomes a genius becomes the target for the Crisis Empire due to a secret kept from her by her parents regarding who she really is.",
     "thumbnail": "08.jpg",
     "season": 1,
@@ -65,6 +73,7 @@
   },
   {
     "episode": "09",
+    "airDate": "1900-01-01",
     "synopsis": "Maribaron decides to use one of Gedorian's weaker monsters to assist in a plot to brainwash humanity by manipulating the purity of a cactus-loving girl.",
     "title": "Maribaron's Witchcraft",
     "thumbnail": "09.webp",
@@ -74,6 +83,7 @@
   {
     "episode": "10",
     "title": "Surprised with Replicas",
+    "airDate": "1900-01-01",
     "synopsis": "A monster replaces Shigeru with a perfect clone in a plot by Maribaron to replace all of Kohtaro's friends and allies in order to estrange him.",
     "thumbnail": "10.jpg",
     "season": 1,
@@ -82,6 +92,7 @@
   {
     "episode": "11",
     "title": "The Scraps' Revolt",
+    "airDate": "1900-01-01",
     "synopsis": "Gatezone employs an extremely powerful yet extremely rebellious member of his machine army to use his machine-controlling powers to defeat Kohtaro for the Crisis Empire.",
     "thumbnail": "11.webp",
     "season": 1,
@@ -90,6 +101,7 @@
   {
     "episode": "12",
     "title": "The Assassin in the Dreams",
+    "airDate": "1900-01-01",
     "synopsis": "A Crisis monster is brought in to manipulate Reiko's dreams to use her to draw suspicion against Kohtaro and thus use her against RX.",
     "thumbnail": "12.webp",
     "season": 1,
@@ -98,6 +110,7 @@
   {
     "episode": "13",
     "title": "The Targeted Strange Demon Girl",
+    "airDate": "1900-01-01",
     "synopsis": "Shigeru finds a strange green stone needed by the Crisis Empire to activate their new dimension-switching device as the daughter of the scientist behind it pursues him to get it back.",
     "thumbnail": "13.webp",
     "season": 1,
@@ -106,6 +119,7 @@
   {
     "episode": "14",
     "title": "Hitomi's Kidnapping",
+    "airDate": "1900-01-01",
     "synopsis": "When Maribaron accidentally kills the Crisis Emperor's cloned daughter, she decides to fix her mistake by abducting the Sahara daughter Hitomi as her replacement.",
     "thumbnail": "14.webp",
     "season": 1,
@@ -114,6 +128,7 @@
   {
     "episode": "15",
     "title": "Roborider's Birth",
+    "airDate": "1900-01-01",
     "synopsis": "Pursuing Maribaron and Hitomi in the Demon World, Kohtaro is forced to fight against the assumed traitor Deathgaron, leading to a sorrowful encounter that awakens a new power in RX.",
     "thumbnail": "15.webp",
     "season": 2,
@@ -122,6 +137,7 @@
   {
     "episode": "16",
     "title": "The Miraculous Valley's Princess",
+    "airDate": "1900-01-01",
     "synopsis": "While still pursuing Hitomi, Kohtaro encounters a strange cyborg who wishes to work on his side, but is under the control of a harsh, mind-controlling warrior of the Crisis Empire.",
     "thumbnail": "16.webp",
     "season": 2,
@@ -130,6 +146,7 @@
   {
     "episode": "17",
     "title": "Biorider!",
+    "airDate": "1900-01-01",
     "synopsis": "With Hitomi fully transformed into Princess Garonia, Kohtaro has to figure out a way to finally resurrect her memories and save her before he, Shigeru and Joe the Haze are executed by Maribaron's pawn.",
     "thumbnail": "17.webp",
     "season": 2,
@@ -138,6 +155,7 @@
   {
     "episode": "18",
     "title": "Mystery! A Dream of Swimming in the Air",
+    "airDate": "1900-01-01",
     "synopsis": "Kohtaro takes on Gedorian's Crisis monster mutating kids while giving them the delusion that they're flying squirrels.",
     "thumbnail": "18.webp",
     "season": 2,
@@ -146,6 +164,7 @@
   {
     "episode": "19",
     "title": "The Artificial Sun of Terror!",
+    "airDate": "1900-01-01",
     "synopsis": "Crisis creates a second sun over Tokyo, forcing the city to burn unless a scientist can develop a special magnetic gun that can eliminate the threat while under Kohtaro's protection.",
     "thumbnail": "19.jpg",
     "season": 2,
@@ -154,6 +173,7 @@
   {
     "episode": "20",
     "title": "The Banana-eating Ogre",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "20.webp",
     "season": 2,
@@ -162,6 +182,7 @@
   {
     "episode": "21",
     "title": "The Front of Love and Friendship",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "21.webp",
     "season": 2,
@@ -170,6 +191,7 @@
   {
     "episode": "22",
     "title": "Shadow Moon!",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "22.webp",
     "season": 2,
@@ -178,6 +200,7 @@
   {
     "episode": "23",
     "title": "RX Became a Pig",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "23.webp",
     "season": 2,
@@ -186,6 +209,7 @@
   {
     "episode": "24",
     "title": "Papa is Dracula",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "24.webp",
     "season": 2,
@@ -194,6 +218,7 @@
   {
     "episode": "25",
     "title": "The Bride of the Scorpion Seat",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "25.webp",
     "season": 2,
@@ -202,6 +227,7 @@
   {
     "episode": "26",
     "title": "Bosgun's Counterattack",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "26.webp",
     "season": 2,
@@ -210,6 +236,7 @@
   {
     "episode": "27",
     "title": "Great Counterattack! The Prince of Shadows",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "27.webp",
     "season": 2,
@@ -218,6 +245,7 @@
   {
     "episode": "28",
     "title": "Agent of the Majestic Emperor",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "28.webp",
     "season": 2,
@@ -226,6 +254,7 @@
   {
     "episode": "29",
     "title": "A World Without Water",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "29.webp",
     "season": 2,
@@ -234,6 +263,7 @@
   {
     "episode": "30",
     "title": "Tomorrow in Tears, Tokyo's a Desert",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "30.webp",
     "season": 2,
@@ -242,6 +272,7 @@
   {
     "episode": "31",
     "title": "The Woman who Saw the Evil Devil World",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "31.webp",
     "season": 3,
@@ -250,6 +281,7 @@
   {
     "episode": "32",
     "title": "The Sky of Love and Hope",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "32.webp",
     "season": 3,
@@ -258,6 +290,7 @@
   {
     "episode": "33",
     "title": "The Great Battle of Seto Bridge",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "33.webp",
     "season": 3,
@@ -266,6 +299,7 @@
   {
     "episode": "34",
     "title": "The Shikoku Aircraft Plans!!",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "34.webp",
     "season": 3,
@@ -274,6 +308,7 @@
   {
     "episode": "35",
     "title": "Kohtaro Wanted!!",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "35.webp",
     "season": 3,
@@ -282,6 +317,7 @@
   {
     "episode": "36",
     "title": "Who's the Hero!?",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "36.webp",
     "season": 3,
@@ -290,6 +326,7 @@
   {
     "episode": "37",
     "title": "Peeling with Tusks, the Beastman Ninja Troop",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "37.webp",
     "season": 3,
@@ -298,6 +335,7 @@
   {
     "episode": "38",
     "title": "The Wicked Dance Troop of the White Bone Field",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "38.webp",
     "season": 3,
@@ -306,6 +344,7 @@
   {
     "episode": "39",
     "title": "Running Explosion! Mini 4WD",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "39.webp",
     "season": 3,
@@ -314,6 +353,7 @@
   {
     "episode": "40",
     "title": "The Trap of the Ghostly Housing Development",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "40.webp",
     "season": 3,
@@ -322,6 +362,7 @@
   {
     "episode": "41",
     "title": "Terror of the 100 Eyed Hag",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "41.webp",
     "season": 3,
@@ -330,6 +371,7 @@
   {
     "episode": "42",
     "title": "The Four Commanders Are Banished",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "42.jpg",
     "season": 3,
@@ -338,6 +380,7 @@
   {
     "episode": "43",
     "title": "Defeated!! RX",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "43.webp",
     "season": 3,
@@ -346,6 +389,7 @@
   {
     "episode": "44",
     "title": "Fight! All Riders",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "44.webp",
     "season": 4,
@@ -354,6 +398,7 @@
   {
     "episode": "45",
     "title": "False Rider's Last Days",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "45.webp",
     "season": 4,
@@ -362,6 +407,7 @@
   {
     "episode": "46",
     "title": "The Riders' All Out Charge",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "46.webp",
     "season": 4,
@@ -370,6 +416,7 @@
   {
     "episode": "47",
     "title": "A Shining Tomorrow!",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "47.webp",
     "season": 4,

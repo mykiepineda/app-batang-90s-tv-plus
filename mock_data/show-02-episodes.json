@@ -2,6 +2,7 @@
   {
     "episode": "01",
     "title": "The Fushigi World",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "01 THE STRANGE WORLD.JPG",
     "season": 1,
@@ -10,6 +11,7 @@
   {
     "episode": "02",
     "title": "Dance, Petpet",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "02 DANCE PETOPETO.JPG",
     "season": 1,
@@ -18,6 +20,7 @@
   {
     "episode": "03",
     "title": "Annie Doesn't Listen",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "03 ANNIE DOESN'T LISTEN.JPG",
     "season": 1,
@@ -26,6 +29,7 @@
   {
     "episode": "04",
     "title": "The Children Who Became Dogs",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "04 THE CHILDREN WHO BECAME ANIMALS.JPG",
     "season": 1,
@@ -34,6 +38,7 @@
   {
     "episode": "05",
     "title": "Suddenly! Lazy People",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "05 THE SUDDEN CASE OF LAZINESS.JPG",
     "season": 1,
@@ -42,6 +47,7 @@
   {
     "episode": "06",
     "title": "Strange Cooking Counterattack",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "06 THE ATTACK OF THE STRANGE WORLD'S COOKING.JPG",
     "season": 1,
@@ -50,6 +56,7 @@
   {
     "episode": "07",
     "title": "Have You Seen the Girls' Hallucination?",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "07 HAVE YOU SEEN THE GIRL'S HALLUCINATION.JPG",
     "season": 1,
@@ -58,6 +65,7 @@
   {
     "episode": "08",
     "title": "Rebellious Girl From the Stars",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "08 THE REBELLIOUS GIRL FROM THE STARS.JPG",
     "season": 1,
@@ -66,6 +74,7 @@
   {
     "episode": "09",
     "title": "I Hate the Blue Boys Band!",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "09 I HATE THE BLUE BOYS BAND.JPG",
     "season": 1,
@@ -74,6 +83,7 @@
   {
     "episode": "10",
     "title": "House of Twilight",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "10 HOUSE OF DARKNESS.JPG",
     "season": 1,
@@ -82,6 +92,7 @@
   {
     "episode": "11",
     "title": "Leave It to Annie",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "11 LEAVE IT TO ANNIE.JPG",
     "season": 1,
@@ -90,6 +101,7 @@
   {
     "episode": "12",
     "title": "Perfect-Score Genta's True Identity?",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "12 THE TRUE IDENTITY OF PERFECT-SCORING GENTA.JPG",
     "season": 1,
@@ -98,6 +110,7 @@
   {
     "episode": "13",
     "title": "The Gold Medal Tricked People",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "13 THE GOLD MEDAL MAN.JPG",
     "season": 1,
@@ -106,6 +119,7 @@
   {
     "episode": "14",
     "title": "The Love Mutant",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "14 MUTANT OF LOVE.JPG",
     "season": 1,
@@ -114,6 +128,7 @@
   {
     "episode": "15",
     "title": "Marine Blue of the Seashore",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "15 THE MARINE BLUE OF THE SEASHORE.JPG",
     "season": 1,
@@ -122,6 +137,7 @@
   {
     "episode": "16",
     "title": "The Surprised Alien Life Form",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "16 THE SURPRISED ALIEN LIFE FORM.JPG",
     "season": 1,
@@ -130,6 +146,7 @@
   {
     "episode": "17",
     "title": "The Mysterious Writings of the Space Sheriffs",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "17 THE MYSTERIOUS WRITINGS OF THE SPACE POLICE.jpg",
     "season": 1,
@@ -138,6 +155,7 @@
   {
     "episode": "18",
     "title": "The Fallen Empire Swallowed by the Pacific Ocean",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "18 THE FALLEN EMPIRE SWALLOWED BY THE PACIFIC OCEAN.JPG",
     "season": 1,
@@ -146,6 +164,7 @@
   {
     "episode": "19",
     "title": "Annie In Danger",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "19 ANNIE IN DANGER.JPG",
     "season": 2,
@@ -154,6 +173,7 @@
   {
     "episode": "20",
     "title": "The Fushigi Song",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "20 THE STRANGE SONG.jpg",
     "season": 2,
@@ -162,6 +182,7 @@
   {
     "episode": "21",
     "title": "Oh No! The Beast Family",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "21 I HATE THEM! THE LITTLE BEASTS' FAMILY.jpg",
     "season": 2,
@@ -170,6 +191,7 @@
   {
     "episode": "22",
     "title": "The Merman Calls the Ocean of Mysteries",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "22 THE ODDITY OF THE SEA ACCORDING TO A MERMAN.jpg",
     "season": 2,
@@ -178,6 +200,7 @@
   {
     "episode": "23",
     "title": "The Great Escape With Wounds All Over",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "23 THE GREAT ESCAPE WITH WOUNDS ALL OVER.jpg",
     "season": 2,
@@ -186,6 +209,7 @@
   {
     "episode": "24",
     "title": "The Beautiful Poe's Mask",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "24 THE BEAUTIFUL MASK OF PO.jpg",
     "season": 2,
@@ -194,6 +218,7 @@
   {
     "episode": "25",
     "title": "Esper Queen",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "25 ESPER QUEEN.JPG",
     "season": 2,
@@ -202,6 +227,7 @@
   {
     "episode": "26",
     "title": "Great Crash Into the Demon Zone",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "26 GREAT CRASH INTO THE DEMON ZONE.JPG",
     "season": 2,
@@ -210,6 +236,7 @@
   {
     "episode": "27",
     "title": "The Demon Island Deathmatch",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "27 DEATH MATCH AT DEMON ISLAND.JPG",
     "season": 2,
@@ -218,6 +245,7 @@
   {
     "episode": "28",
     "title": "The Demon Palace's Backstabbing Brothers",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "28 BACKSTABBING BROTHERS OF THE DEMON PALACE.jpg",
     "season": 2,
@@ -226,6 +254,7 @@
   {
     "episode": "29",
     "title": "Police Woman with a Hundred Faces",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "29 THE FEMALE COP WITH A HUNDRED FACES.JPG",
     "season": 2,
@@ -234,6 +263,7 @@
   {
     "episode": "30",
     "title": "The Message of Life Slicing the Sky",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "30 THE MESSAGE OF LIFE SLICING THE SKY.JPG",
     "season": 2,
@@ -242,6 +272,7 @@
   {
     "episode": "31",
     "title": "Canned Beast Bargain",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "31 THE BIG SALE ON WILD CANNED MONSTERS.JPG",
     "season": 3,
@@ -250,6 +281,7 @@
   {
     "episode": "32",
     "title": "Our Melody",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "32 THE MELODY OF YOURS AND MINE.JPG",
     "season": 3,
@@ -258,6 +290,7 @@
   {
     "episode": "33",
     "title": "The Walking Puppet Master",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "33 THE WALKING PUPPET MASTER.JPG",
     "season": 3,
@@ -266,6 +299,7 @@
   {
     "episode": "34",
     "title": "Kubilai's Secret",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "34 KUBILAI'S SECRET.jpg",
     "season": 3,
@@ -274,6 +308,7 @@
   {
     "episode": "35",
     "title": "The Mysterious Golden Arrow",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "35 THE MYSTERIOUS GOLDEN ARROW.jpg",
     "season": 3,
@@ -282,6 +317,7 @@
   {
     "episode": "36",
     "title": "It's the Maddening Age of Yumecom",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "36 IT'S THE AGE OF DREAM COMPUTER MADNESS.jpg",
     "season": 3,
@@ -290,6 +326,7 @@
   {
     "episode": "37",
     "title": "Roaring Beam Gun",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "37 ROARING BEAM GUN.jpg",
     "season": 3,
@@ -298,6 +335,7 @@
   {
     "episode": "38",
     "title": "Demon Girl Cinderella",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "38 THE DEMONIC CINDERELLA.jpg",
     "season": 3,
@@ -306,6 +344,7 @@
   {
     "episode": "39",
     "title": "The Masked Dancing Choir",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "39 THE CHOIR OF THE DANCING MASKS.jpg",
     "season": 3,
@@ -314,6 +353,7 @@
   {
     "episode": "40",
     "title": "Vavilos S.O.S.",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "40 VAVILOS S.O.S..jpg",
     "season": 3,
@@ -322,6 +362,7 @@
   {
     "episode": "41",
     "title": "Direct Attack on the Female Journalist",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "41 DIRECT ATTACK ON THE FEMALE JOURNALIST.jpg",
     "season": 3,
@@ -330,6 +371,7 @@
   {
     "episode": "42",
     "title": "The 6th Grade Class 0 Strangeness",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "42 THE MIRACLE OF GRADE 6, CLASS 0.jpg",
     "season": 3,
@@ -338,6 +380,7 @@
   {
     "episode": "43",
     "title": "Our Fuuma",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "43 OUR FUUMA.jpg",
     "season": 4,
@@ -346,6 +389,7 @@
   {
     "episode": "44",
     "title": "The Great Invasion",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "44 THE GREAT INVASION.jpg",
     "season": 4,
@@ -354,6 +398,7 @@
   {
     "episode": "45",
     "title": "The Fire Breathing Golden Idol",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "45 THE FIRE BREATHING GOLDEN IDOL.jpg",
     "season": 4,
@@ -362,6 +407,7 @@
   {
     "episode": "46",
     "title": "Phantom Showtime",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "46 PHANTOM SHOWTIME.jpg",
     "season": 4,
@@ -370,6 +416,7 @@
   {
     "episode": "47",
     "title": "Twelve Thousand Years of Darkness",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "47 12,000 YEARS OF DARKNESS.jpg",
     "season": 4,
@@ -378,6 +425,7 @@
   {
     "episode": "48",
     "title": "Justice – Friendship – Love",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "48 JUSTICE, FRIENDSHIP, AND LOVE.jpg",
     "season": 4,
@@ -386,6 +434,7 @@
   {
     "episode": "49",
     "title": "The Three Space Sheriffs – Gavan, Sharivan, Shaider Great Gathering!",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "49 3 SPACE SHERIFFS! GAVAN, SHARIVAN, SHAIDER! THE GATHERING.jpg",
     "season": 4,
@@ -394,6 +443,7 @@
   {
     "episode": "50",
     "title": "The Movie",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "50 THE MOVIE.jpg",
     "season": 5,
@@ -402,6 +452,7 @@
   {
     "episode": "51",
     "title": "Pursuit! The Strange Kidnappers!",
+    "airDate": "1900-01-01",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "thumbnail": "51 PURSUIT! THE STRANGE KIDNAPPERS!.jpg",
     "season": 5,
