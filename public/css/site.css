@@ -1,7 +1,8 @@
 :root {
     --cards-spacing: 25px;
     --my-primary-color: rgb(26,29,41);
-    --my-secondary-color: rgb(9,11,19);}
+    --my-secondary-color: rgb(9,11,19);
+}
 
 .my-primary-text {font-size: 20px !important;}
 .my-secondary-text {font-size: 15px !important;}
@@ -16,6 +17,9 @@ html, body {
 
 body {
     background: linear-gradient(45deg, var(--my-secondary-color), var(--my-primary-color), var(--my-secondary-color));
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
 }
 
 .background-show-01 {
@@ -86,7 +90,7 @@ body, #bookmark-button {
 }
 
 #card-body {
-    background-color: black;
+    background-color: var(--my-secondary-color);
     color: white;
     transition: transform 0.25s ease;
     z-index: 30;
@@ -124,14 +128,13 @@ body, #bookmark-button {
 }
 
 #card-image-container {
-    background-color: white;
     position: relative;
     transition: border 0.25s ease;
     overflow: hidden;
 }
 
 #card-body:hover #card-image-container {
-    border: 5px white solid;
+    border: 3px white solid;
 }
 
 #suggested-section img {
@@ -362,6 +365,10 @@ body, #bookmark-button {
     /*}*/
     #suggested-section .d-flex {
         justify-content: center !important;
+    }
+
+    #show-summary {
+        padding: 0 !important;
     }
 
 }
@@ -661,7 +668,7 @@ body, #bookmark-button {
 }
 
 .card-body {
-    background-color: black;
+    background-color: var(--my-secondary-color);
 }
 
 .btn:focus {
