@@ -182,17 +182,17 @@
   },
   {
     "_id": "10",
-    "title": "Chou Denji Machine Voltes V",
-    "summary": "After the destruction of their home world, the survivors of the planet Baam head towards Earth with the goal of negotiating the purchase of land for emigration. Unfortunately, during the negotiations, the Baam-seijin leader is assassinated by his second in command and the delegation from Earth is framed for the murder. In the ensuing chaos, Doctor Isamu Ryūzaki of the Earth delegation is shot and killed.\n\nShortly after the disastrous end of the talks, the Baam began a campaign of terror against Earth. The only thing standing between the Earthlings and annihilation is the transforming, karate-using super robot, Daimos and its pilot, Kazuya Ryūzaki. But that changes when he meets and falls in love with a mysterious girl named Erika, who turns out to be the daughter of the deceased Baam-seijin leader. Over the course of their struggles to reunite, Kazuya and Erika each learn that the other's people are not all evil... And that their own people are not all good.",
-    "cover": "",
-    "logo": "voltes-v-logo.jpg",
+    "title": "Choudenji Machine Voltes V",
+    "summary": "A demonic race from a planet 14,000 lightyears away called Boazan headed by Prince Heinel arrived on Earth to start an invasion to fulfill their emperor's ambition of universal conquest. Standing on their way is a group of heroic warriors piloting a a giant ultra-magnetic robot called Voltes V. It was a long and bitter struggle that took the heroes from Earth to Boazan.",
+    "cover": "voltes-v-cover.jpg",
+    "logo": "voltes-v-logo.png",
     "titleCard": "voltes-v-title-card.jpg",
     "fandomWiki": "https://superrobotwars.fandom.com/wiki/Super_Electromagnetic_Machine_Voltes_V",
     "imdbUrl": "https://www.imdb.com/title/tt0159855",
     "imdbRating": "8.1",
     "releaseInfo": "1977-1978",
     "averageRunningTime": "24m",
-    "bucketFolder": "chou-denji-machine-voltes-v",
+    "bucketFolder": "choudenji-machine-voltes-v",
     "seasons": [
       "Season 1",
       "Final Season"
