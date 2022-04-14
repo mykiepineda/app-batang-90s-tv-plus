@@ -1,0 +1,22 @@
+<section id="hero-section">
+    {{>hero-banner}}
+</section>
+<section class="pt-3">
+    {{>mid-navbar}}
+</section>
+<section id="episodes-section">
+    <div id="non-small-form-factor">
+        {{>seasons-navbar}}
+        {{>episodes-carousel}}
+    </div>
+    <div id="small-form-factor">
+        {{>seasons-dropdown}}
+        {{>episodes-small-form-factor}}
+    </div>
+</section>
+<section id="suggested-section" style="display:none;">
+    {{>suggestions}}
+</section>
+<section id="details-section" style="display:none;">
+    {{>details}}
+</section>

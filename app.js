@@ -30,9 +30,12 @@ AWS.config.update({
     region: "ap-southeast-2"
 });
 
-app.get("/", function (req, res) {
-    // TODO: Homepage. Redirect to Kamen Rider Black RX for now
-    res.redirect("/show/01");
+app.get("/", async function (req, res) {
+
+    res.locals.suggestions = await shows.find().sort({_id: 1}).lean();
+
+    res.render("home");
+
 });
 
 app.get("/show/:id", showsDropdown(), async function (req, res) {
@@ -117,10 +120,9 @@ app.get("/show/:id", showsDropdown(), async function (req, res) {
 
     }
 
-    res.render("home");
+    res.render("show");
 
-})
-;
+});
 
 function getOtherEpisode(episode, next) {
 
