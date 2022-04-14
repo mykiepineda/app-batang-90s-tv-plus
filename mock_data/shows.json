@@ -160,5 +160,43 @@
       "Movies"
     ],
     "details": "Choudenshi Bioman (超電子バイオマン, Chōdenshi Baioman, Super Electron Bioman) is Toei Company's eighth installment in the Super Sentai metaseries. Its 51 episodes aired on TV Asahi from February 4, 1984 to January 26, 1985 with a movie being released during the show's initial run.\n\nIt is the first Super Sentai series to have two females in the main five as well as the first Super Sentai series to have a female Yellow Ranger. The international English title is listed by Toei as Bioman.[1] It was dubbed into English in the Philippines in the late 80's."
+  },
+  {
+    "_id": "09",
+    "title": "Toushou Daimos",
+    "summary": "After the destruction of their home world, the survivors of the planet Baam head towards Earth with the goal of negotiating the purchase of land for emigration. Unfortunately, during the negotiations, the Baam-seijin leader is assassinated by his second in command and the delegation from Earth is framed for the murder. In the ensuing chaos, Doctor Isamu Ryūzaki of the Earth delegation is shot and killed.\n\nShortly after the disastrous end of the talks, the Baam began a campaign of terror against Earth. The only thing standing between the Earthlings and annihilation is the transforming, karate-using super robot, Daimos and its pilot, Kazuya Ryūzaki. But that changes when he meets and falls in love with a mysterious girl named Erika, who turns out to be the daughter of the deceased Baam-seijin leader. Over the course of their struggles to reunite, Kazuya and Erika each learn that the other's people are not all evil... And that their own people are not all good.",
+    "cover": "282994_front.jpg",
+    "logo": "Tosho_Daimos_%28logo%29.webp",
+    "titleCard": "Daimos.jpg",
+    "fandomWiki": "https://manga.fandom.com/wiki/T%C5%8Dsh%C5%8D_Daimos",
+    "imdbUrl": "https://www.imdb.com/title/tt0159923",
+    "imdbRating": "7.9",
+    "releaseInfo": "1978-1979",
+    "averageRunningTime": "24m",
+    "bucketFolder": "toushou-daimos",
+    "seasons": [
+      "Season 1",
+      "Final Season"
+    ],
+    "details": "Tōshō Daimos (闘将ダイモス, Tōshō Daimosu, \"Fighting General Daimos\") is a Japanese anime television series produced by Toei Animation and animated by Nippon Sunrise, directed by Tadao Nagahama as his last work. It is the third and final installment of the Robot Romance Trilogy, following Chōdenji Robo Combattler V and Chōdenji Machine Voltes V. It aired on TV Asahi from April 1, 1978 to January 27, 1979, consisting of 44 episodes."
+  },
+  {
+    "_id": "10",
+    "title": "Chou Denji Machine Voltes V",
+    "summary": "After the destruction of their home world, the survivors of the planet Baam head towards Earth with the goal of negotiating the purchase of land for emigration. Unfortunately, during the negotiations, the Baam-seijin leader is assassinated by his second in command and the delegation from Earth is framed for the murder. In the ensuing chaos, Doctor Isamu Ryūzaki of the Earth delegation is shot and killed.\n\nShortly after the disastrous end of the talks, the Baam began a campaign of terror against Earth. The only thing standing between the Earthlings and annihilation is the transforming, karate-using super robot, Daimos and its pilot, Kazuya Ryūzaki. But that changes when he meets and falls in love with a mysterious girl named Erika, who turns out to be the daughter of the deceased Baam-seijin leader. Over the course of their struggles to reunite, Kazuya and Erika each learn that the other's people are not all evil... And that their own people are not all good.",
+    "cover": "",
+    "logo": "voltes-v-logo.jpg",
+    "titleCard": "voltes-v-title-card.jpg",
+    "fandomWiki": "https://superrobotwars.fandom.com/wiki/Super_Electromagnetic_Machine_Voltes_V",
+    "imdbUrl": "https://www.imdb.com/title/tt0159855",
+    "imdbRating": "8.1",
+    "releaseInfo": "1977-1978",
+    "averageRunningTime": "24m",
+    "bucketFolder": "chou-denji-machine-voltes-v",
+    "seasons": [
+      "Season 1",
+      "Final Season"
+    ],
+    "details": "Super Electromagnetic Machine Voltes V (Japanese: 超電磁マシーン ボルテスVファイブ, Hepburn: Chōdenji Mashīn Borutesu Faibu), popularly known as simply Voltes V (pronounced as \"Voltes Five\") is a Japanese anime television series produced by Toei Company and Nippon Sunrise. It is the second installment of the Robot Romance Trilogy, which also includes Chōdenji Robo Combattler V and Tōshō Daimos. It is directed by Tadao Nagahama and produced by Yoshiyuki Tomino. It aired on TV Asahi from June 1977 to March 1978."
   }
 ]

@@ -1,0 +1,398 @@
+[
+  {
+    "episode": "01",
+    "title": "The Fated Encounter During Wartime",
+    "airDate": "1978-04-01",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "01.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "02",
+    "title": "The Mysterious Girl Erika",
+    "airDate": "1978-04-08",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "02.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "03",
+    "title": "Memory Of The White Wing",
+    "airDate": "1978-04-15",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "03.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "04",
+    "title": "My Brother - Earth's Enemy",
+    "airDate": "1978-04-22",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "04.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "05",
+    "title": "The Terrible Sin",
+    "airDate": "1978-04-29",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "05.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "06",
+    "title": "Wipe Away Your Tears And Rise",
+    "airDate": "1978-05-06",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "06.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "07",
+    "title": "Joanna The Sentimental Warrior",
+    "airDate": "1978-05-13",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "07.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "08",
+    "title": "True Feelings Exposed",
+    "airDate": "1978-05-20",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "08.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "09",
+    "title": "The Martyr Warrior",
+    "airDate": "1978-05-27",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "09.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "10",
+    "title": "The Righteous Rebellion",
+    "airDate": "1978-06-03",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "10.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "11",
+    "title": "The Ballad of Love and Betrayal",
+    "airDate": "1978-06-10",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "11.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "12",
+    "title": "The Archangel of Death",
+    "airDate": "1978-06-17",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "12.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "13",
+    "title": "Erika's Hazardous Flight",
+    "airDate": "1978-06-24",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "13.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "14",
+    "title": "Erika Fights Richard",
+    "airDate": "1978-07-01",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "14.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "15",
+    "title": "Is Princess Erika A Murderer?",
+    "airDate": "1978-07-08",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "15.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "16",
+    "title": "Treachery On Devil's Island",
+    "airDate": "1978-07-15",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "16.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "17",
+    "title": "Erika's Escape From Brahm",
+    "airDate": "1978-07-22",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "17.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "18",
+    "title": "Erika A Prisoner",
+    "airDate": "1978-07-29",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "18.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "19",
+    "title": "The Messenger From Brahm",
+    "airDate": "1978-08-05",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "19.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "20",
+    "title": "The Battle For Peace",
+    "airDate": "1978-08-12",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "20.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "21",
+    "title": "The Wait For Peace",
+    "airDate": "1978-08-19",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "21.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "22",
+    "title": "A Visit From The Past",
+    "airDate": "1978-08-26",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "22.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "23",
+    "title": "A Wedding For Bertha",
+    "airDate": "1978-09-02",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "23.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "24",
+    "title": "Joanna's Secret Weapon",
+    "airDate": "1978-09-09",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "24.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "25",
+    "title": "A Battle To The Death",
+    "airDate": "1978-09-16",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "25.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "26",
+    "title": "The Imminent Defeat Of Daimos",
+    "airDate": "1978-09-23",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "26.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "27",
+    "title": "Daimos' New Weapons",
+    "airDate": "1978-09-30",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "27.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "28",
+    "title": "Genius Scientist Aizam's Challenge",
+    "airDate": "1978-10-07",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "28.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "29",
+    "title": "The Death Of A Warrior",
+    "airDate": "1978-10-14",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "29.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "30",
+    "title": "A Sense Of Duty",
+    "airDate": "1978-10-21",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "30.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "31",
+    "title": "The Race Against Time",
+    "airDate": "1978-10-28",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "31.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "32",
+    "title": "The Exodus Into The Southern Regions",
+    "airDate": "1978-11-04",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "32.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "33",
+    "title": "The Daimobic Typhoon",
+    "airDate": "1978-11-11",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "33.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "34",
+    "title": "The Arrival Of Bertha's Nephew, Darwin",
+    "airDate": "1978-11-18",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "34.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "35",
+    "title": "Ulrich's Downfall",
+    "airDate": "1978-11-25",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "35.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "36",
+    "title": "Ah, Richter! There's Nowhere Left To Run",
+    "airDate": "1978-12-02",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "36.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "37",
+    "title": "The Sacrificial Bride",
+    "airDate": "1978-12-09",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "37.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "38",
+    "title": "I Will Never Give It Up! Daimos Is Mine!",
+    "airDate": "1978-12-16",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "38.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "39",
+    "title": "Kazuya Falls Into A Trap",
+    "airDate": "1978-12-23",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "39.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "40",
+    "title": "The Love Of Richard Betrayed",
+    "airDate": "1978-12-30",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "40.jpg",
+    "season": 1,
+    "showId": "09"
+  },
+  {
+    "episode": "41",
+    "title": "Kazuya, Hit By Erika's Bullet!",
+    "airDate": "1979-01-06",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "41.jpg",
+    "season": 2,
+    "showId": "09"
+  },
+  {
+    "episode": "42",
+    "title": "Begin The Attack On The Enemy: Baam",
+    "airDate": "1979-01-13",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "42.jpg",
+    "season": 2,
+    "showId": "09"
+  },
+  {
+    "episode": "43",
+    "title": "Big Clash In Little Baam!",
+    "airDate": "1979-01-20",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "43.jpg",
+    "season": 2,
+    "showId": "09"
+  },
+  {
+    "episode": "44",
+    "title": "Ulrich's Absolution",
+    "airDate": "1979-01-27",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "thumbnail": "44.jpg",
+    "season": 2,
+    "showId": "09"
+  }
+]
