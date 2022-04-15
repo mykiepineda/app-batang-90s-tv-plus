@@ -32,7 +32,7 @@ AWS.config.update({
 
 app.get("/", async function (req, res) {
 
-    res.locals.suggestions = await shows.find().sort({_id: 1}).lean();
+    res.locals.suggestions = await shows.find().sort({releaseInfo: 1}).lean();
 
     res.render("home");
 

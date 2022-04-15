@@ -1,5 +1,7 @@
 <div class="container">
-    <h1 class="text-center">Batang 90s TV Plus</h1>
+    <div class="d-flex justify-content-center">
+        <img src="/images/batang-90s-tv-plus.png" alt="" style="width:300px">
+    </div>
     <h6 class="ps-3">Shows</h6>
 </div>
 <section id="suggested-section">
@@ -9,12 +11,15 @@
                 <div class="p-3">
                     <a href="/show/{{_id}}">
                         <div class="card">
-                            <div class="d-flex flex-column justify-content-center align-items-center" style="position:relative">
+                            <div class="d-flex flex-column justify-content-center align-items-center"
+                                 style="position:relative">
                                 <div style="width:200px;height:300px">
                                     <img class="card-img-top" src="/images/shows/{{_id}}/cover/{{cover}}"
                                          alt="Card image cap" style="width:100%;height:100%">
                                 </div>
-                                <div class="my-card-title d-flex justify-content-center align-items-center" style="position:absolute;width:200px;height:300px">
+                                <div class="my-card-title d-flex flex-column justify-content-center align-items-center"
+                                     style="position:absolute;width:200px;height:300px">
+                                    <h6>{{releaseInfo}}</h6>
                                     <h3>{{title}}</h3>
                                 </div>
                             </div>
