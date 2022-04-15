@@ -1,12 +1,20 @@
 :root {
     --cards-spacing: 25px;
-    --my-primary-color: rgb(26,29,41);
-    --my-secondary-color: rgb(9,11,19);
+    --my-primary-color: rgb(26, 29, 41);
+    --my-secondary-color: rgb(9, 11, 19);
 }
 
-.my-primary-text {font-size: 20px !important;}
-.my-secondary-text {font-size: 15px !important;}
-.my-tertiary-text {font-size: 12px !important;}
+.my-primary-text {
+    font-size: 20px !important;
+}
+
+.my-secondary-text {
+    font-size: 15px !important;
+}
+
+.my-tertiary-text {
+    font-size: 12px !important;
+}
 
 html, body {
     text-size-adjust: none;
@@ -418,6 +426,20 @@ body, #bookmark-button {
     transition: transform 0.2s ease;
 }
 
+#volume-container {
+    position: relative;
+}
+
+#volume-slider-container {
+    display:none;
+    position: absolute;
+    bottom: 95px;
+    transform: rotate(270deg);
+    padding: 5px;
+    background: rgb(38,38,38);
+    border-radius: 2px;
+}
+
 #volume-container:hover .btn,
 #video-controls .btn:hover {
     color: white;
@@ -483,6 +505,7 @@ body, #bookmark-button {
     display: none;
 }
 
+#volume-container:hover #volume-slider-container,
 #volume-container:hover #volume-slider {
     display: block;
 }

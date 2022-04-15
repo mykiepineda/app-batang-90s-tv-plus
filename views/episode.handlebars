@@ -1,4 +1,9 @@
-<div class="container d-flex justify-content-center mt-3">
+<div class="container d-flex flex-column justify-content-center mt-3">
+    <div>
+        <a href="/show/{{video.showId}}" role="button" class="btn" style="padding-left:0">
+            <h6 style="color:white"><i class="fa-solid fa-chevron-left"></i> Back</h6>
+        </a>
+    </div>
     <div id="episode-container" class="d-flex flex-column">
         <div>
             <div id="video-outer-container">
@@ -19,11 +24,56 @@
                     </div>
                 </div>
                 <div id="video-container">
-                    <video id="video-player" poster="/images/shows/{{video.showId}}/thumbnails/{{video.thumbnail}}" autoplay>
+                    <video id="video-player" poster="/images/shows/{{video.showId}}/thumbnails/{{video.thumbnail}}"
+                           autoplay>
                         <source src="/video/{{video._id}}" type="video/mp4"/>
                     </video>
                     <div id="video-controls">
-                        <div class="ps-3 pb-2 pe-3 pt-5">
+                        <div id="video-controls-inner" class="row ps-3 pb-2 pe-3 pt-5">
+                            <div class="col d-flex align-items-center justify-content-start">
+                                <div>
+                                    <div id="time" class="my-tertiary-text"><span id="current">0:00</span> / <span id="duration">0:00</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col d-flex align-items-center justify-content-center">
+                                {{#unless reachedStart}}
+                                    <div>
+                                        <a href="/show/{{video.showId}}/episode/{{prevEpisode}}" role="button" class="btn btn-light p-0">
+                                            <i class="fa fa-step-backward"></i>
+                                        </a>
+                                    </div>
+                                {{/unless}}
+                                <div class="text-center" style="width:40px;">
+                                    <button id="play-pause-button" class="btn btn-light"><i class="fa fa-pause"></i>
+                                    </button>
+                                </div>
+                                {{#unless reachedEnd}}
+                                    <div>
+                                        <a href="/show/{{video.showId}}/episode/{{nextEpisode}}" role="button" class="btn btn-light p-0">
+                                            <i class="fa fa-step-forward"></i>
+                                        </a>
+                                    </div>
+                                {{/unless}}
+                            </div>
+                            <div class="col d-flex align-items-center justify-content-end">
+                                <div id="volume-container" class="d-flex flex-column p-1 align-items-center">
+                                    <div id="volume-slider-container">
+                                        <input id="volume-slider" type="range" min="0" max="1" step="0.10" value="1">
+                                    </div>
+                                    <div>
+                                        <button id="volume-button" class="btn btn-light text-start" style="width:40px">
+                                            <i class="fa fa-volume-high" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button id="fullscreen" class="btn btn-light p-0"><i class="fa-solid fa-expand"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="video-seeker-bar" class="pt-0 p-3">
                             <div id="video-slide-container">
                                 <div id="video-track">
                                     <div id="video-progress"></div>
@@ -31,44 +81,6 @@
                                 <div id="video-thumb">
                                     <div id="video-thumb-indicator"></div>
                                 </div>
-                            </div>
-                        </div>
-                        <div id="video-controls-inner" class="d-flex align-items-center pt-0 p-3">
-                            {{#unless reachedStart}}
-                                <div>
-                                    <a href="/show/{{video.showId}}/episode/{{prevEpisode}}" role="button" class="btn btn-light"><i
-                                            class="fa fa-step-backward"></i></a>
-                                </div>
-                            {{/unless}}
-                            <div class="text-center" style="width:50px;">
-                                <button id="play-pause-button" class="btn btn-light"><i class="fa fa-pause"></i>
-                                </button>
-                            </div>
-                            {{#unless reachedEnd}}
-                                <div>
-                                    <a href="/show/{{video.showId}}/episode/{{nextEpisode}}" role="button" class="btn btn-light"><i
-                                            class="fa fa-step-forward"></i></a>
-                                </div>
-                            {{/unless}}
-                            <div id="volume-container" class="d-flex p-1 align-items-center">
-                                <div>
-                                    <button id="volume-button" class="btn btn-light text-start"><i
-                                            class="fa fa-volume-high"
-                                            aria-hidden="true"></i>
-                                    </button>
-                                </div>
-                                <div>
-                                    <input id="volume-slider" type="range" min="0" max="1" step="0.10"
-                                           value="1">
-                                </div>
-                            </div>
-                            <div class="me-auto">
-                                <div id="time"><span id="current">0:00</span> / <span id="duration">0:00</span>
-                                </div>
-                            </div>
-                            <div>
-                                <button id="fullscreen" class="btn btn-light"><i class="fa-solid fa-expand"></i>
-                                </button>
                             </div>
                         </div>
                     </div>
