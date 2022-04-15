@@ -23,7 +23,7 @@
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
                         {{#each allShows}}
                             <a class="dropdown-item{{#ifEquals @root.showId this._id}} active{{/ifEquals}}"
-                               href="/show/{{this._id}}">{{this.title}}</a>
+                               href="/show/{{this._id}}">{{this.title}} ({{this.releaseInfo}})</a>
                         {{/each}}
                     </div>
                 </li>
@@ -32,7 +32,7 @@
                        aria-expanded="false">My Watchlist</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
                         {{#each myWatchlist}}
-                            <a class="dropdown-item{{#ifEquals @root.showId this.id}} active{{/ifEquals}}" href="/show/{{this.id}}">{{this.title}}</a>
+                            <a class="dropdown-item{{#ifEquals @root.showId this.id}} active{{/ifEquals}}" href="/show/{{this.id}}">{{this.title}} ({{this.releaseInfo}})</a>
                         {{/each}}
                     </div>
                 </li>

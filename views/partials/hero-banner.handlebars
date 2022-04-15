@@ -31,12 +31,6 @@
                                 class="fa fa-{{#if inWatchlist}}minus{{else}}plus{{/if}}-circle"
                                 aria-hidden="true"></i>  {{#if inWatchlist}}Remove from{{else}}Add to{{/if}} Watchlist</h5></a>
                     </div>
-                    <div id="plus-watchlist" class="pt-1">
-                        <a href="/watchlist/{{#if inWatchlist}}remove{{else}}add{{/if}}/{{showId}}"
-                           class="nav-link pt-3 ps-5 pb-3 pe-5"><h5 class="my-secondary-text" style="margin:5px 0"><i
-                                class="fa fa-{{#if inWatchlist}}minus{{else}}plus{{/if}}"
-                                aria-hidden="true"></i></i>  {{#if inWatchlist}}Remove from{{else}}Add to{{/if}} Watchlist</h5></a>
-                    </div>
                 </div>
                 <p id="show-summary" class="my-secondary-text pt-3" style="margin-bottom:0">{{show.summary}}</p>
             </div>

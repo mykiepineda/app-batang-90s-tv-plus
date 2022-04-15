@@ -32,7 +32,7 @@ AWS.config.update({
 
 app.get("/", async function (req, res) {
 
-    res.locals.suggestions = await shows.find().sort({releaseInfo: 1}).lean();
+    res.locals.suggestions = await shows.find().sort({releaseInfo: 1, title: 1}).lean();
 
     res.render("home");
 
@@ -59,14 +59,8 @@ app.get("/show/:id", showsDropdown(), async function (req, res) {
         }
     }
 
-    let filteredSuggestions = [];
-    const suggestions = await shows.find().sort({_id: 1}).lean();
-    for (let i = 0; i < suggestions.length; i++) {
-        if (suggestions[i]._id !== showId) {
-            filteredSuggestions.push(suggestions[i]);
-        }
-    }
-    res.locals.suggestions = filteredSuggestions;
+    // return other shows
+    res.locals.suggestions = await shows.find().where("_id").ne(showId).sort({releaseInfo: 1, title: 1}).lean();
 
     const videoCollection = await videos.find({showId: showId}).sort({episode: 1}).lean();
 

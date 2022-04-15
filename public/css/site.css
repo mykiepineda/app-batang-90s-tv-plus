@@ -139,6 +139,7 @@ body, #bookmark-button {
     position: relative;
     transition: border 0.25s ease;
     overflow: hidden;
+    height: 150px;
 }
 
 #card-body:hover #card-image-container {
@@ -267,21 +268,10 @@ body, #bookmark-button {
         flex-direction: row;
     }
 
-    #add-to-watchlist {
-        display: block;
-    }
-
-    #plus-watchlist {
-        display: none;
-    }
 }
 
 #card-title-container {
     width: 100%;
-}
-
-#plus-watchlist a {
-    color: white !important;
 }
 
 @media screen and (max-width: 1099px) {
@@ -294,11 +284,7 @@ body, #bookmark-button {
     }
 
     #add-to-watchlist {
-        display: none;
-    }
-
-    #plus-watchlist {
-        display: block;
+        padding-top: 1rem;
     }
 
     #logo-image {
@@ -351,7 +337,9 @@ body, #bookmark-button {
     }
 
     #hero-buttons #play,
-    #hero-buttons #play a {
+    #hero-buttons #play a,
+    #hero-buttons #add-to-watchlist,
+    #hero-buttons #add-to-watchlist a{
         width: 100%;
     }
 
@@ -375,9 +363,9 @@ body, #bookmark-button {
         justify-content: center !important;
     }
 
-    #show-summary {
-        padding: 0 !important;
-    }
+    /*#show-summary {*/
+    /*    padding: 0 !important;*/
+    /*}*/
 
 }
 
