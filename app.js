@@ -31,7 +31,7 @@ AWS.config.update({
     region: "ap-southeast-2"
 });
 
-app.get("/", async function (req, res) {
+app.get("/", showsDropdown(), async function (req, res) {
 
     res.locals.suggestions = await shows.find().sort({releaseInfo: 1, title: 1}).lean();
 
