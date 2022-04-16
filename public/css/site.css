@@ -105,6 +105,10 @@ body, #bookmark-button {
     z-index: 30;
 }
 
+#card-title-container {
+    width: 100%;
+}
+
 #non-small-form-factor #card-text-container {
     height: 140px;
     overflow: hidden;
@@ -208,19 +212,11 @@ body, #bookmark-button {
     #non-small-form-factor #card-body {
         width: calc((540px - (0.75rem * 2) - (var(--cards-spacing) * 4)) / 5);
     }
-
-    .carousel-control-prev, .carousel-control-next {
-        width: calc((100vw - 540px - (0.75rem * 2)) / 2);
-    }
 }
 
 @media screen and (min-width: 768px) {
     #non-small-form-factor #card-body {
         width: calc((720px - (0.75rem * 2) - (var(--cards-spacing) * 4)) / 5);
-    }
-
-    .carousel-control-prev, .carousel-control-next {
-        width: calc((100vw - 720px - (0.75rem * 2)) / 2);
     }
 }
 
@@ -229,15 +225,12 @@ body, #bookmark-button {
         width: calc((960px - (0.75rem * 2) - (var(--cards-spacing) * 4)) / 5);
     }
 
-    .carousel-control-prev, .carousel-control-next {
-        width: calc((100vw - 960px - (0.75rem * 2)) / 2);
+    .carousel-control-prev {
+        left: calc((100vw - 960px - 50px - (0.75rem * 2)) / 2);
     }
-}
 
-@media screen and (max-width: 1200px) {
-    #video-player {
-        width: 100%;
-        height: auto !important;
+    .carousel-control-next {
+        right: calc((100vw - 960px - 50px - (0.75rem * 2)) / 2);
     }
 }
 
@@ -246,8 +239,12 @@ body, #bookmark-button {
         width: calc((1140px - (0.75rem * 2) - (var(--cards-spacing) * 4)) / 5);
     }
 
-    .carousel-control-prev, .carousel-control-next {
-        width: calc((100vw - 1140px - (0.75rem * 2)) / 2);
+    .carousel-control-prev {
+        left: calc((100vw - 1140px - 50px - (0.75rem * 2)) / 2);
+    }
+
+    .carousel-control-next {
+        right: calc((100vw - 1140px - 50px - (0.75rem * 2)) / 2);
     }
 }
 
@@ -256,8 +253,12 @@ body, #bookmark-button {
         width: calc((1320px - (0.75rem * 2) - (var(--cards-spacing) * 4)) / 5);
     }
 
-    .carousel-control-prev, .carousel-control-next {
-        width: calc((100vw - 1320px - (0.75rem * 2)) / 2);
+    .carousel-control-prev {
+        left: calc((100vw - 1320px - 50px - (0.75rem * 2)) / 2);
+    }
+
+    .carousel-control-next {
+        right: calc((100vw - 1320px - 50px - (0.75rem * 2)) / 2);
     }
 }
 
@@ -278,11 +279,7 @@ body, #bookmark-button {
 
 }
 
-#card-title-container {
-    width: 100%;
-}
-
-@media screen and (max-width: 1099px) {
+@media screen and (max-width: 1100px) {
     #non-small-form-factor {
         display: none;
     }
@@ -380,14 +377,6 @@ body, #bookmark-button {
 .seasons-sff-dropdown > .dropdown-toggle {
 }
 
-.carousel-control-prev {
-    justify-content: end !important;
-}
-
-.carousel-control-next {
-    justify-content: start !important;
-}
-
 #card > div:nth-child(1),
 #card > div:nth-child(2),
 #card > div:nth-child(3),
@@ -482,6 +471,13 @@ body, #bookmark-button {
 #video-progress-filled:hover + #video-progress-background + #video-progress-circle,
 #video-progress-background:hover + #video-progress-circle {
     transform: scale(1.5);
+}
+
+@media screen and (max-width: 1200px) {
+    #video-player {
+        width: 100%;
+        height: auto !important;
+    }
 }
 
 #video-player {
@@ -670,6 +666,18 @@ body, #bookmark-button {
     transform: scale(1.5);
 }
 
+#goto-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+}
+
+#myBtn:hover {
+    background-color: #555;
+}
+
 /* Override Bootstrap/Fontawesome styles */
 
 .fa-star {
@@ -702,6 +710,17 @@ body, #bookmark-button {
     box-shadow: none !important;
 }
 
+.btn-light {
+    background-color: white;
+    border-color: white;
+}
+
+.btn-light:hover {
+    color: #000 !important;
+    background-color: lightgrey !important;
+    border-color: lightgrey !important;
+}
+
 #seasons-navbar .nav-link {
     padding-left: 0 !important;
     padding-right: 0 !important;
@@ -717,4 +736,9 @@ body, #bookmark-button {
 
 .card-img-top {
     height: 100%;
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: auto !important;
+    display: block !important;
 }
