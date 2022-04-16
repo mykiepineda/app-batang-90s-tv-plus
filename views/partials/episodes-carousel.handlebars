@@ -1,6 +1,6 @@
-<div id="episodes-carousel" class="carousel slide pt-2 pb-2" data-bs-ride="carousel" data-bs-interval="false">
+<div id="episodes-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
     <div class="container">
-        <div class="carousel-inner">
+        <div class="carousel-inner" style="padding-top:1.5rem;padding-bottom:1.5rem">
             {{#each pagination}}
                 <div class="my-carousel-group-{{season}} carousel-item {{#ifEquals page 1}}active{{/ifEquals}}">
                     <div class="card-deck">
@@ -15,11 +15,11 @@
                                                 <i id="card-play-button" class="fa fa-play-circle-o"
                                                    aria-hidden="true"></i>
                                             </div>
-                                            <div class="card-body d-flex flex-column justify-content-between">
+                                            <div id="card-text-container" class="card-body d-flex flex-column justify-content-between">
                                                 <div class="d-flex flex-column">
                                                     <h5 class="card-title my-secondary-text">{{episode}}. {{title}}</h5>
                                                     <div>
-                                                        <p class="card-text my-tertiary-text">{{synopsis}}</p>
+                                                        <p class="card-text my-tertiary-text">{{#truncate synopsis}}{{/truncate}}</p>
                                                     </div>
                                                 </div>
                                             </div>

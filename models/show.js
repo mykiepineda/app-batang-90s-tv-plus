@@ -16,11 +16,19 @@ const showSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    thumbnail: {
+    logo: {
         type: String,
         required: true
     },
-    imdbURL: {
+    titleCard: {
+        type: String,
+        required: true
+    },
+    fandomWiki: {
+        type: String,
+        required: true
+    },
+    imdbUrl: {
         type: String,
         required: true
     },

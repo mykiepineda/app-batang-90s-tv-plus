@@ -90,7 +90,7 @@
         <div>
             <h6>Episode {{video.episode}}<span class="the-dot">Season {{video.season}}</span></h6>
             <h3>{{video.title}}</h3>
-            <h6>Originally aired on {{video.airDate}}</h6>
+            <h6 class="my-tertiary-text">Originally aired on {{#serialiseDate video.airDate}}{{/serialiseDate}}</h6>
             <p>{{video.synopsis}}</p>
         </div>
     </div>

@@ -10,6 +10,7 @@ const mongoose = require("mongoose");
 const videos = require("./models/video");
 const shows = require("./models/show");
 const watchlists = require("./models/watchlist");
+const mockDatabase = require("./modules/mock-database");
 const database = "batang-90s-tv-plus";
 mongoose.connect(`mongodb+srv://mykiepineda:P1n3d%40j0hN@cluster0.omg3p.mongodb.net/${database}?retryWrites=true&w=majority`);
 
@@ -55,7 +56,11 @@ app.get("/show/:id", showsDropdown(), async function (req, res) {
             if (myWatchlistShow._id === showId) {
                 res.locals.inWatchlist = true;
             }
-            res.locals.myWatchlist.push({id: myWatchlistShow._id, title: myWatchlistShow.title, releaseInfo: myWatchlistShow.releaseInfo});
+            res.locals.myWatchlist.push({
+                id: myWatchlistShow._id,
+                title: myWatchlistShow.title,
+                releaseInfo: myWatchlistShow.releaseInfo
+            });
         }
     }
 
@@ -285,6 +290,31 @@ app.get("/watchlist/remove/:showId", async function (req, res) {
     res.redirect(`/show/${showId}`);
 
 });
+
+app.get("/initialise-database", async function (req, res) {
+
+    const db = mongoose.connection;
+
+    let message = "1. start database initialisation...";
+
+    await db.dropCollection("shows");
+    message += "\n2. shows collection dropped";
+
+    const showsMockData = mockDatabase.getShows();
+    await shows.insertMany(showsMockData);
+    message += `\n3. inserted ${showsMockData.length} documents to shows collection`;
+
+    await db.dropCollection("videos");
+    message += "\n3. videos collection dropped";
+
+    const episodesMockData = mockDatabase.getEpisodes();
+    await videos.insertMany(episodesMockData);
+    message += `\n4. inserted ${episodesMockData.length} documents to videos collection`;
+
+    message += "\n5. end database initialisation.";
+
+    res.json({message: message});
+})
 
 app.listen(port, function () {
     if (process.env.URL !== undefined) {

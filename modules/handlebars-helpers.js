@@ -7,7 +7,7 @@ function ifEquals(value1, value2, options) {
 
 function truncate(value) {
     if (String(value).length > 50) {
-        return `${value.substr(0, 50)}...`;
+        return `${value.substr(0, 50)}... <u>more</u>`;
     }
     return value;
 }

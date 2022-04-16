@@ -8,6 +8,10 @@ const videoSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    airDate: {
+        type: Date,
+        required: true
+    },
     synopsis: {
         type: String,
         required: true

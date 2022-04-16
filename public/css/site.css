@@ -2,6 +2,7 @@
     --cards-spacing: 25px;
     --my-primary-color: rgb(26, 29, 41);
     --my-secondary-color: rgb(9, 11, 19);
+    --my-tertiary-color: rgb(31, 32, 43);
 }
 
 .my-primary-text {
@@ -98,14 +99,14 @@ body, #bookmark-button {
 }
 
 #card-body {
-    background-color: var(--my-secondary-color);
+    /*background-color: var(--my-secondary-color);*/
     color: white;
     transition: transform 0.25s ease;
     z-index: 30;
 }
 
-#non-small-form-factor #card-body {
-    height: 400px;
+#non-small-form-factor #card-text-container {
+    height: 140px;
     overflow: hidden;
 }
 
@@ -678,8 +679,9 @@ body, #bookmark-button {
     color: white !important;
 }
 
+.card,
 .card-body {
-    background-color: var(--my-secondary-color);
+    background-color: var(--my-tertiary-color) !important;
 }
 
 .btn:focus {
@@ -697,4 +699,8 @@ body, #bookmark-button {
 
 .nav-link {
     cursor: pointer;
+}
+
+.card-img-top {
+    height: 100%;
 }
