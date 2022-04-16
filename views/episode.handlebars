@@ -2,8 +2,7 @@
     <div id="episode-container" class="d-flex flex-column">
         <div class="d-flex align-items-end justify-content-between">
             <div>
-                <h6 class="my-tertiary-text">{{show.title}}<span class="the-dot">Episode {{video.episode}}</span><span
-                        class="the-dot">Season {{video.season}}</span></h6>
+                <h6 class="my-tertiary-text">{{show.title}}</h6>
                 <h3 class="my-primary-text">{{video.title}}</h3>
             </div>
             <div>
@@ -103,7 +102,10 @@
             </div>
         </div>
         <div class="pt-3">
-            <h6 class="my-tertiary-text">Originally aired on {{#serialiseDate video.airDate}}{{/serialiseDate}}</h6>
+            <h6>Episode {{video.episode}}
+                <span class="the-dot">Season {{video.season}}</span>
+                <span class="the-dot">{{#serialiseDate video.airDate}}{{/serialiseDate}}</span>
+            </h6>
             <p>{{video.synopsis}}</p>
         </div>
     </div>

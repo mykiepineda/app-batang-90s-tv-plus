@@ -710,17 +710,6 @@ body, #bookmark-button {
     box-shadow: none !important;
 }
 
-.btn-light {
-    background-color: white;
-    border-color: white;
-}
-
-.btn-light:hover {
-    color: #000 !important;
-    background-color: lightgrey !important;
-    border-color: lightgrey !important;
-}
-
 #seasons-navbar .nav-link {
     padding-left: 0 !important;
     padding-right: 0 !important;
