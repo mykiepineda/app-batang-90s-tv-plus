@@ -165,6 +165,7 @@ app.get("/show/:showId/episode/:id", showsDropdown(), async function (req, res) 
     });
 
     res.locals.showId = showId;
+    res.locals.show = await shows.findOne({_id: showId}).lean();
 
     res.render("episode");
 });

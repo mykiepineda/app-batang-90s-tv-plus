@@ -2,7 +2,9 @@ window.addEventListener("load", function () {
 
     const videoOuterContainer = document.querySelector("#video-outer-container");
     const videoContainer = document.querySelector("#video-container");
+    const videoInnerContainer = document.querySelector("#video-inner-container");
     const videoPlayer = document.querySelector("#video-player");
+    const videoControls = document.querySelector("#video-controls");
     const playPauseButton = document.querySelector("#play-pause-button");
     const playPauseIcon = playPauseButton.querySelector("i");
     const volumeButton = document.querySelector("#volume-button");
@@ -92,6 +94,9 @@ window.addEventListener("load", function () {
         } else {
             videoOuterContainer.requestFullscreen();
         }
+        videoContainer.classList.toggle("height-100pct");
+        videoInnerContainer.classList.toggle("height-100pct");
+        videoPlayer.classList.toggle("height-100pct");
         fullscreenIcon.classList.toggle("fa-expand");
         fullscreenIcon.classList.toggle("fa-compress");
     });
@@ -161,6 +166,10 @@ window.addEventListener("load", function () {
 
     window.addEventListener("mouseup", function (event) {
         dragging = false;
+    });
+
+    videoOuterContainer.addEventListener("touchstart", function() {
+        videoControls.classList.toggle("opacity-1");
     });
 
 });

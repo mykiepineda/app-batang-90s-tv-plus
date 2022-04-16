@@ -1,11 +1,18 @@
 <div class="container d-flex flex-column justify-content-center mt-3">
-    <div>
-        <a href="/show/{{video.showId}}" role="button" class="btn" style="padding-left:0">
-            <h6 style="color:white"><i class="fa-solid fa-chevron-left"></i> Back</h6>
-        </a>
-    </div>
     <div id="episode-container" class="d-flex flex-column">
-        <div>
+        <div class="d-flex align-items-end justify-content-between">
+            <div>
+                <h6 class="my-tertiary-text">{{show.title}}<span class="the-dot">Episode {{video.episode}}</span><span
+                        class="the-dot">Season {{video.season}}</span></h6>
+                <h3 class="my-primary-text">{{video.title}}</h3>
+            </div>
+            <div>
+                <a href="/show/{{video.showId}}" role="button" class="btn" style="padding-left:0">
+                    <h6 style="color:white" class="my-tertiary-text"><i class="fa-solid fa-chevron-left"></i> Back</h6>
+                </a>
+            </div>
+        </div>
+        <div class="pt-2">
             <div id="video-outer-container">
                 <div id="loader-container">
                     <div class="lds-spinner">
@@ -24,62 +31,70 @@
                     </div>
                 </div>
                 <div id="video-container">
-                    <video id="video-player" poster="/images/shows/{{video.showId}}/thumbnails/{{video.thumbnail}}"
-                           autoplay>
-                        <source src="/video/{{video._id}}" type="video/mp4"/>
-                    </video>
-                    <div id="video-controls">
-                        <div id="video-controls-inner" class="row ps-3 pb-2 pe-3 pt-5">
-                            <div class="col d-flex align-items-center justify-content-start">
-                                <div>
-                                    <div id="time" class="my-tertiary-text"><span id="current">0:00</span> / <span id="duration">0:00</span>
+                    <div id="video-inner-container" class="d-flex justify-content-center">
+                        <video id="video-player" poster="/images/shows/{{video.showId}}/thumbnails/{{video.thumbnail}}"
+                               autoplay>
+                            <source src="/video/{{video._id}}" type="video/mp4"/>
+                        </video>
+                        <div id="video-controls">
+                            <div id="video-controls-inner" class="row ps-3 pb-2 pe-3 pt-5">
+                                <div class="col d-flex align-items-center justify-content-start">
+                                    <div>
+                                        <div id="time" class="my-tertiary-text"><span id="current">0:00</span> / <span
+                                                id="duration">0:00</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col d-flex align-items-center justify-content-center">
-                                {{#unless reachedStart}}
-                                    <div>
-                                        <a href="/show/{{video.showId}}/episode/{{prevEpisode}}" role="button" class="btn btn-light p-0">
-                                            <i class="fa fa-step-backward"></i>
-                                        </a>
+                                <div class="col d-flex align-items-center justify-content-center">
+                                    {{#unless reachedStart}}
+                                        <div>
+                                            <a href="/show/{{video.showId}}/episode/{{prevEpisode}}" role="button"
+                                               class="btn btn-light p-0">
+                                                <i class="fa fa-step-backward"></i>
+                                            </a>
+                                        </div>
+                                    {{/unless}}
+                                    <div class="text-center" style="width:40px;">
+                                        <button id="play-pause-button" class="btn btn-light"><i class="fa fa-pause"></i>
+                                        </button>
                                     </div>
-                                {{/unless}}
-                                <div class="text-center" style="width:40px;">
-                                    <button id="play-pause-button" class="btn btn-light"><i class="fa fa-pause"></i>
-                                    </button>
+                                    {{#unless reachedEnd}}
+                                        <div>
+                                            <a href="/show/{{video.showId}}/episode/{{nextEpisode}}" role="button"
+                                               class="btn btn-light p-0">
+                                                <i class="fa fa-step-forward"></i>
+                                            </a>
+                                        </div>
+                                    {{/unless}}
                                 </div>
-                                {{#unless reachedEnd}}
-                                    <div>
-                                        <a href="/show/{{video.showId}}/episode/{{nextEpisode}}" role="button" class="btn btn-light p-0">
-                                            <i class="fa fa-step-forward"></i>
-                                        </a>
+                                <div class="col d-flex align-items-center justify-content-end">
+                                    <div id="volume-container" class="d-flex flex-column p-1 align-items-center">
+                                        <div id="volume-slider-container">
+                                            <input id="volume-slider" type="range" min="0" max="1" step="0.10"
+                                                   value="1">
+                                        </div>
+                                        <div>
+                                            <button id="volume-button" class="btn btn-light text-start"
+                                                    style="width:40px">
+                                                <i class="fa fa-volume-high" aria-hidden="true"></i>
+                                            </button>
+                                        </div>
                                     </div>
-                                {{/unless}}
-                            </div>
-                            <div class="col d-flex align-items-center justify-content-end">
-                                <div id="volume-container" class="d-flex flex-column p-1 align-items-center">
-                                    <div id="volume-slider-container">
-                                        <input id="volume-slider" type="range" min="0" max="1" step="0.10" value="1">
-                                    </div>
                                     <div>
-                                        <button id="volume-button" class="btn btn-light text-start" style="width:40px">
-                                            <i class="fa fa-volume-high" aria-hidden="true"></i>
+                                        <button id="fullscreen" class="btn btn-light p-0"><i
+                                                class="fa-solid fa-expand"></i>
                                         </button>
                                     </div>
                                 </div>
-                                <div>
-                                    <button id="fullscreen" class="btn btn-light p-0"><i class="fa-solid fa-expand"></i>
-                                    </button>
-                                </div>
                             </div>
-                        </div>
-                        <div id="video-seeker-bar" class="pt-0 p-3">
-                            <div id="video-slide-container">
-                                <div id="video-track">
-                                    <div id="video-progress"></div>
-                                </div>
-                                <div id="video-thumb">
-                                    <div id="video-thumb-indicator"></div>
+                            <div id="video-seeker-bar" class="pt-0 p-3">
+                                <div id="video-slide-container">
+                                    <div id="video-track">
+                                        <div id="video-progress"></div>
+                                    </div>
+                                    <div id="video-thumb">
+                                        <div id="video-thumb-indicator"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -87,9 +102,7 @@
                 </div>
             </div>
         </div>
-        <div>
-            <h6>Episode {{video.episode}}<span class="the-dot">Season {{video.season}}</span></h6>
-            <h3>{{video.title}}</h3>
+        <div class="pt-3">
             <h6 class="my-tertiary-text">Originally aired on {{#serialiseDate video.airDate}}{{/serialiseDate}}</h6>
             <p>{{video.synopsis}}</p>
         </div>
