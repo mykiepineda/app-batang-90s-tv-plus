@@ -55,7 +55,7 @@ app.get("/show/:id", showsDropdown(), async function (req, res) {
             if (myWatchlistShow._id === showId) {
                 res.locals.inWatchlist = true;
             }
-            res.locals.myWatchlist.push({id: myWatchlistShow._id, title: myWatchlistShow.title});
+            res.locals.myWatchlist.push({id: myWatchlistShow._id, title: myWatchlistShow.title, releaseInfo: myWatchlistShow.releaseInfo});
         }
     }
 
