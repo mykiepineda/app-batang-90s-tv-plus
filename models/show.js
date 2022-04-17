@@ -20,6 +20,10 @@ const showSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    background: {
+        type: String,
+        required: false
+    },
     titleCard: {
         type: String,
         required: true

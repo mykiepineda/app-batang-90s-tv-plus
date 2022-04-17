@@ -25,7 +25,7 @@ html, body {
 }
 
 body {
-    background: linear-gradient(45deg, var(--my-secondary-color), var(--my-primary-color), var(--my-secondary-color));
+    background-position: right;
     background-repeat: no-repeat;
     background-size: contain;
     background-attachment: fixed;
@@ -280,6 +280,11 @@ body, #bookmark-button {
 }
 
 @media screen and (max-width: 1100px) {
+
+    body {
+        background: linear-gradient(45deg, var(--my-secondary-color), var(--my-primary-color), var(--my-secondary-color)) !important;
+    }
+
     #non-small-form-factor {
         display: none;
     }

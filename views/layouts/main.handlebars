@@ -15,10 +15,10 @@
     <script src="/scripts/client.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-<body>
-{{>goto-top}}
-{{>top-navbar}}
-{{{body}}}
-{{>footer}}
+<body style="background-image:url(/images/shows/{{showId}}/background/{{show.background}}),linear-gradient(45deg, var(--my-secondary-color), var(--my-primary-color), var(--my-secondary-color))">
+    {{>goto-top}}
+    {{>top-navbar}}
+    {{{body}}}
+    {{>footer}}
 </body>
 </html>
