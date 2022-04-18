@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, "public")));
 const mongoose = require("mongoose");
 const videos = require("./models/video");
 const shows = require("./models/show");
-const watchlists = require("./models/watchlist");
+const users = require("./models/user");
 const mockDatabase = require("./modules/mock-database");
 const database = "batang-90s-tv-plus";
 mongoose.connect(`mongodb+srv://mykiepineda:P1n3d%40j0hN@cluster0.omg3p.mongodb.net/${database}?retryWrites=true&w=majority`);
@@ -21,8 +21,11 @@ app.set("view engine", "handlebars");
 const AWS = require("aws-sdk");
 
 const wasabiEndpoint = new AWS.Endpoint("s3.ap-northeast-2.wasabisys.com");
+const wasabiBucket = "batang-90s-tv-plus";
 
 const showsDropdown = require("./modules/middleware");
+
+const adminUserId = "625cd09778a6145fe83d80dd";
 
 AWS.config.update({
     accessKeyId: "Z5QQ38VNUCU81ANC8NZE",
@@ -48,19 +51,24 @@ app.get("/show/:id", showsDropdown(), async function (req, res) {
     res.locals.myWatchlist = [];
     res.locals.inWatchlist = false;
 
-    const myWatchlist = await watchlists.findOne({user: "mykie"}).populate({path: "shows", model: "shows"}).lean();
+    const userDoc = await users.findOne({_id: adminUserId}).lean();
 
-    if (myWatchlist !== null) {
-        for (let i = 0; i < myWatchlist.shows.length; i++) {
-            const myWatchlistShow = myWatchlist.shows[i];
-            if (myWatchlistShow._id === showId) {
-                res.locals.inWatchlist = true;
+    if (userDoc !== null) {
+
+        const myWatchlist = userDoc.watchlists;
+
+        if (myWatchlist.length > 0) {
+            for (let i = 0; i < myWatchlist.length; i++) {
+                const myWatchlistShow = myWatchlist[i];
+                if (myWatchlistShow._id === showId) {
+                    res.locals.inWatchlist = true;
+                }
+                res.locals.myWatchlist.push({
+                    id: myWatchlistShow._id,
+                    title: myWatchlistShow.title,
+                    releaseInfo: myWatchlistShow.releaseInfo
+                });
             }
-            res.locals.myWatchlist.push({
-                id: myWatchlistShow._id,
-                title: myWatchlistShow.title,
-                releaseInfo: myWatchlistShow.releaseInfo
-            });
         }
     }
 
@@ -211,7 +219,7 @@ app.get("/video/:objectId", async function (req, res, next) {
     const s3 = new AWS.S3();
 
     const params = {
-        Bucket: "batang-90s-tv-plus",
+        Bucket: wasabiBucket,
         Key: key
     };
 
@@ -250,22 +258,36 @@ app.get("/video/:objectId", async function (req, res, next) {
 
 });
 
-async function addRemoveToWatchlist(add, user, showId) {
+async function addRemoveToWatchlist(add, userId, showId) {
 
-    let watchlistUpdate = await watchlists.findOne({user: user}).lean();
+    const userDoc = await users.findOne({_id: userId}).lean();
 
-    if (watchlistUpdate !== null) {
-        const index = watchlistUpdate.shows.indexOf(showId);
-        if (add) {
-            if (index < 0) {
-                watchlistUpdate.shows.push(showId);
-            }
-        } else {
-            if (index > -1) {
-                watchlistUpdate.shows.splice(index, 1);
+    if (userDoc !== null) {
+
+        const showToBeAdded = await shows.findOne({_id: showId}).lean();
+        let updatedWatchList = userDoc.watchlists;
+        let found = false;
+        let index = -1;
+
+        for (let i = 0; i < updatedWatchList.length; i++) {
+            if (updatedWatchList[i]._id === showId) {
+                found = true;
+                index = i;
+                break;
             }
         }
-        await watchlists.findOneAndUpdate({user: user}, watchlistUpdate);
+        if (found) {
+            updatedWatchList.splice(index, 1);
+        } else {
+            updatedWatchList.push(showToBeAdded);
+        }
+
+        await users.findOneAndUpdate(
+            {_id: userId},
+            {$set: {
+                watchlists: updatedWatchList
+            }});
+
     }
 
 }
@@ -275,7 +297,7 @@ app.get("/watchlist/add/:showId", async function (req, res) {
     const showId = req.params.showId;
 
     // TODO: Pass in logged-in user
-    await addRemoveToWatchlist(true, "mykie", showId);
+    await addRemoveToWatchlist(true, adminUserId, showId);
 
     res.redirect(`/show/${showId}`);
 
@@ -286,7 +308,7 @@ app.get("/watchlist/remove/:showId", async function (req, res) {
     const showId = req.params.showId;
 
     // TODO: Pass in logged-in user
-    await addRemoveToWatchlist(false, "mykie", showId);
+    await addRemoveToWatchlist(false, adminUserId, showId);
 
     res.redirect(`/show/${showId}`);
 
@@ -312,10 +334,13 @@ app.get("/initialise-database", async function (req, res) {
     await videos.insertMany(episodesMockData);
     message += `\n4. inserted ${episodesMockData.length} documents to videos collection`;
 
+    // await db.dropCollection("users");
+    // await users.insertMany([{name: "Mykie"}]);
+
     message += "\n5. end database initialisation.";
 
     res.json({message: message});
-})
+});
 
 app.listen(port, function () {
     if (process.env.URL !== undefined) {
