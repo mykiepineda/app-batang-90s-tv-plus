@@ -1,0 +1,353 @@
+[
+  {
+    "episode": "01",
+    "title": "Miracle! The Revival of B't X!",
+    "airDate": "1996-04-06",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "01.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "02",
+    "title": "Rebirth! The Sun Battler",
+    "airDate": "1996-04-13",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "02.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "03",
+    "title": "Confrontation! The Machine Empire",
+    "airDate": "1996-04-20",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "03.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "04",
+    "title": "Appearance! The Legendary Spirit Knight",
+    "airDate": "1996-04-27",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "04.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "05",
+    "title": "Departure! Desperate Battle Road",
+    "airDate": "1996-05-04",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "05.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "06",
+    "title": "Fear! The Watch Man, Pirate in the Desert!",
+    "airDate": "1996-05-11",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "06.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "07",
+    "title": "Frightening! The Mystery of the Machine Emperor!",
+    "airDate": "1996-05-18",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "07.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "08",
+    "title": "Magnificent! The Dazzling Solder, Camilla!",
+    "airDate": "1996-05-25",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "08.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "09",
+    "title": "Fear! Evil Flower!",
+    "airDate": "1996-06-01",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "09.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "10",
+    "title": "Chase! Metal Face Counterattacks!",
+    "airDate": "1996-06-08",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "10.jpg",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "11",
+    "title": "Invincible! Spirit General of the East, Ron",
+    "airDate": "1996-06-15",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "11.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "12",
+    "title": "Formidable Enemy! The Warrior, Kaos",
+    "airDate": "1996-06-22",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "12.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "13",
+    "title": "Buddy! The Bond of a Passionate Soul",
+    "airDate": "1996-06-29",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "13.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "14",
+    "title": "Tragic! Maria Who Lives in the Graveyard",
+    "airDate": "1996-07-06",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "14.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "15",
+    "title": "Blast! Message to the Reaper",
+    "airDate": "1996-07-13",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "15.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "16",
+    "title": "Revived! The Prism of Aura",
+    "airDate": "1996-07-20",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "16.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "17",
+    "title": "Appear! Shadow X!",
+    "airDate": "1996-07-27",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "17.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "18",
+    "title": "The Dark! Fear of the Underhell",
+    "airDate": "1996-08-03",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "18.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "19",
+    "title": "Desperate! X's Death",
+    "airDate": "1996-08-10",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "19.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "20",
+    "title": "Life! Break Heart",
+    "airDate": "1996-08-17",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "20.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "21",
+    "title": "Reborn! The Neo B't X",
+    "airDate": "1996-08-24",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "21.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "22",
+    "title": "The Worst! The Area's Seven Evil Knights",
+    "airDate": "1996-08-31",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "22.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "23",
+    "title": "Flash of Light! Shining Knuckle",
+    "airDate": "1996-09-07",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "23.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "24",
+    "title": "Burn! A Piece of the Sun",
+    "airDate": "1996-09-14",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "24.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "25",
+    "title": "Overthrow! B'T Raphael",
+    "airDate": "1996-09-21",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "25.png",
+    "season": 1,
+    "showId": "12"
+  },
+  {
+    "episode": "26",
+    "title": "The Four Knights vs. The Evil Knights",
+    "airDate": "1997-08-21",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "26.png",
+    "season": 2,
+    "showId": "12"
+  },
+  {
+    "episode": "27",
+    "title": "The Land of Love and Hate",
+    "airDate": "1997-08-28",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "27.png",
+    "season": 2,
+    "showId": "12"
+  },
+  {
+    "episode": "28",
+    "title": "Burning Red Flame!",
+    "airDate": "1997-09-04",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "28.png",
+    "season": 2,
+    "showId": "12"
+  },
+  {
+    "episode": "29",
+    "title": "Miracles of the Blood",
+    "airDate": "1997-09-11",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "29.png",
+    "season": 2,
+    "showId": "12"
+  },
+  {
+    "episode": "30",
+    "title": "Fear of the Illusions",
+    "airDate": "1997-09-18",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "30.png",
+    "season": 2,
+    "showId": "12"
+  },
+  {
+    "episode": "31",
+    "title": "A Streak of Light",
+    "airDate": "1997-09-25",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "31.png",
+    "season": 2,
+    "showId": "12"
+  },
+  {
+    "episode": "32",
+    "title": "Mehr Licht (more light)",
+    "airDate": "1997-10-02",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "32.jpg",
+    "season": 2,
+    "showId": "12"
+  },
+  {
+    "episode": "33",
+    "title": "Confessions of a Mask",
+    "airDate": "1997-10-09",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "33.jpg",
+    "season": 2,
+    "showId": "12"
+  },
+  {
+    "episode": "34",
+    "title": "Blood Bonds",
+    "airDate": "1997-10-16",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "34.jpg",
+    "season": 2,
+    "showId": "12"
+  },
+  {
+    "episode": "35",
+    "title": "The Lair of the Beast",
+    "airDate": "1997-10-23",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "35.jpg",
+    "season": 2,
+    "showId": "12"
+  },
+  {
+    "episode": "36",
+    "title": "Search for a Lost Era!",
+    "airDate": "1997-10-30",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "36.jpg",
+    "season": 2,
+    "showId": "12"
+  },
+  {
+    "episode": "37",
+    "title": "One for All",
+    "airDate": "1997-11-06",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "37.jpg",
+    "season": 2,
+    "showId": "12"
+  },
+  {
+    "episode": "38",
+    "title": "Memories of the Future!",
+    "airDate": "1997-11-13",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "38.jpg",
+    "season": 2,
+    "showId": "12"
+  },
+  {
+    "episode": "39",
+    "title": "A Piece of the Sun!",
+    "airDate": "1997-11-20",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "39.jpg",
+    "season": 2,
+    "showId": "12"
+  }
+]
