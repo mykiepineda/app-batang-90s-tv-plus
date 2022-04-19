@@ -1,0 +1,461 @@
+[
+  {
+    "episode": "01",
+    "title": "The Fierce Demon God Awakens!",
+    "airDate": "1995-01-09",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "01.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "02",
+    "title": "Karuma the Demon and her Three Demon Disciples",
+    "airDate": "1995-01-16",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "02.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "03",
+    "title": "Shut in by the Shutter",
+    "airDate": "1995-01-23",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "03.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "04",
+    "title": "The Pot Filled with Desire",
+    "airDate": "1995-01-30",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "04.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "05",
+    "title": "Tastes Like Fresh Zenki",
+    "airDate": "1995-02-06",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "05.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "06",
+    "title": "The Boy and the Telephone",
+    "airDate": "1995-02-13",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "06.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "07",
+    "title": "Run for the Finish Line of Desire",
+    "airDate": "1995-02-20",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "07.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "08",
+    "title": "Welcome to Hotel Mummy",
+    "airDate": "1995-02-27",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "08.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "09",
+    "title": "A Demon in the Basement and the Fire Spell",
+    "airDate": "1995-03-06",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "09.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "10",
+    "title": "A Boy and his Dogs",
+    "airDate": "1995-03-13",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "10.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "11",
+    "title": "The Night Song of the Samurai",
+    "airDate": "1995-03-20",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "11.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "12",
+    "title": "Memories Buried in the Snow",
+    "airDate": "1995-03-27",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "12.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "13",
+    "title": "The Challenge of the Wishing Plaques",
+    "airDate": "1995-04-03",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "13.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "14",
+    "title": "The Legendary Demon God, Reveal Zenki`s Secret",
+    "airDate": "1995-04-10",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "14.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "15",
+    "title": "The Plan of Sealing up The Demon God",
+    "airDate": "1995-04-17",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "15.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "16",
+    "title": "The Spell of Darkness Souma vs Anju",
+    "airDate": "1995-04-24",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "16.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "17",
+    "title": "The Servant of Evil Falls Anju`s Longest Day",
+    "airDate": "1995-05-01",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "17.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "18",
+    "title": "The Diamond Dragon Awakens The Mythical Immortal Mountain",
+    "airDate": "1995-05-08",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "18.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "19",
+    "title": "The Two Chiakis' 800 year promise",
+    "airDate": "1995-05-14",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "19.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "20",
+    "title": "Heian Capital up in Flames, Come Diamond Axe!",
+    "airDate": "1995-05-22",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "20.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "21",
+    "title": "Rush to the Future! The Pentagram Shrines in the Ancient Capital",
+    "airDate": "1995-05-29",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "21.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "22",
+    "title": "Shikigami-chou Destroyed Water Formation",
+    "airDate": "1995-06-05",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "22.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "23",
+    "title": "Goura the Traitor, Diamond Formation and Earth Formation",
+    "airDate": "1995-06-12",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "23.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "24",
+    "title": "Come back to Life Zenki! Flame Formation",
+    "airDate": "1995-06-19",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "24.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "25",
+    "title": "The Last Battle! The end of Karuma",
+    "airDate": "1995-06-26",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "25.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "26",
+    "title": "Eve of the Demon God Festival, Lulupapa Appears",
+    "airDate": "1995-07-03",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "26.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "27",
+    "title": "A New Enemy, I'm the Prince of the Realm of the Dead.",
+    "airDate": "1995-07-10",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "27.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "28",
+    "title": "The Awakening of the Heartbeat! Akira`s Secret",
+    "airDate": "1995-07-17",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "28.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "29",
+    "title": "Roar out! The Great Demon God Vajura Mahar Samaskara",
+    "airDate": "1995-07-24",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "29.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "30",
+    "title": "Stolen Faces, Beware of the Pick-up Artist!",
+    "airDate": "1995-07-31",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "30.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "31",
+    "title": "The Hands That Create Souls. The Night of the Dolls",
+    "airDate": "1995-08-07",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "31.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "32",
+    "title": "Terror by the Lake, Listen to the Song of the Spirit",
+    "airDate": "1995-08-14",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "32.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "33",
+    "title": "Fragments of Desire. Chiaki in Big Trouble!",
+    "airDate": "1995-08-21",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "33.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "34",
+    "title": "Jukai Runs for Office! Daruma Power, Cast Your Honest Vote!",
+    "airDate": "1995-08-28",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "34.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "35",
+    "title": "An Arrow that Pierces the Full Moon. Ichiko's Secret",
+    "airDate": "1995-09-04",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "35.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "36",
+    "title": "Forbidden Garden. Let`s Put Flowers on our Head!",
+    "airDate": "1995-09-11",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "36.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "37",
+    "title": "A Star is Born. Got the Punch Line?",
+    "airDate": "1995-09-18",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "37.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "38",
+    "title": "The Nightmare of the Lost Pool, Souma Returns",
+    "airDate": "1995-09-25",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "38.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "39",
+    "title": "Hirumaki's Scheme. The Shadow of Death Creeps",
+    "airDate": "1995-10-02",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "39.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "40",
+    "title": "Dangerous Encounter. Sayaka`s Crush",
+    "airDate": "1995-10-09",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "40.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "41",
+    "title": "Kokutei Gets Kidnapped, Assassinate the Dog Deity!",
+    "airDate": "1995-10-16",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "41.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "42",
+    "title": "Akira is the Target. Attacker from the Realm of the Dead",
+    "airDate": "1995-10-22",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "42.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "43",
+    "title": "Darkness Approaches, Chiaki Gets Tested.",
+    "airDate": "1995-10-30",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "43.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "44",
+    "title": "The Miracle of Mother Mary, The Memory of an Ancient Jewel.",
+    "airDate": "1995-11-06",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "44.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "45",
+    "title": "Kazue Dies at Dawn, Kill the Phantom Karuma Beast",
+    "airDate": "1995-11-13",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "45.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "46",
+    "title": "Beautiful Beast, Negation Power",
+    "airDate": "1995-11-20",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "46.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "47",
+    "title": "Enno Shrine Under Attack. Come, Earth Dragon Staff!",
+    "airDate": "1995-11-27",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "47.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "48",
+    "title": "The Fate of the Moon and the Wolf. Beyond the White and Silver.",
+    "airDate": "1995-12-04",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "48.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "49",
+    "title": "The Demon God Versus the Dog Deity. The Last Battle of Destiny.",
+    "airDate": "1995-12-11",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "49.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "50",
+    "title": "The God of Destruction Arrives. Fight, Courageous Ones!",
+    "airDate": "1995-12-18",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "50.jpg",
+    "season": 1,
+    "showId": "13"
+  },
+  {
+    "episode": "51",
+    "title": "Go Demon God! Diamond Axe Rudra!",
+    "airDate": "1995-12-25",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "51.jpg",
+    "season": 1,
+    "showId": "13"
+  }
+]
