@@ -259,10 +259,30 @@
     "imdbRating": "6.5",
     "releaseInfo": "1995-1995",
     "averageRunningTime": "22m",
-    "bucketFolder": "kishin-douji-Zenki",
+    "bucketFolder": "kishin-douji-zenki",
     "seasons": [
-      "Season 1"
+      "Final Season"
     ],
     "details": "Zenki (Japanese: 鬼神童子ZENKIゼンキ, Hepburn: Kishin Dōji Zenki, lit. \"Demon God Child Zenki\") is a Japanese manga series written by Kikuhide Tani and illustrated by Yoshihiro Kuroiwa. It was introduced and serialized in the Shueisha publication, Monthly Shōnen Jump from December 1992 to September 1996. Zenki was adapted into a fifty-one episode anime television series in 1995 and a single original video animation in 1997 by Studio Deen and also received five video games. Enoki Films handles the English language version of the anime and its distribution rights."
+  },
+  {
+    "_id": "14",
+    "title": "Flame of Recca",
+    "summary": "Recca is a boy living in the modern world, only he seems drawn to following the ways of the ninja. On the day he befriends a girl named Yanagi who has a mysterious power of healing, he is confronted and challenged by a Dark Priestess. This battle leads Recca to discover a strange power within himself. Afterwards, he finds that not only is his past and destiny not as crystal clear as he had thought, but there are others with powers practicing the way of the ninja who challenge him one after another.",
+    "cover": "flame-of-recca-cover.jpg",
+    "logo": "flame-of-recca-logo.png",
+    "background": "background.png",
+    "titleCard": "flame-of-recca-title_card.jpg",
+    "fandomWiki": "https://flameofrecca.fandom.com/wiki/Main_Page",
+    "imdbUrl": "https://www.imdb.com/title/tt2160200",
+    "imdbRating": "7.3",
+    "releaseInfo": "1997-1998",
+    "averageRunningTime": "22m",
+    "bucketFolder": "flame-of-recca",
+    "seasons": [
+      "Season 1",
+      "Final Season"
+    ],
+    "details": "Flame of Recca is a 42-episode anime series produced by Studio Pierrot and directed by Noriyuki Abe. It is an adaptation of the manga series of the same name by Nobuyuki Anzai. The plot follows the protagonist Recca Hanabishi, a teenage ninja with the ability to manipulate fire and a descendant of the Hokage, a ninja clan wiped out centuries ago.\n\nThe series aired in Japan from July 19, 1997 to July 10, 1998 on Fuji Television.[1] Flame of Recca has also aired on the satellite network Animax in Japan and Asia.[2][3] Pony Canyon has released the entire series on DVD and laserdisc, while Geneon released it in two DVD boxsets on April 22 and June 24, 2004 in Japan.[4] In North America, Viz Media released the series in ten separate DVD volumes between October 26, 2004 and January 9, 2007.[5][6]\n\nThe Flame of Recca anime series featured background music composed by Yusuke Honma. The series featured \"Nanka Shiawase\" (なんか幸せ, lit. \"Something Happy\") by The Oystars as its opening theme, and used \"Love is Changing\" (西田ひかる) by Hikaru Nishida and \"Zutto Kimi no Soba de\" (ずっと君の傍で, lit. \"By Your Side Forever\") by Yuki Masuda as its ending themes for episodes 1-32 and episodes 33-42 respectively."
   }
 ]
