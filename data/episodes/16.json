@@ -441,74 +441,74 @@
     "showId": "16"
   },
   {
-    "episode": "51",
+    "episode": "50",
     "title": "Operation Meteor I: Odd Numbers",
     "airDate": "1996-04-25",
     "synopsis": "Featuring the \"odd-numbered\" Gundam pilots (Heero, Trowa and Wufei) reflecting on the events of the first half of the series.",
+    "thumbnail": "50.jpg",
+    "season": 3,
+    "showId": "16"
+  },
+  {
+    "episode": "51",
+    "title": "Operation Meteor I: Even Numbers",
+    "airDate": "1996-04-25",
+    "synopsis": "Featuring the \"even-numbered\" Gundam pilots (Duo and Quatre) reflecting on the events of the first half of the series.",
     "thumbnail": "51.jpg",
     "season": 3,
     "showId": "16"
   },
   {
     "episode": "52",
-    "title": "Operation Meteor I: Even Numbers",
-    "airDate": "1996-04-25",
-    "synopsis": "Featuring the \"even-numbered\" Gundam pilots (Duo and Quatre) reflecting on the events of the first half of the series.",
+    "title": "Operation Meteor II: Odd Numbers II",
+    "airDate": "1996-10-25",
+    "synopsis": "Featuring odd-numbered pilots Heero, Trowa and Wufei reflecting on the second half of the series.",
     "thumbnail": "52.jpg",
     "season": 3,
     "showId": "16"
   },
   {
     "episode": "53",
-    "title": "Operation Meteor II: Odd Numbers II",
+    "title": "Operation Meteor II: Even Numbers II",
     "airDate": "1996-10-25",
-    "synopsis": "Featuring odd-numbered pilots Heero, Trowa and Wufei reflecting on the second half of the series.",
+    "synopsis": "Featuring the even-numbered pilots Duo and Quatre reflecting on the second half of the series.",
     "thumbnail": "53.jpg",
     "season": 3,
     "showId": "16"
   },
   {
     "episode": "54",
-    "title": "Operation Meteor II: Even Numbers II",
-    "airDate": "1996-10-25",
-    "synopsis": "Featuring the even-numbered pilots Duo and Quatre reflecting on the second half of the series.",
+    "title": "Silent Orbit",
+    "airDate": "1997-01-25",
+    "synopsis": "In After Colony 196, one year after the end of the war, the Earth and the colonies are at peace, and the Gundam pilots (with the exception of Wufei) send their Gundams to the Sun to be destroyed. On Christmas Eve, however, the Barton Foundation kidnaps Relena and declares war on Earth, using the late Treize's alleged daughter, Mariemaia, as a figurehead. Their plan is to conduct Operation Meteor as it originally was planned. The Gundam pilots have to intervene, but Wufei is revealed to have joined forces with the Mariemaia Army. Additional information concerning the backgrounds of the Gundam pilots is revealed.",
     "thumbnail": "54.jpg",
-    "season": 3,
+    "season": 4,
     "showId": "16"
   },
   {
     "episode": "55",
-    "title": "Silent Orbit",
-    "airDate": "1997-01-25",
-    "synopsis": "In After Colony 196, one year after the end of the war, the Earth and the colonies are at peace, and the Gundam pilots (with the exception of Wufei) send their Gundams to the Sun to be destroyed. On Christmas Eve, however, the Barton Foundation kidnaps Relena and declares war on Earth, using the late Treize's alleged daughter, Mariemaia, as a figurehead. Their plan is to conduct Operation Meteor as it originally was planned. The Gundam pilots have to intervene, but Wufei is revealed to have joined forces with the Mariemaia Army. Additional information concerning the backgrounds of the Gundam pilots is revealed.",
+    "title": "Operation Meteor",
+    "airDate": "1997-04-25",
+    "synopsis": "Quatre decides to bring back the Gundams, while Heero, Duo and Trowa try to stop the Mariemaia Army. Meanwhile, the believed-dead Zechs returns and attacks the Mariemaia Army's asteroid base with the new Tallgeese III mobile suit. However, he is forced to stop when Dekim Barton threatens to drop a colony on Earth. No one is able to prevent the Mariemaia Army from seizing control of Earth using their new Serpent mobile suits. After Quatre succeeds in preventing the Gundams from being destroyed, Heero requests that Quatre send the Wing Zero to a specified point in space where Heero will pick it up himself.",
     "thumbnail": "55.jpg",
     "season": 4,
     "showId": "16"
   },
   {
     "episode": "56",
-    "title": "Operation Meteor",
-    "airDate": "1997-04-25",
-    "synopsis": "Quatre decides to bring back the Gundams, while Heero, Duo and Trowa try to stop the Mariemaia Army. Meanwhile, the believed-dead Zechs returns and attacks the Mariemaia Army's asteroid base with the new Tallgeese III mobile suit. However, he is forced to stop when Dekim Barton threatens to drop a colony on Earth. No one is able to prevent the Mariemaia Army from seizing control of Earth using their new Serpent mobile suits. After Quatre succeeds in preventing the Gundams from being destroyed, Heero requests that Quatre send the Wing Zero to a specified point in space where Heero will pick it up himself.",
+    "title": "Return to Forever",
+    "airDate": "1997-07-25",
+    "synopsis": "Heero rendezvous with the Wing Zero and flies to Earth to save Relena, but is intercepted by Wufei's Altron Gundam and forced to fight him. Duo, Trowa and Quatre get their Gundams back and help Zechs and Noin in their attack on the Mariemaia Army's captured fortress in Brussels. Heero eventually arrives, having convinced Wufei that they must bring an end to the conflict, and uses the Wing Zero's twin buster rifle to destroy the fortress' underground bunker shields. When the people of Earth arrive to declare their own desires for peace, Relena and Lady Une are able to convince Mariemaia that she is mistaken. Dekim tries to kill Relena, but is instead killed by one of his own soldiers out of respect for Treize. Following Mariemaia's surrender and the return of peace between Earth and the colonies, the last of the mobile suits (including the Gundams) are destroyed. The Gundam pilots are at last able to bring closure to their lives as soldiers.",
     "thumbnail": "56.jpg",
     "season": 4,
     "showId": "16"
   },
   {
     "episode": "57",
-    "title": "Return to Forever",
-    "airDate": "1997-07-25",
-    "synopsis": "Heero rendezvous with the Wing Zero and flies to Earth to save Relena, but is intercepted by Wufei's Altron Gundam and forced to fight him. Duo, Trowa and Quatre get their Gundams back and help Zechs and Noin in their attack on the Mariemaia Army's captured fortress in Brussels. Heero eventually arrives, having convinced Wufei that they must bring an end to the conflict, and uses the Wing Zero's twin buster rifle to destroy the fortress' underground bunker shields. When the people of Earth arrive to declare their own desires for peace, Relena and Lady Une are able to convince Mariemaia that she is mistaken. Dekim tries to kill Relena, but is instead killed by one of his own soldiers out of respect for Treize. Following Mariemaia's surrender and the return of peace between Earth and the colonies, the last of the mobile suits (including the Gundams) are destroyed. The Gundam pilots are at last able to bring closure to their lives as soldiers.",
-    "thumbnail": "57.jpg",
-    "season": 4,
-    "showId": "16"
-  },
-  {
-    "episode": "58",
     "title": "Gundam Wing: Endless Waltz Special Edition",
     "airDate": "1997-08-01",
     "synopsis": "A compilation of all three Endless Waltz episodes. It includes additional scenes and an altered musical score.",
-    "thumbnail": "58.jpg",
+    "thumbnail": "57.jpg",
     "season": 4,
     "showId": "16"
   },
