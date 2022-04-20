@@ -1,1 +1,326 @@
-[]
+[
+  {
+    "episode": "01",
+    "title": "The White Textbook Case",
+    "airDate": "1984-01-13",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "01.webp",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "02",
+    "title": "Rainbow-Colored Diamond Tears",
+    "airDate": "1984-01-20",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "02.webp",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "03",
+    "title": "Crush the Idol",
+    "airDate": "1984-01-27",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "03.webp",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "04",
+    "title": "Magical Stone Baked Potato",
+    "airDate": "1984-02-03",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "04.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "05",
+    "title": "The Stamp Thief of Three-Hundred Million Yen",
+    "airDate": "1984-02-10",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "05.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "06",
+    "title": "Me... Mama's Children?",
+    "airDate": "1984-02-17",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "06.webp",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "07",
+    "title": "Hong Kong Karate Dangerous Ken",
+    "airDate": "1984-02-24",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "07.webp",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "08",
+    "title": "Secret of the Baseball Boy",
+    "airDate": "1984-03-02",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "08.webp",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "09",
+    "title": "The Mustache-Growing Girl",
+    "airDate": "1984-03-09",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "09.webp",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "10",
+    "title": "Telepathy Battle",
+    "airDate": "1984-03-16",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "10.webp",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "11",
+    "title": "Unimaginable Part-Time Job",
+    "airDate": "1984-03-23",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "11.webp",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "12",
+    "title": "Children are Disappearing",
+    "airDate": "1984-03-30",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "12.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "13",
+    "title": "K's Look-alike",
+    "airDate": "1984-04-06",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "13.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "14",
+    "title": "Ball Boy's Leaving Home",
+    "airDate": "1984-04-13",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "14.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "15",
+    "title": "The Demon's Present",
+    "airDate": "1984-04-20",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "15.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "16",
+    "title": "Maki Hates Mice",
+    "airDate": "1984-04-27",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "16.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "17",
+    "title": "Ironman Monsu's End",
+    "airDate": "1984-05-01",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "17.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "18",
+    "title": "It's Nopperabo!",
+    "airDate": "1984-05-04",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "18.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "19",
+    "title": "Stray Dog Koro's Adventure",
+    "airDate": "1984-05-08",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "19.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "20",
+    "title": "Octopus Queen",
+    "airDate": "1984-05-25",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "20.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "21",
+    "title": "Rain Rain Fall Fall!",
+    "airDate": "1984-06-01",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "21.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "22",
+    "title": "The Clown's Secret Commands",
+    "airDate": "1984-06-08",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "22.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "23",
+    "title": "Interesting Funny Gun",
+    "airDate": "1984-06-15",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "23.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "24",
+    "title": "Showdown! The Ninja Thief",
+    "airDate": "1984-06-22",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "24.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "25",
+    "title": "Challenge of the Mummy-Man",
+    "airDate": "1984-06-29",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "25.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "26",
+    "title": "Scary! The Laughing Doll",
+    "airDate": "1984-07-06",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "26.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "27",
+    "title": "Monster's Hands Swimming At Sea",
+    "airDate": "1984-07-13",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "27.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "28",
+    "title": "I Like I Like! Maki",
+    "airDate": "1984-07-20",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "28.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "29",
+    "title": "Find the Pirate's Treasure!",
+    "airDate": "1984-07-27",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "29.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "30",
+    "title": "The Village Inhabited by the Red Demon",
+    "airDate": "1984-08-17",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "30.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "31",
+    "title": "The Dangerous Gourd",
+    "airDate": "1984-08-24",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "31.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "32",
+    "title": "Voice of a Bird Called Conflict",
+    "airDate": "1984-08-31",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "32.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "33",
+    "title": "The Dogs have a Time Bomb",
+    "airDate": "1984-09-07",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "33.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "34",
+    "title": "K and M's Winning Strategy",
+    "airDate": "1984-09-14",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "34.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "35",
+    "title": "Today is Goodbye",
+    "airDate": "1984-09-21",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "35.jpg",
+    "season": 1,
+    "showId": "18"
+  },
+  {
+    "episode": "36",
+    "title": "Collection Of The Fight Scenes",
+    "airDate": "1984-09-28",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "36.jpg",
+    "season": 1,
+    "showId": "18"
+  }
+]
