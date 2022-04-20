@@ -2,19 +2,24 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <img id="logo-image" src="/images/shows/{{show._id}}/logo/{{show.logo}}" alt="" class="pb-2">
-                <h3 class="pb-3" style="margin-bottom:0">{{show.title}}</h3>
-                <h6 class="my-tertiary-text" style="margin-bottom:0">TV Series<span class="the-dot">{{show.releaseInfo}}</span><span
-                        class="the-dot">TV-PG</span><span
-                        class="the-dot">{{show.averageRunningTime}}</span></h6>
-                <div id="rating">
-                    <div class="pt-2 pb-3">
-                        <a href="{{show.imdbUrl}}" target="_blank"><h6 class="my-tertiary-text" style="margin-bottom:0"><img
-                                src="/images/imdb_logo.png"
-                                style="height:20px;padding-right:10px;"><i
-                                class="fa fa-star"
-                                aria-hidden="true"></i>
-                            {{show.imdbRating}} / 10</h6></a>
+                <div class="d-flex flex-column">
+                    <img id="logo-image" src="/images/shows/{{show._id}}/logo/{{show.logo}}" alt="" class="pb-2">
+                    <h3 class="pb-3" style="margin-bottom:0">{{show.title}}</h3>
+                    <h6 class="my-tertiary-text" style="margin-bottom:0">TV Series<span
+                            class="the-dot">{{show.releaseInfo}}</span><span
+                            class="the-dot">TV-PG</span><span
+                            class="the-dot">{{show.averageRunningTime}}</span></h6>
+                    <div id="rating">
+                        <div class="pt-2 pb-3">
+                            <a href="{{show.imdbUrl}}" target="_blank"><h6 class="my-tertiary-text"
+                                                                           style="margin-bottom:0">
+                                <img
+                                        src="/images/imdb_logo.png"
+                                        style="height:20px;padding-right:10px;"><i
+                                    class="fa fa-star"
+                                    aria-hidden="true"></i>
+                                {{show.imdbRating}} / 10</h6></a>
+                        </div>
                     </div>
                 </div>
                 <div id="hero-buttons" class="d-flex flex-row">
@@ -23,13 +28,15 @@
                                 class="my-secondary-text" style="margin:5px 0"><i
                                 class="fa fa-play"
                                 aria-hidden="true"></i>
-                             Play</h5></a>
+                            Play</h5></a>
                     </div>
                     <div id="add-to-watchlist">
                         <a href="/watchlist/{{#if inWatchlist}}remove{{else}}add{{/if}}/{{showId}}"
-                           class="btn btn-outline-light pt-3 ps-5 pb-3 pe-5"><h5 class="my-secondary-text" style="margin:5px 0"><i
+                           class="btn btn-outline-light pt-3 ps-5 pb-3 pe-5"><h5 class="my-secondary-text"
+                                                                                 style="margin:5px 0"><i
                                 class="fa fa-{{#if inWatchlist}}minus{{else}}plus{{/if}}-circle"
-                                aria-hidden="true"></i>  {{#if inWatchlist}}Remove from{{else}}Add to{{/if}} Watchlist</h5></a>
+                                aria-hidden="true"></i>  {{#if inWatchlist}}Remove from{{else}}Add to{{/if}} Watchlist
+                        </h5></a>
                     </div>
                 </div>
                 <p id="show-summary" class="my-secondary-text pt-3" style="margin-bottom:0">{{show.summary}}</p>

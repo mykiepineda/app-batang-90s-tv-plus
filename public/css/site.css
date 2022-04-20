@@ -25,7 +25,7 @@ html, body {
 }
 
 body {
-    background-position: right;
+    background-position: top right;
     background-repeat: no-repeat;
     background-size: contain;
     background-attachment: fixed;
@@ -279,10 +279,16 @@ body, #bookmark-button {
 
 }
 
+#logo-image {
+    width: 500px;
+}
+
 @media screen and (max-width: 1100px) {
 
     body {
-        background: linear-gradient(45deg, var(--my-secondary-color), var(--my-primary-color), var(--my-secondary-color)) !important;
+        /*background: linear-gradient(45deg, var(--my-secondary-color), var(--my-primary-color), var(--my-secondary-color)) !important;*/
+        background-position: top;
+        background-attachment: scroll;
     }
 
     #non-small-form-factor {
@@ -298,7 +304,7 @@ body, #bookmark-button {
     }
 
     #logo-image {
-        width: 100%;
+        width: 80%;
     }
 
     #mid-navbar .navbar-nav div:nth-child(1),
@@ -376,6 +382,10 @@ body, #bookmark-button {
     /*#show-summary {*/
     /*    padding: 0 !important;*/
     /*}*/
+
+    #hero-section {
+        margin-top: 30%;
+    }
 
 }
 

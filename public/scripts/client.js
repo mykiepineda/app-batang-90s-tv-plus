@@ -101,6 +101,9 @@ window.addEventListener("load", function () {
         }
     }
 
+    const defaultActiveSeasonNavItem = document.querySelector("#seasons-navbar li:nth-child(1)");
+    defaultActiveSeasonNavItem.classList.add("active");
+
     const seasonsLinks = document.querySelectorAll(".my-seasons-link");
     const carouselItems = document.querySelectorAll(".carousel-item");
 
@@ -177,7 +180,7 @@ window.addEventListener("load", function () {
     const suggestedSection = document.querySelector("#suggested-section");
     const detailsSection = document.querySelector("#details-section");
 
-    // Assumption: On page load, EPISODES tab link is always active by default
+    // Assumption: On page load, EPISODES tab link is active by default
     suggestedSection.style.display = "none";
     detailsSection.style.display = "none";
 
