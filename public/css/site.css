@@ -3,6 +3,7 @@
     --my-primary-color: rgb(26, 29, 41);
     --my-secondary-color: rgb(9, 11, 19);
     --my-tertiary-color: rgb(31, 32, 43);
+    --video-control-icon-size: 20px;
 }
 
 .my-primary-text {
@@ -96,6 +97,18 @@ body, #bookmark-button {
     left: 10px;
     opacity: 0;
     transition: opacity 0.25s ease;
+}
+
+.my-play-pause-button-container {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 55px;
+    height: calc(var(--video-control-icon-size) * 4);
+    width: calc(var(--video-control-icon-size) * 4);
+    transition: transform 0.2s ease;
+}
+
+.my-play-pause-button-container:hover {
+    transform: scale(1.3);
 }
 
 #card-body {
@@ -417,15 +430,11 @@ body, #bookmark-button {
     background-image: linear-gradient(rgba(255, 255, 255, 0), black);
 }
 
-#video-controls:hover {
-    opacity: 1;
-}
-
 .opacity-1 {
     opacity: 1 !important;
 }
 
-#video-controls .btn {
+#video-outer-container .btn {
     transition: transform 0.2s ease;
 }
 
@@ -434,17 +443,18 @@ body, #bookmark-button {
 }
 
 #volume-slider-container {
-    display: none;
+    opacity: 0;
     position: absolute;
-    bottom: 95px;
+    bottom: 100px;
     transform: rotate(270deg);
     padding: 5px;
     background: rgb(38, 38, 38);
     border-radius: 2px;
+    transition: opacity 0.25s ease;
 }
 
 #volume-container:hover .btn,
-#video-controls .btn:hover {
+#video-outer-container .btn:hover {
     color: white;
     transform: scale(1.3);
 }
@@ -507,20 +517,52 @@ body, #bookmark-button {
     height: 100% !important;
 }
 
-#video-container .btn {
+#video-outer-container .btn {
     background-color: transparent;
     color: white;
     border: none;
-    /*font-size: 2rem;*/
+    font-size: var(--video-control-icon-size);
 }
 
-#volume-slider {
-    display: none;
+#seek-10sec-forward-btn svg,
+#seek-10sec-backward-btn svg {
+    width: auto;
+    height: calc(var(--video-control-icon-size) * 2);
 }
 
-#volume-container:hover #volume-slider-container,
-#volume-container:hover #volume-slider {
-    display: block;
+/*#volume-slider {*/
+/*    display: none;*/
+/*}*/
+
+#volume-container:hover #volume-slider-container {
+    opacity: 1;
+}
+
+#volume-button-container {
+    width: calc(29px + 24px);
+}
+
+#volume-icons-container {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+#volume-icons-container svg {
+    width: auto;
+    height: var(--video-control-icon-size);
+}
+
+#volume-icons-container svg path {
+    fill: white;
+}
+
+.display-none {
+    display: none !important;
+}
+
+.display-inline-block {
+    display: inline-block;
 }
 
 #time h4 {
@@ -532,6 +574,7 @@ body, #bookmark-button {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 #video-slide-container {
@@ -542,6 +585,25 @@ body, #bookmark-button {
 #loader-container {
     position: absolute;
     z-index: 10;
+}
+
+/*#video-outer-container:hover #video-controls,*/
+/*#video-outer-container:hover #centre-video-controls-container {*/
+/*    opacity: 1;*/
+/*}*/
+
+/*#video-outer-container:not(:hover) #video-controls,*/
+/*#video-outer-container:not(:hover) #centre-video-controls-container {*/
+/*    opacity: 0;*/
+/*    transition: opacity 0.25s ease;*/
+/*    transition-delay: 0.25s;*/
+/*}*/
+
+#centre-video-controls-container {
+    opacity: 0;
+    position: absolute;
+    z-index: 20;
+    transition: opacity 0.25s ease;
 }
 
 .hide {
@@ -692,7 +754,7 @@ body, #bookmark-button {
     background-color: #555;
 }
 
-.my-line-clamp{
+.my-line-clamp {
     display: -webkit-box !important;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;

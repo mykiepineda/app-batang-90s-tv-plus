@@ -7,15 +7,38 @@ window.addEventListener("load", function () {
     const videoControls = document.querySelector("#video-controls");
     const playPauseButton = document.querySelector("#play-pause-button");
     const playPauseIcon = playPauseButton.querySelector("i");
+    const centreVideoControlsContainer = document.querySelector("#centre-video-controls-container");
+    const seek10secForwardButton = document.querySelector("#seek-10sec-forward-btn");
+    const seek10secBackwardButton = document.querySelector("#seek-10sec-backward-btn");
     const volumeButton = document.querySelector("#volume-button");
-    const volumeIcon = volumeButton.querySelector("i");
+    const volumeHighIcon = document.querySelector("#volume-high-icon");
+    const volumeMediumIcon = document.querySelector("#volume-medium-icon");
+    const volumeLowIcon = document.querySelector("#volume-low-icon");
+    const volumeNoneIcon = document.querySelector("#volume-none-icon");
     const volumeSlider = document.querySelector("#volume-slider");
     const current = document.querySelector("#current");
     const duration = document.querySelector("#duration");
     const fullscreen = document.querySelector("#fullscreen");
     const fullscreenIcon = fullscreen.querySelector("i");
 
-    playPauseButton.addEventListener("click", function (event) {
+    let videoControlsDisplayTimeout;
+
+    function hideVideoControls() {
+        console.log("hideVideoControls");
+        videoControls.style.opacity = "0";
+        centreVideoControlsContainer.style.opacity = "0";
+    }
+
+    videoOuterContainer.addEventListener("mousemove", function(event){
+        clearTimeout(videoControlsDisplayTimeout);
+        videoControls.style.opacity = "1";
+        centreVideoControlsContainer.style.opacity = "1";
+        videoControlsDisplayTimeout = setTimeout(hideVideoControls, 2000);
+    });
+
+    // videoOuterContainer.addEventListener("mouseout", hideVideoControls);
+
+    function playPauseVideo() {
         if (!(videoPlayer.currentTime > 0 && !videoPlayer.paused && !videoPlayer.ended && videoPlayer.readyState > 2)) {
             videoPlayer.play();
             playPauseIcon.classList.remove("fa-play");
@@ -25,24 +48,55 @@ window.addEventListener("load", function () {
             playPauseIcon.classList.add("fa-play");
             playPauseIcon.classList.remove("fa-pause");
         }
-    })
+    }
+
+    playPauseButton.addEventListener("click", function (event) {
+        event.stopPropagation();
+        playPauseVideo();
+    });
+
+    videoOuterContainer.addEventListener("click", function() {
+        playPauseVideo();
+    });
+
+    seek10secForwardButton.addEventListener("click", function(event) {
+        event.stopPropagation();
+        videoPlayer.currentTime = videoPlayer.currentTime + 10;
+        currentTime();
+    });
+
+    seek10secBackwardButton.addEventListener("click", function(event) {
+        event.stopPropagation();
+        videoPlayer.currentTime = videoPlayer.currentTime - 10;
+        currentTime();
+    });
 
     function setVolumeMuteState() {
-        volumeIcon.classList.add("fa-volume-xmark");
-        volumeIcon.classList.remove("fa-volume-high");
-        volumeIcon.classList.remove("fa-volume-low");
+        volumeHighIcon.classList.add("display-none");
+        volumeMediumIcon.classList.add("display-none");
+        volumeLowIcon.classList.add("display-none");
+        volumeNoneIcon.classList.remove("display-none");
     }
 
     function setVolumeUnmuteState() {
-        if (videoPlayer.volume > 0.5) {
-            volumeIcon.classList.remove("fa-volume-xmark");
-            volumeIcon.classList.add("fa-volume-high");
-            volumeIcon.classList.remove("fa-volume-low");
-        } else if (videoPlayer.volume > 0) {
-            volumeIcon.classList.remove("fa-volume-xmark");
-            volumeIcon.classList.remove("fa-volume-high");
-            volumeIcon.classList.add("fa-volume-low");
+
+        if (videoPlayer.volume >= 0.8) {
+            volumeHighIcon.classList.remove("display-none");
+            volumeMediumIcon.classList.add("display-none");
+            volumeLowIcon.classList.add("display-none");
+            volumeNoneIcon.classList.add("display-none");
+        } else if (videoPlayer.volume >= 0.4) {
+            volumeHighIcon.classList.add("display-none");
+            volumeMediumIcon.classList.remove("display-none");
+            volumeLowIcon.classList.add("display-none");
+            volumeNoneIcon.classList.add("display-none");
+        } else {
+            volumeHighIcon.classList.add("display-none");
+            volumeMediumIcon.classList.add("display-none");
+            volumeLowIcon.classList.remove("display-none");
+            volumeNoneIcon.classList.add("display-none");
         }
+
     }
 
     function toggleVolumeState() {
@@ -59,6 +113,7 @@ window.addEventListener("load", function () {
     toggleVolumeState();
 
     volumeButton.addEventListener("click", function (event) {
+        event.stopPropagation();
         videoPlayer.muted = !videoPlayer.muted;
         if (!videoPlayer.muted && videoPlayer.volume === 0) {
             videoPlayer.volume = 0.1; // Set default
@@ -66,7 +121,10 @@ window.addEventListener("load", function () {
         toggleVolumeState();
     });
 
+    // TODO: Fix propagation issue. videoOuterContainer event gets activated when changing the volume
     volumeSlider.addEventListener("mousemove", function (event) {
+        event.stopPropagation();
+        clearTimeout(videoControlsDisplayTimeout);
         videoPlayer.volume = event.target.value;
         videoPlayer.muted = !(videoPlayer.volume > 0);
         if (videoPlayer.muted) {
@@ -74,6 +132,7 @@ window.addEventListener("load", function () {
         } else {
             setVolumeUnmuteState();
         }
+        videoControlsDisplayTimeout = setTimeout(hideVideoControls, 2000);
     });
 
     function currentTime() {
@@ -88,11 +147,16 @@ window.addEventListener("load", function () {
 
     videoPlayer.addEventListener("timeupdate", currentTime);
 
-    fullscreen.addEventListener("click", function () {
+    fullscreen.addEventListener("click", function (event) {
+        event.stopPropagation();
         if (document.fullscreenElement && document.fullscreenElement.id === "video-outer-container") {
-            document.exitFullscreen();
+            document.exitFullscreen().then(function() {
+                // TODO: What to do here?
+            });
         } else {
-            videoOuterContainer.requestFullscreen();
+            videoOuterContainer.requestFullscreen().then(function() {
+                // TODO: What to do here?
+            });
         }
         videoContainer.classList.toggle("height-100pct");
         videoInnerContainer.classList.toggle("height-100pct");
@@ -148,10 +212,12 @@ window.addEventListener("load", function () {
 
     videoPlayer.addEventListener("playing", function (event) {
         spinner.classList.add("hide");
+        centreVideoControlsContainer.classList.remove("hide");
     });
 
     videoPlayer.addEventListener("waiting", function (event) {
         spinner.classList.remove("hide");
+        centreVideoControlsContainer.classList.add("hide");
     });
 
     thumb.addEventListener("mousedown", function (event) {
