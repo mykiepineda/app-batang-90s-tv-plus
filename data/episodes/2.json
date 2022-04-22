@@ -4,7 +4,7 @@
     "title": "The Fushigi World",
     "airDate": "1984-03-02",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
-    "thumbnail": "01 THE STRANGE WORLD.JPG",
+    "thumbnail": "01.jpg",
     "season": 1,
     "showId": "02"
   },
@@ -13,7 +13,7 @@
     "title": "Dance, Petpet",
     "airDate": "1984-03-09",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
-    "thumbnail": "02 DANCE PETOPETO.JPG",
+    "thumbnail": "02.jpg",
     "season": 1,
     "showId": "02"
   },
@@ -22,7 +22,7 @@
     "title": "Annie Doesn't Listen",
     "airDate": "1984-03-16",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
-    "thumbnail": "03 ANNIE DOESN'T LISTEN.JPG",
+    "thumbnail": "03.jpg",
     "season": 1,
     "showId": "02"
   },
@@ -31,7 +31,7 @@
     "title": "The Children Who Became Dogs",
     "airDate": "1984-03-23",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
-    "thumbnail": "04 THE CHILDREN WHO BECAME ANIMALS.JPG",
+    "thumbnail": "04.jpg",
     "season": 1,
     "showId": "02"
   },
@@ -40,7 +40,7 @@
     "title": "Suddenly! Lazy People",
     "airDate": "1984-03-30",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
-    "thumbnail": "05 THE SUDDEN CASE OF LAZINESS.JPG",
+    "thumbnail": "05.jpg",
     "season": 1,
     "showId": "02"
   },
