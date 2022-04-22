@@ -692,6 +692,13 @@ body, #bookmark-button {
     background-color: #555;
 }
 
+.my-line-clamp{
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+
 /* Override Bootstrap/Fontawesome styles */
 
 .fa-star {
@@ -744,11 +751,4 @@ body, #bookmark-button {
 .carousel-control-next, .carousel-control-prev {
     width: auto !important;
     display: block !important;
-}
-
-.text-truncate.text-truncate--2{
-    display: -webkit-box !important;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    white-space: normal;
 }
