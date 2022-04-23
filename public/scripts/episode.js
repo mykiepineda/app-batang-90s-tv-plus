@@ -36,7 +36,7 @@ window.addEventListener("load", function () {
         videoControlsDisplayTimeout = setTimeout(hideVideoControls, 2000);
     });
 
-    // videoOuterContainer.addEventListener("mouseout", hideVideoControls);
+    videoOuterContainer.addEventListener("mouseout", hideVideoControls);
 
     function playPauseVideo() {
         if (!(videoPlayer.currentTime > 0 && !videoPlayer.paused && !videoPlayer.ended && videoPlayer.readyState > 2)) {
@@ -114,11 +114,13 @@ window.addEventListener("load", function () {
 
     volumeButton.addEventListener("click", function (event) {
         event.stopPropagation();
+        clearTimeout(videoControlsDisplayTimeout);
         videoPlayer.muted = !videoPlayer.muted;
         if (!videoPlayer.muted && videoPlayer.volume === 0) {
             videoPlayer.volume = 0.1; // Set default
         }
         toggleVolumeState();
+        videoControlsDisplayTimeout = setTimeout(hideVideoControls, 2000);
     });
 
     // TODO: Fix propagation issue. videoOuterContainer event gets activated when changing the volume

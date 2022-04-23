@@ -338,7 +338,7 @@
     "airDate": "1996-01-12",
     "synopsis": "Informed by Duo, Quatre approaches Trowa and asks for forgiveness. As Quatre and Noin fight the new faction, White Fang, Trowa, despite the fact he still remembers nothing, agrees to fight with them in hopes of recovering his memory. Queen Relena eliminates all international boundaries and founds the World Nation in hopes of bringing peace.",
     "thumbnail": "38.jpg",
-    "season": 2,
+    "season": 1,
     "showId": "16"
   },
   {
@@ -347,7 +347,7 @@
     "airDate": "1996-01-19",
     "synopsis": "Zechs accepts an offer from Quinze to become the leader of White Fang. While Dermail intends to continue using Relena as a figurehead, Dorothy and Marquis Weiridge conspire with other members of Romefeller to make Relena a queen in power as well as name. Meanwhile, White Fang's repeated advances convince Duo to leave Hilde's colony for her own protection. Trowa, Quatre, and Noin are mistaken as White Fang members by an OZ unit in the ruins of a nearby colony; after turning the tide of the resultant battle, Duo agrees to join the group.",
     "thumbnail": "39.jpg",
-    "season": 2,
+    "season": 1,
     "showId": "16"
   },
   {
@@ -356,7 +356,7 @@
     "airDate": "1996-01-26",
     "synopsis": "Howard, an ally to both Duo and Zechs, agrees to team up with all the Gundam pilots and offers his ship, the Peacemillion, as a base. Relena announces that the Romefeller Foundation must disarm and calls for peaceful coexistence between Earth and colonies. Heero, in an attempt to kill her to end the false peace, spares her when he and Relena see the response Romefeller has given her is positive. Dermail is killed trying to regain power in space while White Fang's new leader, Milliardo Peacecraft, declares war on Earth.",
     "thumbnail": "40.jpg",
-    "season": 2,
+    "season": 1,
     "showId": "16"
   },
   {
@@ -510,6 +510,15 @@
     "synopsis": "A compilation of all three Endless Waltz episodes. It includes additional scenes and an altered musical score.",
     "thumbnail": "57.jpg",
     "season": 4,
+    "showId": "16"
+  },
+  {
+    "episode": "58",
+    "title": "Mobile Suit Gundam Wing: Frozen Teardrop Picture Drama - Aratanaru Tatakai",
+    "airDate": "2014-01-29",
+    "synopsis": "Special included in the second of two remastered Gundam Wing Blu-ray boxes based on the novel series Gundam Wing Frozen Teardrop",
+    "thumbnail": "58.jpg",
+    "season": 5,
     "showId": "16"
   }
 ]
