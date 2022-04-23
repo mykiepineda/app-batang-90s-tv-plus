@@ -27,6 +27,9 @@ const showsDropdown = require("./modules/middleware");
 
 const adminUserId = "625cd09778a6145fe83d80dd";
 
+// TODO: Currently, origin is an AWS S3 bucket. Once Wasabi trial is over and objects can be make publicly, update AWS CloudFront to use this as the origin instead
+const cdnRootUrl = "https://d2ku9lxqk7qrgi.cloudfront.net";
+
 AWS.config.update({
     accessKeyId: "Z5QQ38VNUCU81ANC8NZE",
     secretAccessKey: "DmJTppTMTEbXJi8KIlEk1i2mteWtKBAp3hYHrdWV",
@@ -37,6 +40,7 @@ AWS.config.update({
 app.get("/", showsDropdown(), async function (req, res) {
 
     res.locals.suggestions = await shows.find().sort({releaseInfo: 1, title: 1}).lean();
+    res.locals.cdnRootUrl = cdnRootUrl;
 
     res.render("home");
 
@@ -50,6 +54,7 @@ app.get("/show/:id", showsDropdown(), async function (req, res) {
     res.locals.show = await shows.findOne({_id: showId}).lean();
     res.locals.myWatchlist = [];
     res.locals.inWatchlist = false;
+    res.locals.cdnRootUrl = cdnRootUrl;
 
     const userDoc = await users.findOne({_id: adminUserId}).lean();
 
@@ -174,6 +179,7 @@ app.get("/show/:showId/episode/:id", showsDropdown(), async function (req, res) 
 
     res.locals.showId = showId;
     res.locals.show = await shows.findOne({_id: showId}).lean();
+    res.locals.cdnRootUrl = cdnRootUrl;
 
     res.render("episode");
 });

@@ -16,4 +16,14 @@ window.addEventListener("load", function () {
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     });
 
+    // Hamburger button
+
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    const navbarCollapse = document.querySelector(".navbar-collapse");
+
+    navbarToggler.addEventListener("click", function () {
+        navbarToggler.classList.toggle("collapsed");
+        navbarCollapse.classList.toggle("show");
+    });
+
 });

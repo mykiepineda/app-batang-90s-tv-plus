@@ -15,7 +15,7 @@
     <script src="https://kit.fontawesome.com/338a0d231d.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-<body style="background-image:{{#if showId}} url(/images/shows/{{showId}}/background/{{show.background}}),{{/if}}linear-gradient(45deg, var(--my-secondary-color), var(--my-primary-color), var(--my-secondary-color))">
+<body style="background-image:{{#if showId}} url({{cdnRootUrl}}/images/shows/{{showId}}/background/{{show.background}}),{{/if}}linear-gradient(45deg, var(--my-secondary-color), var(--my-primary-color), var(--my-secondary-color))">
     {{>goto-top}}
     {{>top-navbar}}
     {{{body}}}

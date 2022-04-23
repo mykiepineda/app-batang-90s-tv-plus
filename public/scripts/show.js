@@ -16,14 +16,6 @@ window.addEventListener("load", function () {
         myWatchlistDropdownMenu.classList.toggle("show");
     });
 
-    const navbarToggler = document.querySelector(".navbar-toggler");
-    const navbarCollapse = document.querySelector(".navbar-collapse");
-
-    navbarToggler.addEventListener("click", function () {
-        navbarToggler.classList.toggle("collapsed");
-        navbarCollapse.classList.toggle("show");
-    });
-
     const carouselInners = document.querySelectorAll(".carousel-inner");
     const cards = document.querySelectorAll(".card");
 

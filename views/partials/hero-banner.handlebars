@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col">
                 <div class="d-flex flex-column">
-                    <img id="logo-image" src="/images/shows/{{show._id}}/logo/{{show.logo}}" alt="" class="pb-2">
+                    <img id="logo-image" src="{{cdnRootUrl}}/images/shows/{{show._id}}/logo/{{show.logo}}" alt="" class="pb-2">
                     <h3 class="pb-3" style="margin-bottom:0">{{show.title}}</h3>
                     <h6 class="my-tertiary-text" style="margin-bottom:0">TV Series<span
                             class="the-dot">{{show.releaseInfo}}</span><span
@@ -14,7 +14,7 @@
                             <a href="{{show.imdbUrl}}" target="_blank"><h6 class="my-tertiary-text"
                                                                            style="margin-bottom:0">
                                 <img
-                                        src="/images/imdb_logo.png"
+                                        src="{{cdnRootUrl}}/images/imdb_logo.png"
                                         style="height:20px;padding-right:10px;"><i
                                     class="fa fa-star"
                                     aria-hidden="true"></i>
