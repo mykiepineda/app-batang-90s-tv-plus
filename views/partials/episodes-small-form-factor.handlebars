@@ -3,18 +3,18 @@
         <div class="my-card-deck-{{season}} card-deck">
             {{#each videos}}
                 <div style="margin-top:25px;margin-bottom:25px">
-                    <a href="/show/{{showId}}/episode/{{episode}}">
+                    <a href="/show/{{this.showId.slug}}/episode/{{episode}}">
                         <div id="card-body" class="card border-0 shadow">
                             <div id="card-image-container">
-                                <img id="card-image" class="card-img-top rounded-0" src="{{@root.cdnRootUrl}}/images/shows/{{showId}}/thumbnails/{{thumbnail}}"
+                                <img id="card-image" class="card-img-top rounded-0" src="{{@root.cdnRootUrl}}images/shows/{{this.showId._id}}/thumbnails/{{this.thumbnail}}"
                                      alt="Card image cap">
                                 <i id="card-play-button" class="fa fa-play-circle-o" aria-hidden="true"></i>
                             </div>
                             <div id="card-title-container" class="card-body d-flex flex-column justify-content-between">
                                 <div class="d-flex flex-column">
-                                    <h6 class="card-title my-tertiary-text text-truncate my-line-clamp">Season {{season}}</h6>
-                                    <h5 class="card-title my-secondary-text text-truncate my-line-clamp">{{episode}}. {{title}}</h5>
-                                    <h6 class="card-title my-tertiary-text text-truncate my-line-clamp">{{synopsis}}</h6>
+                                    <h6 class="card-title my-tertiary-text text-truncate my-line-clamp">Season {{this.season}}</h6>
+                                    <h5 class="card-title my-secondary-text text-truncate my-line-clamp">{{this.episode}}. {{this.title}}</h5>
+                                    <h6 class="card-title my-tertiary-text text-truncate my-line-clamp">{{this.synopsis}}</h6>
                                 </div>
                             </div>
                         </div>

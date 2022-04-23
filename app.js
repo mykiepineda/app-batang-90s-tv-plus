@@ -1,41 +1,39 @@
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3000; // heroku to dynamically assign the port number during deployment or use 3000 when running locally
 
-// Make the "public" folder available statically
 const path = require("path");
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(path.join(__dirname, "public"))); // Make the "public" folder available statically
+
+require("dotenv").config({path: "process.env"});
+const port = process.env.PORT; // heroku to dynamically assign the port number during deployment or use 3000 when running locally
 
 const mongoose = require("mongoose");
 const videos = require("./models/video");
 const shows = require("./models/show");
 const users = require("./models/user");
 const mockDatabase = require("./modules/mock-database");
-const database = "batang-90s-tv-plus";
-mongoose.connect(`mongodb+srv://mykiepineda:P1n3d%40j0hN@cluster0.omg3p.mongodb.net/${database}?retryWrites=true&w=majority`);
+mongoose.connect(`mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.omg3p.mongodb.net/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`).then(function () {
+    console.log("Connected successfully to MongoDB!");
+});
+const adminUserId = process.env.MONGODB_ADMIN_USER_ID;
 
 const handlebars = require("express-handlebars");
 app.engine("handlebars", handlebars.engine({defaultLayout: "main", helpers: require("./modules/handlebars-helpers")}));
 app.set("view engine", "handlebars");
 
 const AWS = require("aws-sdk");
+AWS.config.update({
+    accessKeyId: process.env.WASABI_ACCESS_KEY_ID,
+    secretAccessKey: process.env.WASABI_SECRET_ACCESS_KEY,
+    endpoint: new AWS.Endpoint(process.env.WASABI_SERVICE_URL),
+    region: process.env.WASABI_REGION
+});
 
-const wasabiEndpoint = new AWS.Endpoint("s3.ap-northeast-2.wasabisys.com");
-const wasabiBucket = "batang-90s-tv-plus";
+const wasabiBucket = process.env.WASABI_BUCKET;
+
+const cdnRootUrl = (process.env.URL === "local" ? "/local_" : `${process.env.CDN_ROOT_URL}/`);
 
 const showsDropdown = require("./modules/middleware");
-
-const adminUserId = "625cd09778a6145fe83d80dd";
-
-// TODO: Currently, origin is an AWS S3 bucket. Once Wasabi trial is over and objects can be make publicly, update AWS CloudFront to use this as the origin instead
-const cdnRootUrl = "https://d2ku9lxqk7qrgi.cloudfront.net";
-
-AWS.config.update({
-    accessKeyId: "Z5QQ38VNUCU81ANC8NZE",
-    secretAccessKey: "DmJTppTMTEbXJi8KIlEk1i2mteWtKBAp3hYHrdWV",
-    endpoint: wasabiEndpoint,
-    region: "ap-southeast-2"
-});
 
 app.get("/", showsDropdown(), async function (req, res) {
 
@@ -46,12 +44,13 @@ app.get("/", showsDropdown(), async function (req, res) {
 
 });
 
-app.get("/show/:id", showsDropdown(), async function (req, res) {
+app.get("/show/:slug", showsDropdown(), async function (req, res) {
 
-    const showId = req.params.id;
+    const show = await shows.findOne({slug: req.params.slug}).lean();
+    const showId = show._id;
 
+    res.locals.show = show;
     res.locals.showId = showId;
-    res.locals.show = await shows.findOne({_id: showId}).lean();
     res.locals.myWatchlist = [];
     res.locals.inWatchlist = false;
     res.locals.cdnRootUrl = cdnRootUrl;
@@ -68,11 +67,7 @@ app.get("/show/:id", showsDropdown(), async function (req, res) {
                 if (myWatchlistShow._id === showId) {
                     res.locals.inWatchlist = true;
                 }
-                res.locals.myWatchlist.push({
-                    id: myWatchlistShow._id,
-                    title: myWatchlistShow.title,
-                    releaseInfo: myWatchlistShow.releaseInfo
-                });
+                res.locals.myWatchlist.push(myWatchlistShow);
             }
         }
     }
@@ -80,7 +75,11 @@ app.get("/show/:id", showsDropdown(), async function (req, res) {
     // return other shows
     res.locals.suggestions = await shows.find().where("_id").ne(showId).sort({releaseInfo: 1, title: 1}).lean();
 
-    const videoCollection = await videos.find({showId: showId}).sort({episode: 1}).lean();
+    // TODO: modify videos model by renaming showId to show?
+    const videoCollection = await videos.find({showId: showId}).populate({
+        path: "showId",
+        model: "shows"
+    }).sort({episode: 1}).lean();
 
     if (videoCollection.length > 0) {
 
@@ -153,14 +152,16 @@ function getOtherEpisode(episode, next) {
     return intEpisode.toString();
 }
 
-app.get("/show/:showId/episode/:id", showsDropdown(), async function (req, res) {
+app.get("/show/:slug/episode/:id", showsDropdown(), async function (req, res) {
 
-    const showId = req.params.showId;
+    const show = await shows.findOne({slug: req.params.slug}).lean();
+    const showId = show._id;
     const episodeId = req.params.id;
 
     let minEpisode = null;
     let maxEpisode = null;
 
+    // TODO: Find max and min episode in one query?
     await videos.findOne({showId: showId}).sort({episode: 1}).then(function (doc) {
         minEpisode = doc.toJSON().episode;
     });
@@ -168,17 +169,15 @@ app.get("/show/:showId/episode/:id", showsDropdown(), async function (req, res) 
         maxEpisode = doc.toJSON().episode;
     });
 
-    await videos.find({showId: showId, episode: episodeId}).then(function (collection) {
-        const video = collection[0].toJSON();
-        res.locals.video = video;
-        res.locals.prevEpisode = getOtherEpisode(video.episode, false);
-        res.locals.nextEpisode = getOtherEpisode(video.episode, true);
-        res.locals.reachedStart = (episodeId === minEpisode);
-        res.locals.reachedEnd = (episodeId === maxEpisode);
-    });
+    const video = await videos.findOne({showId: showId, episode: episodeId}).lean();
 
+    res.locals.video = video;
+    res.locals.prevEpisode = getOtherEpisode(video.episode, false);
+    res.locals.nextEpisode = getOtherEpisode(video.episode, true);
+    res.locals.reachedStart = (episodeId === minEpisode);
+    res.locals.reachedEnd = (episodeId === maxEpisode);
     res.locals.showId = showId;
-    res.locals.show = await shows.findOne({_id: showId}).lean();
+    res.locals.show = show;
     res.locals.cdnRootUrl = cdnRootUrl;
 
     res.render("episode");
@@ -220,7 +219,7 @@ app.get("/video/:objectId", async function (req, res, next) {
 
     const episode = await videos.findOne({_id: req.params.objectId}).lean();
     const show = await shows.findOne({_id: episode.showId}).lean();
-    const key = `${show.bucketFolder}/${episode.episode}.mp4`;
+    const key = `${show.slug}/${episode.episode}.mp4`;
 
     const s3 = new AWS.S3();
 
@@ -264,13 +263,14 @@ app.get("/video/:objectId", async function (req, res, next) {
 
 });
 
-async function addRemoveToWatchlist(add, userId, showId) {
+async function addRemoveToWatchlist(add, userId, slug) {
 
     const userDoc = await users.findOne({_id: userId}).lean();
 
     if (userDoc !== null) {
 
-        const showToBeAdded = await shows.findOne({_id: showId}).lean();
+        const showToBeAdded = await shows.findOne({slug: slug}).lean();
+        const showId = showToBeAdded._id;
         let updatedWatchList = userDoc.watchlists;
         let found = false;
         let index = -1;
@@ -290,33 +290,24 @@ async function addRemoveToWatchlist(add, userId, showId) {
 
         await users.findOneAndUpdate(
             {_id: userId},
-            {$set: {
-                watchlists: updatedWatchList
-            }});
+            {
+                $set: {
+                    watchlists: updatedWatchList
+                }
+            });
 
     }
 
 }
 
-app.get("/watchlist/add/:showId", async function (req, res) {
+app.get(["/watchlist/add/:slug","/watchlist/remove/:slug"], async function (req, res) {
 
-    const showId = req.params.showId;
-
-    // TODO: Pass in logged-in user
-    await addRemoveToWatchlist(true, adminUserId, showId);
-
-    res.redirect(`/show/${showId}`);
-
-});
-
-app.get("/watchlist/remove/:showId", async function (req, res) {
-
-    const showId = req.params.showId;
+    const slug = req.params.slug;
 
     // TODO: Pass in logged-in user
-    await addRemoveToWatchlist(false, adminUserId, showId);
+    await addRemoveToWatchlist((req.url.startsWith("/watchlist/add/",0)), adminUserId, slug);
 
-    res.redirect(`/show/${showId}`);
+    res.redirect(`/show/${slug}`);
 
 });
 

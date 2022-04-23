@@ -6,7 +6,7 @@
                 <h3 class="my-primary-text">{{video.title}}</h3>
             </div>
             <div>
-                <a href="/show/{{video.showId}}" role="button" class="btn" style="padding-left:0">
+                <a href="/show/{{show.slug}}" role="button" class="btn" style="padding-left:0">
                     <h6 style="color:white" class="my-tertiary-text"><i class="fa-solid fa-chevron-left"></i> Back</h6>
                 </a>
             </div>
@@ -49,7 +49,7 @@
                 </div>
                 <div id="video-container">
                     <div id="video-inner-container" class="d-flex justify-content-center">
-                        <video id="video-player" poster="/images/shows/{{video.showId}}/thumbnails/{{video.thumbnail}}" autoplay>
+                        <video id="video-player" poster="{{cdnRootUrl}}images/shows/{{video.showId}}/thumbnails/{{video.thumbnail}}" autoplay>
                             <source src="/video/{{video._id}}" type="video/mp4"/>
                         </video>
                         <div id="video-controls">
@@ -64,14 +64,14 @@
                                 <div class="col d-flex align-items-center justify-content-center">
                                     {{#unless reachedStart}}
                                         <div id="step-backward-container">
-                                            <a href="/show/{{video.showId}}/episode/{{prevEpisode}}" role="button" class="btn btn-light">
+                                            <a href="/show/{{show.slug}}/episode/{{prevEpisode}}" role="button" class="btn btn-light">
                                                 <i class="fa fa-step-backward"></i>
                                             </a>
                                         </div>
                                     {{/unless}}
                                     {{#unless reachedEnd}}
                                         <div id="step-forward-container">
-                                            <a href="/show/{{video.showId}}/episode/{{nextEpisode}}" role="button" class="btn btn-light">
+                                            <a href="/show/{{show.slug}}/episode/{{nextEpisode}}" role="button" class="btn btn-light">
                                                 <i class="fa fa-step-forward"></i>
                                             </a>
                                         </div>

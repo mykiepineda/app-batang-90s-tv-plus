@@ -1,4 +1,6 @@
 const mongoose = require("mongoose");
+const slugify = require("slugify");
+
 const showSchema = new mongoose.Schema({
     _id: {
         type: String,
@@ -48,9 +50,10 @@ const showSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    bucketFolder: {
+    slug: {
         type: String,
-        required: true
+        required: true,
+        unique: true
     },
     seasons: {
         type: Array,
@@ -59,7 +62,14 @@ const showSchema = new mongoose.Schema({
     details: {
         type: String,
         required: true
-    },
+    }
+});
+
+showSchema.pre("validate", function(next) {
+   if (this.title) {
+       this.slug = slugify(this.title, {lower: true, strict: true});
+   }
+   next();
 });
 
 module.exports = mongoose.model("shows", showSchema);
