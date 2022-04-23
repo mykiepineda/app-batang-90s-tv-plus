@@ -154,7 +154,7 @@
   },
   {
     "episode": "18",
-    "title": "It's Nopperabo!",
+    "title": "A Faceless Ghost",
     "airDate": "1984-05-04",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
     "thumbnail": "18.jpg",
@@ -316,11 +316,11 @@
   },
   {
     "episode": "36",
-    "title": "Collection Of The Fight Scenes",
+    "title": "Collection of Fight Scenes",
     "airDate": "1984-09-28",
     "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
     "thumbnail": "36.jpg",
-    "season": 1,
+    "season": 2,
     "showId": "18"
   }
 ]
