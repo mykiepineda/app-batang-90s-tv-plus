@@ -1,13 +1,12 @@
 <div class="container d-flex flex-column justify-content-center mt-3">
     <div id="episode-container" class="d-flex flex-column">
         <div class="d-flex align-items-end justify-content-between">
-            <div>
-                <h6 class="my-tertiary-text">{{show.title}}</h6>
-                <h3 class="my-primary-text">{{video.title}}</h3>
+            <div style="line-height:1.5;padding-top:0.75rem;padding-bottom:0.75rem">
+                <h6 class="my-tertiary-text" style="margin-bottom:0">{{show.title}}</h6>
             </div>
             <div>
                 <a href="/show/{{show.slug}}" role="button" class="btn" style="padding-left:0">
-                    <h6 style="color:white" class="my-tertiary-text"><i class="fa-solid fa-chevron-left"></i> Back</h6>
+                    <h6 style="color:white;margin-bottom:0" class="my-tertiary-text"><i class="fa-solid fa-chevron-left"></i> Back</h6>
                 </a>
             </div>
         </div>
@@ -49,15 +48,15 @@
                 </div>
                 <div id="video-container">
                     <div id="video-inner-container" class="d-flex justify-content-center">
-                        <video id="video-player" poster="{{cdnRootUrl}}images/shows/{{video.showId}}/thumbnails/{{video.thumbnail}}" autoplay>
+                        <video id="video-player" poster="{{fileSourceRootUrl}}images/shows/{{video.showId}}/thumbnails/{{video.thumbnail}}" autoplay>
                             <source src="/video/{{video._id}}" type="video/mp4"/>
                         </video>
                         <div id="video-controls">
-                            <div id="video-controls-inner" class="row ps-3 pb-2 pe-3 pt-5">
+                            <div id="video-controls-inner" class="row ps-3 pb-3 pe-3 pt-5">
                                 <div class="col d-flex align-items-center justify-content-start">
                                     <div>
-                                        <div id="time"><span id="current">0:00</span> / <span
-                                                id="duration">0:00</span>
+                                        <div id="time">
+                                            <span id="current">0:00</span> / <span id="duration">0:00</span>
                                         </div>
                                     </div>
                                 </div>
@@ -100,7 +99,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="video-seeker-bar" class="pt-0 p-3">
+                            <div id="video-seeker-bar" class="ps-3 pe-3 pb-4">
                                 <div id="video-slide-container">
                                     <div id="video-track">
                                         <div id="video-progress"></div>
@@ -116,11 +115,12 @@
             </div>
         </div>
         <div class="pt-3">
-            <h6>Episode {{video.episode}}
+            <h3 class="my-primary-text">{{video.title}}</h3>
+            <h6 class="my-tertiary-text">Episode {{video.episode}}
                 <span class="the-dot">Season {{video.season}}</span>
                 <span class="the-dot">{{#serialiseDate video.airDate}}{{/serialiseDate}}</span>
             </h6>
-            <p>{{video.synopsis}}</p>
+            <p class="my-secondary-text">{{video.synopsis}}</p>
         </div>
     </div>
     <script src="/scripts/episode.js"></script>

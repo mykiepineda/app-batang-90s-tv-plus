@@ -5,7 +5,7 @@ const path = require("path");
 app.use(express.static(path.join(__dirname, "public"))); // Make the "public" folder available statically
 
 require("dotenv").config({path: "process.env"});
-const port = process.env.PORT; // heroku to dynamically assign the port number during deployment or use 3000 when running locally
+const port = (process.env.NODE_ENV === "development" ? 3000 : process.env.PORT);
 
 const mongoose = require("mongoose");
 const videos = require("./models/video");
@@ -31,18 +31,18 @@ AWS.config.update({
 });
 
 const wasabiBucket = process.env.WASABI_BUCKET;
-const cdnRootUrl = (process.env.URL === "local" ? "/local_" : `${process.env.CLOUDFRONT_ROOT_URL}/`);
+const fileSourceRootUrl = (process.env.NODE_ENV === "development" ? "/local_" : `${process.env.CLOUDFRONT_ROOT_URL}/`);
 const showsDropdown = require("./modules/middleware");
 
 app.get("/", showsDropdown(), async function (req, res) {
-    res.locals.cdnRootUrl = cdnRootUrl;
+    res.locals.fileSourceRootUrl = fileSourceRootUrl;
     res.locals.suggestions = await shows.find().sort({releaseInfo: 1, title: 1}).lean();
     res.render("home");
 });
 
 app.get("/show/:slug", showsDropdown(), async function (req, res) {
 
-    res.locals.cdnRootUrl = cdnRootUrl;
+    res.locals.fileSourceRootUrl = fileSourceRootUrl;
 
     const show = await shows.findOne({slug: req.params.slug}).lean();
 
@@ -158,7 +158,7 @@ function getOtherEpisode(episode, next) {
 
 app.get("/show/:slug/episode/:id", showsDropdown(), async function (req, res) {
 
-    res.locals.cdnRootUrl = cdnRootUrl;
+    res.locals.fileSourceRootUrl = fileSourceRootUrl;
 
     const show = await shows.findOne({slug: req.params.slug}).lean();
 
@@ -299,12 +299,12 @@ async function addRemoveToWatchlist(add, userId, slug) {
 
 }
 
-app.get(["/watchlist/add/:slug","/watchlist/remove/:slug"], async function (req, res) {
+app.get(["/watchlist/add/:slug", "/watchlist/remove/:slug"], async function (req, res) {
 
     const slug = req.params.slug;
 
     // TODO: Pass in logged-in user
-    await addRemoveToWatchlist((req.url.startsWith("/watchlist/add/",0)), adminUserId, slug);
+    await addRemoveToWatchlist((req.url.startsWith("/watchlist/add/", 0)), adminUserId, slug);
 
     res.redirect(`/show/${slug}`);
 
@@ -339,8 +339,6 @@ app.get("/initialise-database", async function (req, res) {
 });
 
 app.listen(port, function () {
-    if (process.env.URL !== undefined) {
-        console.log(`Environment URL = ${process.env.URL}`);
-    }
+    console.log(`Running environment: ${process.env.NODE_ENV}`);
     console.log(`App listening on port ${port}`);
 });

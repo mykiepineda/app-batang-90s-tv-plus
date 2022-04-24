@@ -113,6 +113,10 @@ window.addEventListener("load", function () {
     toggleVolumeState();
 
     volumeButton.addEventListener("click", function (event) {
+        if (event.pointerType === "touch") {
+            // Prevent overlapping of elements in mobile devices
+            centreVideoControlsContainer.style.opacity = "0";
+        }
         event.stopPropagation();
         clearTimeout(videoControlsDisplayTimeout);
         videoPlayer.muted = !videoPlayer.muted;
@@ -123,7 +127,6 @@ window.addEventListener("load", function () {
         videoControlsDisplayTimeout = setTimeout(hideVideoControls, 2000);
     });
 
-    // TODO: Fix propagation issue. videoOuterContainer event gets activated when changing the volume
     volumeSlider.addEventListener("mousemove", function (event) {
         event.stopPropagation();
         clearTimeout(videoControlsDisplayTimeout);
@@ -153,15 +156,16 @@ window.addEventListener("load", function () {
 
     videoPlayer.addEventListener("timeupdate", currentTime);
 
-    fullscreen.addEventListener("click", function (event) {
+    fullscreen.addEventListener("click", async function (event) {
         event.stopPropagation();
-        if (document.fullscreenElement && document.fullscreenElement.id === "video-outer-container") {
-            document.exitFullscreen().then(function () {
-                // TODO: What to do here?
-            });
+        if (document.fullscreenElement !== null) {
+            await document.exitFullscreen();
         } else {
-            videoOuterContainer.requestFullscreen().then(function () {
-                // TODO: What to do here?
+            await videoOuterContainer.requestFullscreen();
+            screen.orientation.lock("landscape-primary").then(function() {
+                console.log("Locked screen orientation to landscape");
+            }).catch(function(error) {
+                console.log(error);
             });
         }
         videoContainer.classList.toggle("height-100pct");
