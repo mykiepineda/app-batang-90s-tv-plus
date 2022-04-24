@@ -31,7 +31,7 @@ AWS.config.update({
 });
 
 const wasabiBucket = process.env.WASABI_BUCKET;
-const cdnRootUrl = (process.env.URL === "local" ? "/local_" : `${process.env.CDN_ROOT_URL}/`);
+const cdnRootUrl = (process.env.URL === "local" ? "/local_" : `${process.env.CLOUDFRONT_ROOT_URL}/`);
 const showsDropdown = require("./modules/middleware");
 
 app.get("/", showsDropdown(), async function (req, res) {
@@ -201,30 +201,6 @@ app.get("/show/:slug/episode/:id", showsDropdown(), async function (req, res) {
     }
 });
 
-async function getContentLength(s3, params) {
-
-    let videoSize = 0;
-
-    const promise = new Promise(function (resolve, reject) {
-        s3.headObject(params, function (err, data) {
-            if (err && err.statusCode === 404) {
-                reject("Object not found");
-            } else {
-                resolve(data.ContentLength);
-            }
-        });
-    });
-
-    await promise.then(function (value) {
-        videoSize = value;
-    }).catch(function(error){
-        console.log(`Error encountered while getting object content-length for ${params.Bucket}/${params.Key}: ${error}`);
-    });
-
-    return videoSize;
-
-}
-
 app.get("/video/:objectId", async function (req, res, next) {
 
     // Ensure there is a range given for the video
@@ -245,7 +221,8 @@ app.get("/video/:objectId", async function (req, res, next) {
     };
 
     // Check first the content-length of the file in s3 bucket so that we can calculate for the Byte-Range
-    const videoSize = await getContentLength(s3, params);
+    const data = await s3.headObject(params).promise();
+    const videoSize = data.ContentLength;
 
     if (videoSize === 0) {
         return res.status(404).send("File not found");
