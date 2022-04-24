@@ -12,8 +12,9 @@ const videos = require("./models/video");
 const shows = require("./models/show");
 const users = require("./models/user");
 const mockDatabase = require("./modules/mock-database");
-mongoose.connect(`mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@cluster0.omg3p.mongodb.net/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`).then(function () {
-    console.log("Connected successfully to MongoDB!");
+
+mongoose.connect(`mongodb+srv://${process.env.MONGODB_USERNAME}:${process.env.MONGODB_PASSWORD}@${process.env.MONGODB_CLUSTER}/${process.env.MONGODB_DATABASE}?retryWrites=true&w=majority`).then(function () {
+    console.log("Connected successfully to database");
 });
 const adminUserId = process.env.MONGODB_ADMIN_USER_ID;
 
@@ -30,109 +31,112 @@ AWS.config.update({
 });
 
 const wasabiBucket = process.env.WASABI_BUCKET;
-
 const cdnRootUrl = (process.env.URL === "local" ? "/local_" : `${process.env.CDN_ROOT_URL}/`);
-
 const showsDropdown = require("./modules/middleware");
 
 app.get("/", showsDropdown(), async function (req, res) {
-
-    res.locals.suggestions = await shows.find().sort({releaseInfo: 1, title: 1}).lean();
     res.locals.cdnRootUrl = cdnRootUrl;
-
+    res.locals.suggestions = await shows.find().sort({releaseInfo: 1, title: 1}).lean();
     res.render("home");
-
 });
 
 app.get("/show/:slug", showsDropdown(), async function (req, res) {
 
-    const show = await shows.findOne({slug: req.params.slug}).lean();
-    const showId = show._id;
-
-    res.locals.show = show;
-    res.locals.showId = showId;
-    res.locals.myWatchlist = [];
-    res.locals.inWatchlist = false;
     res.locals.cdnRootUrl = cdnRootUrl;
 
-    const userDoc = await users.findOne({_id: adminUserId}).lean();
+    const show = await shows.findOne({slug: req.params.slug}).lean();
 
-    if (userDoc !== null) {
+    if (show === null) {
+        res.locals.errorMessage = "Show not found";
+        res.render("error");
+    } else {
 
-        const myWatchlist = userDoc.watchlists;
+        const showId = show._id;
 
-        if (myWatchlist.length > 0) {
-            for (let i = 0; i < myWatchlist.length; i++) {
-                const myWatchlistShow = myWatchlist[i];
-                if (myWatchlistShow._id === showId) {
-                    res.locals.inWatchlist = true;
+        res.locals.show = show;
+        res.locals.showId = showId;
+        res.locals.myWatchlist = [];
+        res.locals.inWatchlist = false;
+
+        const userDoc = await users.findOne({_id: adminUserId}).lean();
+
+        if (userDoc !== null) {
+
+            const myWatchlist = userDoc.watchlists;
+
+            if (myWatchlist.length > 0) {
+                for (let i = 0; i < myWatchlist.length; i++) {
+                    const myWatchlistShow = myWatchlist[i];
+                    if (myWatchlistShow._id === showId) {
+                        res.locals.inWatchlist = true;
+                    }
+                    res.locals.myWatchlist.push(myWatchlistShow);
                 }
-                res.locals.myWatchlist.push(myWatchlistShow);
             }
         }
-    }
 
-    // return other shows
-    res.locals.suggestions = await shows.find().where("_id").ne(showId).sort({releaseInfo: 1, title: 1}).lean();
+        // return other shows
+        res.locals.suggestions = await shows.find().where("_id").ne(showId).sort({releaseInfo: 1, title: 1}).lean();
 
-    // TODO: modify videos model by renaming showId to show?
-    const videoCollection = await videos.find({showId: showId}).populate({
-        path: "showId",
-        model: "shows"
-    }).sort({episode: 1}).lean();
+        // TODO: modify videos model by renaming showId to show?
+        const videoCollection = await videos.find({showId: showId}).populate({
+            path: "showId",
+            model: "shows"
+        }).sort({episode: 1}).lean();
 
-    if (videoCollection.length > 0) {
+        if (videoCollection.length > 0) {
 
-        const cardsPerPage = 5;
-        let pagination = [];
-        let pageNbr = 1;
-        let videoList = [];
-        let tempVideoList = [];
-        let prevSeason = videoCollection[0].season;
+            const cardsPerPage = 5;
+            let pagination = [];
+            let pageNbr = 1;
+            let videoList = [];
+            let tempVideoList = [];
+            let prevSeason = videoCollection[0].season;
 
-        for (let i = 0; i < videoCollection.length; i++) {
+            for (let i = 0; i < videoCollection.length; i++) {
 
-            const videoDocument = videoCollection[i];
+                const videoDocument = videoCollection[i];
 
-            if (prevSeason !== videoDocument.season) {
-                tempVideoList = videoList;
-                videoList = [];
+                if (prevSeason !== videoDocument.season) {
+                    tempVideoList = videoList;
+                    videoList = [];
+                }
+
+                if (videoList.length < cardsPerPage) {
+                    videoList.push(videoDocument);
+                }
+
+                if (tempVideoList.length > 0) {
+                    pagination.push({
+                        page: pageNbr,
+                        season: prevSeason,
+                        videos: tempVideoList
+                    });
+                    tempVideoList = [];
+                    pageNbr++;
+                }
+
+                if ((videoList.length === cardsPerPage) || (i === videoCollection.length - 1)) {
+                    pagination.push({
+                        page: pageNbr,
+                        season: videoDocument.season,
+                        videos: videoList
+                    });
+                    videoList = [];
+                    pageNbr++;
+                }
+
+                prevSeason = videoDocument.season;
+
             }
 
-            if (videoList.length < cardsPerPage) {
-                videoList.push(videoDocument);
-            }
-
-            if (tempVideoList.length > 0) {
-                pagination.push({
-                    page: pageNbr,
-                    season: prevSeason,
-                    videos: tempVideoList
-                });
-                tempVideoList = [];
-                pageNbr++;
-            }
-
-            if ((videoList.length === cardsPerPage) || (i === videoCollection.length - 1)) {
-                pagination.push({
-                    page: pageNbr,
-                    season: videoDocument.season,
-                    videos: videoList
-                });
-                videoList = [];
-                pageNbr++;
-            }
-
-            prevSeason = videoDocument.season;
+            res.locals.pagination = pagination;
 
         }
 
-        res.locals.pagination = pagination;
+        res.render("show");
 
     }
-
-    res.render("show");
-
 });
 
 function getOtherEpisode(episode, next) {
@@ -154,33 +158,47 @@ function getOtherEpisode(episode, next) {
 
 app.get("/show/:slug/episode/:id", showsDropdown(), async function (req, res) {
 
-    const show = await shows.findOne({slug: req.params.slug}).lean();
-    const showId = show._id;
-    const episodeId = req.params.id;
-
-    let minEpisode = null;
-    let maxEpisode = null;
-
-    // TODO: Find max and min episode in one query?
-    await videos.findOne({showId: showId}).sort({episode: 1}).then(function (doc) {
-        minEpisode = doc.toJSON().episode;
-    });
-    await videos.findOne({showId: showId}).sort({episode: -1}).then(function (doc) {
-        maxEpisode = doc.toJSON().episode;
-    });
-
-    const video = await videos.findOne({showId: showId, episode: episodeId}).lean();
-
-    res.locals.video = video;
-    res.locals.prevEpisode = getOtherEpisode(video.episode, false);
-    res.locals.nextEpisode = getOtherEpisode(video.episode, true);
-    res.locals.reachedStart = (episodeId === minEpisode);
-    res.locals.reachedEnd = (episodeId === maxEpisode);
-    res.locals.showId = showId;
-    res.locals.show = show;
     res.locals.cdnRootUrl = cdnRootUrl;
 
-    res.render("episode");
+    const show = await shows.findOne({slug: req.params.slug}).lean();
+
+    if (show === null) {
+        res.locals.errorMessage = "Show not found";
+        res.render("error");
+    } else {
+
+        const showId = show._id;
+        const episodeId = req.params.id;
+
+        const video = await videos.findOne({showId: showId, episode: episodeId}).lean();
+
+        if (video === null) {
+            res.locals.errorMessage = "Episode not found";
+            res.render("error");
+        } else {
+
+            let minEpisode = null;
+            let maxEpisode = null;
+
+            // TODO: Find max and min episode in one query?
+            await videos.findOne({showId: showId}).sort({episode: 1}).then(function (doc) {
+                minEpisode = doc.toJSON().episode;
+            });
+            await videos.findOne({showId: showId}).sort({episode: -1}).then(function (doc) {
+                maxEpisode = doc.toJSON().episode;
+            });
+
+            res.locals.video = video;
+            res.locals.prevEpisode = getOtherEpisode(video.episode, false);
+            res.locals.nextEpisode = getOtherEpisode(video.episode, true);
+            res.locals.reachedStart = (episodeId === minEpisode);
+            res.locals.reachedEnd = (episodeId === maxEpisode);
+            res.locals.showId = showId;
+            res.locals.show = show;
+
+            res.render("episode");
+        }
+    }
 });
 
 async function getContentLength(s3, params) {
@@ -189,27 +207,25 @@ async function getContentLength(s3, params) {
 
     const promise = new Promise(function (resolve, reject) {
         s3.headObject(params, function (err, data) {
-            if (err) {
-                reject(0);
+            if (err && err.statusCode === 404) {
+                reject("Object not found");
+            } else {
+                resolve(data.ContentLength);
             }
-            resolve(data.ContentLength);
         });
     });
 
-    const thenPromise = promise.then(function (value) {
+    await promise.then(function (value) {
         videoSize = value;
+    }).catch(function(error){
+        console.log(`Error encountered while getting object content-length for ${params.Bucket}/${params.Key}: ${error}`);
     });
-
-    await thenPromise;
 
     return videoSize;
 
 }
 
 app.get("/video/:objectId", async function (req, res, next) {
-
-    // TODO: https://github.com/aws/aws-sdk-js/issues/2087
-    // Getting timeout error when seeking video (multiple canceled requests in browser developer/network mode)
 
     // Ensure there is a range given for the video
     const range = req.headers.range;
@@ -230,6 +246,10 @@ app.get("/video/:objectId", async function (req, res, next) {
 
     // Check first the content-length of the file in s3 bucket so that we can calculate for the Byte-Range
     const videoSize = await getContentLength(s3, params);
+
+    if (videoSize === 0) {
+        return res.status(404).send("File not found");
+    }
 
     // Calculate for Byte-Range
     const CHUNK_SIZE = 10 ** 6; // 1 MB
@@ -253,13 +273,15 @@ app.get("/video/:objectId", async function (req, res, next) {
     // HTTP Status 206 for Partial Content
     res.writeHead(206, headers);
 
-    // Pipe the s3 object to the response
-    stream.pipe(res);
-
     stream.on("error", function (error) {
-        console.log(error);
+        // Request is stuck in pending and eventually errors out when seeking video (multiple canceled requests in browser developer mode network tab)
+        // I think it's linked to this open bug, https://github.com/aws/aws-sdk-js/issues/2087
+        console.log(`Error encountered while serving ${params.Bucket}/${params.Key}: ${error}`);
         res.end();
     });
+
+    // Pipe the s3 object to the response
+    stream.pipe(res);
 
 });
 
@@ -332,7 +354,7 @@ app.get("/initialise-database", async function (req, res) {
     message += `\n4. inserted ${episodesMockData.length} documents to videos collection`;
 
     // await db.dropCollection("users");
-    // await users.insertMany([{name: "Mykie"}]);
+    await users.findOneAndUpdate({_id: adminUserId}, {$set: {watchlists: []}});
 
     message += "\n5. end database initialisation.";
 

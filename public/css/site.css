@@ -574,7 +574,7 @@ body, #bookmark-button {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+    /*cursor: pointer;*/
 }
 
 #video-slide-container {

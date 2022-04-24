@@ -16,7 +16,7 @@ window.addEventListener("load", function () {
         document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     });
 
-    // Hamburger button
+    // Top Navigation Bar - Hamburger button
 
     const navbarToggler = document.querySelector(".navbar-toggler");
     const navbarCollapse = document.querySelector(".navbar-collapse");
@@ -24,6 +24,26 @@ window.addEventListener("load", function () {
     navbarToggler.addEventListener("click", function () {
         navbarToggler.classList.toggle("collapsed");
         navbarCollapse.classList.toggle("show");
+    });
+
+    // Top Navigation Bar - Shows Dropdown
+
+    const showsDropdown = document.querySelector("#shows-dropdown");
+    const showsDropdownMenu = showsDropdown.querySelector(".dropdown-menu");
+
+    showsDropdown.addEventListener("click", function () {
+        showsDropdown.classList.toggle("show");
+        showsDropdownMenu.classList.toggle("show");
+    });
+
+    // Top Navigation Bar - My Watchlist Dropdown
+
+    const myWatchlistDropdown = document.querySelector("#my-watchlist-dropdown");
+    const myWatchlistDropdownMenu = myWatchlistDropdown.querySelector(".dropdown-menu");
+
+    myWatchlistDropdown.addEventListener("click", function () {
+        myWatchlistDropdown.classList.toggle("show");
+        myWatchlistDropdownMenu.classList.toggle("show");
     });
 
 });

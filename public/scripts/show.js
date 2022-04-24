@@ -1,21 +1,5 @@
 window.addEventListener("load", function () {
 
-    const showsDropdown = document.querySelector("#shows-dropdown");
-    const showsDropdownMenu = showsDropdown.querySelector(".dropdown-menu");
-
-    showsDropdown.addEventListener("click", function () {
-        showsDropdown.classList.toggle("show");
-        showsDropdownMenu.classList.toggle("show");
-    });
-
-    const myWatchlistDropdown = document.querySelector("#my-watchlist-dropdown");
-    const myWatchlistDropdownMenu = myWatchlistDropdown.querySelector(".dropdown-menu");
-
-    myWatchlistDropdown.addEventListener("click", function () {
-        myWatchlistDropdown.classList.toggle("show");
-        myWatchlistDropdownMenu.classList.toggle("show");
-    });
-
     const carouselInners = document.querySelectorAll(".carousel-inner");
     const cards = document.querySelectorAll(".card");
 
