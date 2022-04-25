@@ -2,13 +2,19 @@
     <div class="d-flex justify-content-center">
         <img src="{{fileSourceRootUrl}}images/batang-90s-tv-plus.png" alt="" style="width:300px">
     </div>
-    <h6 class="ps-3">Continue Watching</h6>
 </div>
-<section id="episodes-section">
-    <div id="non-small-form-factor">
-        {{>episodes-carousel}}
+
+{{#if pagination}}
+    <div class="container">
+        <h6 class="ps-3">Continue Watching</h6>
     </div>
-</section>
+    <section id="episodes-section">
+        <div id="non-small-form-factor">
+            {{>episodes-carousel}}
+        </div>
+    </section>
+{{/if}}
+
 <div class="container">
     <h6 class="ps-3">All Shows</h6>
 </div>

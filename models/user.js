@@ -8,6 +8,11 @@ const continueWatchingSchema = new mongoose.Schema({
     episodeId: {
         type: String,
         required: true
+    },
+    dateTimeStamp: {
+        type: Date,
+        required: true,
+        default: Date.now()
     }
 });
 

@@ -46,4 +46,40 @@ window.addEventListener("load", function () {
         myWatchlistDropdownMenu.classList.toggle("show");
     });
 
+    // Continue Watching Carousel
+
+    const carouselInners = document.querySelectorAll(".carousel-inner");
+    const episodesCarousel = document.querySelector("#episodes-carousel");
+    const cards = document.querySelectorAll("#episodes-carousel .card");
+    const carouselControlPrevButton = document.querySelector("button.carousel-control-prev");
+    const carouselControlNextButton = document.querySelector("button.carousel-control-next");
+
+    let sliding = false;
+
+    episodesCarousel.addEventListener("slide.bs.carousel", function (item) {
+        sliding = true;
+        for (let i = 0; i < carouselInners.length; i++) {
+            carouselInners[i].style.overflow = "hidden";
+        }
+    });
+
+    episodesCarousel.addEventListener("slid.bs.carousel", function () {
+        sliding = false;
+    });
+
+    for (let i = 0; i < cards.length; i++) {
+        cards[i].addEventListener("mouseover", function () {
+            for (let j = 0; j < carouselInners.length; j++) {
+                if (!sliding) {
+                    carouselInners[j].style.overflow = "visible";
+                }
+            }
+        });
+    }
+
+    if (cards.length < 6) {
+        carouselControlPrevButton.style.setProperty("display", "none", "important");
+        carouselControlNextButton.style.setProperty("display", "none", "important");
+    }
+
 });

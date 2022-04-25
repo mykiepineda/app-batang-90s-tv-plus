@@ -46,6 +46,14 @@ app.get("/", initTopNavBar(), async function (req, res) {
         .lean();
     if (user !== null) {
         const cwList = user.continueWatching;
+        cwList.sort(function(a, b){
+            if (b.dateTimeStamp === a.dateTimeStamp) {
+                return 0;
+            } else if (b.dateTimeStamp > a.dateTimeStamp) {
+                return 1
+            }
+            return -1;
+        });
         res.locals.continueWatching = cwList;
         if (cwList.length > 0) {
             const cardsPerPage = 5;
@@ -223,7 +231,7 @@ async function saveContinueWatching(video) {
             $addToSet: {
                 continueWatching: {
                     showId: video.showId,
-                    episodeId: null // will be updated below
+                    episodeId: null
                 }
             }
         }
@@ -231,7 +239,12 @@ async function saveContinueWatching(video) {
 
     await users.findOneAndUpdate(
         {_id: adminUserId},
-        {$set: {"continueWatching.$[elem].episodeId": video._id}},
+        {
+            $set: {
+                "continueWatching.$[elem].episodeId": video._id,
+                "continueWatching.$[elem].dateTimeStamp": Date.now()
+            }
+        },
         {arrayFilters: [{"elem.showId": video.showId}]}
     );
 
