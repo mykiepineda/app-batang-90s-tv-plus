@@ -17,8 +17,13 @@
                                             </div>
                                             <div id="card-text-container" class="card-body d-flex flex-column justify-content-between">
                                                 <div class="d-flex flex-column">
-                                                    <h5 class="card-title my-secondary-text text-truncate my-line-clamp">{{this.episode}}. {{this.title}}</h5>
-                                                    <p class="card-text my-tertiary-text text-truncate my-line-clamp">{{this.synopsis}}</p>
+                                                    {{#if continueWatching}}
+                                                        <h5 class="card-title my-secondary-text text-truncate my-line-clamp">{{this.episode}}. {{this.title}}</h5>
+                                                        <p class="card-text my-tertiary-text text-truncate my-line-clamp">{{this.synopsis}}</p>
+                                                    {{else}}
+                                                        <h5 class="card-title my-secondary-text text-truncate my-line-clamp">{{this.showId.title}}</h5>
+                                                        <p class="card-text my-tertiary-text text-truncate my-line-clamp">S{{this.season}}:E{{this.episode}} "{{this.title}}"</p>
+                                                    {{/if}}
                                                 </div>
                                             </div>
                                         </div>

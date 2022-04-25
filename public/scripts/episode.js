@@ -4,7 +4,6 @@ window.addEventListener("load", function () {
     const videoContainer = document.querySelector("#video-container");
     const videoInnerContainer = document.querySelector("#video-inner-container");
     const videoPlayer = document.querySelector("#video-player");
-    const videoSource = document.querySelector("#video-player source");
     const videoControls = document.querySelector("#video-controls");
     const playPauseButton = document.querySelector("#play-pause-button");
     const playPauseIcon = playPauseButton.querySelector("i");

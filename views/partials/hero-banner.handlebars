@@ -24,19 +24,19 @@
                 </div>
                 <div id="hero-buttons" class="d-flex flex-row">
                     <div id="play" class="pe-3">
-                        <a href="/show/{{show.slug}}/episode/01" class="btn btn-light pt-3 ps-5 pb-3 pe-5"><h5
+                        <a href="/show/{{show.slug}}/episode/{{#if continueWatching}}{{continueWatching}}{{else}}01{{/if}}" class="btn btn-light pt-3 ps-5 pb-3 pe-5"><h5
                                 class="my-secondary-text" style="margin:5px 0"><i
                                 class="fa fa-play"
                                 aria-hidden="true"></i>
-                            Play</h5></a>
+                            {{#if continueWatching}}Continue Watching{{else}}Play{{/if}}</h5></a>
                     </div>
                     <div id="add-to-watchlist">
-                        <a href="/watchlist/{{#if inWatchlist}}remove{{else}}add{{/if}}/{{show.slug}}"
-                           class="btn btn-outline-light pt-3 ps-5 pb-3 pe-5"><h5 class="my-secondary-text"
-                                                                                 style="margin:5px 0"><i
-                                class="fa fa-{{#if inWatchlist}}minus{{else}}plus{{/if}}-circle"
-                                aria-hidden="true"></i>  {{#if inWatchlist}}Remove from{{else}}Add to{{/if}} Watchlist
-                        </h5></a>
+                        <a href="/watchlist/{{#if inWatchlist}}remove{{else}}add{{/if}}/{{show.slug}}" class="btn btn-outline-light pt-3 ps-5 pb-3 pe-5">
+                            <h5 class="my-secondary-text" style="margin:5px 0">
+                                <i class="fa fa-{{#if inWatchlist}}minus{{else}}plus{{/if}}-circle" aria-hidden="true"></i>
+                                {{#if inWatchlist}}Remove from{{else}}Add to{{/if}} Watchlist
+                            </h5>
+                        </a>
                     </div>
                 </div>
                 <p id="show-summary" class="my-secondary-text pt-3" style="margin-bottom:0">{{show.summary}}</p>

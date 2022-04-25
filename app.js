@@ -32,15 +32,53 @@ AWS.config.update({
 
 const wasabiBucket = process.env.WASABI_BUCKET;
 const fileSourceRootUrl = (process.env.NODE_ENV === "development" ? "/local_" : `${process.env.CLOUDFRONT_ROOT_URL}/`);
-const showsDropdown = require("./modules/middleware");
+const initTopNavBar = require("./modules/middleware");
 
-app.get("/", showsDropdown(), async function (req, res) {
+app.get("/", initTopNavBar(), async function (req, res) {
     res.locals.fileSourceRootUrl = fileSourceRootUrl;
     res.locals.suggestions = await shows.find().sort({releaseInfo: 1, title: 1}).lean();
+    const user = await users.findOne({_id: adminUserId})
+        .populate({
+            path: "continueWatching.episodeId",
+            model: "videos",
+            populate: {path: "showId", model: "shows"}
+        })
+        .lean();
+    if (user !== null) {
+        const cwList = user.continueWatching;
+        res.locals.continueWatching = cwList;
+        if (cwList.length > 0) {
+            const cardsPerPage = 5;
+            let pagination = [];
+            let videoList = [];
+            let pageNbr = 1;
+
+            for (let i = 0; i < cwList.length; i++) {
+
+                const cwVideo = cwList[i].episodeId;
+
+                if (videoList.length < cardsPerPage) {
+                    videoList.push(cwVideo);
+                }
+
+                if (videoList.length === cardsPerPage || i === cwList.length - 1) {
+                    pagination.push({
+                        page: pageNbr,
+                        season: cwVideo.season,
+                        videos: videoList
+                    });
+                    pageNbr++;
+                    videoList = [];
+                }
+
+            }
+            res.locals.pagination = pagination;
+        }
+    }
     res.render("home");
 });
 
-app.get("/show/:slug", showsDropdown(), async function (req, res) {
+app.get("/show/:slug", initTopNavBar(), async function (req, res) {
 
     res.locals.fileSourceRootUrl = fileSourceRootUrl;
 
@@ -56,22 +94,39 @@ app.get("/show/:slug", showsDropdown(), async function (req, res) {
         res.locals.show = show;
         res.locals.showId = showId;
         res.locals.displayShowBackground = true;
-        res.locals.myWatchlist = [];
         res.locals.inWatchlist = false;
 
-        const userDoc = await users.findOne({_id: adminUserId}).lean();
+        const user = await users.findOne({_id: adminUserId})
+            .populate({
+                path: "continueWatching.episodeId",
+                model: "videos",
+                populate: {path: "showId", model: "shows"}
+            })
+            .lean();
 
-        if (userDoc !== null) {
+        if (user !== null) {
 
-            const myWatchlist = userDoc.watchlists;
+            const myWatchlist = user.watchlists;
 
             if (myWatchlist.length > 0) {
                 for (let i = 0; i < myWatchlist.length; i++) {
                     const myWatchlistShow = myWatchlist[i];
                     if (myWatchlistShow._id === showId) {
                         res.locals.inWatchlist = true;
+                        break;
                     }
-                    res.locals.myWatchlist.push(myWatchlistShow);
+                }
+            }
+
+            const cwList = user.continueWatching;
+
+            if (cwList.length > 0) {
+                for (let i = 0; i < cwList.length; i++) {
+                    const cwEpisode = cwList[i];
+                    if (cwEpisode.showId === showId) {
+                        res.locals.continueWatching = cwEpisode.episodeId.episode;
+                        break;
+                    }
                 }
             }
         }
@@ -157,7 +212,32 @@ function getOtherEpisode(episode, next) {
     return intEpisode.toString();
 }
 
-app.get("/show/:slug/episode/:id", showsDropdown(), async function (req, res) {
+async function saveContinueWatching(video) {
+
+    await users.findOneAndUpdate(
+        {
+            _id: adminUserId,
+            "continueWatching.showId": {$ne: video.showId}
+        },
+        {
+            $addToSet: {
+                continueWatching: {
+                    showId: video.showId,
+                    episodeId: null // will be updated below
+                }
+            }
+        }
+    );
+
+    await users.findOneAndUpdate(
+        {_id: adminUserId},
+        {$set: {"continueWatching.$[elem].episodeId": video._id}},
+        {arrayFilters: [{"elem.showId": video.showId}]}
+    );
+
+}
+
+app.get("/show/:slug/episode/:id", initTopNavBar(), async function (req, res) {
 
     res.locals.fileSourceRootUrl = fileSourceRootUrl;
 
@@ -181,7 +261,6 @@ app.get("/show/:slug/episode/:id", showsDropdown(), async function (req, res) {
             let minEpisode = null;
             let maxEpisode = null;
 
-            // TODO: Find max and min episode in one query?
             await videos.findOne({showId: showId}).sort({episode: 1}).then(function (doc) {
                 minEpisode = doc.toJSON().episode;
             });
@@ -196,6 +275,8 @@ app.get("/show/:slug/episode/:id", showsDropdown(), async function (req, res) {
             res.locals.reachedEnd = (episodeId === maxEpisode);
             res.locals.showId = showId;
             res.locals.show = show;
+
+            await saveContinueWatching(video);
 
             res.render("episode");
         }
@@ -276,32 +357,19 @@ async function addRemoveToWatchlist(add, userId, slug) {
 
     if (userDoc !== null) {
 
-        const showToBeAdded = await shows.findOne({slug: slug}).lean();
-        const showId = showToBeAdded._id;
-        let updatedWatchList = userDoc.watchlists;
-        let found = false;
-        let index = -1;
+        const addThisShow = await shows.findOne({slug: slug}).lean();
 
-        for (let i = 0; i < updatedWatchList.length; i++) {
-            if (updatedWatchList[i]._id === showId) {
-                found = true;
-                index = i;
-                break;
-            }
-        }
-        if (found) {
-            updatedWatchList.splice(index, 1);
+        if (add) {
+            await users.findOneAndUpdate(
+                {_id: userId},
+                {$addToSet: {watchlists: addThisShow}}
+            );
         } else {
-            updatedWatchList.push(showToBeAdded);
+            await users.findOneAndUpdate(
+                {_id: userId},
+                {$pull: {watchlists: {_id: addThisShow._id}}}
+            )
         }
-
-        await users.findOneAndUpdate(
-            {_id: userId},
-            {
-                $set: {
-                    watchlists: updatedWatchList
-                }
-            });
 
     }
 
@@ -339,7 +407,7 @@ app.get("/initialise-database", async function (req, res) {
     message += `\n4. inserted ${episodesMockData.length} documents to videos collection`;
 
     // await db.dropCollection("users");
-    await users.findOneAndUpdate({_id: adminUserId}, {$set: {watchlists: []}});
+    await users.findOneAndUpdate({_id: adminUserId}, {$set: {watchlists: [], continueWatching: []}});
 
     message += "\n5. end database initialisation.";
 

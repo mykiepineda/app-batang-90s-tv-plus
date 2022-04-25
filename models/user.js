@@ -1,5 +1,16 @@
 const mongoose = require("mongoose");
 
+const continueWatchingSchema = new mongoose.Schema({
+    showId: {
+        type: String,
+        required: true
+    },
+    episodeId: {
+        type: String,
+        required: true
+    }
+});
+
 const userSchema = new mongoose.Schema({
     name: {
         type: mongoose.Schema.Types.String,
@@ -12,7 +23,7 @@ const userSchema = new mongoose.Schema({
     },
     continueWatching: {
         type: mongoose.Schema.Types.Array,
-        ref: "videoSchema",
+        ref: "continueWatchingSchema",
         required: false
     }
 });

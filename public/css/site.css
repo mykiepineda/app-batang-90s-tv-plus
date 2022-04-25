@@ -823,4 +823,5 @@ body, #bookmark-button {
 .carousel-control-next, .carousel-control-prev {
     width: auto !important;
     display: block !important;
+    z-index: 100;
 }
