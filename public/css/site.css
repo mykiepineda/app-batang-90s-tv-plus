@@ -771,6 +771,18 @@ body, #bookmark-button {
     white-space: normal;
 }
 
+#jumbotron {
+    background-color: white;
+    color: black;
+    width: 100%;
+    height: 500px;
+}
+
+#jumbotron a {
+    background-color: var(--my-tertiary-color);
+    border: none;
+}
+
 /* Override Bootstrap/Fontawesome styles */
 
 .fa-star {

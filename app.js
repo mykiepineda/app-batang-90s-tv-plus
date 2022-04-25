@@ -35,6 +35,7 @@ const fileSourceRootUrl = (process.env.NODE_ENV === "development" ? "/local_" : 
 const initTopNavBar = require("./modules/middleware");
 
 app.get("/", initTopNavBar(), async function (req, res) {
+    res.locals.atHome = true;
     res.locals.fileSourceRootUrl = fileSourceRootUrl;
     res.locals.suggestions = await shows.find().sort({releaseInfo: 1, title: 1}).lean();
     const user = await users.findOne({_id: adminUserId})
@@ -45,6 +46,7 @@ app.get("/", initTopNavBar(), async function (req, res) {
         })
         .lean();
     if (user !== null) {
+        res.locals.userName = user.name;
         const cwList = user.continueWatching;
         cwList.sort(function(a, b){
             if (b.dateTimeStamp === a.dateTimeStamp) {

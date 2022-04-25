@@ -29,7 +29,7 @@
                 </li>
                 <li id="my-watchlist-dropdown" class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                       aria-expanded="false">My Watchlist</a>
+                       aria-expanded="false">My list</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
                         {{#each myWatchist}}
                             <a class="dropdown-item{{#ifEquals @root.showId this._id}} active{{/ifEquals}}" href="/show/{{this.slug}}">{{this.title}} ({{this.releaseInfo}})</a>

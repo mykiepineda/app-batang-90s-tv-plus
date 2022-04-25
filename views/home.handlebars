@@ -1,12 +1,25 @@
 <div class="container">
-    <div class="d-flex justify-content-center">
+    <div class="d-flex flex-column align-items-center justify-content-center">
         <img src="{{fileSourceRootUrl}}images/batang-90s-tv-plus.png" alt="" style="width:300px">
+        <p>by <a href="https://mykiepineda.com">Mykie</a></p>
     </div>
 </div>
 
+<section class="pt-3">
+    <div id="jumbotron" class="jumbotron jumbotron-fluid d-flex flex-column align-items-center justify-content-center">
+        <div class="container">
+            <h1 class="display-4">Namiss mo ba ang mga palabas na ito?</h1>
+            <p>Libre ang manuod dito at higit sa lahat, walang pesky ads! Kaya ano pang hinihintay ninyo, sign up na!</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Sign Up</a>
+            </p>
+        </div>
+    </div>
+</section>
+
 {{#if pagination}}
-    <div class="container">
-        <h6 class="ps-3">Continue Watching</h6>
+    <div class="container pt-3">
+        <h6>Continue Watching for {{userName}}</h6>
     </div>
     <section id="episodes-section">
         <div id="non-small-form-factor">
@@ -16,7 +29,7 @@
 {{/if}}
 
 <div class="container">
-    <h6 class="ps-3">All Shows</h6>
+    <h6>All Shows</h6>
 </div>
 <section id="suggested-section">
     <div class="container">
