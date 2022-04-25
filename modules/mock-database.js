@@ -4,6 +4,10 @@ function getShows() {
     return JSON.parse(fs.readFileSync("./data/shows.json", "utf-8"));
 }
 
+function getCategories() {
+    return JSON.parse(fs.readFileSync("./data/categories.json", "utf-8"));
+}
+
 function getEpisodes() {
     const numberOfShows = getShows().length;
     let episodes = [];
@@ -20,5 +24,6 @@ function getEpisodes() {
 
 module.exports = {
     getShows,
+    getCategories,
     getEpisodes
 }

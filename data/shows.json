@@ -1,6 +1,7 @@
 [
   {
     "_id": "01",
+    "categoryId": "02",
     "title": "Kamen Rider Black RX",
     "summary": "Half a year after the downfall of Gorgom, Kotaro Minami has gotten a job of a helicopter pilot in a business owned by the Sahara family. Kotaro is later captured by the Crisis Empire and offered a place in their group. When Kotaro refused, his King Stone was shattered and he was thrown into space where the sun's radiation mutated his King Stone and he mutated into Kamen Rider Black RX. With his new powers, he battles the Crisis Empire and thwarts their plans to take over Earth.",
     "cover": "9110712rx.jpg",
@@ -20,6 +21,7 @@
   },
   {
     "_id": "02",
+    "categoryId": "04",
     "title": "Uchuu Keiji Shaider",
     "summary": "In college studying archaeology, Dai Sawamura deciphers the symbols of the Nazca Lines in Peru. Impressed by this feat, the Galactic Union Police (銀河連邦警察, Ginga Renpō Keisatsu) recruit and train him to be Earth's third Space Sheriff. He's given the code name Shaider in memory of an ancient warrior who defeated Emperor Kubilai and brought down his Fuuma Empire 12,000 years ago. When Fuuma returns, Dai is deputized as he returns to Earth to battle Fuuma.",
     "cover": "9vJzrEPmjxcaxQJ3o3nxaeYVkT3.jpg",
@@ -41,6 +43,7 @@
   },
   {
     "_id": "03",
+    "categoryId": "06",
     "title": "Kosouku Sentai Turboranger",
     "summary": "Twenty thousand years ago, the Fairy race assisted humans in a battle against the Bōma Tribes and sealed them away. Due to modern day pollution and man's destruction of nature, the power of Fairy magic has weakened, allowing the seal to be broken and the Tribes escape. With the help of Doctor Dazai, Seelon, the last of the fairies, summoned five high school seniors. As children, they were showered with the \"flames of spirit\" of the fallen fairies in a forest, and can now hear Seelon's voice. Donning powered suits, the product of a collaboration between Seelon's magic and Doctor Dazai's science, the five become the Turborangers, juggling days of fighting with their regular school lives, in order to defeat the Bōma Tribes.",
     "cover": "KST_PromoPoster.PNG.png",
@@ -63,6 +66,7 @@
   },
   {
     "_id": "04",
+    "categoryId": "06",
     "title": "Hikari Sentai Maskman",
     "summary": "Commander Sugata is a scientist and sage who excels in mental reinforcements and is a master of every martial art. He disthumbnailed the existence of the Underground Empire Tube, a once peaceful kingdom that has turned into a malignant force under the mysterious Zeba, who desires to conquer the surface. In order to stand against them and thwart their plans, Sugata recruits five young people to become the Maskmen. Each becomes specialized in a style of martial arts, and Sugata teaches them the ways of the mystical \"Aura Power\" energy. A year after Sugata recruits and trains the Maskmen, the Underground Empire Tube is ready to strike. Princess Ial of the deposed Igam Royal Family, sent to spy above ground as Mio, falls in love with Takeru, and wishes for those underground and above ground to coexist. She is kidnapped and imprisoned in ice for her betrayal. As Takeru and the Maskmen battle Tube, they learn about Ial and Igam's relationship, and a terrible dark secret about Zeba, the Tube leader.",
     "cover": "6731772.jpg",
@@ -82,6 +86,7 @@
   },
   {
     "_id": "05",
+    "categoryId": "06",
     "title": "Chikyu Sentai Fiveman",
     "summary": "In 1970, Doctor Hoshikawa was researching how to transform the planet Sedon into a green, lush world, testing it by attempting to grow flowers. On the day the first flower bloomed, the Zone Empire launched an assault on the planet, separating him and his wife from their five children. Arthur G6 took the five children back to Earth and raised them while after the attack, Doctor Hoshikawa is safely went to Planet P16 Milky way.\n\nTwenty years later, the five are now teachers at the same school, the Newtown Elementary School (Newtown Shougakko). The Galactic Imperial Army Zone led by Empress Meadow and Captain Garoa now prepares to invade Earth as its thousandth target to destroy for immortality of Empress Meadow (but later reveals that Empress Meadow is an illusion used by Vulgyre, their base which is also a gigantic lifeform monster to manipulate them in order to be a \"god\"). As they begin the attack, three vehicles appear and counter the offensive. Five warriors descend from the vehicles and confront Zone.\n\nThe Hoshikawa siblings have been developing the Fiveman technology and training hard upon the possibility of Zone invading Earth. Now the five siblings are ready to battle with the familiar foes as Fiveman.",
     "cover": "Fiveman_Poster.png",
@@ -101,6 +106,7 @@
   },
   {
     "_id": "06",
+    "categoryId": "06",
     "title": "Choujin Sentai Jetman",
     "summary": "This series takes place in 1991 on the Earth Ship, the command center of an international defense agency called Sky Force, the guardian of peace on Earth. In the ship, scientists have developed \"Birdonic Waves\", a newly developed technology which gives the subject superhuman abilities. The experiments called \"J-Project\" were successful. Aya Odagiri, the director of the project, chose five elite Sky Force officials from Earth to use this technology. Ryu Tendo, one of the Sky Force officers, was successfully exposed to the Birdonic waves, making him the first Jetman, the Red Hawk.\n\nHowever, the Earth Ship is suddenly attacked by Vyram, an evil outer-dimensional organization bent on inter-dimensional domination. They successfully destroy the ship and seemingly killing Ryu's lover and fellow candidate member Rie, in the chaos. The remaining Birdonic waves that were meant for the other four officials become scattered on Earth, hitting four civilians instead. Odagiri and Ryu successfully escape and begin searching on Earth for the four remaining Jetman, training them to aid them in stopping Vyram's plans of conquering our dimension.",
     "cover": "coverCSJ_PromoPoster.png",
@@ -120,6 +126,7 @@
   },
   {
     "_id": "07",
+    "categoryId": "02",
     "title": "Kamen Rider Black",
     "summary": "After being kidnapped by the cult Gorgom on the night of their 19th birthday, stepbrothers Kotaro Minami and Nobuhiko Akizuki were submitted to a cyborg surgery with the purpose of becoming the candidates for the next Gorgom Creation King. Both of them are called Century Kings and are destined to best each other in a final battle - whoever wins will become the next Creation King. Kotaro escaped before getting brainwashed (which is the final step in the surgery), with help from his foster father, and turned against Gorgom. He soon finds out the horrific truth from his stepfather: Gorgom originally killed his true parents and, since both Kotaro and Nobuhiko were born on the day of a solar eclipse, referred as \"Black Sun\" and \"Shadow Moon\". Kotaro, taking on the name of Kamen Rider Black, was determined to rescue his stepbrother from Gorgom while protecting Japan.",
     "cover": "8105822black.jpg",
@@ -140,6 +147,7 @@
   },
   {
     "_id": "08",
+    "categoryId": "06",
     "title": "Choudenshi Bioman",
     "summary": "Many centuries ago, the android Peebo and the Bio Robo came to Earth from the fallen Bio Star. The Bio Robo showered five people with the Bio Particles, which would be passed on to later generations. In the present day, Doctor Man and his Shin Teikoku (New Empire) Gear threaten the world. Peebo must find the descendants of the original Bio Particle-showered five to form the Choudenshi (Super Electronic Squadron) Bioman.",
     "cover": "CDB_PromoPoster.jpg",
@@ -160,6 +168,7 @@
   },
   {
     "_id": "09",
+    "categoryId": "03",
     "title": "Toushou Daimos",
     "summary": "After the destruction of their home world, the survivors of the planet Baam head towards Earth with the goal of negotiating the purchase of land for emigration. Unfortunately, during the negotiations, the Baam-seijin leader is assassinated by his second in command and the delegation from Earth is framed for the murder. In the ensuing chaos, Doctor Isamu Ryūzaki of the Earth delegation is shot and killed.\n\nShortly after the disastrous end of the talks, the Baam began a campaign of terror against Earth. The only thing standing between the Earthlings and annihilation is the transforming, karate-using super robot, Daimos and its pilot, Kazuya Ryūzaki. But that changes when he meets and falls in love with a mysterious girl named Erika, who turns out to be the daughter of the deceased Baam-seijin leader. Over the course of their struggles to reunite, Kazuya and Erika each learn that the other's people are not all evil... And that their own people are not all good.",
     "cover": "282994_front.jpg",
@@ -179,6 +188,7 @@
   },
   {
     "_id": "10",
+    "categoryId": "03",
     "title": "Choudenji Machine Voltes V",
     "summary": "A demonic race from a planet 14,000 lightyears away called Boazan headed by Prince Heinel arrived on Earth to start an invasion to fulfill their emperor's ambition of universal conquest. Standing on their way is a group of heroic warriors piloting a a giant ultra-magnetic robot called Voltes V. It was a long and bitter struggle that took the heroes from Earth to Boazan.",
     "cover": "voltes-v-cover.jpg",
@@ -198,6 +208,7 @@
   },
   {
     "_id": "11",
+    "categoryId": "04",
     "title": "Uchuu Keiji Gavan",
     "summary": "Earth is invaded by the criminal organization known as Makuu, led by Don Horror, who had first destroyed a space colony near Earth. Don Horror wants to dominate the whole universe, and the Earth represents an obstacle that he has to overcome by turning it into a domain for all evil. In response to Makuu's attack, Space Sheriff Gavan of the Galactic Union Police (銀河連邦警察, Ginga Renpō Keisatsu) is deployed to Earth to defend his mother's home world. Gavan is helped by Mimi, the daughter of Commander Qom, and is given information by Qom, assisted by Marin on his home planet. Gavan goes to Earth to defend it against Don Horror and his devilish schemes. He settles on Earth incognito as Retsu Ichijouji, taking a job at the Avalon Youth Club in Japan to track Makuu's forces down.",
     "cover": "55415_1_large.jpg",
@@ -217,6 +228,7 @@
   },
   {
     "_id": "12",
+    "categoryId": "03",
     "title": "B't X",
     "summary": "Teppei is going to visit his older brother Kotaro Takamiya during a scientific conference after training with a mysterious woman named Karen for the past 11 years. However his plans for a family reunion become stalled when a woman named Aramis kills everyone in the conference to kidnap Kotaro. Teppei on the way to save his brother encounters a broken mechanical horse called B't X who revives thanks to Teppei's blood and is now his aide to save his brother from the mysterious Machine Empire.",
     "cover": "btx-cover.jpg",
@@ -236,6 +248,7 @@
   },
   {
     "_id": "13",
+    "categoryId": "05",
     "title": "Kishin Douji Zenki",
     "summary": "In ancient times, a great battle was waged between a master mage, Enno Ozuno, and an evil demon goddess, Karuma. Unfortunately, Enno didn't have the strength to defeat her alone and was forced to call upon Zenki, a powerful protector demon. After Karuma was defeated, Enno sealed Zenki away in a pillar located inside his temple. 1,200 years after this epic battle, Enno's descendant, Chiaki, spends her days showing tourists around her hometown of Shikigami-cho and doing exorcisms to pay the bills. One day, two thieves enter the town in hopes of opening a seal in the Ozuno temple and releasing the hidden treasure from within. However, what actually pops out is a dark entity that attaches itself to the henchmen, transforming them into demonic beings. After this transformation, they begin a rampage through the temple, terrorizing poor Chiaki. It is now up to this young progeny to unleash her family's powers to summon Zenki and save Shikigami-cho from these demons, as well as the evil entities sure to follow in their footsteps.",
     "cover": "zenki-cover.jpg",
@@ -254,6 +267,7 @@
   },
   {
     "_id": "14",
+    "categoryId": "05",
     "title": "Flame of Recca",
     "summary": "Recca is a boy living in the modern world, only he seems drawn to following the ways of the ninja. On the day he befriends a girl named Yanagi who has a mysterious power of healing, he is confronted and challenged by a Dark Priestess. This battle leads Recca to discover a strange power within himself. Afterwards, he finds that not only is his past and destiny not as crystal clear as he had thought, but there are others with powers practicing the way of the ninja who challenge him one after another.",
     "cover": "flame-of-recca-cover.jpg",
@@ -273,6 +287,7 @@
   },
   {
     "_id": "15",
+    "categoryId": "05",
     "title": "Slam Dunk",
     "summary": "Sakuragi Hanamichi is a junior high punk used to getting into fights and being rejected by girls but upon entering high school he meets the girl of his dreams, Haruko Akagi. He will do anything in order to win her heart including joining the school basketball team that is aiming to conquer the nation lead by Haruko’s brother. The problem is that Sakuragi has never played basketball before and a freshman sensation is stealing the spotlight and Haruko’s affection from him.",
     "cover": "slam-dunk-cover.jfif",
@@ -295,6 +310,7 @@
   },
   {
     "_id": "16",
+    "categoryId": "03",
     "title": "Mobile Suit Gundam Wing",
     "summary": "It is the year After Colony 195, and war between the Space Colonies and Earth has begun. To give the colonies an edge, they send 5 young soldiers, trained to perfection, to earth in the most powerful of Mobile Suits-Gundams. With their arrival, the tide of the war changes as they battle against the Earth forces and the Colonies of their origin.",
     "cover": "gundam-wing-cover.jpg",
@@ -317,6 +333,7 @@
   },
   {
     "_id": "17",
+    "categoryId": "05",
     "title": "Magic Knight Rayearth",
     "summary": "Three young girls, Hikaru, Umi, and Fuu, are transported to a magical world called Cephiro during a field trip to Tokyo Tower. They are soon greeted by Master Mage Clef, who explains to them that they have been summoned to become the Legendary Magic Knights and save Cephiro. The girls are less than enthusiastic about this idea, and only want to return home. Clef further explains that they must seek out the three Rune Gods to help them fight. He bestows armor and magical powers to each of them. They learn from Clef that High Priest Zagato has kidnapped the Pillar of Cephiro, Princess Emeraude. The Pillar of Cephiro has the sole responsibility of keeping Cephiro alive and in balance with her prayers. Without Princess Emeraude, Cephiro would fall into ruin. Hikaru, Umi, and Fuu must fight off Zagato’s henchman and find the Rune Gods if they ever want to get back home. They soon learn that friendship and loyalty are the only things they can rely on in the crumbling Cephiro.",
     "cover": "mkr-cover.jpg",
@@ -337,6 +354,7 @@
   },
   {
     "_id": "18",
+    "categoryId": "06",
     "title": "Seiun Kamen Machineman",
     "summary": "Traveling in the spaceship \"Space Colony\", Nick, with the help of his ball-shaped robot \"Ball Boy\", arrive on Earth to study the behavior and manners of human beings for his doctoral degree thesis. Under the human identity of a young man named Ken Takase, he meets Maki Hayama, a photographer at Shukan Hit newspaper, and later saves her from a building fall. Maki was taking pictures for a scoop about a building which had been mysteriously demolished. Later, she and Ken find that the evil organization \"Tentacle\" is behind the demolitions and other evil deeds around the world. Nick then decides to extend his stay on Earth and uses his advanced technology and superior powers to protect Maki and the children of Earth under the alter-ego of Machineman, a red- and yellow-suited superhero. Armed with an advanced technology weapons, he begins fighting Tentacle's cyborgs and protect humankind.\n\nA few episodes later, Machineman succeeds in dismantling Tentacle; however, Professor K flees to Spain and his niece, Lady M, appears. With her aide Tonchinkan, they establish a new organization called \"Octopus\". Like her uncle, she is allergic to children (whenever she is near one, her nose turns red). In the beginning, she calls up various thieves and legendary criminals from around the world, but later robotic drones are assembled to combat Machineman. By the end of the series, the missing Professor K returns, bringing with him the biggest threat the hero had ever faced: Golden Monsu, a fortified version of Tetsujin Monsu.",
     "cover": "machineman-cover.jpg",
@@ -356,6 +374,7 @@
   },
   {
     "_id": "19",
+    "categoryId": "05",
     "title": "Yu Yu Hakusho",
     "summary": "One day, 14 year old Yusuke Urameshi suddenly finds himself dead, having died pushing a child out of the way of oncoming traffic. Since he has such a bad personality, even the Spirit World was caught by surpise that he would sacrifice himself. Yusuke soon finds out he wasn’t supposed to die and has a chance for resurrection and bringing his body back to life. After being resurrected, Yusuke becomes a Spirit Detective, along with his comrades, and one adventure after another happens, whether it be an investigation or a fighting tournament. Genre: Action, comedy, drama, supernatural, tournament Plot Summary:One day, 14 year old Yusuke Urameshi suddenly finds himself dead, having died pushing a child out of the way of oncoming traffic. Since he has such a bad personality, even the Spirit World was caught by surpise that he would sacrifice himself. Yusuke soon finds out he wasn’t supposed to die and has a chance for resurrection and bringing his body back to life. After being resurrected, Yusuke becomes a Spirit Detective, along with his comrades, and one adventure after another happens, whether it be an investigation or a fighting tournament. Genre: Action, comedy, drama, supernatural, tournament",
     "cover": "yu-yu-hakusho-cover.jpg",

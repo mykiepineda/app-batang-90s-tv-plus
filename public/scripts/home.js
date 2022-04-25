@@ -1,51 +1,5 @@
 window.addEventListener("load", function () {
 
-    const buttonGoToTop = document.querySelector("#goto-top");
-    const scrollDistance = 500; // px
-
-    document.addEventListener("scroll", function () {
-        if (document.body.scrollTop > scrollDistance || document.documentElement.scrollTop > scrollDistance) {
-            buttonGoToTop.style.display = "block";
-        } else {
-            buttonGoToTop.style.display = "none";
-        }
-    });
-
-    buttonGoToTop.addEventListener("click", function () {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-    });
-
-    // Top Navigation Bar - Hamburger button
-
-    const navbarToggler = document.querySelector(".navbar-toggler");
-    const navbarCollapse = document.querySelector(".navbar-collapse");
-
-    navbarToggler.addEventListener("click", function () {
-        navbarToggler.classList.toggle("collapsed");
-        navbarCollapse.classList.toggle("show");
-    });
-
-    // Top Navigation Bar - Shows Dropdown
-
-    const showsDropdown = document.querySelector("#shows-dropdown");
-    const showsDropdownMenu = showsDropdown.querySelector(".dropdown-menu");
-
-    showsDropdown.addEventListener("click", function () {
-        showsDropdown.classList.toggle("show");
-        showsDropdownMenu.classList.toggle("show");
-    });
-
-    // Top Navigation Bar - My Watchlist Dropdown
-
-    const myWatchlistDropdown = document.querySelector("#my-watchlist-dropdown");
-    const myWatchlistDropdownMenu = myWatchlistDropdown.querySelector(".dropdown-menu");
-
-    myWatchlistDropdown.addEventListener("click", function () {
-        myWatchlistDropdown.classList.toggle("show");
-        myWatchlistDropdownMenu.classList.toggle("show");
-    });
-
     // Continue Watching Carousel
 
     const carouselInners = document.querySelectorAll(".carousel-inner");
@@ -80,6 +34,31 @@ window.addEventListener("load", function () {
     if (cards.length < 6) {
         carouselControlPrevButton.style.setProperty("display", "none", "important");
         carouselControlNextButton.style.setProperty("display", "none", "important");
+    }
+
+    // All Shows Section
+    const categoryButtons = document.querySelectorAll("#categories-button-container button");
+    const showCards = document.querySelectorAll("#suggested-section .my-card");
+
+    for (let i = 0; i < categoryButtons.length; i++) {
+        const categoryButton = categoryButtons[i];
+        categoryButton.addEventListener("click", function() {
+            this.classList.add("active");
+            for (let j = 0; j < categoryButtons.length; j++) {
+                const otherButton = categoryButtons[j];
+                if (this.dataset.categoryId !== otherButton.dataset.categoryId) {
+                    otherButton.classList.remove("active");
+                }
+            }
+            for (let k = 0; k < showCards.length; k++) {
+                const showCard = showCards[k];
+                if (showCard.dataset.categoryId !== this.dataset.categoryId && this.dataset.categoryId !== "01") {
+                    showCard.style.display = "none";
+                } else {
+                    showCard.style.display = "block";
+                }
+            }
+        });
     }
 
 });

@@ -10,6 +10,7 @@ const port = (process.env.NODE_ENV === "development" ? 3000 : process.env.PORT);
 const mongoose = require("mongoose");
 const videos = require("./models/video");
 const shows = require("./models/show");
+const categories = require("./models/category");
 const users = require("./models/user");
 const mockDatabase = require("./modules/mock-database");
 
@@ -35,9 +36,10 @@ const fileSourceRootUrl = (process.env.NODE_ENV === "development" ? "/local_" : 
 const initTopNavBar = require("./modules/middleware");
 
 app.get("/", initTopNavBar(), async function (req, res) {
+
     res.locals.atHome = true;
     res.locals.fileSourceRootUrl = fileSourceRootUrl;
-    res.locals.suggestions = await shows.find().sort({releaseInfo: 1, title: 1}).lean();
+
     const user = await users.findOne({_id: adminUserId})
         .populate({
             path: "continueWatching.episodeId",
@@ -85,7 +87,12 @@ app.get("/", initTopNavBar(), async function (req, res) {
             res.locals.pagination = pagination;
         }
     }
+
+    res.locals.suggestions = await shows.find().sort({releaseInfo: 1, title: 1}).lean();
+    res.locals.categories = await categories.find().sort({description: 1}).lean();
+
     res.render("home");
+
 });
 
 app.get("/show/:slug", initTopNavBar(), async function (req, res) {
@@ -404,27 +411,34 @@ app.get(["/watchlist/add/:slug", "/watchlist/remove/:slug"], async function (req
 app.get("/initialise-database", async function (req, res) {
 
     const db = mongoose.connection;
+    let seqNbr = 1;
+    let message = `${seqNbr++}. start database initialisation...`;
 
-    let message = "1. start database initialisation...";
+    await db.dropCollection("categories");
+    message += `\n${seqNbr++}. categories collection dropped`;
+
+    const categoriesMockData = mockDatabase.getCategories();
+    await categories.insertMany(categoriesMockData);
+    message += `\n${seqNbr++}. inserted ${categoriesMockData.length} documents to categories collection`;
 
     await db.dropCollection("shows");
-    message += "\n2. shows collection dropped";
+    message += `\n${seqNbr++}. shows collection dropped`;
 
     const showsMockData = mockDatabase.getShows();
     await shows.insertMany(showsMockData);
-    message += `\n3. inserted ${showsMockData.length} documents to shows collection`;
+    message += `\n${seqNbr++}. inserted ${showsMockData.length} documents to shows collection`;
 
     await db.dropCollection("videos");
-    message += "\n3. videos collection dropped";
+    message += `\n${seqNbr++}. videos collection dropped`;
 
     const episodesMockData = mockDatabase.getEpisodes();
     await videos.insertMany(episodesMockData);
-    message += `\n4. inserted ${episodesMockData.length} documents to videos collection`;
+    message += `\n${seqNbr++}. inserted ${episodesMockData.length} documents to videos collection`;
 
     // await db.dropCollection("users");
     await users.findOneAndUpdate({_id: adminUserId}, {$set: {watchlists: [], continueWatching: []}});
 
-    message += "\n5. end database initialisation.";
+    message += `\n${seqNbr++}. end database initialisation.`;
 
     res.json({message: message});
 });

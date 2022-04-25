@@ -773,17 +773,22 @@ body, #bookmark-button {
 
 #jumbotron-section {
     background-color: var(--my-secondary-color);
+    background-position: center;
     /*color: black;*/
     width: 100%;
     height: 500px;
 }
 
+#categories-button-container .btn,
 #jumbotron-section .btn {
     color:white;
     border-color:white;
 }
 
-#jumbotron-section .btn:hover {
+#categories-button-container .btn.active,
+#categories-button-container .btn:hover,
+#jumbotron-section .btn:hover,
+#jumbotron-section .btn-primary.active {
     background-color: white;
     color: var(--my-secondary-color);
 }

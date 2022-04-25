@@ -5,19 +5,25 @@
     </div>
 </div>
 
-<section class="pt-3">
-    <div id="jumbotron-section"
-         class="jumbotron jumbotron-fluid d-flex flex-column align-items-center justify-content-center">
+<section class="pt-3 shadow">
+    <div id="jumbotron-section" class="jumbotron jumbotron-fluid d-flex flex-column align-items-center justify-content-center">
         <div class="container">
             <h1 class="display-4">Namiss mo ba ang mga palabas na ito?</h1>
-            <p>Libre ang manuod dito at higit sa lahat, walang pesky ads! Kaya ano pang hinihintay ninyo, sign up
+            <p>Libre ang manood dito at higit sa lahat, walang pesky ads! Kaya ano pang hinihintay ninyo, sign up
                 na!</p>
             <p class="lead">
-            <h2>
-                <a class="btn btn-outline-primary btn-lg" href="#" role="button">
-                    Sign Up
-                </a>
-            </h2>
+            <div class="d-flex">
+                <h2 class="pe-3">
+                    <a class="btn btn-primary btn-lg active" href="#" role="button">
+                        Sign Up
+                    </a>
+                </h2>
+                <h2>
+                    <a class="btn btn-outline-secondary btn-lg" href="#" role="button">
+                        Contact Us
+                    </a>
+                </h2>
+            </div>
             </p>
         </div>
     </div>
@@ -34,15 +40,18 @@
     </section>
 {{/if}}
 
-<div id="all-shows-section" class="container-fluid pb-5">
-    <div class="container pt-5">
-        <h6>All Shows</h6>
+<div id="all-shows-section" class="container-fluid pb-5 shadow">
+    <div id="categories-button-container" class="container pt-5">
+        {{#each categories}}
+            <button class="btn btn-outline-primary{{#ifEquals this._id "01"}} active{{/ifEquals}}"
+                    data-category-id="{{this._id}}">{{this.description}}</button>
+        {{/each}}
     </div>
     <section id="suggested-section">
         <div class="container">
             <div class="d-flex flex-row flex-wrap">
                 {{#each suggestions}}
-                    <div class="p-3">
+                    <div class="p-3 my-card" data-category-id="{{this.categoryId}}">
                         <a href="/show/{{slug}}">
                             <div class="card">
                                 <div class="d-flex flex-column justify-content-center align-items-center"
@@ -66,3 +75,4 @@
         </div>
     </section>
 </div>
+<script src="/scripts/home.js"></script>

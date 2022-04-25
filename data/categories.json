@@ -1,0 +1,26 @@
+[
+  {
+    "_id": "01",
+    "description": "All Shows"
+  },
+  {
+    "_id": "02",
+    "description": "Kamen Rider"
+  },
+  {
+    "_id": "03",
+    "description": "Mecha Anime"
+  },
+  {
+    "_id": "04",
+    "description": "Metal Hero"
+  },
+  {
+    "_id": "05",
+    "description": "Other Anime"
+  },
+  {
+    "_id": "06",
+    "description": "Super Sentai"
+  }
+]
