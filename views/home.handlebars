@@ -6,19 +6,25 @@
 </div>
 
 <section class="pt-3">
-    <div id="jumbotron" class="jumbotron jumbotron-fluid d-flex flex-column align-items-center justify-content-center">
+    <div id="jumbotron-section"
+         class="jumbotron jumbotron-fluid d-flex flex-column align-items-center justify-content-center">
         <div class="container">
             <h1 class="display-4">Namiss mo ba ang mga palabas na ito?</h1>
-            <p>Libre ang manuod dito at higit sa lahat, walang pesky ads! Kaya ano pang hinihintay ninyo, sign up na!</p>
+            <p>Libre ang manuod dito at higit sa lahat, walang pesky ads! Kaya ano pang hinihintay ninyo, sign up
+                na!</p>
             <p class="lead">
-                <a class="btn btn-primary btn-lg" href="#" role="button">Sign Up</a>
+            <h2>
+                <a class="btn btn-outline-primary btn-lg" href="#" role="button">
+                    Sign Up
+                </a>
+            </h2>
             </p>
         </div>
     </div>
 </section>
 
 {{#if pagination}}
-    <div class="container pt-3">
+    <div class="container pt-5">
         <h6>Continue Watching for {{userName}}</h6>
     </div>
     <section id="episodes-section">
@@ -28,33 +34,35 @@
     </section>
 {{/if}}
 
-<div class="container">
-    <h6>All Shows</h6>
-</div>
-<section id="suggested-section">
-    <div class="container">
-        <div class="d-flex flex-row flex-wrap">
-            {{#each suggestions}}
-                <div class="p-3">
-                    <a href="/show/{{slug}}">
-                        <div class="card">
-                            <div class="d-flex flex-column justify-content-center align-items-center"
-                                 style="position:relative">
-                                <div style="width:200px;height:300px">
-                                    <img class="card-img-top"
-                                         src="{{@root.fileSourceRootUrl}}images/shows/{{_id}}/cover/{{cover}}"
-                                         alt="Card image cap" style="width:100%;height:100%">
-                                </div>
-                                <div class="my-card-title d-flex flex-column justify-content-center align-items-center"
-                                     style="position:absolute;width:200px;height:300px">
-                                    <h6>{{releaseInfo}}</h6>
-                                    <h3>{{title}}</h3>
+<div id="all-shows-section" class="container-fluid pb-5">
+    <div class="container pt-5">
+        <h6>All Shows</h6>
+    </div>
+    <section id="suggested-section">
+        <div class="container">
+            <div class="d-flex flex-row flex-wrap">
+                {{#each suggestions}}
+                    <div class="p-3">
+                        <a href="/show/{{slug}}">
+                            <div class="card">
+                                <div class="d-flex flex-column justify-content-center align-items-center"
+                                     style="position:relative">
+                                    <div style="width:200px;height:300px">
+                                        <img class="card-img-top"
+                                             src="{{@root.fileSourceRootUrl}}images/shows/{{_id}}/cover/{{cover}}"
+                                             alt="Card image cap" style="width:100%;height:100%">
+                                    </div>
+                                    <div class="my-card-title d-flex flex-column justify-content-center align-items-center"
+                                         style="position:absolute;width:200px;height:300px">
+                                        <h6>{{releaseInfo}}</h6>
+                                        <h3>{{title}}</h3>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </a>
-                </div>
-            {{/each}}
+                        </a>
+                    </div>
+                {{/each}}
+            </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>

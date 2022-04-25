@@ -771,16 +771,25 @@ body, #bookmark-button {
     white-space: normal;
 }
 
-#jumbotron {
-    background-color: white;
-    color: black;
+#jumbotron-section {
+    background-color: var(--my-secondary-color);
+    /*color: black;*/
     width: 100%;
     height: 500px;
 }
 
-#jumbotron a {
-    background-color: var(--my-tertiary-color);
-    border: none;
+#jumbotron-section .btn {
+    color:white;
+    border-color:white;
+}
+
+#jumbotron-section .btn:hover {
+    background-color: white;
+    color: var(--my-secondary-color);
+}
+
+#all-shows-section {
+    background-color: var(--my-primary-color);
 }
 
 /* Override Bootstrap/Fontawesome styles */
