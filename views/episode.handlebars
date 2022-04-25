@@ -1,12 +1,12 @@
 <div class="container d-flex flex-column justify-content-center mt-3">
     <div id="episode-container" class="d-flex flex-column">
-        <div class="d-flex align-items-end justify-content-between">
-            <div style="line-height:1.5;padding-top:0.75rem;padding-bottom:0.75rem">
-                <h6 class="my-tertiary-text" style="margin-bottom:0">{{show.title}}</h6>
+        <div class="d-flex align-items-center justify-content-between">
+            <div>
+                <h6 class="my-secondary-text" style="margin-bottom:0">{{show.title}}</h6>
             </div>
             <div>
                 <a href="/show/{{show.slug}}" role="button" class="btn" style="padding-left:0">
-                    <h6 style="color:white;margin-bottom:0" class="my-tertiary-text"><i class="fa-solid fa-chevron-left"></i> Back</h6>
+                    <h6 style="color:white;margin-bottom:0" class="my-secondary-text"><i class="fa-solid fa-chevron-left"></i> Back</h6>
                 </a>
             </div>
         </div>
@@ -47,7 +47,10 @@
                     </div>
                 </div>
                 <div id="video-container">
-                    <div id="video-inner-container" class="d-flex justify-content-center">
+                    <div id="video-inner-container" class="d-flex align-items-center justify-content-center flex-column">
+                        <div id="video-not-found-banner">
+                            <h1>Error: Video not found!</h1>
+                        </div>
                         <video id="video-player" poster="{{fileSourceRootUrl}}images/shows/{{video.showId}}/thumbnails/{{video.thumbnail}}" autoplay>
                             <source src="/video/{{video._id}}" type="video/mp4"/>
                         </video>
@@ -115,11 +118,8 @@
             </div>
         </div>
         <div class="pt-3">
-            <h3 class="my-primary-text">{{video.title}}</h3>
-            <h6 class="my-tertiary-text">Episode {{video.episode}}
-                <span class="the-dot">Season {{video.season}}</span>
-                <span class="the-dot">{{#serialiseDate video.airDate}}{{/serialiseDate}}</span>
-            </h6>
+            <h3 class="my-primary-text">S{{video.season}}:E{{video.episode}} "{{video.title}}"</h3>
+            <h6 class="my-tertiary-text">Original Air Date: {{#serialiseDate video.airDate}}{{/serialiseDate}}</h6>
             <p class="my-secondary-text">{{video.synopsis}}</p>
         </div>
     </div>

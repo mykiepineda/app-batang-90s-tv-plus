@@ -502,6 +502,11 @@ body, #bookmark-button {
     transform: scale(1.5);
 }
 
+#video-not-found-banner {
+    position: absolute;
+    display: none;
+}
+
 @media screen and (max-width: 1200px) {
     #video-player {
         width: 100%;

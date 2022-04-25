@@ -150,10 +150,6 @@ window.addEventListener("load", function () {
         duration.innerHTML = `${durationMinutes}:${durationSeconds < 10 ? '0' + durationSeconds : durationSeconds}`;
     }
 
-    videoSource.addEventListener("error", function (e) {
-        console.log(e);
-    });
-
     videoPlayer.addEventListener("timeupdate", currentTime);
 
     fullscreen.addEventListener("click", async function (event) {
@@ -209,6 +205,15 @@ window.addEventListener("load", function () {
     sliderContainer.addEventListener("click", function (event) {
         seekVideo(event);
     });
+
+    const videoNotFoundBanner = document.querySelector("#video-not-found-banner");
+    // NETWORK_NO_SOURCE
+    if (videoPlayer.networkState === 3) {
+        videoNotFoundBanner.style.display = "block";
+        spinner.classList.add("hide");
+        centreVideoControlsContainer.classList.add("hide");
+        videoControls.classList.add("hide");
+    }
 
     videoPlayer.addEventListener("timeupdate", function (event) {
         percentage = (videoPlayer.currentTime / videoPlayer.duration) * 100;

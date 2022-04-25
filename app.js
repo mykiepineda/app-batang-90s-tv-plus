@@ -55,6 +55,7 @@ app.get("/show/:slug", showsDropdown(), async function (req, res) {
 
         res.locals.show = show;
         res.locals.showId = showId;
+        res.locals.displayShowBackground = true;
         res.locals.myWatchlist = [];
         res.locals.inWatchlist = false;
 
@@ -220,9 +221,16 @@ app.get("/video/:objectId", async function (req, res, next) {
         Key: key
     };
 
+    let videoSize;
+
     // Check first the content-length of the file in s3 bucket so that we can calculate for the Byte-Range
-    const data = await s3.headObject(params).promise();
-    const videoSize = data.ContentLength;
+    try {
+        const data = await s3.headObject(params).promise();
+        videoSize = data.ContentLength;
+    } catch (error) {
+        videoSize = 0;
+        console.log(`Error encountered while serving ${params.Bucket}/${params.Key}: ${error}`);
+    }
 
     if (videoSize === 0) {
         return res.status(404).send("File not found");
