@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 
 const path = require("path");
-app.use("/static", express.static(path.join(__dirname, "public"))); // Make the "public" folder available statically
+app.use(express.static(path.join(__dirname, "public"))); // Make the "public" folder available statically
 
 require("dotenv").config({path: "process.env"});
 const port = (process.env.NODE_ENV === "production" ? process.env.PORT : 3000);
@@ -32,7 +32,7 @@ AWS.config.update({
 });
 
 const wasabiBucket = process.env.WASABI_BUCKET;
-const fileSourceRootUrl = (process.env.NODE_ENV === "production" ? `${process.env.CLOUDFRONT_ROOT_URL}/` : "/static/local_");
+const fileSourceRootUrl = (process.env.NODE_ENV === "production" ? `${process.env.CLOUDFLARE_ROOT_URL}/` : "/local_");
 const initTopNavBar = require("./modules/middleware");
 
 app.get("/", initTopNavBar(), async function (req, res) {
