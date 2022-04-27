@@ -52,7 +52,7 @@
                             <h1>Error: Video not found!</h1>
                         </div>
                         <video id="video-player" poster="{{fileSourceRootUrl}}images/shows/{{video.showId}}/thumbnails/{{video.thumbnail}}" autoplay>
-                            <source src="/video/{{video._id}}" type="video/mp4"/>
+                            <source src="{{video.url}}" type="video/mp4"/>
                         </video>
                         <div id="video-controls">
                             <div id="video-controls-inner" class="row ps-3 pb-3 pe-3 pt-5">
