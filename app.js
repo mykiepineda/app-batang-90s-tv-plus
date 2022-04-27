@@ -32,7 +32,8 @@ AWS.config.update({
 });
 
 const wasabiBucket = process.env.WASABI_BUCKET;
-const fileSourceRootUrl = (process.env.NODE_ENV === "production" ? `${process.env.CLOUDFLARE_ROOT_URL}/` : "/local_");
+const cdnRootUrl = process.env.AWS_CLOUDFRONT_ROOT_URL;
+const fileSourceRootUrl = (process.env.NODE_ENV === "production" ? `${cdnRootUrl}/` : "/local_");
 const initTopNavBar = require("./modules/middleware");
 
 app.get("/", initTopNavBar(), async function (req, res) {
@@ -263,7 +264,8 @@ app.get("/show/:slug/episode/:id", initTopNavBar(), async function (req, res) {
 
     res.locals.fileSourceRootUrl = fileSourceRootUrl;
 
-    const show = await shows.findOne({slug: req.params.slug}).lean();
+    const slug = req.params.slug;
+    const show = await shows.findOne({slug: slug}).lean();
 
     if (show === null) {
         res.locals.errorMessage = "Show not found";
@@ -290,6 +292,7 @@ app.get("/show/:slug/episode/:id", initTopNavBar(), async function (req, res) {
                 maxEpisode = doc.toJSON().episode;
             });
 
+            video.url = `${cdnRootUrl}/videos/${slug}/${video.episode}.mp4`;
             res.locals.video = video;
             res.locals.prevEpisode = getOtherEpisode(video.episode, false);
             res.locals.nextEpisode = getOtherEpisode(video.episode, true);
