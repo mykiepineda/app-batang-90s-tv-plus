@@ -32,8 +32,7 @@ AWS.config.update({
 });
 
 const wasabiBucket = process.env.WASABI_BUCKET;
-const cdnRootUrl = process.env.AWS_CLOUDFRONT_ROOT_URL;
-const fileSourceRootUrl = (process.env.NODE_ENV === "production" ? `${cdnRootUrl}/` : "/local_");
+const fileSourceRootUrl = (process.env.NODE_ENV === "production" ? `${process.env.AWS_CLOUDFRONT_ROOT_URL}/` : "/local_");
 const initTopNavBar = require("./modules/middleware");
 
 app.get("/", initTopNavBar(), async function (req, res) {
@@ -292,7 +291,7 @@ app.get("/show/:slug/episode/:id", initTopNavBar(), async function (req, res) {
                 maxEpisode = doc.toJSON().episode;
             });
 
-            video.url = `${cdnRootUrl}/videos/${slug}/${video.episode}.mp4`;
+            video.url = `${process.env.AWS_CLOUDFRONT_ROOT_URL2}/${slug}/${video.episode}.mp4`;
             res.locals.video = video;
             res.locals.prevEpisode = getOtherEpisode(video.episode, false);
             res.locals.nextEpisode = getOtherEpisode(video.episode, true);
@@ -308,6 +307,7 @@ app.get("/show/:slug/episode/:id", initTopNavBar(), async function (req, res) {
     }
 });
 
+// TODO: Videos will be served using CDN URL directly for now until I figure out its maintaining cost
 app.get("/video/:objectId", async function (req, res, next) {
 
     // Ensure there is a range given for the video
