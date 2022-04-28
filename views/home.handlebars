@@ -1,16 +1,8 @@
-<div class="container">
-    <div class="d-flex flex-column align-items-center justify-content-center">
-        <img src="{{fileSourceRootUrl}}images/batang-90s-tv-plus.png" alt="" style="width:300px">
-        <p>by <a href="https://mykiepineda.com">Mykie</a></p>
-    </div>
-</div>
-
-<section class="pt-3 shadow">
+<section class="pt-5 pb-5 shadow">
     <div id="jumbotron-section" class="jumbotron jumbotron-fluid d-flex flex-column align-items-center justify-content-center">
         <div class="container">
-            <h1 class="display-4">Namiss mo ba ang mga palabas na ito?</h1>
-            <p>Libre ang manood dito at higit sa lahat, walang pesky ads! Kaya ano pang hinihintay ninyo, sign up
-                na!</p>
+            <h1 class="display-4">Batang 90s TV+</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
             <p class="lead">
             <div class="d-flex">
                 <h2 class="pe-3">
@@ -20,7 +12,7 @@
                 </h2>
                 <h2>
                     <a class="btn btn-outline-secondary btn-lg" href="#" role="button">
-                        Contact Us
+                        Log In
                     </a>
                 </h2>
             </div>
@@ -31,7 +23,7 @@
 
 {{#if pagination}}
     <div class="container pt-5">
-        <h6>Continue Watching for {{userName}}</h6>
+        <h6 class="my-primary-text">Continue Watching for {{userName}}</h6>
     </div>
     <section id="episodes-section">
         <div id="non-small-form-factor">
@@ -40,32 +32,29 @@
     </section>
 {{/if}}
 
-<div id="all-shows-section" class="container-fluid pb-5 shadow">
-    <div id="categories-button-container" class="container pt-5">
+<div class="container-fluid pt-5">
+    <div class="container">
+        <h6 class="my-primary-text">Show Categories</h6>
+    </div>
+    <div id="categories-button-container" class="container" style="transform:translate(-0.5rem)">
         {{#each categories}}
-            <button class="btn btn-outline-primary{{#ifEquals this._id "01"}} active{{/ifEquals}}"
+            <button class="m-2 btn btn-outline-primary{{#ifEquals this._id "01"}} active{{/ifEquals}}"
                     data-category-id="{{this._id}}">{{this.description}}</button>
         {{/each}}
     </div>
-    <section id="suggested-section">
+    <section id="all-shows-section" class="mt-3">
         <div class="container">
-            <div class="d-flex flex-row flex-wrap">
+            <div class="d-flex flex-row flex-wrap justify-content-start" style="transform:translate(-0.5rem)">
                 {{#each suggestions}}
-                    <div class="p-3 my-card" data-category-id="{{this.categoryId}}">
+                    <div class="my-card" data-category-id="{{this.categoryId}}">
                         <a href="/show/{{slug}}">
-                            <div class="card">
-                                <div class="d-flex flex-column justify-content-center align-items-center"
-                                     style="position:relative">
-                                    <div style="width:200px;height:300px">
-                                        <img class="card-img-top"
-                                             src="{{@root.fileSourceRootUrl}}images/shows/{{_id}}/cover/{{cover}}"
-                                             alt="Card image cap" style="width:100%;height:100%">
-                                    </div>
-                                    <div class="my-card-title d-flex flex-column justify-content-center align-items-center"
-                                         style="position:absolute;width:200px;height:300px">
-                                        <h6>{{releaseInfo}}</h6>
-                                        <h3>{{title}}</h3>
-                                    </div>
+                            <div class="card m-2" style="width:200px;background:none!important;border:none">
+                                <div style="height:300px">
+                                    <img class="card-img-top" src="{{@root.fileSourceRootUrl}}images/shows/{{_id}}/cover/{{cover}}" alt="Card image cap" style="object-fit:cover">
+                                </div>
+                                <div class="card-body" style="background:none!important;height:94px;padding-left:0;padding-right:0">
+                                    <h5 class="card-title my-secondary-text">{{title}}</h5>
+                                    <p class="card-text my-tertiary-text">{{releaseInfo}}</p>
                                 </div>
                             </div>
                         </a>

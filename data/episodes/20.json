@@ -1,1 +1,461 @@
-[]
+[
+  {
+    "episode": "01",
+    "title": "Enter the Mini 4WD Brothers! Go, Sabers!",
+    "airDate": "1996-01-08",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "01.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "02",
+    "title": "Disturbance in the Winter Race Finals!!",
+    "airDate": "1996-01-15",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "02.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "03",
+    "title": "The Mysterious Fully-Cowled Machine!",
+    "airDate": "1996-01-22",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "03.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "04",
+    "title": "Stormy Confrontation! Roaring Downhill Race!",
+    "airDate": "1996-01-29",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "04.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "05",
+    "title": "Tridagger X! The Culvert Rematch!",
+    "airDate": "1996-02-05",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "05.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "06",
+    "title": "Magnum in Danger! The New Lightning Machine!!",
+    "airDate": "1996-02-12",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "06.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "07",
+    "title": "Cornering Confrontation! Sonic Saber vs. Spin Axe!",
+    "airDate": "1996-02-19",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "07.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "08",
+    "title": "Fly, Magnum! Aim for the Spring Race!",
+    "airDate": "1996-02-26",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "08.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "09",
+    "title": "Gathering of Adversaries! The Sparking Spring Race!",
+    "airDate": "1996-03-04",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "09.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "10",
+    "title": "Special Technique, Magnum Tornado!",
+    "airDate": "1996-03-11",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "10.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "11",
+    "title": "Retsu's Crisis! Remaining Chance",
+    "airDate": "1996-03-18",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "11.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "12",
+    "title": "Go's Challenge! Getting the Magnum Back!!",
+    "airDate": "1996-03-25",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "12.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "13",
+    "title": "The 6th Fully-Cowled Machine Racer!",
+    "airDate": "1996-04-01",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "13.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "14",
+    "title": "Dr. Oogami's Ambition: The Surprising Strongest Machine!",
+    "airDate": "1996-04-08",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "14.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "15",
+    "title": "Confronting the Gang! Protect Grandpa!",
+    "airDate": "1996-04-15",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "15.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "16",
+    "title": "Volcanic Crater Death Match! The Sabers' Desperate Situation!",
+    "airDate": "1996-04-22",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "16.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "17",
+    "title": "The V Machines Born! Bet on Tomorrow's Victory!",
+    "airDate": "1996-04-29",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "17.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "18",
+    "title": "V Machines, Run! The Perilous Amusement Park!",
+    "airDate": "1996-05-06",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "18.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "19",
+    "title": "Defeat the Powerful JB! The V-Power of Friendship!",
+    "airDate": "1996-05-13",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "19.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "20",
+    "title": "The Missing Tridagger X!",
+    "airDate": "1996-05-20",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "20.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "21",
+    "title": "Chiiko's Whirlwind Confrontation! VS. Seiba Brothers",
+    "airDate": "1996-05-27",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "21.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "22",
+    "title": "The Return, The Dreaded Cutting Machine!",
+    "airDate": "1996-06-03",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "22.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "23",
+    "title": "The Canned Goods Factory Duel! Starting a New Journey!",
+    "airDate": "1996-06-10",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "23.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "24",
+    "title": "Spin Cobra Takes Off! New Machine Development Orders",
+    "airDate": "1996-06-17",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "24.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "25",
+    "title": "The Summer Race Opening! A Hot Mini 4WD Summer!",
+    "airDate": "1996-06-24",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "25.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "26",
+    "title": "A Wounded Goal! The Tridaggers' Tears",
+    "airDate": "1996-07-01",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "26.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "27",
+    "title": "The Flaming New Machine, The Reborn Tridagger",
+    "airDate": "1996-07-08",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "27.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "28",
+    "title": "The Sintering Amazing ZMC, Ryo Takaba's Full Comeback",
+    "airDate": "1996-07-15",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "28.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "29",
+    "title": "Rapid Panic! The Mini 4WD Rescue Team",
+    "airDate": "1996-07-22",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "29.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "30",
+    "title": "Sea! Monkeys! A Big Race of Teamwork",
+    "airDate": "1996-07-29",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "30.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "31",
+    "title": "Enter the Brocken Gigant! The Heavyweight Machine of Destruction",
+    "airDate": "1996-08-05",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "31.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "32",
+    "title": "Confrontation With a Ghost! The Seven-Mystery Race!!",
+    "airDate": "1996-08-12",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "32.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "33",
+    "title": "Sandstorm Battle! The Oogami Rulless Race",
+    "airDate": "1996-08-19",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "33.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "34",
+    "title": "A Decisive Camp Battle! A Cornered J",
+    "airDate": "1996-08-26",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "34.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "35",
+    "title": "The V Machines are the Enemy! Let's Go Retrieval",
+    "airDate": "1996-09-02",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "35.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "36",
+    "title": "The Legendary Mini 4WD, The Phantasmic Scorpion",
+    "airDate": "1996-09-09",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "36.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "37",
+    "title": "Ray Stinger! Oogami's Trump Card!",
+    "airDate": "1996-09-16",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "37.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "38",
+    "title": "The Revived Magnum! The Name is Cyclone",
+    "airDate": "1996-09-23",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "38.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "39",
+    "title": "The Cyclone Lands! I'm a Genius Designer",
+    "airDate": "1996-09-30",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "39.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "40",
+    "title": "The Climatic Autumn Race",
+    "airDate": "1996-10-07",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "40.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "41",
+    "title": "Conflict between J & Go! Cyclone in Danger",
+    "airDate": "1996-10-14",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "41.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "42",
+    "title": "Go, the Mini 4WD Master!? Autumn Festival Exhibition Race",
+    "airDate": "1996-10-21",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "42.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "43",
+    "title": "Race with the Prince! Jun's Love Elopement",
+    "airDate": "1996-10-28",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "43.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "44",
+    "title": "Magnum in Best Condition! Retsu's Impatience",
+    "airDate": "1996-11-04",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "44.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "45",
+    "title": "Retsu's Betrayal!? Sonic vs. Magnum",
+    "airDate": "1996-11-11",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "45.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "46",
+    "title": "J's Comeback! Proto Saber Evolution",
+    "airDate": "1996-11-18",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "46.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "47",
+    "title": "The Sparking Last Chance!",
+    "airDate": "1996-11-25",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "47.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "48",
+    "title": "SGJC Commencement!! A Turbulent Start!",
+    "airDate": "1996-12-02",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "48.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "49",
+    "title": "Retsu and Go's Bitter Fight! The Destructive Corps Rampage",
+    "airDate": "1996-12-09",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "49.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "50",
+    "title": "The Fierce Snowberg Course! The Severe 2nd Ground!",
+    "airDate": "1996-12-16",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "50.jpg",
+    "season": 1,
+    "showId": "20"
+  },
+  {
+    "episode": "51",
+    "title": "The Podium of Glory!! The Victorious Mini 4WD",
+    "airDate": "1996-12-23",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "51.jpg",
+    "season": 1,
+    "showId": "20"
+  }
+]
