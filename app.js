@@ -32,7 +32,7 @@ AWS.config.update({
 });
 
 const wasabiBucket = process.env.WASABI_BUCKET;
-const fileSourceRootUrl = (process.env.NODE_ENV === "production" ? `${process.env.CLOUDFLARE_ROOT_URL}/` : "/local_");
+const fileSourceRootUrl = (process.env.NODE_ENV === "production" ? `${process.env.AWS_CLOUDFRONT_ROOT_URL}/` : "/local_");
 const initTopNavBar = require("./modules/middleware");
 
 app.get("/", initTopNavBar(), async function (req, res) {
@@ -291,7 +291,7 @@ app.get("/show/:slug/episode/:id", initTopNavBar(), async function (req, res) {
                 maxEpisode = doc.toJSON().episode;
             });
 
-            video.url = `${process.env.CLOUDFLARE_ROOT_URL}/videos/${slug}/${video.episode}.mp4`;
+            video.url = `${process.env.AWS_CLOUDFRONT_ROOT_URL}/videos/${slug}/${video.episode}.mp4`;
             res.locals.video = video;
             res.locals.prevEpisode = getOtherEpisode(video.episode, false);
             res.locals.nextEpisode = getOtherEpisode(video.episode, true);
