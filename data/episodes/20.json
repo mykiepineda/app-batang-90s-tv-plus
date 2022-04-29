@@ -457,5 +457,365 @@
     "thumbnail": "51.jpg",
     "season": 1,
     "showId": "20"
+  },
+  {
+    "episode": "52",
+    "title": "Mini 4wd New Generation: Toward WGP!",
+    "airDate": "1997-01-06",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "52.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "53",
+    "title": "TRF BIKUTORIIZU tanjou ! WGP nippon kaimaku !",
+    "airDate": "1997-01-13",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "53.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "54",
+    "title": "GP MASHIN kansei ! RIIDAA wa dare ?",
+    "airDate": "1997-01-20",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "54.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "55",
+    "title": "kyoui no CHIIMUPUREE ! hyougen kara kita gingitsune",
+    "airDate": "1997-01-27",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "55.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "56",
+    "title": "datou ! BAKKUBUREEDAA mou tokkun wo norikire",
+    "airDate": "1997-02-03",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "56.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "57",
+    "title": "gekisou ! GP KUROSU 4 i wo nerae !",
+    "airDate": "1997-02-10",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "57.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "58",
+    "title": "BIKUTORIIZU no kiki ! shin kantoku tamami sensei ?!",
+    "airDate": "1997-02-17",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "58.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "59",
+    "title": "bangai taiketsu gou VS EJJI",
+    "airDate": "1997-02-24",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "59.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "60",
+    "title": "nazo no fukumen REESAA ore-tachi KATSU tobiBUcchigiri",
+    "airDate": "1997-03-03",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "60.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "61",
+    "title": "ni rou maru sansen ! ASUTORODOUMU no tatakai",
+    "airDate": "1997-03-10",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "61.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "62",
+    "title": "himitsu heiki ! shougeki !! PAWAA BUUSUTAA",
+    "airDate": "1997-03-17",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "62.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "63",
+    "title": "shunkashuutou zenkai BATORU kitaguni no RIIDAA",
+    "airDate": "1997-03-24",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "63.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "64",
+    "title": "JANGURU wo kirisake ! yomigaeru KIRAA MASHIN !!",
+    "airDate": "1997-03-31",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "64.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "65",
+    "title": "densetsu no MASHIN wo motta hen na yakko",
+    "airDate": "1997-04-07",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "65.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "66",
+    "title": "BIKUTORIIZU VS kouzasori (GONKI) SHAININGUSUKOUPION sanjou !",
+    "airDate": "1997-04-14",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "66.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "67",
+    "title": "kaette kita ouja (CHANPION) kagayake ! GUREETO JAPAN KAPPU",
+    "airDate": "1997-04-21",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "67.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "68",
+    "title": "arashi no naka no dai sakusen ! NYUU MOUTAA ni kakero !",
+    "airDate": "1997-04-28",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "68.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "69",
+    "title": "kodomo no hi dai RAASU GP REESAA dai shuugou",
+    "airDate": "1997-05-05",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "69.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "70",
+    "title": "kate ! kyoufu no DESUMACCHIDIOSUPAADA VS SAIKURONMAGUNAMU",
+    "airDate": "1997-05-12",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "70.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "71",
+    "title": "RIZUMU ni notte tsuppashire ! atsui kuni kara kita REESAA",
+    "airDate": "1997-05-19",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "71.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "72",
+    "title": "moero fujiyoshi ! SUPIN KOBURA no gyakushuu",
+    "airDate": "1997-05-26",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "72.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "73",
+    "title": "kimeru ze, nippon ichi ! shouten gai de dai REESU !!",
+    "airDate": "1997-06-02",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "73.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "74",
+    "title": "sente hisshou ! SUTAATO shoubu !?",
+    "airDate": "1997-06-09",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "74.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "75",
+    "title": "senshu wa dare da ? kaisai ! DORIIMUCHANSUREESU",
+    "airDate": "1997-06-16",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "75.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "76",
+    "title": "RAIBARU seizoroi hakunetsu ! DORIIMUCHANSUREESU",
+    "airDate": "1997-06-23",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "76.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "77",
+    "title": "GOURU mae no dai gyakuten kecchaku ! DORIIMUCHANSUREESU",
+    "airDate": "1997-06-30",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "77.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "78",
+    "title": "beni no senkou ! ROSSOSUTORAADA no mashu !!",
+    "airDate": "1997-07-07",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "78.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "79",
+    "title": "SURII RIREE BATORU ! datou ! DIOSUPAADA",
+    "airDate": "1997-07-14",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "79.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "80",
+    "title": "yatsu ga RIIDAA ? sugata wo miseta kyouteki !",
+    "airDate": "1997-07-21",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "80.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "81",
+    "title": "fukkatsu no REESAA",
+    "airDate": "1997-07-28",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "81.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "82",
+    "title": "kesshi no MINI yon SABAIBARU !",
+    "airDate": "1997-08-04",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "82.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "83",
+    "title": "manatsu no akumu ! deta ! obake gasshuku",
+    "airDate": "1997-08-11",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "83.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "84",
+    "title": "MINI yonku oyako REESU hayasa no himitsu wa otou-san ?",
+    "airDate": "1997-08-18",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "84.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "85",
+    "title": "BIKUTORIIZU kaimetsu !! shitou TAWAASAAKITTO !",
+    "airDate": "1997-08-25",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "85.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "86",
+    "title": "tanjou ! yuujou no NYUUMASHIN !!",
+    "airDate": "1997-09-01",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "86.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "87",
+    "title": "gokakoku taikou senbatsu REESU ! gekisou ! BIITOMAGUNAMU",
+    "airDate": "1997-09-08",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "87.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "88",
+    "title": "arauma-tachi no banka",
+    "airDate": "1997-09-15",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "88.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "89",
+    "title": "mezase dai gyakuten zettai furi wo hanekaese !",
+    "airDate": "1997-09-22",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "89.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "90",
+    "title": "tensai to no taiketsu ! deru ka hissatsu waza",
+    "airDate": "1997-09-29",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "90.jpg",
+    "season": 2,
+    "showId": "20"
+  },
+  {
+    "episode": "91",
+    "title": "Bakusou Kyoudai Let's & Go! WGP: The Great Pursuit of the Berserk Mini 4WD car",
+    "airDate": "1997-10-06",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "91.jpg",
+    "season": 3,
+    "showId": "20"
   }
 ]
