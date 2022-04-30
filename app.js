@@ -170,6 +170,10 @@ app.get("/show/:slug", initTopNavBar(), async function (req, res) {
 
                 const videoDocument = videoCollection[i];
 
+                if (i === 0) {
+                    res.locals.firstEpisode = videoDocument;
+                }
+
                 if (prevSeason !== videoDocument.season) {
                     tempVideoList = videoList;
                     videoList = [];
@@ -214,6 +218,7 @@ app.get("/show/:slug", initTopNavBar(), async function (req, res) {
 
 function getOtherEpisode(episode, next) {
 
+    // TODO: Fix me when episode number is three digits
     let intEpisode = parseInt(episode);
 
     if (next) {
