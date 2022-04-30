@@ -29,18 +29,41 @@
         <div id="non-small-form-factor">
             {{>episodes-carousel}}
         </div>
+        <div id="small-form-factor">
+            {{>episodes-small-form-factor}}
+        </div>
     </section>
 {{/if}}
 
-<div class="container-fluid pt-5">
+<div class="pt-5">
     <div class="container">
         <h6 class="my-primary-text">Show Categories</h6>
     </div>
-    <div id="categories-button-container" class="container" style="transform:translate(-0.5rem)">
-        {{#each categories}}
-            <button class="m-2 btn btn-outline-primary{{#ifEquals this._id "01"}} active{{/ifEquals}}"
-                    data-category-id="{{this._id}}">{{this.description}}</button>
-        {{/each}}
+    <div id="non-small-form-factor">
+        <div id="categories-button-container" class="container" style="transform:translate(-0.5rem)">
+            {{#each categories}}
+                <button class="m-2 btn btn-outline-primary{{#ifEquals this._id "01"}} active{{/ifEquals}}"
+                        data-category-id="{{this._id}}">{{this.description}}</button>
+            {{/each}}
+        </div>
+    </div>
+    <div id="small-form-factor">
+        <div class="container" style="margin-top:calc(25px - 0.5rem)">
+            <div id="categories-sff-dropdown" class="dropdown">
+                <button id="dropdownMenuButton" class="btn btn-light btn-lg dropdown-toggle my-secondary-text" type="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"
+                        style="font-weight:500;line-height:1.2;width:100%;text-align:center;padding:15px 0">
+                    All Shows
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width:100%;text-align:center">
+                    {{#each categories}}
+                        <button class="dropdown-item{{#ifEquals this._id "01"}} active{{/ifEquals}}" data-category-id="{{this._id}}">
+                            <h4 class="my-secondary-text">{{this.description}}</h4></button>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
     </div>
     <section id="all-shows-section" class="mt-3">
         <div class="container">

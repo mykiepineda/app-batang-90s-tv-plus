@@ -42,28 +42,51 @@ window.addEventListener("load", function () {
     }
 
     // All Shows Section
+
+    function activateShowsByCategory(containerButtons) {
+        for (let i = 0; i < containerButtons.length; i++) {
+            const containerButton = containerButtons[i];
+            containerButton.addEventListener("click", function() {
+                this.classList.add("active");
+                for (let j = 0; j < containerButtons.length; j++) {
+                    const otherButton = containerButtons[j];
+                    if (this.dataset.categoryId !== otherButton.dataset.categoryId) {
+                        otherButton.classList.remove("active");
+                    } else {
+                        categoriesDropdownMenuButton.innerText = this.innerText;
+                    }
+                }
+                for (let k = 0; k < showCards.length; k++) {
+                    const showCard = showCards[k];
+                    if (showCard.dataset.categoryId !== this.dataset.categoryId && this.dataset.categoryId !== "01") {
+                        showCard.style.display = "none";
+                    } else {
+                        showCard.style.display = "block";
+                    }
+                }
+            });
+        }
+    }
+
+    // Non-Small Form Factor
+
     const categoryButtons = document.querySelectorAll("#categories-button-container button");
     const showCards = document.querySelectorAll("#all-shows-section .my-card");
 
-    for (let i = 0; i < categoryButtons.length; i++) {
-        const categoryButton = categoryButtons[i];
-        categoryButton.addEventListener("click", function() {
-            this.classList.add("active");
-            for (let j = 0; j < categoryButtons.length; j++) {
-                const otherButton = categoryButtons[j];
-                if (this.dataset.categoryId !== otherButton.dataset.categoryId) {
-                    otherButton.classList.remove("active");
-                }
-            }
-            for (let k = 0; k < showCards.length; k++) {
-                const showCard = showCards[k];
-                if (showCard.dataset.categoryId !== this.dataset.categoryId && this.dataset.categoryId !== "01") {
-                    showCard.style.display = "none";
-                } else {
-                    showCard.style.display = "block";
-                }
-            }
-        });
-    }
+    activateShowsByCategory(categoryButtons);
+
+    // Small Form Factor
+
+    const categoriesDropdown = document.querySelector("#categories-sff-dropdown");
+    const categoriesDropdownMenuButton = categoriesDropdown.querySelector("#dropdownMenuButton");
+    const categoriesDropdownMenu = categoriesDropdown.querySelector(".dropdown-menu");
+    const categoriesDropdownItems = categoriesDropdown.querySelectorAll(".dropdown-item");
+
+    categoriesDropdown.addEventListener("click", function () {
+        categoriesDropdown.classList.toggle("show");
+        categoriesDropdownMenu.classList.toggle("show");
+    });
+
+    activateShowsByCategory(categoriesDropdownItems);
 
 });

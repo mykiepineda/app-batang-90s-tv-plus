@@ -227,10 +227,10 @@ body, #bookmark-button {
 
 @media screen and (max-width: 576px) {
     #all-shows-section .my-card .card {
-        width: 150px !important;
+        width: 160px !important;
     }
     #all-shows-section .my-card .card > div:first-child {
-        height: 210px !important;
+        height: 230px !important;
     }
 }
 
