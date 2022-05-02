@@ -11,6 +11,7 @@
     "fandomWiki": "https://kamenrider.fandom.com/wiki/Kamen_Rider_Black_RX",
     "imdbUrl": "https://www.imdb.com/title/tt0151178/",
     "imdbRating": "8.2",
+    "maturityRating": "PG",
     "releaseInfo": "1987-1988",
     "averageRunningTime": "25m",
     "seasons": [
@@ -31,6 +32,7 @@
     "fandomWiki": "https://metalheroes.fandom.com/wiki/Uchuu_Keiji_Shaider",
     "imdbUrl": "https://www.imdb.com/title/tt0185829",
     "imdbRating": "7.8",
+    "maturityRating": "PG",
     "releaseInfo": "1984-1985",
     "averageRunningTime": "30m",
     "seasons": [
@@ -53,6 +55,7 @@
     "fandomWiki": "https://powerrangers.fandom.com/wiki/Kousoku_Sentai_Turboranger",
     "imdbUrl": "https://www.imdb.com/title/tt0096629",
     "imdbRating": "7.4",
+    "maturityRating": "PG",
     "releaseInfo": "1989-1990",
     "averageRunningTime": "30m",
     "seasons": [
@@ -76,6 +79,7 @@
     "fandomWiki": "https://powerrangers.fandom.com/wiki/Hikari_Sentai_Maskman",
     "imdbUrl": "https://www.imdb.com/title/tt0092371",
     "imdbRating": "7.1",
+    "maturityRating": "PG",
     "releaseInfo": "1987-1988",
     "averageRunningTime": "30m",
     "seasons": [
@@ -96,6 +100,7 @@
     "fandomWiki": "https://powerrangers.fandom.com/wiki/Chikyuu_Sentai_Fiveman",
     "imdbUrl": "https://www.imdb.com/title/tt0098767",
     "imdbRating": "7.5",
+    "maturityRating": "PG",
     "releaseInfo": "1990-1991",
     "averageRunningTime": "25m",
     "seasons": [
@@ -116,6 +121,7 @@
     "fandomWiki": "https://powerrangers.fandom.com/wiki/Choujin_Sentai_Jetman",
     "imdbUrl": "https://www.imdb.com/title/tt0101063",
     "imdbRating": "8.3",
+    "maturityRating": "13",
     "releaseInfo": "1991-1992",
     "averageRunningTime": "25m",
     "seasons": [
@@ -136,6 +142,7 @@
     "fandomWiki": "https://kamenrider.fandom.com/wiki/Kamen_Rider_Black",
     "imdbUrl": "https://www.imdb.com/title/tt0156213",
     "imdbRating": "8.3",
+    "maturityRating": "PG",
     "releaseInfo": "1987-1988",
     "averageRunningTime": "25m",
     "seasons": [
@@ -157,6 +164,7 @@
     "fandomWiki": "https://powerrangers.fandom.com/wiki/Choudenshi_Bioman",
     "imdbUrl": "https://www.imdb.com/title/tt0086683",
     "imdbRating": "6.5",
+    "maturityRating": "PG",
     "releaseInfo": "1984-1985",
     "averageRunningTime": "30m",
     "seasons": [
@@ -178,6 +186,7 @@
     "fandomWiki": "https://manga.fandom.com/wiki/T%C5%8Dsh%C5%8D_Daimos",
     "imdbUrl": "https://www.imdb.com/title/tt0159923",
     "imdbRating": "7.9",
+    "maturityRating": "13",
     "releaseInfo": "1978-1979",
     "averageRunningTime": "24m",
     "seasons": [
@@ -198,6 +207,7 @@
     "fandomWiki": "https://superrobotwars.fandom.com/wiki/Super_Electromagnetic_Machine_Voltes_V",
     "imdbUrl": "https://www.imdb.com/title/tt0159855",
     "imdbRating": "8.1",
+    "maturityRating": "13",
     "releaseInfo": "1977-1978",
     "averageRunningTime": "24m",
     "seasons": [
@@ -218,6 +228,7 @@
     "fandomWiki": "https://metalheroes.fandom.com/wiki/Uchuu_Keiji_Gavan",
     "imdbUrl": "https://www.imdb.com/title/tt0182637",
     "imdbRating": "7.5",
+    "maturityRating": "PG",
     "releaseInfo": "1982-1983",
     "averageRunningTime": "30m",
     "seasons": [
@@ -238,6 +249,7 @@
     "fandomWiki": "https://btx.fandom.com/wiki/B%27t_X",
     "imdbUrl": "https://www.imdb.com/title/tt0331863",
     "imdbRating": "6.8",
+    "maturityRating": "PG",
     "releaseInfo": "1996-1997",
     "averageRunningTime": "25m",
     "seasons": [
@@ -258,6 +270,7 @@
     "fandomWiki": "https://kishin-douji-zenki.fandom.com/wiki/Zenki",
     "imdbUrl": "https://www.imdb.com/title/tt0112233",
     "imdbRating": "6.5",
+    "maturityRating": "13",
     "releaseInfo": "1995",
     "averageRunningTime": "22m",
     "seasons": [
@@ -277,6 +290,7 @@
     "fandomWiki": "https://flameofrecca.fandom.com/wiki/Main_Page",
     "imdbUrl": "https://www.imdb.com/title/tt2160200",
     "imdbRating": "7.3",
+    "maturityRating": "13",
     "releaseInfo": "1997-1998",
     "averageRunningTime": "22m",
     "seasons": [
@@ -297,6 +311,7 @@
     "fandomWiki": "https://slamdunk.fandom.com/wiki/Main_Page",
     "imdbUrl": "https://www.imdb.com/title/tt0965547",
     "imdbRating": "8.7",
+    "maturityRating": "13",
     "releaseInfo": "1993-1996",
     "averageRunningTime": "22m",
     "seasons": [
@@ -318,6 +333,7 @@
     "fandomWiki": "https://gundam.fandom.com/wiki/Mobile_Suit_Gundam_Wing",
     "imdbUrl": "https://www.imdb.com/title/tt0159193",
     "imdbRating": "8.0",
+    "maturityRating": "13",
     "releaseInfo": "1995-1996",
     "averageRunningTime": "30m",
     "seasons": [
@@ -341,6 +357,7 @@
     "fandomWiki": "https://magicknightrayearth.fandom.com/wiki/Magic_Knight_Rayearth_Wiki",
     "imdbUrl": "https://www.imdb.com/title/tt0112057",
     "imdbRating": "7.6",
+    "maturityRating": "13",
     "releaseInfo": "1994-1995",
     "averageRunningTime": "20m",
     "seasons": [
@@ -362,6 +379,7 @@
     "fandomWiki": "https://tokusatsu.fandom.com/wiki/Seiun_Kamen_Machineman",
     "imdbUrl": "https://www.imdb.com/title/tt0184142",
     "imdbRating": "7.6",
+    "maturityRating": "PG",
     "releaseInfo": "1984",
     "averageRunningTime": "30m",
     "seasons": [
@@ -382,6 +400,7 @@
     "fandomWiki": "https://yuyuhakusho.fandom.com/wiki/YuYu_Hakusho",
     "imdbUrl": "https://www.imdb.com/title/tt0185133",
     "imdbRating": "8.5",
+    "maturityRating": "13",
     "releaseInfo": "1992-1995",
     "averageRunningTime": "24m",
     "seasons": [
@@ -405,6 +424,7 @@
     "fandomWiki": "https://mini-4wd.fandom.com/wiki/Bakusou_Kyoudai_Let%27s_%26_Go!",
     "imdbUrl": "https://www.imdb.com/title/tt1204829",
     "imdbRating": "7.1",
+    "maturityRating": "G",
     "releaseInfo": "1996-1997",
     "averageRunningTime": "25m",
     "seasons": [

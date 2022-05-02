@@ -46,6 +46,10 @@ const showSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    maturityRating: {
+        type: String,
+        required: true
+    },
     releaseInfo: {
         type: String,
         required: true
