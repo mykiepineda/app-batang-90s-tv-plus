@@ -4,7 +4,7 @@ const app = express();
 const path = require("path");
 app.use(express.static(path.join(__dirname, "public"))); // Make the "public" folder available statically
 
-require("dotenv").config({path: ".env"});
+require("dotenv").config({path: "process.env"});
 const port = (process.env.NODE_ENV === "production" ? process.env.PORT : 3000);
 
 const mongoose = require("mongoose");
@@ -323,7 +323,7 @@ app.get("/video/:objectId", async function (req, res, next) {
 
     const episode = await videos.findOne({_id: req.params.objectId}).lean();
     const show = await shows.findOne({_id: episode.showId}).lean();
-    const key = `${show.slug}/${episode.episode}.mp4`;
+    const key = `videos/${show.slug}/${episode.episode}.mp4`;
 
     const s3 = new AWS.S3();
 
