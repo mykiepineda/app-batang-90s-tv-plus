@@ -4,7 +4,7 @@ const app = express();
 const path = require("path");
 app.use(express.static(path.join(__dirname, "public"))); // Make the "public" folder available statically
 
-require("dotenv").config({path: "process.env"});
+require("dotenv").config({path: ".env"});
 const port = (process.env.NODE_ENV === "production" ? process.env.PORT : 3000);
 
 const mongoose = require("mongoose");
