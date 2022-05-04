@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const videoSchema = new mongoose.Schema({
     episode: {
-        type: String,
+        type: Number,
         required: true
     },
     title: {
@@ -17,6 +17,10 @@ const videoSchema = new mongoose.Schema({
         required: true
     },
     thumbnail: {
+        type: String,
+        required: true
+    },
+    video: {
         type: String,
         required: true
     },

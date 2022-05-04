@@ -1,5 +1,9 @@
 # Exclude files from these folders when heroku compresses the application
 # in order to keep the slug size small
 
+/assets/
+/data/
 /public/icons/
 /public/local_images/
+/public/videos/
+/specs/

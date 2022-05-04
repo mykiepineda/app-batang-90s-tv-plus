@@ -218,17 +218,12 @@ app.get("/show/:slug", initTopNavBar(), async function (req, res) {
 
 function getOtherEpisode(episode, next) {
 
-    // TODO: Fix me when episode number is three digits
     let intEpisode = parseInt(episode);
 
     if (next) {
         intEpisode++;
     } else {
         intEpisode--;
-    }
-
-    if (intEpisode < 10) {
-        return `0${intEpisode}`;
     }
 
     return intEpisode.toString();
@@ -286,22 +281,19 @@ app.get("/show/:slug/episode/:id", initTopNavBar(), async function (req, res) {
             res.render("error");
         } else {
 
-            let minEpisode = null;
+            let minEpisode = 1;
             let maxEpisode = null;
 
-            await videos.findOne({showId: showId}).sort({episode: 1}).then(function (doc) {
-                minEpisode = doc.toJSON().episode;
-            });
             await videos.findOne({showId: showId}).sort({episode: -1}).then(function (doc) {
                 maxEpisode = doc.toJSON().episode;
             });
 
-            video.url = `${process.env.AWS_CLOUDFRONT_ROOT_URL}/videos/${slug}/${video.episode}.mp4`;
+            video.url = `${process.env.AWS_CLOUDFRONT_ROOT_URL}/videos/${slug}/${video.video}`;
             res.locals.video = video;
             res.locals.prevEpisode = getOtherEpisode(video.episode, false);
             res.locals.nextEpisode = getOtherEpisode(video.episode, true);
-            res.locals.reachedStart = (episodeId === minEpisode);
-            res.locals.reachedEnd = (episodeId === maxEpisode);
+            res.locals.reachedStart = (episodeId == minEpisode);
+            res.locals.reachedEnd = (episodeId == maxEpisode);
             res.locals.showId = showId;
             res.locals.show = show;
 
