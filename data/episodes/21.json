@@ -1,0 +1,522 @@
+[
+  {
+    "episode": 1,
+    "title": "Heisei’s Samurai Yaiba Appears",
+    "airDate": "1993-04-09",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "01.jpg",
+    "video": "01.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 2,
+    "title": "The Revived Sword of Fuujin",
+    "airDate": "1993-04-16",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "02.jpg",
+    "video": "02.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 3,
+    "title": "Sword of Raijin/Sword of Fuujin",
+    "airDate": "1993-04-23",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "03.jpg",
+    "video": "03.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 4,
+    "title": "The Eight Demons: Frog Man’s Assault",
+    "airDate": "1993-04-30",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "04.jpg",
+    "video": "04.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 5,
+    "title": "Special Attack Whirlwind Sword",
+    "airDate": "1993-05-07",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "05.jpg",
+    "video": "05.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 6,
+    "title": "Frightening Slug Man Appears",
+    "airDate": "1993-05-14",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "06.jpg",
+    "video": "06.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 7,
+    "title": "The Eight Demons: Spider Man’s Weakness!?",
+    "airDate": "1993-05-21",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "07.jpg",
+    "video": "07.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 8,
+    "title": "Vampire: Bat Guy!",
+    "airDate": "1993-05-28",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "08.jpg",
+    "video": "08.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 9,
+    "title": "The Secret of the Onimaru Manjuu",
+    "airDate": "1993-06-04",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "09.jpg",
+    "video": "09.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 10,
+    "title": "The Revival of the Master Swordsman, Kojiro",
+    "airDate": "1993-06-11",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "10.jpg",
+    "video": "10.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 11,
+    "title": "Who Is the Strongest Swordsman!?",
+    "airDate": "1993-06-18",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "11.jpg",
+    "video": "11.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 12,
+    "title": "The Birth of the Lightning Slash",
+    "airDate": "1993-06-25",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "12.jpg",
+    "video": "12.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 13,
+    "title": "Gigantic Anglerfish!? Infiltrate Onimaru Castle",
+    "airDate": "1993-07-02",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "13.jpg",
+    "video": "13.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 14,
+    "title": "Vanished? The Enemy Chameleon",
+    "airDate": "1993-07-09",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "14.jpg",
+    "video": "14.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 15,
+    "title": "Kojiro’s Betrayal!?",
+    "airDate": "1993-07-16",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "15.jpg",
+    "video": "15.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 16,
+    "title": "The Strongest Machine of the Four Guardians Attacks!",
+    "airDate": "1993-07-23",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "16.jpg",
+    "video": "16.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 17,
+    "title": "Wind and Thunder Clash! Yaiba vs. Onimaru",
+    "airDate": "1993-07-30",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "17.jpg",
+    "video": "17.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 18,
+    "title": "Searching for the Legendary Orb",
+    "airDate": "1993-08-06",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "18.jpg",
+    "video": "18.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 19,
+    "title": "What Kind of an Orb is the Golden Orb?",
+    "airDate": "1993-08-13",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "19.jpg",
+    "video": "19.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 20,
+    "title": "Legend of the Red Dragon!! Shiro Amakusa Appears!",
+    "airDate": "1993-08-20",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "20.jpg",
+    "video": "20.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 21,
+    "title": "Feverish Hell! Steal the Flame Orb!!",
+    "airDate": "1993-08-27",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "21.jpg",
+    "video": "21.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 22,
+    "title": "The World Renowned Thief, Goemon",
+    "airDate": "1993-09-03",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "22.jpg",
+    "video": "22.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 23,
+    "title": "Huge Battle! Buddha vs. Osaka Onimaru Castle",
+    "airDate": "1993-09-10",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "23.jpg",
+    "video": "23.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 24,
+    "title": "Friend or Foe? The Revival of Jubei Yagyu!",
+    "airDate": "1993-09-17",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "24.jpg",
+    "video": "24.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 25,
+    "title": "The Waiting Trap!? The Decisive Battle of Kawanakajima",
+    "airDate": "1993-09-24",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "25.jpg",
+    "video": "25.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 26,
+    "title": "The Darkness Orb is the Entrance to the Dark World",
+    "airDate": "1993-10-01",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "26.jpg",
+    "video": "26.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 27,
+    "title": "Throw Away Your Dream! Special Training Deadly Sword",
+    "airDate": "1993-10-08",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "27.jpg",
+    "video": "27.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 28,
+    "title": "Fast Ball Match! Strike Out Benkei",
+    "airDate": "1993-10-15",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "28.jpg",
+    "video": "28.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 29,
+    "title": "What!? 100,000 Legendary Orbs",
+    "airDate": "1993-10-22",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "29.jpg",
+    "video": "29.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 30,
+    "title": "Stinger of Petrification! Monkey Basho",
+    "airDate": "1993-10-29",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "30.jpg",
+    "video": "30.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 31,
+    "title": "Aim for the Ryuujin Orb on Mount Fuji!",
+    "airDate": "1993-11-05",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "31.jpg",
+    "video": "31.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 32,
+    "title": "Yaiba Loses the Seven Orbs!?",
+    "airDate": "1993-11-12",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "32.jpg",
+    "video": "32.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 33,
+    "title": "Ryuujin’s Ruthless Test",
+    "airDate": "1993-11-19",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "33.jpg",
+    "video": "33.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 34,
+    "title": "Disappearing Companions",
+    "airDate": "1993-11-26",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "34.jpg",
+    "video": "34.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 35,
+    "title": "The Strongest in History! The Ryuujin Sword!!",
+    "airDate": "1993-12-03",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "35.jpg",
+    "video": "35.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 36,
+    "title": "Invaders From the Moon - The Empress Kaguya",
+    "airDate": "1993-12-10",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "36.jpg",
+    "video": "36.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 37,
+    "title": "Large Sinking! Onimaru’s Floating Castle",
+    "airDate": "1993-12-17",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "37.jpg",
+    "video": "37.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 38,
+    "title": "Tokyo Flooding Strategy!",
+    "airDate": "1993-12-24",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "38.jpg",
+    "video": "38.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 39,
+    "title": "The Moon Alien Merged with the Gas Tank!?",
+    "airDate": "1993-12-27",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "39.jpg",
+    "video": "39.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 40,
+    "title": "Birth of the New Ryuujin Legend!!",
+    "airDate": "1994-01-07",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "40.jpg",
+    "video": "40.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 41,
+    "title": "Carry Out the Women Rescue Mission",
+    "airDate": "1994-01-14",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "41.jpg",
+    "video": "41.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 42,
+    "title": "Jubei Loses His Body!?",
+    "airDate": "1994-01-21",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "42.jpg",
+    "video": "42.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 43,
+    "title": "Sayaka’s In Trouble! Hurry, Yaiba",
+    "airDate": "1994-01-28",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "43.jpg",
+    "video": "43.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 44,
+    "title": "The Targeted Dragon Priestess - Sayaka",
+    "airDate": "1994-02-04",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "44.jpg",
+    "video": "44.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 45,
+    "title": "Gekko’s Return! The Demon King’s Sword",
+    "airDate": "1994-02-11",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "45.jpg",
+    "video": "45.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 46,
+    "title": "Yaiba, Defeated By the Demon King’s Sword",
+    "airDate": "1994-02-18",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "46.jpg",
+    "video": "46.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 47,
+    "title": "Onimaru Returns! Save Sayaka!!",
+    "airDate": "1994-02-25",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "47.jpg",
+    "video": "47.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 48,
+    "title": "Take That! Combined Technique Wave of Wind Thunder",
+    "airDate": "1994-03-04",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "48.jpg",
+    "video": "48.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 49,
+    "title": "The Terrible True Figure of Kaguya!",
+    "airDate": "1994-03-11",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "49.jpg",
+    "video": "49.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 50,
+    "title": "Desperate Situation! Yaiba Loses His Sword",
+    "airDate": "1994-03-18",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "50.jpg",
+    "video": "50.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 51,
+    "title": "The White Ryuujin Appears!!",
+    "airDate": "1994-03-25",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "51.jpg",
+    "video": "51.mp4",
+    "season": 1,
+    "showId": "21"
+  },
+  {
+    "episode": 52,
+    "title": "I’m Yaiba Kurogane, a Samurai!",
+    "airDate": "1994-04-01",
+    "synopsis": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Facilisi etiam dignissim diam quis enim lobortis scelerisque fermentum.",
+    "thumbnail": "52.jpg",
+    "video": "52.mp4",
+    "season": 1,
+    "showId": "21"
+  }
+]

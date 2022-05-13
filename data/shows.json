@@ -433,5 +433,25 @@
    "Movies"
   ],
   "details": "Bakusō Kyōdai Let's & Go!! (Japanese: 爆走兄弟レッツ&ゴー!!, Hepburn: Bakusō Kyōdai Rettsu Endo Gō!!, lit. \"The Racing Brothers Let's & Go!!\") is a manga series created by Tetsuhiro Koshita, first serialized in Shogakukan's CoroCoro Comic magazine from July 1994 to October 1999. The manga centers on Retsu and Go Seiba, twin brothers who focus on the world of miniature car racing known as Mini 4WD. It is created as a tie-in to Tamiya's Mini 4WD franchise (Mainly Fully Cowled, Mechanical and Aero), and it is the second series to center on the franchise since Dash! Yonkuro. Three anime adaptations of the manga were produced by Xebec from 1996 to 1998, each of which consisting of three 51-episode series, and was also made into several games. The series also released various merchandise, including CDs, trading cards, stickers, and even die-cast cars. In 2014, a sequel series, Return Racers, began serialization in Shogakukan's CoroCoro Aniki magazine, 20 years after the original series' serialization. A spinoff manga, which focuses on Tsubasa, was serialized on CoroCoro Ichiban on August 2017."
+ },
+ {
+  "_id": "21",
+  "categoryId": "05",
+  "title": "Kenyuu Densetsu Yaiba",
+  "summary": "Kurogane Yaiba is a boy who doesn't want to become what any regular kid would: A samurai. That's why he undergoes a hard training with his father, knowing only the forest as his world. Then, one day, he is sent to Japan, where he has to deal with a whole new civilized reality, meeting the Mine family, the evil Onimaru and even the legendary Musashi, having lots of dangerous adventures, becoming stronger everyday.",
+  "cover": "yaiba-cover.jpg",
+  "logo": "yaiba-logo.png",
+  "background": "background.png",
+  "titleCard": "yaiba-title-card.jpg",
+  "fandomWiki": "https://yaiba.fandom.com/wiki/Yaiba_Wiki",
+  "imdbUrl": "https://www.imdb.com/title/tt0476096",
+  "imdbRating": "7.3",
+  "maturityRating": "13",
+  "releaseInfo": "1993-1994",
+  "averageRunningTime": "30m",
+  "seasons": [
+   "Season 1"
+  ],
+  "details": "Yaiba (stylized as Y∀IBA) is a Japanese manga series written and illustrated by Gosho Aoyama. It was serialized in Shogakukan's Weekly Shōnen Sunday from September 1988 to December 1993, with its chapters collected in twenty-four tankōbon volumes. It was adapted into an anime television series titled Kenyū Densetsu Yaiba, aired on TV Tokyo from April 1993 to April 1994. In 1993, Yaiba received the 38th Shogakukan Manga Award for the shōnen category."
  }
 ]
