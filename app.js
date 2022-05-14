@@ -4,8 +4,10 @@ const app = express();
 const path = require("path");
 app.use(express.static(path.join(__dirname, "public"))); // Make the "public" folder available statically
 
+const isProdEnv = (process.env.NODE_ENV === "production");
+
 require("dotenv").config({path: "process.env"});
-const port = (process.env.NODE_ENV === "production" ? process.env.PORT : 3000);
+const port = (isProdEnv ? process.env.PORT : 3000);
 
 const mongoose = require("mongoose");
 const videos = require("./models/video");
@@ -32,7 +34,7 @@ AWS.config.update({
 });
 
 const wasabiBucket = process.env.WASABI_BUCKET;
-const fileSourceRootUrl = (process.env.NODE_ENV === "production" ? `${process.env.AWS_CLOUDFRONT_ROOT_URL}/` : "/local_");
+const fileSourceRootUrl = (isProdEnv ? `${process.env.AWS_CLOUDFRONT_ROOT_URL}/` : "/local_");
 const initTopNavBar = require("./modules/middleware");
 
 app.get("/", initTopNavBar(), async function (req, res) {
@@ -272,9 +274,13 @@ app.get("/show/:slug/episode/:id", initTopNavBar(), async function (req, res) {
     } else {
 
         const showId = show._id;
-        const episodeId = req.params.id;
+        let episodeId = req.params.id;
+        let video = null;
 
-        const video = await videos.findOne({showId: showId, episode: episodeId}).lean();
+        if (!isNaN(episodeId)) {
+            episodeId = parseInt(episodeId);
+            video = await videos.findOneAndUpdate({showId: showId, episode: episodeId},{$inc: {views: 1}}).lean();
+        }
 
         if (video === null) {
             res.locals.errorMessage = "Episode not found";
@@ -282,20 +288,21 @@ app.get("/show/:slug/episode/:id", initTopNavBar(), async function (req, res) {
         } else {
 
             let minEpisode = 1;
-            let maxEpisode = null;
+            let maxEpisode = 0;
 
             await videos.findOne({showId: showId}).sort({episode: -1}).then(function (doc) {
-                maxEpisode = doc.toJSON().episode;
+                maxEpisode = parseInt(doc.toJSON().episode);
             });
 
-            video.url = `${process.env.AWS_CLOUDFRONT_ROOT_URL}/videos/${slug}/${video.video}`;
+            video.url = (isProdEnv ? `${process.env.AWS_CLOUDFRONT_ROOT_URL}/videos/${slug}/${video.video}` : '/videos/sample.mp4');
             res.locals.video = video;
             res.locals.prevEpisode = getOtherEpisode(video.episode, false);
             res.locals.nextEpisode = getOtherEpisode(video.episode, true);
-            res.locals.reachedStart = (episodeId == minEpisode);
-            res.locals.reachedEnd = (episodeId == maxEpisode);
+            res.locals.reachedStart = (episodeId === minEpisode);
+            res.locals.reachedEnd = (episodeId === maxEpisode);
             res.locals.showId = showId;
             res.locals.show = show;
+            res.locals.otherEpisodes = await videos.find({showId: showId, episode: { $ne: episodeId}}).sort({episode: 1}).lean();
 
             await saveContinueWatching(video);
 
@@ -304,7 +311,7 @@ app.get("/show/:slug/episode/:id", initTopNavBar(), async function (req, res) {
     }
 });
 
-// TODO: Videos will be served using CDN URL directly for now until I figure out its maintaining cost
+// DEPRECATED!!!
 app.get("/video/:objectId", async function (req, res, next) {
 
     // Ensure there is a range given for the video

@@ -1,126 +1,220 @@
 <div class="container d-flex flex-column justify-content-center mt-3">
-    <div id="episode-container" class="d-flex flex-column">
-        <div class="d-flex align-items-center justify-content-between">
-            <div>
-                <h6 class="my-secondary-text" style="margin-bottom:0">{{show.title}}</h6>
-            </div>
-            <div>
-                <a href="/show/{{show.slug}}" role="button" class="btn" style="padding-left:0">
-                    <h6 style="color:white;margin-bottom:0" class="my-secondary-text"><i class="fa-solid fa-chevron-left"></i> Back</h6>
-                </a>
-            </div>
-        </div>
-        <div class="pt-2">
-            <div id="video-outer-container">
-                <div id="loader-container">
-                    <div class="lds-spinner">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+    <div id="episode-layout-container" class="row">
+        <div id="episode-video-col" class="col">
+            <div id="episode-container" class="d-flex flex-column">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div>
+                        <a href="/show/{{show.slug}}" role="button" class="btn" style="padding-left:0">
+                            <h6 class="my-secondary-text mb-0"><i
+                                    class="fa-solid fa-chevron-left"></i> Back</h6>
+                        </a>
                     </div>
+                    <!--                    <div>-->
+                    <!--                        <h6 class="my-secondary-text" style="margin-bottom:0">{{show.title}}</h6>-->
+                    <!--                    </div>-->
                 </div>
-                <div id="centre-video-controls-container" class="d-flex">
-                    <div class="my-play-pause-button-container d-flex align-items-center justify-content-center">
-                        <div class="d-flex align-items-center justify-content-center">
-                            {{>seek-10seconds-backward}}
+                <div class="pt-2">
+                    <div id="video-outer-container">
+                        <div id="loader-container">
+                            <div class="lds-spinner">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="my-play-pause-button-container d-flex align-items-center justify-content-center">
-                        <div class="d-flex align-items-center justify-content-center" style="width:25px;">
-                            <button id="play-pause-button" class="btn btn-light"><i class="fa fa-pause"></i>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="my-play-pause-button-container d-flex align-items-center justify-content-center">
-                        <div class="d-flex align-items-center justify-content-center">
-                            {{>seek-10seconds-forward}}
-                        </div>
-                    </div>
-                </div>
-                <div id="video-container">
-                    <div id="video-inner-container" class="d-flex align-items-center justify-content-center flex-column">
-                        <div id="video-not-found-banner">
-                            <h1>Error: Video not found!</h1>
-                        </div>
-                        <video id="video-player" poster="{{fileSourceRootUrl}}images/shows/{{video.showId}}/thumbnails/{{video.thumbnail}}" autoplay>
-                            <source src="{{video.url}}" type="video/mp4"/>
-                        </video>
-                        <div id="video-controls">
-                            <div id="video-controls-inner" class="row ps-3 pb-3 pe-3 pt-5">
-                                <div class="col d-flex align-items-center justify-content-start">
-                                    <div>
-                                        <div id="time">
-                                            <span id="current">0:00</span> / <span id="duration">0:00</span>
-                                        </div>
-                                    </div>
+                        <div id="centre-video-controls-container" class="d-flex">
+                            <div class="my-play-pause-button-container d-flex align-items-center justify-content-center">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    {{>seek-10seconds-backward}}
                                 </div>
-                                <div class="col d-flex align-items-center justify-content-center">
-                                    {{#unless reachedStart}}
-                                        <div id="step-backward-container">
-                                            <a href="/show/{{show.slug}}/episode/{{prevEpisode}}" role="button" class="btn btn-light">
-                                                <i class="fa fa-step-backward"></i>
-                                            </a>
-                                        </div>
-                                    {{/unless}}
-                                    {{#unless reachedEnd}}
-                                        <div id="step-forward-container">
-                                            <a href="/show/{{show.slug}}/episode/{{nextEpisode}}" role="button" class="btn btn-light">
-                                                <i class="fa fa-step-forward"></i>
-                                            </a>
-                                        </div>
-                                    {{/unless}}
+                            </div>
+                            <div class="my-play-pause-button-container d-flex align-items-center justify-content-center">
+                                <div class="d-flex align-items-center justify-content-center" style="width:25px;">
+                                    <button id="play-pause-button" class="btn btn-light"><i class="fa fa-pause"></i>
+                                    </button>
                                 </div>
-                                <div class="col d-flex align-items-center justify-content-end">
-                                    <div id="volume-container" class="d-flex flex-column p-1 align-items-center">
-                                        <div id="volume-slider-container" class="d-flex align-items-center justify-content-center">
-                                            <input id="volume-slider" type="range" min="0" max="1" step="0.10" value="1">
-                                        </div>
-                                        <div id="volume-button-container">
-                                            <button id="volume-button" class="btn btn-light text-start d-flex justify-content-start align-items-center">
-                                                <div id="volume-icons-container">
-                                                    {{>volume-high}}
-                                                    {{>volume-medium}}
-                                                    {{>volume-low}}
-                                                    {{>volume-none}}
+                            </div>
+                            <div class="my-play-pause-button-container d-flex align-items-center justify-content-center">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    {{>seek-10seconds-forward}}
+                                </div>
+                            </div>
+                        </div>
+                        <div id="video-container">
+                            <div id="video-inner-container"
+                                 class="d-flex align-items-center justify-content-center flex-column">
+                                <div id="video-not-found-banner">
+                                    <h1>Error: Video not found!</h1>
+                                </div>
+                                <video id="video-player"
+                                       poster="{{fileSourceRootUrl}}images/shows/{{video.showId}}/thumbnails/{{video.thumbnail}}"
+                                       autoplay>
+                                    <source src="{{video.url}}" type="video/mp4"/>
+                                </video>
+                                <div id="video-controls">
+                                    <div id="video-controls-inner" class="row ps-3 pb-3 pe-3 pt-5">
+                                        <div class="col d-flex align-items-center justify-content-start">
+                                            <div>
+                                                <div id="time">
+                                                    <span id="current">0:00</span> / <span id="duration">0:00</span>
                                                 </div>
-                                            </button>
+                                            </div>
+                                        </div>
+                                        <div class="col d-flex align-items-center justify-content-center">
+                                            {{#unless reachedStart}}
+                                                <div id="step-backward-container">
+                                                    <a href="/show/{{show.slug}}/episode/{{prevEpisode}}" role="button"
+                                                       class="btn btn-light">
+                                                        <i class="fa fa-step-backward"></i>
+                                                    </a>
+                                                </div>
+                                            {{/unless}}
+                                            {{#unless reachedEnd}}
+                                                <div id="step-forward-container">
+                                                    <a href="/show/{{show.slug}}/episode/{{nextEpisode}}" role="button"
+                                                       class="btn btn-light">
+                                                        <i class="fa fa-step-forward"></i>
+                                                    </a>
+                                                </div>
+                                            {{/unless}}
+                                        </div>
+                                        <div class="col d-flex align-items-center justify-content-end">
+                                            <div id="volume-container"
+                                                 class="d-flex flex-column p-1 align-items-center">
+                                                <div id="volume-slider-container"
+                                                     class="d-flex align-items-center justify-content-center">
+                                                    <input id="volume-slider" type="range" min="0" max="1" step="0.10"
+                                                           value="1">
+                                                </div>
+                                                <div id="volume-button-container">
+                                                    <button id="volume-button"
+                                                            class="btn btn-light text-start d-flex justify-content-start align-items-center">
+                                                        <div id="volume-icons-container">
+                                                            {{>volume-high}}
+                                                            {{>volume-medium}}
+                                                            {{>volume-low}}
+                                                            {{>volume-none}}
+                                                        </div>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                            <div>
+                                                <button id="fullscreen" class="btn btn-light"><i
+                                                        class="fa-solid fa-expand"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div>
-                                        <button id="fullscreen" class="btn btn-light"><i
-                                                class="fa-solid fa-expand"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="video-seeker-bar" class="ps-3 pe-3 pb-4">
-                                <div id="video-slide-container">
-                                    <div id="video-track">
-                                        <div id="video-progress"></div>
-                                    </div>
-                                    <div id="video-thumb">
-                                        <div id="video-thumb-indicator"></div>
+                                    <div id="video-seeker-bar" class="ps-3 pe-3 pb-4">
+                                        <div id="video-slide-container">
+                                            <div id="video-track">
+                                                <div id="video-progress"></div>
+                                            </div>
+                                            <div id="video-thumb">
+                                                <div id="video-thumb-indicator"></div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="pt-3">
+                    <div>
+                        <h6 class="my-tertiary-text"><a href="#">#Season{{video.season}}</a> <a
+                                href="#">#Episode{{video.episode}}</a></h6>
+                    </div>
+                    <h3 class="my-primary-text">{{video.title}}</h3>
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div>
+                            <h6 class="my-secondary-text mb-0">{{video.views}} views<span class="the-dot">{{#serialiseDate
+                                    video.airDate}}{{/serialiseDate}}</span></h6>
+                        </div>
+                        <div class="d-flex">
+                            <div>
+                                <a href="#" role="button" class="btn">
+                                    <h6 class="mb-0">
+                                        <i class="fa-solid fa-thumbs-up"></i>
+                                        {{video.likes}}
+                                    </h6>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" role="button" class="btn">
+                                    <h6 class="mb-0">
+                                        <i class="fa-solid fa-thumbs-down"></i>
+                                        {{video.dislikes}}
+                                    </h6>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" role="button" class="btn">
+                                    <h6 class="mb-0">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                        Share
+                                    </h6>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" role="button" class="btn">
+                                    <h6 class="mb-0">
+                                        <i class="fa-brands fa-twitter"></i>
+                                        Share
+                                    </h6>
+                                </a>
+                            </div>
+                            <div>
+                                <a href="#" role="button" class="btn">
+                                    <h6 class="mb-0">
+                                        <i class="fa-solid fa-flag"></i>
+                                        Report
+                                    </h6>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <div class="d-flex align-items-center justify-content-between mb-1">
+                        <div class="d-flex align-items-center">
+                            <div id="episode-title-card">
+                                <a href="/show/{{show.slug}}" role="button" class="btn">
+                                    <img src="{{@root.fileSourceRootUrl}}images/shows/{{show._id}}/title_card/{{show.titleCard}}"
+                                         alt="">
+                                </a>
+                            </div>
+                            <div>
+                                <h6 class="my-secondary-text mb-1">{{show.title}}</h6>
+                                <h6 class="my-tertiary-text">{{show.episodes}} Episodes</h6>
+                            </div>
+                        </div>
+                        <div>
+                            <a href="#" class="btn btn-light"><h6 class="mb-0" style="color:black"><i class="fa fa-plus-circle" aria-hidden="true"></i> My List</h6></a>
+                        </div>
+                    </div>
+                    <div style="margin-left:calc(50px + 16px)">
+                        <p class="my-secondary-text mb-0">{{video.synopsis}}</p>
+                    </div>
+                </div>
+                <hr>
+                <div>
+                    <h6>0 Comments</h6>
+                </div>
             </div>
         </div>
-        <div class="pt-3">
-            <h3 class="my-primary-text">S{{video.season}}:E{{video.episode}} "{{video.title}}"</h3>
-            <h6 class="my-tertiary-text">Original Air Date: {{#serialiseDate video.airDate}}{{/serialiseDate}}</h6>
-            <p class="my-secondary-text">{{video.synopsis}}</p>
+        <div id="other-episodes-col" class="col-3">
+            {{>other-episodes}}
         </div>
     </div>
     <script src="/scripts/episode.js"></script>

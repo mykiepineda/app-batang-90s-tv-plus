@@ -24,6 +24,18 @@ const videoSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    views: {
+        type: Number,
+        default: 1
+    },
+    likes: {
+        type: Number,
+        default: 0
+    },
+    dislikes: {
+        type: Number,
+        default: 0
+    },
     season: {
         type: Number,
         required: true

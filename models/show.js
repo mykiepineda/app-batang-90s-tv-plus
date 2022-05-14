@@ -67,6 +67,10 @@ const showSchema = new mongoose.Schema({
         type: Array,
         required: true
     },
+    episodes: {
+        type: Number,
+        required: true
+    },
     details: {
         type: String,
         required: true

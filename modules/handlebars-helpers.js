@@ -20,6 +20,7 @@ function serialiseDate(date) {
     const dayComponent = serialisedDate.getDate();
     const monthComponent = serialisedDate.getMonth() + 1;
     const monthLongDescriptions = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+    const monthShortDescriptions = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
     let dayString = String(dayComponent);
     if (dayComponent < 10) {
@@ -32,7 +33,7 @@ function serialiseDate(date) {
     }
 
     // Month DD, YYYY
-    return `${monthLongDescriptions[monthComponent-1]} ${dayString}, ${yearComponent}`;
+    return `${monthShortDescriptions[monthComponent-1]} ${dayString}, ${yearComponent}`;
 }
 
 module.exports = {
