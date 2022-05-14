@@ -323,7 +323,12 @@ body, #bookmark-button {
     width: 500px;
 }
 
-#episode-layout-container .btn > h1,h2,h3,h4,h5,h6 {
+#episode-layout-container .btn > h1,
+#episode-layout-container .btn > h2,
+#episode-layout-container .btn > h3,
+#episode-layout-container .btn > h4,
+#episode-layout-container .btn > h5,
+#episode-layout-container .btn > h6 {
     color: white;
 }
 
