@@ -496,8 +496,6 @@ app.get(["/like/:slug/episode/:episodeId","/dislike/:slug/episode/:episodeId"], 
             throw new Error("Episode not found!");
         }
 
-        console.log("like = " + like);
-
         if (like) {
             await videos.findOneAndUpdate({_id: video._id}, {$inc: {likes: 1}}).lean();
         } else {

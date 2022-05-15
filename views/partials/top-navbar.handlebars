@@ -14,9 +14,11 @@
                 <li class="nav-item active">
                     <a id="navbar-home" class="nav-link" href="/">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{show.fandomWiki}}" target="_blank">Fandom Wiki</a>
-                </li>
+                {{#unless atHome}}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{show.fandomWiki}}" target="_blank">Wiki</a>
+                    </li>
+                {{/unless}}
                 <li id="shows-dropdown" class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
                        aria-expanded="false">Shows</a>
@@ -32,7 +34,8 @@
                        aria-expanded="false">My list</a>
                     <div class="dropdown-menu" aria-labelledby="dropdown01">
                         {{#each myWatchist}}
-                            <a class="dropdown-item{{#ifEquals @root.showId this._id}} active{{/ifEquals}}" href="/show/{{this.slug}}">{{this.title}} ({{this.releaseInfo}})</a>
+                            <a class="dropdown-item{{#ifEquals @root.showId this._id}} active{{/ifEquals}}"
+                               href="/show/{{this.slug}}">{{this.title}} ({{this.releaseInfo}})</a>
                         {{/each}}
                     </div>
                 </li>
