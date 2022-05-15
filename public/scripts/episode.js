@@ -157,9 +157,9 @@ window.addEventListener("load", function () {
             await document.exitFullscreen();
         } else {
             await videoOuterContainer.requestFullscreen();
-            screen.orientation.lock("landscape-primary").then(function() {
+            screen.orientation.lock("landscape-primary").then(function () {
                 console.log("Locked screen orientation to landscape");
-            }).catch(function(error) {
+            }).catch(function (error) {
                 console.log(error);
             });
         }
@@ -250,6 +250,26 @@ window.addEventListener("load", function () {
 
     videoOuterContainer.addEventListener("touchstart", function () {
         videoControls.classList.toggle("opacity-1");
+    });
+
+    const addRemoveMyListButton = document.querySelector("#add-remove-my-list-btn");
+    const iconDom = addRemoveMyListButton.querySelector("i");
+    const showSlug = addRemoveMyListButton.dataset.showSlug;
+
+    addRemoveMyListButton.addEventListener("click", async function () {
+        const responsePromise = await fetch(`/watchlist/${showSlug}`);
+        const responseJson = await responsePromise.json();
+        if (responseJson.success) {
+            if (responseJson.action === "add") {
+                iconDom.classList.remove("fa-plus");
+                iconDom.classList.add("fa-minus");
+            } else {
+                iconDom.classList.add("fa-plus");
+                iconDom.classList.remove("fa-minus");
+            }
+        } else {
+            console.log(responseJson.message);
+        }
     });
 
 });

@@ -347,6 +347,10 @@ body, #bookmark-button {
     border-radius: 50%;
 }
 
+#hr-comments-other-episodes {
+    display: none;
+}
+
 @media screen and (max-width: 1100px) {
 
     #episode-layout-container {
@@ -377,6 +381,10 @@ body, #bookmark-button {
 
     #logo-image {
         width: 80%;
+    }
+
+    #hr-comments-other-episodes {
+        display: block;
     }
 
     #mid-navbar .navbar-nav div:nth-child(1),

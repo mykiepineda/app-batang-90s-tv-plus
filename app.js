@@ -6,7 +6,7 @@ app.use(express.static(path.join(__dirname, "public"))); // Make the "public" fo
 
 const isProdEnv = (process.env.NODE_ENV === "production");
 
-require("dotenv").config({path: "process.env"});
+require("dotenv").config({path: ".env"});
 const port = (isProdEnv ? process.env.PORT : 3000);
 
 const mongoose = require("mongoose");
@@ -153,7 +153,6 @@ app.get("/show/:slug", initTopNavBar(), async function (req, res) {
         // return other shows
         res.locals.suggestions = await shows.find().where("_id").ne(showId).sort({releaseInfo: 1, title: 1}).lean();
 
-        // TODO: modify videos model by renaming showId to show?
         const videoCollection = await videos.find({showId: showId}).populate({
             path: "showId",
             model: "shows"
@@ -279,7 +278,7 @@ app.get("/show/:slug/episode/:id", initTopNavBar(), async function (req, res) {
 
         if (!isNaN(episodeId)) {
             episodeId = parseInt(episodeId);
-            video = await videos.findOneAndUpdate({showId: showId, episode: episodeId},{$inc: {views: 1}}).lean();
+            video = await videos.findOneAndUpdate({showId: showId, episode: episodeId}, {$inc: {views: 1}}).lean();
         }
 
         if (video === null) {
@@ -302,9 +301,15 @@ app.get("/show/:slug/episode/:id", initTopNavBar(), async function (req, res) {
             res.locals.reachedEnd = (episodeId === maxEpisode);
             res.locals.showId = showId;
             res.locals.show = show;
-            res.locals.otherEpisodes = await videos.find({showId: showId, episode: { $ne: episodeId}}).sort({episode: 1}).lean();
+            res.locals.otherEpisodes = await videos.find({
+                showId: showId,
+                episode: {$ne: episodeId}
+            }).sort({episode: 1}).lean();
 
             await saveContinueWatching(video);
+
+            const temp = await users.findOne({_id: adminUserId, watchlists: {$elemMatch: {_id: showId}}}).lean();
+            res.locals.inWatchlist = (temp !== null);
 
             res.render("episode");
         }
@@ -384,34 +389,56 @@ async function addRemoveToWatchlist(add, userId, slug) {
 
     const userDoc = await users.findOne({_id: userId}).lean();
 
-    if (userDoc !== null) {
+    if (userDoc == null) {
+        throw new Error("User not found!");
+    }
 
-        const addThisShow = await shows.findOne({slug: slug}).lean();
+    const addThisShow = await shows.findOne({slug: slug}).lean();
 
-        if (add) {
-            await users.findOneAndUpdate(
-                {_id: userId},
-                {$addToSet: {watchlists: addThisShow}}
-            );
-        } else {
-            await users.findOneAndUpdate(
-                {_id: userId},
-                {$pull: {watchlists: {_id: addThisShow._id}}}
-            )
-        }
-
+    if (add) {
+        await users.findOneAndUpdate(
+            {_id: userId},
+            {$addToSet: {watchlists: addThisShow}}
+        );
+    } else {
+        await users.findOneAndUpdate(
+            {_id: userId},
+            {$pull: {watchlists: {_id: addThisShow._id}}}
+        )
     }
 
 }
 
-app.get(["/watchlist/add/:slug", "/watchlist/remove/:slug"], async function (req, res) {
+app.get("/watchlist/:slug", async function (req, res) {
 
     const slug = req.params.slug;
+    const redirect = (req.query.redirect === "true");
 
-    // TODO: Pass in logged-in user
-    await addRemoveToWatchlist((req.url.startsWith("/watchlist/add/", 0)), adminUserId, slug);
+    try {
 
-    res.redirect(`/show/${slug}`);
+        const show = await shows.findOne({slug: slug}).lean();
+
+        if (show == null) {
+            throw new Error("Show not found!");
+        }
+
+        // TODO: Pass in logged-in user
+        const userWatchlist = await users.findOne({_id: adminUserId, watchlists: {$elemMatch: {_id: show._id}}}).lean();
+        const add = (userWatchlist == null);
+
+        await addRemoveToWatchlist(add, adminUserId, slug);
+
+        if (redirect) {
+            res.redirect(`/show/${slug}`);
+        } else {
+            res.json({success: true, action: (add ? "add" : "remove"), message: null});
+        }
+
+    } catch (e) {
+        if (!redirect) {
+            res.json({success: false, action: null, message: e.toString()});
+        }
+    }
 
 });
 
@@ -570,7 +597,7 @@ app.get("/downloader", function (req, res) {
     ];
 
     for (let i = 0; i < fileIds.length; i++) {
-        const id = (i+1).toString();
+        const id = (i + 1).toString();
         const fileName = id.padStart(3, "0");
         const targetFile = fs.createWriteStream(`./public/local_images/shows/19/thumbnails/${fileName}.jpeg`);
         http.get(`https://beta.crunchyroll.com/imgsrv/display/thumbnail/320x180/catalog/crunchyroll/${fileIds[i]}.jpeg`, function (response) {

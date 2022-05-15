@@ -55,9 +55,8 @@
                                 <div id="video-not-found-banner">
                                     <h1>Error: Video not found!</h1>
                                 </div>
-                                <video id="video-player"
-                                       poster="{{fileSourceRootUrl}}images/shows/{{video.showId}}/thumbnails/{{video.thumbnail}}"
-                                       autoplay>
+                                <!--https://stackoverflow.com/questions/50287175/html5-video-autoplay-feature-not-working-without-muted-->
+                                <video id="video-player" poster="{{fileSourceRootUrl}}images/shows/{{video.showId}}/thumbnails/{{video.thumbnail}}" autoplay muted>
                                     <source src="{{video.url}}" type="video/mp4"/>
                                 </video>
                                 <div id="video-controls">
@@ -160,15 +159,7 @@
                             <div>
                                 <a href="#" role="button" class="btn">
                                     <h6 class="mb-0">
-                                        <i class="fa-brands fa-facebook-f"></i>
-                                        Share
-                                    </h6>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="#" role="button" class="btn">
-                                    <h6 class="mb-0">
-                                        <i class="fa-brands fa-twitter"></i>
+                                        <i class="fa-solid fa-share"></i>
                                         Share
                                     </h6>
                                 </a>
@@ -190,7 +181,7 @@
                         <div class="d-flex align-items-center">
                             <div id="episode-title-card">
                                 <a href="/show/{{show.slug}}" role="button" class="btn">
-                                    <img src="{{@root.fileSourceRootUrl}}images/shows/{{show._id}}/title_card/{{show.titleCard}}"
+                                    <img src="{{fileSourceRootUrl}}images/shows/{{show._id}}/title_card/{{show.titleCard}}"
                                          alt="">
                                 </a>
                             </div>
@@ -200,7 +191,9 @@
                             </div>
                         </div>
                         <div>
-                            <a href="#" class="btn btn-light"><h6 class="mb-0" style="color:black"><i class="fa fa-plus-circle" aria-hidden="true"></i> My List</h6></a>
+                            <button id="add-remove-my-list-btn" class="btn btn-light" data-show-slug="{{show.slug}}">
+                                <h6 class="mb-0" style="color:black"><i class="fa fa-{{#if inWatchlist}}minus{{else}}plus{{/if}}" aria-hidden="true"></i> My List</h6>
+                            </button>
                         </div>
                     </div>
                     <div style="margin-left:calc(50px + 16px)">
@@ -209,8 +202,9 @@
                 </div>
                 <hr>
                 <div>
-                    <h6>0 Comments</h6>
+                    <h6 class="mb-0"><span class="me-5">0 Comments</span><a href="">{{>bars-sort}} Sort By</a></h6>
                 </div>
+                <hr id="hr-comments-other-episodes">
             </div>
         </div>
         <div id="other-episodes-col" class="col-3">

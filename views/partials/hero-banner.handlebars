@@ -34,7 +34,7 @@
                             {{#if continueWatching}}Continue Watching{{else}}Play{{/if}}</h5></a>
                     </div>
                     <div id="add-to-watchlist">
-                        <a href="/watchlist/{{#if inWatchlist}}remove{{else}}add{{/if}}/{{show.slug}}"
+                        <a href="/watchlist/{{show.slug}}?redirect=true"
                            class="btn btn-outline-light pt-3 ps-5 pb-3 pe-5">
                             <h5 class="my-secondary-text" style="margin:5px 0">
                                 <i class="fa fa-{{#if inWatchlist}}minus{{else}}plus{{/if}}-circle"
