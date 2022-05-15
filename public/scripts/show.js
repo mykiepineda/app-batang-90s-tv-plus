@@ -184,4 +184,20 @@ window.addEventListener("load", function () {
         activateNavItemTabsInContext([false, false, true]);
     });
 
+    const showSummary = document.querySelector("#show-summary");
+    const showMore = document.querySelector("#show-more");
+    const showMoreText = showMore.querySelector("span");
+    const showMoreIcon = showMore.querySelector("i");
+
+    showMore.addEventListener("click", function() {
+        showSummary.classList.toggle("summary-overflow");
+        if (showMoreIcon.classList.contains("fa-chevron-down")) {
+            showMoreIcon.classList.replace("fa-chevron-down", "fa-chevron-up");
+            showMoreText.innerHTML = "SHOW LESS";
+        } else {
+            showMoreIcon.classList.replace("fa-chevron-up", "fa-chevron-down");
+            showMoreText.innerHTML = "SHOW MORE";
+        }
+    });
+
 });

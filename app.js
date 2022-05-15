@@ -49,6 +49,7 @@ app.get("/", initTopNavBar(), async function (req, res) {
             populate: {path: "showId", model: "shows"}
         })
         .lean();
+
     if (user !== null) {
         res.locals.userName = user.name;
         const cwList = user.continueWatching;
@@ -61,6 +62,7 @@ app.get("/", initTopNavBar(), async function (req, res) {
             return -1;
         });
         res.locals.continueWatching = cwList;
+
         if (cwList.length > 0) {
             const cardsPerPage = 5;
             let pagination = [];
@@ -212,6 +214,8 @@ app.get("/show/:slug", initTopNavBar(), async function (req, res) {
 
         }
 
+        res.locals.seasonsDescription = show.seasons;
+
         res.render("show");
 
     }
@@ -311,6 +315,8 @@ app.get("/show/:slug/episode/:id", initTopNavBar(), async function (req, res) {
 
             const temp = await users.findOne({_id: adminUserId, watchlists: {$elemMatch: {_id: showId}}}).lean();
             res.locals.inWatchlist = (temp !== null);
+
+            res.locals.seasonsDescription = show.seasons;
 
             res.render("episode");
         }

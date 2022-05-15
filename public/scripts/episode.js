@@ -319,4 +319,21 @@ window.addEventListener("load", function () {
         })
     }
 
+    const episodeSynopsis = document.querySelector("#episode-synopsis p");
+    const showMore = document.querySelector("#episode-show-more");
+    const showMoreText = showMore.querySelector("span");
+    const showMoreIcon = showMore.querySelector("i");
+
+    showMore.addEventListener("click", function() {
+        episodeSynopsis.classList.toggle("synopsis-overflow");
+        console.log(episodeSynopsis);
+        if (showMoreIcon.classList.contains("fa-chevron-down")) {
+            showMoreIcon.classList.replace("fa-chevron-down", "fa-chevron-up");
+            showMoreText.innerHTML = "SHOW LESS";
+        } else {
+            showMoreIcon.classList.replace("fa-chevron-up", "fa-chevron-down");
+            showMoreText.innerHTML = "SHOW MORE";
+        }
+    });
+
 });

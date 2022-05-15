@@ -53,7 +53,7 @@
                                 <!--https://stackoverflow.com/questions/50287175/html5-video-autoplay-feature-not-working-without-muted-->
                                 <video id="video-player"
                                        poster="{{fileSourceRootUrl}}images/shows/{{video.showId}}/thumbnails/{{video.thumbnail}}"
-                                       autoplay muted>
+                                       autoplay>
                                     <source src="{{video.url}}" type="video/mp4"/>
                                 </video>
                                 <div id="video-controls">
@@ -127,15 +127,15 @@
                 </div>
                 <div class="pt-3">
                     <div>
-                        <h6 class="my-tertiary-text"><a href="#">#Season{{video.season}}</a> <a
+                        <h6 class="my-tertiary-text"><a href="#">#{{#getSeasonsDescription @root.seasonsDescription video.season true}}{{/getSeasonsDescription}}</a> <a
                                 href="#">#Episode{{video.episode}}</a></h6>
                     </div>
                     <h3 class="my-primary-text">{{video.title}}</h3>
                     <div id="info-container" class="d-flex">
                         <div>
                             <h6 class="my-secondary-text mb-0">{{video.views}} views<span
-                                    class="the-dot">{{#serialiseDate
-                                    video.airDate}}{{/serialiseDate}}</span></h6>
+                                    class="the-dot">{{#formatDate
+                                    video.airDate}}{{/formatDate}}</span></h6>
                         </div>
                         <div class="d-flex">
                             <div>
@@ -182,25 +182,30 @@
                         <div class="d-flex align-items-center">
                             <div id="episode-title-card">
                                 <a href="/show/{{show.slug}}" role="button" class="btn my-btn">
-                                    <img src="{{fileSourceRootUrl}}images/shows/{{show._id}}/title_card/{{show.titleCard}}"
-                                         alt="">
+                                    <img src="{{fileSourceRootUrl}}images/shows/{{show._id}}/title_card/{{show.titleCard}}" alt="">
                                 </a>
                             </div>
-                            <div>
+                            <div class="me-2">
                                 <h6 class="my-secondary-text mb-1">{{show.title}}</h6>
-                                <h6 class="my-tertiary-text">{{show.episodes}} Episodes</h6>
+                                <h6 class="my-tertiary-text mb-0">{{show.episodes}} Episodes</h6>
                             </div>
                         </div>
                         <div>
                             <button id="add-remove-my-list-btn" class="btn btn-outline-light" data-show-slug="{{show.slug}}">
-                                <div class="mb-0"><i
-                                        class="me-1 fa fa-{{#if inWatchlist}}minus{{else}}plus{{/if}}-circle"
-                                        aria-hidden="true"></i><span>{{#if inWatchlist}}Remove from{{else}}Add to{{/if}} My List</span></div>
+                                <div class="mb-0 text-nowrap"><i class="me-1 fa fa-{{#if inWatchlist}}minus{{else}}plus{{/if}}-circle"></i>
+                                    <div id="episode-add-remove-my-list-non-sff-container" class="display-inline-block">
+                                        <span>{{#if inWatchlist}}Remove from{{else}}Add to{{/if}} My List</span>
+                                    </div>
+                                    <div id="episode-add-remove-my-list-sff-container" class="display-inline-block">
+                                        <span> My List</span>
+                                    </div>
+                                </div>
                             </button>
                         </div>
                     </div>
-                    <div style="margin-left:calc(50px + 16px)">
-                        <p class="my-secondary-text mb-0">{{video.synopsis}}</p>
+                    <div id="episode-synopsis" style="margin-left:calc(50px + 16px)">
+                        <p class="my-secondary-text mb-2 synopsis-overflow">{{video.synopsis}}</p>
+                        <div id="episode-show-more"><i class="fa-solid fa-chevron-down"></i> <span>SHOW MORE</span></div>
                     </div>
                 </div>
                 <hr>

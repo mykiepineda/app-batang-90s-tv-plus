@@ -17,8 +17,8 @@
         {{#each otherEpisodes}}
             <div style="margin-top:10px;margin-bottom:10px" data-season="{{this.season}}" class="my-card-container">
                 <a href="/show/{{@root.show.slug}}/episode/{{this.episode}}">
-                    <div id="card-body" class="card border-0 shadow flex-row">
-                        <div id="card-image-container" style="width:168px;height:94px">
+                    <div id="card-body" class="card border-0 shadow flex-row" style="height:94px">
+                        <div id="card-image-container" style="width:170px;height:100%">
                             <img id="card-image" class="card-img-top rounded-0"
                                  src="{{@root.fileSourceRootUrl}}images/shows/{{this.showId}}/thumbnails/{{this.thumbnail}}"
                                  alt="Card image cap">
@@ -27,7 +27,7 @@
                         <div id="card-title-container" class="card-body d-flex flex-column justify-content-between">
                             <div class="d-flex flex-column">
                                 <h6 class="card-title my-tertiary-text text-truncate my-line-clamp">
-                                    Season {{this.season}}</h6>
+                                    {{#getSeasonsDescription @root.seasonsDescription this.season false}}{{/getSeasonsDescription}}</h6>
                                 <h5 class="card-title my-secondary-text text-truncate my-line-clamp">
                                     <span>{{this.episode}}. {{this.title}}</span></h5>
                             </div>

@@ -12,7 +12,7 @@ function truncate(value) {
     return value;
 }
 
-function serialiseDate(date) {
+function formatDate(date) {
 
     // Wrap in Date object
     const serialisedDate = new Date(date);
@@ -36,8 +36,26 @@ function serialiseDate(date) {
     return `${monthShortDescriptions[monthComponent-1]} ${dayString}, ${yearComponent}`;
 }
 
+function getSeasonsDescription(array, index, stripWhitespace) {
+
+    let description = "";
+
+    for (let i = 0; array.length; i++) {
+        if (i === index - 1) {
+            description = array[i];
+            break;
+        }
+    }
+
+    if (stripWhitespace) {
+        return description.replace(/\s/g, '');
+    }
+    return description;
+}
+
 module.exports = {
     ifEquals,
     truncate,
-    serialiseDate
+    formatDate,
+    getSeasonsDescription
 };

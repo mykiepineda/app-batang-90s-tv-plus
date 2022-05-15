@@ -2,10 +2,10 @@
     {{#each pagination}}
         <div class="my-card-deck-{{season}} card-deck">
             {{#each videos}}
-                <div style="margin-top:25px;margin-bottom:25px">
+                <div class="mt-3 mb-3">
                     <a href="/show/{{this.showId.slug}}/episode/{{episode}}">
-                        <div id="card-body" class="card border-0 shadow">
-                            <div id="card-image-container">
+                        <div id="card-body" class="card border-0 shadow"{{#if @root.atHome}} style="height:120px"{{/if}}>
+                            <div id="card-image-container"{{#if @root.atHome}} style="height:120px"{{/if}}>
                                 <img id="card-image" class="card-img-top rounded-0" src="{{@root.fileSourceRootUrl}}images/shows/{{this.showId._id}}/thumbnails/{{this.thumbnail}}"
                                      alt="Card image cap">
                                 <i id="card-play-button" class="fa fa-play-circle-o" aria-hidden="true"></i>
@@ -13,10 +13,11 @@
                             <div id="card-title-container" class="card-body d-flex flex-column justify-content-between">
                                 <div class="d-flex flex-column">
                                     {{#if @root.atHome}}
-                                        <h5 class="card-title my-tertiary-text text-truncate my-line-clamp">{{this.showId.title}}</h5>
-                                        <p class="card-text my-secondary-text-text text-truncate my-line-clamp">S{{this.season}}:E{{this.episode}} "{{this.title}}"</p>
+                                        <h5 class="card-title my-tertiary-text text-truncate my-line-clamp-1">{{this.showId.title}}</h5>
+                                        <h6 class="card-title my-tertiary-text text-truncate my-line-clamp-1">{{#getSeasonsDescription this.showId.seasons this.season false}}{{/getSeasonsDescription}}</h6>
+                                        <h5 class="card-title my-secondary-text text-truncate my-line-clamp">{{this.episode}}. {{this.title}}</h5>
                                     {{else}}
-                                        <h6 class="card-title my-tertiary-text text-truncate my-line-clamp">Season {{this.season}}</h6>
+                                        <h6 class="card-title my-tertiary-text text-truncate my-line-clamp-1">{{#getSeasonsDescription @root.seasonsDescription this.season false}}{{/getSeasonsDescription}}</h6>
                                         <h5 class="card-title my-secondary-text text-truncate my-line-clamp">{{this.episode}}. {{this.title}}</h5>
                                         <h6 class="card-title my-tertiary-text text-truncate my-line-clamp">{{this.synopsis}}</h6>
                                     {{/if}}
