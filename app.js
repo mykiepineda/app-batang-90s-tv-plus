@@ -6,7 +6,7 @@ app.use(express.static(path.join(__dirname, "public"))); // Make the "public" fo
 
 const isProdEnv = (process.env.NODE_ENV === "production");
 
-require("dotenv").config({path: ".env"});
+require("dotenv").config({path: "process.env"});
 const port = (isProdEnv ? process.env.PORT : 3000);
 
 const mongoose = require("mongoose");
