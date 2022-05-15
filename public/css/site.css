@@ -317,6 +317,10 @@ body, #bookmark-button {
         flex-direction: row;
     }
 
+    #info-container {
+        align-items: center;
+        justify-content: space-between;
+    }
 }
 
 #logo-image {
@@ -352,6 +356,15 @@ body, #bookmark-button {
 }
 
 @media screen and (max-width: 1100px) {
+
+    #info-container {
+        align-items: start;
+        flex-direction: column;
+    }
+
+    #like-btn {
+        padding-left: 0;
+    }
 
     #episode-layout-container {
         flex-direction: column;
@@ -858,7 +871,7 @@ body, #bookmark-button {
 }
 
 #all-shows-section a:hover img {
-    border: 1px solid white;
+    border: 3px solid white;
     transform: scale(1.1);
 }
 
@@ -874,6 +887,14 @@ body, #bookmark-button {
 
 .mr-sm-2, .mx-sm-2 {
     margin-right: 0.5rem !important;
+}
+
+.my-btn {
+    transition: transform 0.25s ease;
+}
+
+.my-btn:hover {
+    transform: scale(1.2);
 }
 
 .form-inline {

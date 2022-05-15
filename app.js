@@ -293,8 +293,9 @@ app.get("/show/:slug/episode/:id", initTopNavBar(), async function (req, res) {
                 maxEpisode = parseInt(doc.toJSON().episode);
             });
 
-            video.url = (isProdEnv ? `${process.env.AWS_CLOUDFRONT_ROOT_URL}/videos/${slug}/${video.video}` : '/videos/sample.mp4');
-            res.locals.video = video;
+            // Query the DB again to retrieve the updated views count
+            res.locals.video = await videos.findOne({_id: video._id}).lean();
+            res.locals.video.url = (isProdEnv ? `${process.env.AWS_CLOUDFRONT_ROOT_URL}/videos/${slug}/${video.video}` : '/videos/sample.mp4');
             res.locals.prevEpisode = getOtherEpisode(video.episode, false);
             res.locals.nextEpisode = getOtherEpisode(video.episode, true);
             res.locals.reachedStart = (episodeId === minEpisode);
@@ -475,6 +476,47 @@ app.get("/initialise-database", async function (req, res) {
     message += `\n${seqNbr++}. end database initialisation.`;
 
     res.json({message: message});
+});
+
+app.get(["/like/:slug/episode/:episodeId","/dislike/:slug/episode/:episodeId"], async function (req, res) {
+
+    try {
+        const url = req.url;
+        const like = (url.startsWith("/like/"));
+        const show = await shows.findOne({slug: req.params.slug}).lean();
+
+        if (show === null) {
+            throw new Error("Show not found!");
+        }
+
+        const episodeId = req.params.episodeId;
+        const video = await videos.findOne({episode: episodeId, showId: show._id}).lean();
+
+        if (video === null) {
+            throw new Error("Episode not found!");
+        }
+
+        console.log("like = " + like);
+
+        if (like) {
+            await videos.findOneAndUpdate({_id: video._id}, {$inc: {likes: 1}}).lean();
+        } else {
+            await videos.findOneAndUpdate({_id: video._id}, {$inc: {dislikes: 1}}).lean();
+        }
+
+        // Query the DB again to retrieve updated count
+        const result = await videos.findOne({_id: video._id}).lean();
+
+        if (like) {
+            res.json({success: true, count: result.likes, message: null});
+        } else {
+            res.json({success: true, count: result.dislikes, message: null});
+        }
+
+    } catch (e) {
+        res.json({success: false, count: null, message: e.toString()});
+    }
+
 });
 
 app.get("/downloader", function (req, res) {

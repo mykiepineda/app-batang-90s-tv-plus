@@ -254,6 +254,7 @@ window.addEventListener("load", function () {
 
     const addRemoveMyListButton = document.querySelector("#add-remove-my-list-btn");
     const iconDom = addRemoveMyListButton.querySelector("i");
+    const textDom = addRemoveMyListButton.querySelector("span");
     const showSlug = addRemoveMyListButton.dataset.showSlug;
 
     addRemoveMyListButton.addEventListener("click", async function () {
@@ -261,15 +262,37 @@ window.addEventListener("load", function () {
         const responseJson = await responsePromise.json();
         if (responseJson.success) {
             if (responseJson.action === "add") {
-                iconDom.classList.remove("fa-plus");
-                iconDom.classList.add("fa-minus");
+                iconDom.classList.remove("fa-plus-circle");
+                iconDom.classList.add("fa-minus-circle");
+                textDom.innerHTML = "Remove from My List";
             } else {
-                iconDom.classList.add("fa-plus");
-                iconDom.classList.remove("fa-minus");
+                iconDom.classList.add("fa-plus-circle");
+                iconDom.classList.remove("fa-minus-circle");
+                textDom.innerHTML = "Add to My List";
             }
         } else {
             console.log(responseJson.message);
         }
+    });
+
+    const likeButton = document.querySelector("#like-btn");
+    const dislikeButton = document.querySelector("#dislike-btn");
+
+    async function updateLikeDislikeCounter(action, targetDom) {
+        const responsePromise = await fetch(`/${action}/${targetDom.dataset.showSlug}/episode/${targetDom.dataset.episode}`);
+        const responseJson = await responsePromise.json();
+        if (responseJson.success) {
+            targetDom.querySelector("span").innerHTML = responseJson.count;
+        } else {
+            console.log(responseJson.message);
+        }
+    }
+
+    likeButton.addEventListener("click", async function() {
+        await updateLikeDislikeCounter("like", this);
+    });
+    dislikeButton.addEventListener("click", async function() {
+        await updateLikeDislikeCounter("dislike", this);
     });
 
 });

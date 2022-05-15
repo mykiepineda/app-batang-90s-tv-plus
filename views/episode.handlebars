@@ -2,16 +2,11 @@
     <div id="episode-layout-container" class="row">
         <div id="episode-video-col" class="col">
             <div id="episode-container" class="d-flex flex-column">
-                <div class="d-flex align-items-center justify-content-between">
-                    <div>
-                        <a href="/show/{{show.slug}}" role="button" class="btn" style="padding-left:0">
-                            <h6 class="my-secondary-text mb-0"><i
-                                    class="fa-solid fa-chevron-left"></i> Back</h6>
-                        </a>
-                    </div>
-                    <!--                    <div>-->
-                    <!--                        <h6 class="my-secondary-text" style="margin-bottom:0">{{show.title}}</h6>-->
-                    <!--                    </div>-->
+                <div>
+                    <a href="/show/{{show.slug}}" role="button" class="btn ps-0">
+                        <h6 class="my-secondary-text mb-0"><i
+                                class="fa-solid fa-chevron-left"></i> Back</h6>
+                    </a>
                 </div>
                 <div class="pt-2">
                     <div id="video-outer-container">
@@ -56,7 +51,9 @@
                                     <h1>Error: Video not found!</h1>
                                 </div>
                                 <!--https://stackoverflow.com/questions/50287175/html5-video-autoplay-feature-not-working-without-muted-->
-                                <video id="video-player" poster="{{fileSourceRootUrl}}images/shows/{{video.showId}}/thumbnails/{{video.thumbnail}}" autoplay muted>
+                                <video id="video-player"
+                                       poster="{{fileSourceRootUrl}}images/shows/{{video.showId}}/thumbnails/{{video.thumbnail}}"
+                                       autoplay muted>
                                     <source src="{{video.url}}" type="video/mp4"/>
                                 </video>
                                 <div id="video-controls">
@@ -134,30 +131,33 @@
                                 href="#">#Episode{{video.episode}}</a></h6>
                     </div>
                     <h3 class="my-primary-text">{{video.title}}</h3>
-                    <div class="d-flex align-items-center justify-content-between">
+                    <div id="info-container" class="d-flex">
                         <div>
-                            <h6 class="my-secondary-text mb-0">{{video.views}} views<span class="the-dot">{{#serialiseDate
+                            <h6 class="my-secondary-text mb-0">{{video.views}} views<span
+                                    class="the-dot">{{#serialiseDate
                                     video.airDate}}{{/serialiseDate}}</span></h6>
                         </div>
                         <div class="d-flex">
                             <div>
-                                <a href="#" role="button" class="btn">
+                                <button id="like-btn" class="btn my-btn" data-show-slug="{{show.slug}}"
+                                        data-episode="{{video.episode}}">
                                     <h6 class="mb-0">
                                         <i class="fa-solid fa-thumbs-up"></i>
-                                        {{video.likes}}
+                                        <span>{{video.likes}}</span>
                                     </h6>
-                                </a>
+                                </button>
                             </div>
                             <div>
-                                <a href="#" role="button" class="btn">
+                                <button id="dislike-btn" class="btn my-btn" data-show-slug="{{show.slug}}"
+                                        data-episode="{{video.episode}}">
                                     <h6 class="mb-0">
                                         <i class="fa-solid fa-thumbs-down"></i>
-                                        {{video.dislikes}}
+                                        <span>{{video.dislikes}}</span>
                                     </h6>
-                                </a>
+                                </button>
                             </div>
                             <div>
-                                <a href="#" role="button" class="btn">
+                                <a href="#" role="button" class="btn my-btn">
                                     <h6 class="mb-0">
                                         <i class="fa-solid fa-share"></i>
                                         Share
@@ -165,7 +165,8 @@
                                 </a>
                             </div>
                             <div>
-                                <a href="#" role="button" class="btn">
+                                <a href="mailto:mykie.pineda@gmail.com?subject=[{{show.title}}] S{{video.season}}E{{video.episode}}: {{video.title}}"
+                                   role="button" class="btn my-btn">
                                     <h6 class="mb-0">
                                         <i class="fa-solid fa-flag"></i>
                                         Report
@@ -180,7 +181,7 @@
                     <div class="d-flex align-items-center justify-content-between mb-1">
                         <div class="d-flex align-items-center">
                             <div id="episode-title-card">
-                                <a href="/show/{{show.slug}}" role="button" class="btn">
+                                <a href="/show/{{show.slug}}" role="button" class="btn my-btn">
                                     <img src="{{fileSourceRootUrl}}images/shows/{{show._id}}/title_card/{{show.titleCard}}"
                                          alt="">
                                 </a>
@@ -191,8 +192,10 @@
                             </div>
                         </div>
                         <div>
-                            <button id="add-remove-my-list-btn" class="btn btn-light" data-show-slug="{{show.slug}}">
-                                <h6 class="mb-0" style="color:black"><i class="fa fa-{{#if inWatchlist}}minus{{else}}plus{{/if}}" aria-hidden="true"></i> My List</h6>
+                            <button id="add-remove-my-list-btn" class="btn btn-outline-light" data-show-slug="{{show.slug}}">
+                                <div class="mb-0"><i
+                                        class="me-1 fa fa-{{#if inWatchlist}}minus{{else}}plus{{/if}}-circle"
+                                        aria-hidden="true"></i><span>{{#if inWatchlist}}Remove from{{else}}Add to{{/if}} My List</span></div>
                             </button>
                         </div>
                     </div>
