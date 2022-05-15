@@ -355,6 +355,10 @@ body, #bookmark-button {
     display: none;
 }
 
+#episode-list-filter-container {
+    transform: translateX(-0.25rem);
+}
+
 @media screen and (max-width: 1100px) {
 
     #info-container {

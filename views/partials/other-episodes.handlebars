@@ -1,25 +1,41 @@
 <div>
-    <h6 style="padding-top:0.375rem;padding-right:0.75rem;padding-bottom:0.375rem;">Other Episodes</h6>
+    <div class="d-flex align-items-center mb-2">
+        <div class="me-2">
+            {{>filter-list-icon}}
+        </div>
+        <div><h6 class="mb-0">Other Episodes</h6></div>
+    </div>
 
-    {{#each otherEpisodes}}
-        <div style="margin-top:10px;margin-bottom:10px">
-            <a href="/show/{{@root.show.slug}}/episode/{{episode}}">
-                <div id="card-body" class="card border-0 shadow flex-row">
-                    <div id="card-image-container" style="width:168px;height:94px">
-                        <img id="card-image" class="card-img-top rounded-0"
-                             src="{{@root.fileSourceRootUrl}}images/shows/{{this.showId}}/thumbnails/{{this.thumbnail}}"
-                             alt="Card image cap">
-                        <i id="card-play-button" class="fa fa-play-circle-o" aria-hidden="true"></i>
-                    </div>
-                    <div id="card-title-container" class="card-body d-flex flex-column justify-content-between">
-                        <div class="d-flex flex-column">
-                            <h6 class="card-title my-tertiary-text text-truncate my-line-clamp">
-                                Season {{this.season}}</h6>
-                            <h5 class="card-title my-secondary-text text-truncate my-line-clamp">{{this.episode}}. {{this.title}}</h5>
+    <div id="episode-list-filter-container">
+        <button class="btn btn-outline-light m-1 active">All Shows</button>
+        {{#each @root.show.seasons}}
+            <button class="btn btn-outline-light m-1">{{this}}</button>
+        {{/each}}
+    </div>
+
+    <div id="other-episodes-card-container">
+        {{#each otherEpisodes}}
+            <div style="margin-top:10px;margin-bottom:10px" data-season="{{this.season}}" class="my-card-container">
+                <a href="/show/{{@root.show.slug}}/episode/{{this.episode}}">
+                    <div id="card-body" class="card border-0 shadow flex-row">
+                        <div id="card-image-container" style="width:168px;height:94px">
+                            <img id="card-image" class="card-img-top rounded-0"
+                                 src="{{@root.fileSourceRootUrl}}images/shows/{{this.showId}}/thumbnails/{{this.thumbnail}}"
+                                 alt="Card image cap">
+                            <i id="card-play-button" class="fa fa-play-circle-o" aria-hidden="true"></i>
+                        </div>
+                        <div id="card-title-container" class="card-body d-flex flex-column justify-content-between">
+                            <div class="d-flex flex-column">
+                                <h6 class="card-title my-tertiary-text text-truncate my-line-clamp">
+                                    Season {{this.season}}</h6>
+                                <h5 class="card-title my-secondary-text text-truncate my-line-clamp">{{this.episode}}
+                                    . {{this.title}}</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </a>
-        </div>
-    {{/each}}
+                </a>
+            </div>
+        {{/each}}
+    </div>
+
 </div>

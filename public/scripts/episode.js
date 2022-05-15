@@ -288,11 +288,35 @@ window.addEventListener("load", function () {
         }
     }
 
-    likeButton.addEventListener("click", async function() {
+    likeButton.addEventListener("click", async function () {
         await updateLikeDislikeCounter("like", this);
     });
-    dislikeButton.addEventListener("click", async function() {
+    dislikeButton.addEventListener("click", async function () {
         await updateLikeDislikeCounter("dislike", this);
     });
+
+    const episodeListFilters = document.querySelectorAll("#episode-list-filter-container button");
+    const otherEpisodeCards = document.querySelectorAll("#other-episodes-card-container .my-card-container");
+
+    for (let i = 0; i < episodeListFilters.length; i++) {
+        const filterBtn = episodeListFilters[i];
+        filterBtn.addEventListener("click", function () {
+            for (let j = 0; j < otherEpisodeCards.length; j++) {
+                const otherEpisodeCard = otherEpisodeCards[j];
+                if (i === parseInt(otherEpisodeCard.dataset.season) || i === 0) {
+                    otherEpisodeCard.style.display = "block";
+                } else {
+                    otherEpisodeCard.style.display = "none";
+                }
+            }
+            for (let k = 0; k < episodeListFilters.length; k++) {
+                if (i === k) {
+                    this.classList.add("active");
+                } else {
+                    episodeListFilters[k].classList.remove("active");
+                }
+            }
+        })
+    }
 
 });
