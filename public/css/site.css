@@ -1,5 +1,5 @@
 :root {
-    --cards-spacing: 25px;
+    --cards-spacing: 15px;
     --my-primary-color: rgb(26, 29, 41);
     --my-secondary-color: rgb(9, 11, 19);
     --my-tertiary-color: rgb(31, 32, 43);
@@ -64,7 +64,7 @@ a {
 
 a:hover {
     color: white;
-    opacity: 0.80;
+    /*opacity: 0.80;*/
 }
 
 .the-dot::before {
@@ -79,7 +79,7 @@ a:hover {
 }
 
 .summary-overflow {
-    max-height: calc(90px + 16px); /* (line-height: 22.5px) * 4 = 90px */
+    max-height: calc(68px + 16px); /* (line-height: 22.5px) * 4 = 90px */
     overflow: hidden;
 }
 
@@ -220,11 +220,11 @@ body, #bookmark-button {
 }
 
 #suggested-section .card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 #card-body:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 #card-body:hover #card-play-button {
@@ -939,7 +939,7 @@ body, #bookmark-button {
 
 #all-shows-section a:hover img {
     border: 3px solid white;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 /* Override Bootstrap/Fontawesome styles */

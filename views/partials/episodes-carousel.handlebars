@@ -1,6 +1,6 @@
 <div id="episodes-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
     <div class="container">
-        <div class="carousel-inner" style="padding-top:1.5rem;padding-bottom:1.5rem">
+        <div class="carousel-inner pt-3 pb-3">
             {{#each pagination}}
                 <div class="my-carousel-group-{{season}} carousel-item {{#ifEquals page 1}}active{{/ifEquals}}">
                     <div class="card-deck">
@@ -18,8 +18,9 @@
                                             <div id="card-text-container" class="card-body d-flex flex-column justify-content-between">
                                                 <div class="d-flex flex-column">
                                                     {{#if @root.atHome}}
-                                                        <h5 class="card-title my-tertiary-text text-truncate my-line-clamp">{{this.showId.title}}</h5>
-                                                        <p class="card-text my-secondary-text-text text-truncate my-line-clamp">S{{this.season}}:E{{this.episode}} "{{this.title}}"</p>
+                                                        <h5 class="card-title my-tertiary-text text-truncate my-line-clamp-1">{{this.showId.title}}</h5>
+                                                        <h6 class="card-title my-tertiary-text text-truncate my-line-clamp-1">{{#getSeasonsDescription this.showId.seasons this.season false}}{{/getSeasonsDescription}}</h6>
+                                                        <h5 class="card-title my-secondary-text text-truncate my-line-clamp">{{this.episode}}. {{this.title}}</h5>
                                                     {{else}}
                                                         <h5 class="card-title my-secondary-text text-truncate my-line-clamp">{{this.episode}}. {{this.title}}</h5>
                                                         <p class="card-text my-tertiary-text text-truncate my-line-clamp">{{this.synopsis}}</p>

@@ -36,13 +36,13 @@
 {{/if}}
 
 <div class="pt-5">
-    <div class="container">
-        <h6 class="my-primary-text">Show Categories</h6>
+    <div class="container mb-3">
+        <h6 class="my-primary-text m-0">Show Categories</h6>
     </div>
     <div id="non-small-form-factor">
-        <div id="categories-button-container" class="container" style="transform:translate(-0.5rem)">
+        <div id="categories-button-container" class="container" style="transform:translate(-0.25rem)">
             {{#each categories}}
-                <button class="m-2 btn btn-outline-primary{{#ifEquals this._id "01"}} active{{/ifEquals}}"
+                <button class="m-1 btn btn-outline-primary{{#ifEquals this._id "01"}} active{{/ifEquals}}"
                         data-category-id="{{this._id}}">{{this.description}}</button>
             {{/each}}
         </div>
@@ -72,10 +72,10 @@
                     <div class="my-card" data-category-id="{{this.categoryId}}">
                         <a href="/show/{{slug}}">
                             <div class="card m-2" style="width:200px;background:none!important;border:none">
-                                <div style="height:300px">
+                                <div class="shadow" style="height:300px">
                                     <img class="card-img-top" src="{{@root.fileSourceRootUrl}}images/shows/{{_id}}/cover/{{cover}}" alt="Card image cap" style="object-fit:cover">
                                 </div>
-                                <div class="card-body" style="background:none!important;height:94px;padding-left:0;padding-right:0">
+                                <div class="card-body ps-0 pe-0 pt-3 pb-0" style="background:none!important">
                                     <h5 class="card-title my-secondary-text">{{title}}</h5>
                                     <p class="card-text my-tertiary-text">{{releaseInfo}}</p>
                                 </div>
