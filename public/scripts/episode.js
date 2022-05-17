@@ -298,20 +298,51 @@ window.addEventListener("load", function () {
     const episodeListFilters = document.querySelectorAll("#episode-list-filter-container button");
     const otherEpisodeCards = document.querySelectorAll("#other-episodes-card-container .my-card-container");
 
+    // Other Episodes Dropdown Filter
+
+    const dropdown = document.querySelector("#other-episodes-sff-dropdown");
+    const dropdownButton = dropdown.querySelector("#dropdownMenuButton");
+    const dropdownMenu = dropdown.querySelector(".dropdown-menu");
+    const dropdownItems = dropdown.querySelectorAll(".dropdown-item");
+
+    function hideShowOtherEpisodeCards(i) {
+        for (let j = 0; j < otherEpisodeCards.length; j++) {
+            const otherEpisodeCard = otherEpisodeCards[j];
+            if (i === parseInt(otherEpisodeCard.dataset.season) || i === 0) {
+                otherEpisodeCard.style.display = "block";
+            } else {
+                otherEpisodeCard.style.display = "none";
+            }
+        }
+    }
+
+    dropdown.addEventListener("click", function () {
+        dropdown.classList.toggle("show");
+        dropdownMenu.classList.toggle("show");
+    });
+
+    for (let i = 0; i < dropdownItems.length; i++) {
+        const dropdownItem = dropdownItems[i];
+        dropdownItem.addEventListener("click", () => {
+            dropdownButton.innerText = dropdownItem.innerText;
+            hideShowOtherEpisodeCards(i);
+            for (let k = 0; k < dropdownItems.length; k++) {
+                if (i === k) {
+                    dropdownItem.classList.add("active");
+                } else {
+                    dropdownItems[k].classList.remove("active");
+                }
+            }
+        });
+    }
+
     for (let i = 0; i < episodeListFilters.length; i++) {
         const filterBtn = episodeListFilters[i];
         filterBtn.addEventListener("click", function () {
-            for (let j = 0; j < otherEpisodeCards.length; j++) {
-                const otherEpisodeCard = otherEpisodeCards[j];
-                if (i === parseInt(otherEpisodeCard.dataset.season) || i === 0) {
-                    otherEpisodeCard.style.display = "block";
-                } else {
-                    otherEpisodeCard.style.display = "none";
-                }
-            }
+            hideShowOtherEpisodeCards(i);
             for (let k = 0; k < episodeListFilters.length; k++) {
                 if (i === k) {
-                    this.classList.add("active");
+                    filterBtn.classList.add("active");
                 } else {
                     episodeListFilters[k].classList.remove("active");
                 }
@@ -324,7 +355,7 @@ window.addEventListener("load", function () {
     const showMoreText = showMore.querySelector("span");
     const showMoreIcon = showMore.querySelector("i");
 
-    showMore.addEventListener("click", function() {
+    showMore.addEventListener("click", function () {
         episodeSynopsis.classList.toggle("synopsis-overflow");
         console.log(episodeSynopsis);
         if (showMoreIcon.classList.contains("fa-chevron-down")) {

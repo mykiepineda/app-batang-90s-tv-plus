@@ -50,16 +50,16 @@
     <div id="small-form-factor">
         <div class="container" style="margin-top:calc(25px - 0.5rem)">
             <div id="categories-sff-dropdown" class="dropdown">
-                <button id="dropdownMenuButton" class="btn btn-light btn-lg dropdown-toggle my-secondary-text" type="button"
+                <button id="dropdownMenuButton" class="btn btn-light btn-lg dropdown-toggle my-secondary-text text-center pt-3 pb-3 w-100" type="button"
                         data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false"
-                        style="font-weight:500;line-height:1.2;width:100%;text-align:center;padding:15px 0">
+                        style="font-weight:500">
                     All Shows
                 </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" style="width:100%;text-align:center">
+                <div class="dropdown-menu text-center w-100" aria-labelledby="dropdownMenuButton">
                     {{#each categories}}
                         <button class="dropdown-item{{#ifEquals this._id "01"}} active{{/ifEquals}}" data-category-id="{{this._id}}">
-                            <h4 class="my-secondary-text">{{this.description}}</h4></button>
+                            <h4 class="my-secondary-text mb-0 pt-1 pb-1">{{this.description}}</h4></button>
                     {{/each}}
                 </div>
             </div>

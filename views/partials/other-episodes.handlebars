@@ -6,11 +6,32 @@
         <div><h6 class="mb-0">Other Episodes</h6></div>
     </div>
 
-    <div id="episode-list-filter-container">
-        <button class="btn btn-outline-light m-1 active">All Shows</button>
-        {{#each @root.show.seasons}}
-            <button class="btn btn-outline-light m-1">{{this}}</button>
-        {{/each}}
+    <div id="non-small-form-factor">
+        <div id="episode-list-filter-container">
+            <button class="btn btn-outline-light m-1 active">All Episodes</button>
+            {{#each @root.show.seasons}}
+                <button class="btn btn-outline-light m-1">{{this}}</button>
+            {{/each}}
+        </div>
+    </div>
+
+    <div id="small-form-factor">
+        <div style="margin-top:calc(25px - 0.5rem)">
+            <div id="other-episodes-sff-dropdown" class="dropdown">
+                <button id="dropdownMenuButton" class="btn btn-light btn-lg dropdown-toggle my-secondary-text text-center pt-3 pb-3 w-100" type="button"
+                        data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false"
+                        style="font-weight:500">
+                    All Episodes
+                </button>
+                <div class="dropdown-menu text-center w-100" aria-labelledby="dropdownMenuButton">
+                    <button class="dropdown-item active"><h4 class="my-secondary-text mb-0 pt-1 pb-1">All Episodes</h4></button>
+                    {{#each @root.show.seasons}}
+                        <button class="dropdown-item"><h4 class="my-secondary-text mb-0 pt-1 pb-1">{{this}}</h4></button>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="other-episodes-card-container">

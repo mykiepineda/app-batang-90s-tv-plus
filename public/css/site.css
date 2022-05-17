@@ -248,6 +248,13 @@ body, #bookmark-button {
     #all-shows-section .my-card .card > div:first-child {
         height: 230px !important;
     }
+
+    #mid-navbar .navbar-nav div:nth-child(1),
+    #mid-navbar .navbar-nav div:nth-child(2),
+    #mid-navbar .navbar-nav div:nth-child(3) {
+        padding-right: 2rem !important;
+    }
+
 }
 
 /* Begin, From bootstrap _containers.scss */
@@ -461,16 +468,14 @@ body, #bookmark-button {
         display: block;
     }
 
-    #mid-navbar .navbar-nav div:nth-child(1),
-    #mid-navbar .navbar-nav div:nth-child(2),
-    #mid-navbar .navbar-nav div:nth-child(3) {
-        padding: 0 !important;
-    }
-
-    ul.navbar-nav {
-        justify-content: space-between;
-    }
-
+    /*#mid-navbar .navbar-nav div:nth-child(1),*/
+    /*#mid-navbar .navbar-nav div:nth-child(2),*/
+    /*#mid-navbar .navbar-nav div:nth-child(3) {*/
+    /*    padding: 0 !important;*/
+    /*}*/
+    /*ul.navbar-nav {*/
+    /*    justify-content: space-between;*/
+    /*}*/
     #small-form-factor #card-body {
         flex-direction: row;
     }
