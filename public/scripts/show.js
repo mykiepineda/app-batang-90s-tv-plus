@@ -189,7 +189,7 @@ window.addEventListener("load", function () {
     const showMoreText = showMore.querySelector("span");
     const showMoreIcon = showMore.querySelector("i");
 
-    showMore.addEventListener("click", function() {
+    showMore.addEventListener("click", function () {
         showSummary.classList.toggle("summary-overflow");
         if (showMoreIcon.classList.contains("fa-chevron-down")) {
             showMoreIcon.classList.replace("fa-chevron-down", "fa-chevron-up");
@@ -198,6 +198,40 @@ window.addEventListener("load", function () {
             showMoreIcon.classList.replace("fa-chevron-up", "fa-chevron-down");
             showMoreText.innerHTML = "SHOW MORE";
         }
+    });
+
+    function displayShowMore() {
+        if (showSummary.scrollHeight === showSummary.clientHeight) {
+            // TODO: if you resize the window while the summary section is expanded, it will hide the show more/less button
+            showMore.style.display = "none";
+        } else {
+            showMore.style.display = "block";
+        }
+    }
+
+    displayShowMore();
+
+    const backgroundShowImage = document.querySelector("#background-show-image");
+    const bodyFooterContainer = document.querySelector("#body-footer-container");
+
+    function setBackgroundShowImage() {
+        if (backgroundShowImage.offsetWidth <= 1083) {
+            // TODO: create sff-background for all shows
+            // backgroundShowImage.style.backgroundImage = `url("${backgroundShowImage.dataset.imageEndpoint}/sff-background.png")`;
+            backgroundShowImage.style.backgroundImage = `url("${backgroundShowImage.dataset.imageEndpoint}/background.png")`;
+            backgroundShowImage.style.transform = "translate(0,0)";
+        } else {
+            backgroundShowImage.style.backgroundImage = `url("${backgroundShowImage.dataset.imageEndpoint}/background.png")`;
+            backgroundShowImage.style.transform = "translate(0,-76px)";
+            bodyFooterContainer.style.transform = "translate(0,76px)";
+        }
+    }
+
+    setBackgroundShowImage();
+
+    window.addEventListener("resize", () => {
+        setBackgroundShowImage();
+        displayShowMore();
     });
 
 });

@@ -355,6 +355,17 @@ window.addEventListener("load", function () {
     const showMoreText = showMore.querySelector("span");
     const showMoreIcon = showMore.querySelector("i");
 
+    function displayShowMore() {
+        if (episodeSynopsis.scrollHeight === episodeSynopsis.clientHeight) {
+            // TODO: if you resize the window while the episode synopsis is expanded, it will hide the show more/less button
+            showMore.style.display = "none";
+        } else {
+            showMore.style.display = "block";
+        }
+    }
+
+    displayShowMore();
+
     showMore.addEventListener("click", function () {
         episodeSynopsis.classList.toggle("synopsis-overflow");
         console.log(episodeSynopsis);
@@ -365,6 +376,10 @@ window.addEventListener("load", function () {
             showMoreIcon.classList.replace("fa-chevron-up", "fa-chevron-down");
             showMoreText.innerHTML = "SHOW MORE";
         }
+    });
+
+    window.addEventListener("resize", () => {
+        displayShowMore();
     });
 
 });

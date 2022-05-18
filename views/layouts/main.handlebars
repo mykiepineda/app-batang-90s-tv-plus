@@ -10,7 +10,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-HE90PZB3NX"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
 
         gtag('config', 'G-HE90PZB3NX');
@@ -24,10 +28,21 @@
     <script src="https://kit.fontawesome.com/338a0d231d.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
-<body style="background-image:{{#if displayShowBackground}} url({{fileSourceRootUrl}}images/shows/{{showId}}/background/{{show.background}}),{{/if}}linear-gradient(45deg, var(--my-secondary-color), var(--my-primary-color), var(--my-secondary-color))">
-    {{>goto-top}}
-    {{>top-navbar}}
-    {{{body}}}
-    {{>footer}}
+
+<body>
+{{>goto-top}}
+{{>top-navbar}}
+<div id="background-show-image" data-image-endpoint="{{fileSourceRootUrl}}images/shows/{{showId}}/background"
+     style="background-image:{{#if
+             displayShowBackground}} url({{fileSourceRootUrl}}images/shows/{{showId}}/background/{{show.background}}){{/if}}">
+    <div id="body-footer-container" class="d-flex flex-column justify-content-between">
+        <div>
+            {{{body}}}
+        </div>
+        <div>
+            {{>footer}}
+        </div>
+    </div>
+</div>
 </body>
 </html>

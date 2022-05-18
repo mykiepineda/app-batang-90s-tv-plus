@@ -152,8 +152,12 @@ app.get("/show/:slug", initTopNavBar(), async function (req, res) {
             }
         }
 
-        // return other shows
-        res.locals.suggestions = await shows.find().where("_id").ne(showId).sort({releaseInfo: 1, title: 1}).lean();
+        // return other shows of same category
+        res.locals.suggestions = await shows.find(
+            {
+                _id: {$ne: showId},
+                categoryId: show.categoryId
+            }).sort({releaseInfo: 1, title: 1}).lean();
 
         const videoCollection = await videos.find({showId: showId}).populate({
             path: "showId",
@@ -484,7 +488,7 @@ app.get("/initialise-database", async function (req, res) {
     res.json({message: message});
 });
 
-app.get(["/like/:slug/episode/:episodeId","/dislike/:slug/episode/:episodeId"], async function (req, res) {
+app.get(["/like/:slug/episode/:episodeId", "/dislike/:slug/episode/:episodeId"], async function (req, res) {
 
     try {
         const url = req.url;
