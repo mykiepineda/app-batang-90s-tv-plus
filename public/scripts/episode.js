@@ -302,7 +302,6 @@ window.addEventListener("load", function () {
 
     const dropdown = document.querySelector("#other-episodes-sff-dropdown");
     const dropdownButton = dropdown.querySelector("#dropdownMenuButton");
-    const dropdownMenu = dropdown.querySelector(".dropdown-menu");
     const dropdownItems = dropdown.querySelectorAll(".dropdown-item");
 
     function hideShowOtherEpisodeCards(i) {
@@ -315,11 +314,6 @@ window.addEventListener("load", function () {
             }
         }
     }
-
-    dropdown.addEventListener("click", function () {
-        dropdown.classList.toggle("show");
-        dropdownMenu.classList.toggle("show");
-    });
 
     for (let i = 0; i < dropdownItems.length; i++) {
         const dropdownItem = dropdownItems[i];

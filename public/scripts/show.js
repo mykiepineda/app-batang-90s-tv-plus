@@ -7,15 +7,10 @@ window.addEventListener("load", function () {
 
     const dropdown = document.querySelector("#seasons-sff-dropdown");
     const dropdownButton = dropdown.querySelector("#dropdownMenuButton");
-    const dropdownMenu = dropdown.querySelector(".dropdown-menu");
     const dropdownItems = dropdown.querySelectorAll(".dropdown-item");
 
     const cardDecks = document.querySelectorAll("#card-deck-container .card-deck");
 
-    dropdown.addEventListener("click", function () {
-        dropdown.classList.toggle("show");
-        dropdownMenu.classList.toggle("show");
-    });
 
     function activateSeasonDropdownInContext(i) {
 
@@ -69,7 +64,7 @@ window.addEventListener("load", function () {
 
     for (let i = 0; i < seasonsLinks.length; i++) {
 
-        seasonsLinks[i].addEventListener("click", function (event) {
+        seasonsLinks[i].addEventListener("click", () => {
 
             let options = [];
             for (let j = 0; j < seasonsLinks.length; j++) {
