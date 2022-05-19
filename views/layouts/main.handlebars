@@ -32,9 +32,8 @@
 <body>
 {{>goto-top}}
 {{>top-navbar}}
-<div id="background-show-image" data-image-endpoint="{{fileSourceRootUrl}}images/shows/{{showId}}/background"
-     style="background-image:{{#if
-             displayShowBackground}} url({{fileSourceRootUrl}}images/shows/{{showId}}/background/{{show.background}}){{/if}}">
+<div{{#if atShow}} class="my-background-show-image" data-image-endpoint="{{fileSourceRootUrl}}images/shows/{{showId}}/background"
+     style="background-image: url({{fileSourceRootUrl}}images/shows/{{showId}}/background/{{show.background}})"{{/if}}>
     <div id="body-footer-container" class="d-flex flex-column justify-content-between">
         <div>
             {{{body}}}

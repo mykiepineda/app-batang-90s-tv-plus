@@ -32,40 +32,26 @@ body {
     background-attachment: fixed !important;
 }
 
-#background-show-image {
+.my-background-show-image {
     background-position: top right;
     background-repeat: no-repeat;
     background-size: contain;
     background-attachment: fixed !important;
 }
 
-#body-footer-container {
+.my-background-show-image #body-footer-container {
     min-height: calc(100vh - 76px); /* less top navbar height */
-}
-
-.background-show-01 {
-    background: linear-gradient(black, darkgreen, black, black) fixed;
-}
-
-.background-show-02 {
-    background: linear-gradient(black, darkblue, black, black) fixed;
-}
-
-.background-show-03,
-.background-show-04,
-.background-show-05,
-.background-show-06 {
-    background: linear-gradient(black, darkred, black, black) fixed;
-}
-
-.background-show-07 {
-    background: linear-gradient(black, yellow, black, black) fixed;
 }
 
 #image-cover,
 #image-cover img {
     width: 100%;
     height: 100%;
+}
+
+#all-shows-card::after {
+    content: "";
+    flex: auto;
 }
 
 a {
@@ -418,25 +404,25 @@ body, #bookmark-button {
 }
 
 @media screen and (max-width: 1100px) {
-    #body-footer-container {
+    .my-background-show-image #body-footer-container {
         transform: translateY(400px) !important;
     }
 }
 
 @media screen and (max-width: 767px) {
-    #body-footer-container {
+    .my-background-show-image #body-footer-container {
         transform: translateY(300px) !important;
     }
 }
 
 @media screen and (max-width: 575px) {
-    #body-footer-container {
+    .my-background-show-image #body-footer-container {
         transform: translateY(200px) !important;
     }
 }
 
 @media screen and (max-width: 287px) {
-    #body-footer-container {
+    .my-background-show-image #body-footer-container {
         transform: translateY(100px) !important;
     }
 }

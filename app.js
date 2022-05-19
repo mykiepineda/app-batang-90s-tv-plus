@@ -101,6 +101,7 @@ app.get("/", initTopNavBar(), async function (req, res) {
 
 app.get("/show/:slug", initTopNavBar(), async function (req, res) {
 
+    res.locals.atShow = true;
     res.locals.fileSourceRootUrl = fileSourceRootUrl;
 
     const show = await shows.findOne({slug: req.params.slug}).lean();
@@ -114,7 +115,7 @@ app.get("/show/:slug", initTopNavBar(), async function (req, res) {
 
         res.locals.show = show;
         res.locals.showId = showId;
-        res.locals.displayShowBackground = true;
+        // res.locals.displayShowBackground = true;
         res.locals.inWatchlist = false;
 
         const user = await users.findOne({_id: adminUserId})

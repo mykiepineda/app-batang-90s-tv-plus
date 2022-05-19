@@ -20,24 +20,20 @@
                     </li>
                 {{/unless}}
                 <li id="shows-dropdown" class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                       aria-expanded="false">Shows</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="true">Shows</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown01">
                         {{#each allShows}}
-                            <a class="dropdown-item{{#ifEquals @root.showId this._id}} active{{/ifEquals}}"
-                               href="/show/{{this.slug}}">{{this.title}} ({{this.releaseInfo}})</a>
+                            <li><a class="dropdown-item{{#ifEquals @root.showId this._id}} active{{/ifEquals}}" href="/show/{{this.slug}}">{{this.title}} ({{this.releaseInfo}})</a></li>
                         {{/each}}
-                    </div>
+                    </ul>
                 </li>
                 <li id="my-watchlist-dropdown" class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
-                       aria-expanded="false">My list</a>
-                    <div class="dropdown-menu" aria-labelledby="dropdown01">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" data-bs-auto-close="true">My List</a>
+                    <ul class="dropdown-menu" aria-labelledby="dropdown01">
                         {{#each myWatchist}}
-                            <a class="dropdown-item{{#ifEquals @root.showId this._id}} active{{/ifEquals}}"
-                               href="/show/{{this.slug}}">{{this.title}} ({{this.releaseInfo}})</a>
+                            <li><a class="dropdown-item{{#ifEquals @root.showId this._id}} active{{/ifEquals}}" href="/show/{{this.slug}}">{{this.title}} ({{this.releaseInfo}})</a></li>
                         {{/each}}
-                    </div>
+                    </ul>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" action="/search" method="POST">

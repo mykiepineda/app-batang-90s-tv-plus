@@ -185,6 +185,7 @@ window.addEventListener("load", function () {
     });
 
     const showSummary = document.querySelector("#show-summary");
+    const showMoreContainer = document.querySelector("#show-more-container");
     const showMore = document.querySelector("#show-more");
     const showMoreText = showMore.querySelector("span");
     const showMoreIcon = showMore.querySelector("i");
@@ -194,9 +195,11 @@ window.addEventListener("load", function () {
         if (showMoreIcon.classList.contains("fa-chevron-down")) {
             showMoreIcon.classList.replace("fa-chevron-down", "fa-chevron-up");
             showMoreText.innerHTML = "SHOW LESS";
+            showMoreContainer.dataset.expanded = "true";
         } else {
             showMoreIcon.classList.replace("fa-chevron-up", "fa-chevron-down");
             showMoreText.innerHTML = "SHOW MORE";
+            showMoreContainer.dataset.expanded = "false";
         }
     });
 
@@ -211,7 +214,7 @@ window.addEventListener("load", function () {
 
     displayShowMore();
 
-    const backgroundShowImage = document.querySelector("#background-show-image");
+    const backgroundShowImage = document.querySelector(".my-background-show-image");
     const bodyFooterContainer = document.querySelector("#body-footer-container");
 
     function setBackgroundShowImage() {

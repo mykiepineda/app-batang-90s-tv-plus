@@ -26,24 +26,4 @@ window.addEventListener("load", function () {
         navbarCollapse.classList.toggle("show");
     });
 
-    // Top Navigation Bar - Shows Dropdown
-
-    const showsDropdown = document.querySelector("#shows-dropdown");
-    const showsDropdownMenu = showsDropdown.querySelector(".dropdown-menu");
-
-    showsDropdown.addEventListener("click", function () {
-        showsDropdown.classList.toggle("show");
-        showsDropdownMenu.classList.toggle("show");
-    });
-
-    // Top Navigation Bar - My Watchlist Dropdown
-
-    const myWatchlistDropdown = document.querySelector("#my-watchlist-dropdown");
-    const myWatchlistDropdownMenu = myWatchlistDropdown.querySelector(".dropdown-menu");
-
-    myWatchlistDropdown.addEventListener("click", function () {
-        myWatchlistDropdown.classList.toggle("show");
-        myWatchlistDropdownMenu.classList.toggle("show");
-    });
-
 });
